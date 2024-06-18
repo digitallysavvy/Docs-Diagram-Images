@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant User
+    participant WebServer as Web Server
+    participant AppServer as Your App Server
+    participant AgoraAPI as Agora Media Pull API
+
+    Note over User,AppServer: Implemented by you
+
+    User->>WebServer: Request to pull media
+    WebServer->>AppServer: Communicate action
+    AppServer->>AgoraAPI: Create Player API
+    AgoraAPI->>AppServer: Player parameters (response)
+    Note right of AgoraAPI: Player Created (eventType=1)
+    AppServer->>AgoraAPI: 200 OK
+    AppServer->>AgoraAPI: Request change player status
+    AgoraAPI->>AppServer: Updated player parameters
+    Note right of AgoraAPI: Player Status Changed (eventType=4)
+    AppServer->>AgoraAPI: 200 OK
+    AppServer->>AgoraAPI: Stop playing media
+    Note right of AgoraAPI: Player Destroyed (eventType=2)
+    AppServer->>AgoraAPI: 200 OK

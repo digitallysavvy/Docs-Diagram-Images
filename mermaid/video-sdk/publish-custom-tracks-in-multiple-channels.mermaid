@@ -1,0 +1,22 @@
+graph LR
+    subgraph VideoSources
+        A[Video to be captured] -->|Capture by modules| B[Third-party video capture module 1]
+        A -->|Capture by modules| C[Third-party video capture module 2]
+        A -->|Capture by modules| D[Third-party video capture module N]
+    end
+
+    subgraph AgoraSDK
+        B --> E[Captured video frames]
+        C --> E
+        D --> E
+        E -->|Process video frames| F[Agora SDK]
+    end
+
+    subgraph OutputChannels
+        F -->|Output streams| G[Custom video track 1]
+        F -->|Output streams| H[Custom video track 2]
+        F -->|Output streams| I[Custom video track N]
+        G --> J[Channel 1]
+        H --> K[Channel 2]
+        I --> L[Channel N]
+    end

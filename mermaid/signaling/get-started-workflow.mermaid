@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant User
+    participant YourApp as Your app
+    participant Agora as Signaling System (Agora)
+
+    Note over User, Agora: Initialize
+    User->>+YourApp: Opens the app
+    YourApp->>+YourApp: Create signaling engine instance
+    YourApp->>+YourApp: Add event listeners
+    YourApp->>+YourApp: Set authentication token
+    YourApp->>+Agora: Login to signaling system
+
+    Note over User, Agora: Messages
+    YourApp->>+Agora: signalingEngine.subscribe
+    YourApp->>+Agora: signalingEngine.publish
+    Agora-->>YourApp: message event
+    YourApp-->>YourApp: Relay message to app or user
+
+    Note over User, Agora: Close
+    User->>+YourApp: Log out
+    YourApp->>+Agora: Logout from signaling system

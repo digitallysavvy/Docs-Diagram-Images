@@ -1,0 +1,27 @@
+flowchart TB
+    startUserInteraction("User starts the app") --> selectChannel("User selects a channel")
+    selectSLogin("User logs into identity management system") --> requestToken("Request Agora token with parameters")
+    validateRequest("Agora validates request") --> generateToken("Generate token using library methods") --> validateToken("Validate token")
+    returnToken("Token returned to client") --> useToken("Client uses token to join channel") --> callback("Callback confirms channel joining")
+
+    subgraph UserAppInteraction ["User and App Interaction"]
+        startUserInteraction
+        selectChannel
+    end
+
+    subgraph ImplementedByYou ["Implemented by You"]
+        selectSLogin
+        requestToken
+    end
+
+    subgraph ProvidedByAgora ["Provided by Agora"]
+        validateRequest
+        generateToken
+        validateToken
+    end
+
+    subgraph TokenSessionMgmt ["Token and Session Management"]
+        returnToken
+        useToken
+        callback
+    end

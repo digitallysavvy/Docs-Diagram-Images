@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant User as User
+    participant App as Application
+    participant VoiceSDK as Voice SDK
+    participant Agora as Agora System
+
+    User ->> App: Open App
+    App ->> VoiceSDK: Create Agora Engine Instance
+    VoiceSDK ->> App: Engine Ready
+    App ->> App: Check External Source for Compatibility
+    App ->> App: Set External Audio Source
+
+    App ->> Agora: Retrieve Authentication Token
+    Agora ->> App: Token Retrieved
+    App ->> Agora: Join Channel
+    Agora -->> App: Channel Joined
+    App ->> App: Process Data
+    App ->> Agora: Stream Data
+    Agora ->> App: Data Streamed
+    App ->> Agora: Leave Channel
+    Agora -->> App: Channel Left
+    App ->> VoiceSDK: Return to Idle
+    VoiceSDK -->> App: Idle State

@@ -1,0 +1,32 @@
+flowchart TD
+    Capture --> Preprocess
+    Preprocess --> Encode
+    Encode --> Transmit
+    Transmit --> Decode
+    Decode --> Postprocess
+    Postprocess --> Play
+    subgraph Video_SDK["Video SDK"]
+    Capture
+    Preprocess
+    Encode
+    Transmit
+    Decode
+    Postprocess
+    Play
+    end
+    subgraph Extensions["Extensions (Audio/Video Filter)"]
+    Image_Enhancement["Image Enhancement"]
+    Face_Filter["Face Filter"]
+    Face_Change["Face Change"]
+    Voice_Effect["Voice Effect"]
+    Voice_Changer["Voice Changer"]
+    Noise_Cancellation["Noise Cancellation"]
+    end
+    Encode -.-> Extensions
+    Transmit -.-> Extensions
+    Decode -.-> Extensions
+    Postprocess -.-> Extensions
+    Extensions -.-> Encode
+    Extensions -.-> Transmit
+    Extensions -.-> Decode
+    Extensions -.-> Postprocess

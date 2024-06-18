@@ -1,0 +1,36 @@
+flowchart TD
+    openApp[Open App] --> initSDK[Initialize the Agora Video SDK Engine]
+    initSDK --> enableVideo[Enable the Video Module]
+    enableVideo --> registerHandler[Register the Event Handler]
+    registerHandler --> setupVideoView[Setup AgoraVideoView Widget]
+
+    subgraph hostActions [Host Actions]
+        startLiveEvent[Start a Live Streaming Event] --> setHostRole[Set the Client Role to Host]
+        setHostRole --> setChannelProfileHost[Set a Channel Profile]
+        setChannelProfileHost --> retrieveTokenHost[Retrieve Authentication Token]
+        retrieveTokenHost --> joinChannelHost[Join a Channel Using the Token]
+        joinChannelHost --> sendDataStreams[Send Data Streams]
+        sendDataStreams --> startPreview[Start Local Preview]
+        startPreview --> displayLocalVideo[Display Local Video Using AgoraVideoView]
+    end
+
+    subgraph audienceActions [Audience Actions]
+        joinLiveEvent[Join a Live Streaming Event] --> setAudienceRole[Set the Client Role as Audience]
+        setAudiceRole --> setChannelProfileAudience[Set a Channel Profile]
+        setChannelProfileAudience --> retrieveTokenAudience[Retrieve Authentication Token]
+        retrieveTokenAudience --> joinChannelAudience[Join a Channel Using the Token]
+        joinChannelAudience --> remoteUserJoined[Remote User Joined]
+        remoteUserJoined --> receiveDataStreams[Receive Data Streams]
+        receiveDataStreams --> renderRemoteVideo[Render Remote Video Using AgoraVideoView]
+    end
+
+    setupVideoView -.-> startLiveEvent
+    setupVideoView -.-> joinLiveEvent
+
+    subgraph postEventActions [User Actions Post Event]
+        leaveBroadcast[Leave Broadcast]
+        leaveBroadcast --> closeApp[Close App]
+    end
+
+    displayLocalVideo --> leaveBroadcast
+    renderRemoteVideo --> leaveBroadcast

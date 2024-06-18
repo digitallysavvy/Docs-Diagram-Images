@@ -1,0 +1,6 @@
+flowchart TB
+    A["Video to be captured"] --> B["Third-party video capture module"]
+    B --> C["Captured video frames"]
+    C --> D["Agora SDK"]
+    D --> E["Custom video track"]
+    E --> F["Main channel"]

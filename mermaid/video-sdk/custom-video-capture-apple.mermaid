@@ -1,0 +1,9 @@
+flowchart TD
+    A[App] -->|Create and initialize the engine| B(Enable the video module)
+    B --> C[Custom Video Capture]
+    C -->|Set up the external video source| D[Join the channel]
+    D --> E[Send processed video data to SDK]
+    E --> F[Agora SD-RTN]
+    F --> G[Handle video streaming]
+    E -->|Leave the channel| H
+    H -->|Destroy the engine| I[App Shutdown]

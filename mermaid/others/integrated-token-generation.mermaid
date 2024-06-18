@@ -1,0 +1,8 @@
+flowchart TD
+    A[Start App] --> B[Select Channel]
+    B --> C[Login via Developer's Auth System]
+    C --> D[Request Agora Token]
+    D --> E[Validate Request & Generate Token]
+    E --> F[Return Token to App]
+    F --> G[Join Channel with Token]
+    G --> H[User added to Channel & Callback Triggered]

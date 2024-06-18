@@ -1,0 +1,37 @@
+sequenceDiagram
+    participant User
+    participant YourApp as Your app
+    participant ChatSDK as Chat SDK
+    participant ChatServer as Chat Server
+
+    Note over User,ChatServer: Initialize
+    User ->>+ YourApp: Opens the app
+    YourApp ->>+ ChatSDK: ChatClient.getInstance
+    YourApp ->> ChatSDK: ChatClient.init(options)
+    YourApp ->> ChatSDK: ChatClient.chatManager.addEventHandler(...)
+    YourApp ->> ChatSDK: ChatClient.addConnectionEventHandler(...)
+    
+    Note over User,ChatServer: Log in
+    User ->>+ YourApp: Retrieve authentication token
+    YourApp ->>+ ChatSDK: ChatClient.loginWithAgoraToken(userId, token)
+    ChatSDK ->>+ ChatServer: Login Request
+    ChatServer -->>- ChatSDK: Login Success
+    ChatSDK -->>- YourApp: onConnected()
+
+    Note over User,ChatServer: Send messages
+    User ->>+ YourApp: Create message
+    YourApp ->>+ ChatSDK: ChatClient.chatManager.sendMessage(message)
+    ChatSDK ->> ChatServer: Send Message
+    ChatServer -->>- ChatSDK: Message Sent
+
+    Note over User,ChatServer: Receive messages
+    ChatServer ->> ChatSDK: Incoming Message
+    ChatSDK ->> YourApp: onMessagesReceived(messages)
+    YourApp -->>- User: Display messages
+
+    Note over User,ChatServer: Close
+    User ->>+ YourApp: Leaves chat
+    YourApp ->>+ ChatSDK: ChatClient.logout(...)
+    ChatSDK ->>+ ChatServer: Logout Request
+    ChatServer -->>- ChatSDK: Logout Success
+    ChatSDK -->>- YourApp: onDisconnected()

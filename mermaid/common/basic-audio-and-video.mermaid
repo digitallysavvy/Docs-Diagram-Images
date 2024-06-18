@@ -1,0 +1,16 @@
+flowchart TB
+    RTC_SDK[RTC SDK] -->|Connects| Voice_Video_Call_Channel
+    RTC_SDK -->|Connects| Live_Video_Channel
+    RTC_SDK -->|Connects| Agora_SD_RTN[Agora SD-RTN™]
+
+    subgraph Voice_Video_Call_Channel[Voice/Video Call Channel]
+        UserA[User A: Host] -.->|Publish & Subscribe| UserB[User B: Audience]
+        UserB -.->|Publish & Subscribe| UserA
+    end
+
+    subgraph Live_Video_Channel[Live Video Channel]
+        UserC[User C: Host] -->|Publish & Subscribe| UserD[User D: Audience]
+    end
+
+    style RTC_SDK fill:#d3d3d3
+    style Agora_SD_RTN fill:#add8e6

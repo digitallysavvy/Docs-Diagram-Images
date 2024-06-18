@@ -1,0 +1,36 @@
+flowchart TB
+    subgraph ClientA [Client A]
+        AppA[App A]
+        sdkA[SDK A]
+        custEncA[Customized Encryption]
+        AppA --> sdkA
+        sdkA --> custEncA
+    end
+
+    subgraph ClientB [Client B]
+        AppB[App B]
+        sdkB[SDK B]
+        custEncB[Customized Encryption]
+        AppB --> sdkB
+        sdkS --> custEncB
+    end
+
+    subgraph AGORA [Agora SD-RTN™]
+        Cloud
+    end
+
+    encodeA[Audio/Video Encoding]
+    decodeA[Audio/Video Decoding]
+    encodeB[Audio/Video Encoding]
+    decodeB[Audio/Video Decoding]
+
+    custEncA --> encodeA
+    encodeA --> Cloud
+    Cloud --> decodeB --> custEncB
+
+    custEncB --> encodeB
+    encodeB --> Cloud
+    Cloud --> decodeA --> custEncA
+
+    classDef clients fill:#f9f,stroke:#333,stroke-width:2px;
+    class ClientA,ClientB clients;

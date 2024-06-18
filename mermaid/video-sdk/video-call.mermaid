@@ -1,0 +1,21 @@
+flowchart TB
+  subgraph Host["Host (Agora Video SDK)"]
+    HostJoin["Join Channel"]
+    HostPublish["Publish Stream"]
+    HostSubscribe["Subscribe to Stream"]
+  end
+
+  subgraph Audience["Audience (Agora Video SDK)"]
+    AudienceJoin["Join Channel"]
+    AudienceSubscribe["Subscribe to Stream"]
+  end
+
+  subgraph AgoraSDRTN["Agora SD-RTN™"]
+    AgoraCloud["Cloud Service"]
+  end
+
+  HostJoin -->|Connects to| AgoraSDRTN
+  HostPublish -->|Publish Stream to| AgoraSDRTN
+  AudienceJoin -->|Connects to| AgoraSDRTN
+  Host -->|Stream Accessible to| Audience
+  AudienceSubscribe -->|Subscribes to| HostPublish

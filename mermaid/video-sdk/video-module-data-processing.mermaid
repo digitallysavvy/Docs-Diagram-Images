@@ -1,0 +1,9 @@
+flowchart TB
+    A[Enable Local Video Capture] --> B[Video Pre-processing]
+    B --> C[Local Preview]
+    C --> D[Pre-encoding processing]
+    D --> E[Video Encoding]
+    E --> F[Join Channel]
+    F --> G[Video Decoding]
+    G --> H[Video Post-processing]
+    H --> I[Video Rendering Display]

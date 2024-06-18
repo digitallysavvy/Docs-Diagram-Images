@@ -1,0 +1,25 @@
+sequenceDiagram
+    autonumber
+    participant User as User
+    participant App as Your App
+    participant SDK as Voice SDK
+    participant Engine as Agora Voice SDK Engine
+    participant Network as SD-RTN
+
+    User->>App: Opens the App
+    App->>SDK: Includes Voice SDK
+    SDK->>Engine: Initiate(Kickstart Engine)
+    Engine->>Network: Connect to Agora Network
+
+    alt Join Call
+        User->>App: Requests to join a channel
+        App->>SDK: Retrieve Authentication Token
+        SDK->>Engine: joinChannel(token)
+        Engine->>User: onUserJoined() callback
+    end
+
+    alt Leave Call
+        User->>Engine: leaveChannel()
+        User->>App: Close App
+        App->>Engine: destroy()
+    end

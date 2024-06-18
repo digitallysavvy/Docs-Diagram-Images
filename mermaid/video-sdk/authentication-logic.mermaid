@@ -1,0 +1,28 @@
+flowchart TD
+
+    subgraph "Implemented by you"
+        A1[Join a channel with authentication]
+        A2[Renew token]
+    end
+
+    subgraph "App"
+        B1[Join channel using user ID, channel name, and token]
+        B2[Send new token with RenewToken request]
+    end
+
+    subgraph "Provided by Agora SD-RTN"
+        C1[Token validated by Agora]
+        C2[User added callback triggered]
+        C3[Token expiration event triggered]
+    end
+
+    A1 -->|Request token with details| A2
+    A2 -->|Internal security validation| B1
+    B1 -->|Token generated and returned| C1
+    C1 --> B2 
+    B1 --> C2
+    C2 --> C3
+    A2 -->|Request for new token| B2
+    A2 -->|Validation against internal logic| B2
+    B2 -->|Token generated and returned| C1
+    B2 --> B1

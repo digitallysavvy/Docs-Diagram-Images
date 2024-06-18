@@ -1,0 +1,14 @@
+flowchart TD
+    A([Start]) --> B[User logs in]
+    B --> C[User joins channel]
+    C --> D{Channel joined?}
+    D -- Yes --> E[Agora's SD-RTN authenticates]
+    E --> F[ActiveFence monitors content]
+    F --> G{Risk detected?}
+    G -- Yes --> H[Trigger webhook]
+    H --> I[Automated responses via REST API]
+    G -- No --> J[Continue normal operation]
+    D -- No --> J
+    I --> K[User logs out]
+    J --> K
+    K --> L([End])

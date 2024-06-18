@@ -1,0 +1,10 @@
+flowchart TB
+    openApp[Open Your App] --> initSDK[Initialize the Agora Video SDK Engine]
+    initSDK --> enableVideo[Enable the Video Module]
+    enableVideo --> registerHandler[Register the Event Handler]
+    registerHandler --> setupWidgets[Setup AgoraVideoView Widgets]
+    setupWidgets --> joinCall[Join a Video Call]
+    joinCall --> startPreview[Start Local Preview]
+    startPreview --> duringCall[During the Call]
+    duringCall --> leaveCall[Leave the Video Call]
+    leaveCall --> closeApp[Close the App]

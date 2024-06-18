@@ -1,0 +1,5 @@
+flowchart LR
+    SDK("SDK") --> PassRenderedAudioFrame("Pass rendered audio frame")
+    PassRenderedAudioFrame --> RenderingModule("Rendering Module")
+    RenderingModule --> RenderedAudioFrame("Rendered audio frame")
+    RenderedAudioFrame --> PlayLocally("Play locally")

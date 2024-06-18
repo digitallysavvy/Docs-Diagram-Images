@@ -1,0 +1,27 @@
+flowchart TB
+    subgraph you ["Implemented by You"]
+        A1[("User logs in and joins a channel via App")]
+        A5[("Eventually, the user logs out")]
+    end
+
+    subgraph agora ["Provided by Agora"]
+        B1[("Login authentication")]
+        B2[("User session handling via SD-RTN")]
+        B3[("User logs out from Agora SD-RTN")]
+    end
+
+    subgraph activeFence ["Provided by ActiveFence"]
+        C1[("Monitor content within the channel")]
+        C2[("Identifies potential risk")]
+        C3[("Trigger action webhook if risk matches")]
+        C4[("Prescribed action taken via Channel Management REST API")]
+    end
+
+    A1 --> B1
+    B1 --> B2
+    B2 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
+    C4 -- "User action taken" --> A5
+    A5 --> B3

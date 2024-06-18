@@ -1,0 +1,17 @@
+flowchart TD
+    A[Start App] --> B[Create Signaling Engine Instance]
+    B --> C[Add Presence Event Listener]
+    C --> D[Set Authentication Token]
+    D --> E[Login to Signaling System]
+    E --> F[Join Communication Channel]
+    F --> G[Subscribe to Channel & Enable Presence Events]
+    G --> H{Presence Event Occurs}
+    H -->|Yes| I[Read Event Arguments]
+    I --> J[Update App & Inform Users]
+    J --> H
+    H -->|No| K[Load Users with getOnlineUsers]
+    K --> L[Retrieve Channels with getUserChannels]
+    L --> M[Set Own Status with setState]
+    M --> N[Query User Status with getState]
+    N --> O[Logout of Signaling System]
+    O --> P[End]

@@ -1,0 +1,31 @@
+flowchart TB
+    UOA[User Opens the App]
+    IVSE[Initiate the Video SDK Engine]
+    SVIE[Start Video in the Engine]
+    SLM[Start Local Media]
+    RATJC[Retrieve Authentication Token to Join Channel]
+    JTC[Join the Channel]
+    JA[Join Accepted]
+    PLMTC[Push Local Media to the Channel]
+    RSOTU[Retrieve Streaming from the Other User]
+    RASDS[Receive and Send Data Streams]
+    LC[Leave Call]
+    ASN[Actions by Agora's SD-RTN]
+    
+    UOA --> IVSE
+    IVSE --> SVIE
+    SVIE --> SLM
+    SLM --> RATJC
+    RATJC --> JTC
+    JTC--> JA
+    JA --> PLMTC
+    PLMTC --> RSOTU
+    RSOTU --> RASDS
+    RASDS --> LC
+    
+    IVSE --> ASN
+    RATJC -.-> ASN
+    JTC -.-> ASN
+    RSOTU -.-> ASN
+    RASDS -.-> ASN
+    LC -.-> ASN

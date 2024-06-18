@@ -1,0 +1,28 @@
+sequenceDiagram
+    participant Client1 as Client 1
+    participant Client2 as Client 2
+    participant Agora
+
+    Note over Client1,Client2: Run Call Phase
+
+    Client1->>Client1: Connect to local audio and video
+    Client2->>Client2: Connect to local audio and video
+
+    Client1->>Agora: Join channel
+    Client2->>Agora: Join channel
+
+    Client1->>Agora: Send audio and video
+    Client2->>Agora: Send audio and video
+
+    Note over Client1,Client2: Communicate
+
+    Agora->>Client1: Transmit audio and video
+    Agora->>Client2: Transmit audio and video
+
+    Note over Client1,Client2: End Call Phase
+
+    Client1->>Client1: Close audio and video
+    Client2->>Client2: Close audio and video
+
+    Client1->>Agora: Leave channel
+    Client2->>Agora: Leave channel

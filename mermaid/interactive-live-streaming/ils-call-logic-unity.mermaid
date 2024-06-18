@@ -1,0 +1,27 @@
+flowchart TD
+    U1[User Opens the game]
+    U2[User Initiates the Agora Video SDK engine]
+    U3[User Sets up and enables the local video stream]
+    U4[User Enables the video observer]
+    U5[User Closes the game, disables the video stream and observer, cleans up local resources, and destroys the engine]
+
+    H1[Host Starts a live streaming event]
+    H2[Host Retrieves authentication token]
+    H3[Host Sets channel profile for live broadcasting]
+    H4[Host Sets user role as host]
+    H5[Host Joins the channel]
+    H6[Host Sends the data stream]
+
+    A1[Audience Joins the live streaming event]
+    A2[Audience Retrieves the same authentication token]
+    A3[Audience Sets user role as audience]
+    A4[Audience Joins the channel]
+    A5[Audience Receives callbacks to start remote video]
+    A6[Audience Retrieves streaming from the host]
+    A7[Audience Sets up the remote view]
+    A8[Audience Receives the data stream]
+    A9[Audience Leaves the live streaming event and the channel]
+
+    U1 --> U2 --> U3 --> U4 --> U5
+    H1 --> H2 --> H3 --> H4 --> H5 --> H6
+    A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8 --> A9

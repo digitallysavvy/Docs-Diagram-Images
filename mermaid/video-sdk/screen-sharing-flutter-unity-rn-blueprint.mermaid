@@ -1,0 +1,5 @@
+flowchart TB
+    EP[Extension Process] -->|Send screen sharing command| MP[Main Process]
+    EP -->|Publish screen sharing stream| MP
+    MP -->|Publish stream to other parts| Agora[Agora SD-RTN]
+    MP -->|Subscribe to other streams| Agora

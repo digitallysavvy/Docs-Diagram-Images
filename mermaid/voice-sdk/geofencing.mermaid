@@ -1,0 +1,9 @@
+flowchart TB
+    User[User] -->|Start the app| App[App]
+    App -->|Set SD-RTN Region| SDRTN[SD-RTN]
+    App -->|Init Agora Engine| SDRTN
+    App -->|Connect to SD-RTN| SDRTN
+    SDRTN -->|Success Response| App
+    User -->|Select Channel| App
+    App -->|Process User ID, Channel Name, Token| SDRTN
+    SDRTN -->|Accept Channel Join| App

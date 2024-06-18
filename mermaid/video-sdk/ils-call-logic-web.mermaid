@@ -1,0 +1,33 @@
+flowchart TB
+A[Open App] --> B[Initiate Video SDK Engine]
+B --> C[Start Video in the Engine and Local Media]
+C --> D[Start Live Streaming Event]
+D --> E[Set User Role as Host]
+E --> F[Join a Channel as Host]
+F --> G[Push Local Media to the Channel]
+
+H[Join Live Streaming Event] --> I[Retrieve Authentication Token and Set User Role (Audience)]
+I --> J[Join the Live Stream Event]
+J --> K[Retrieve and Subscribe to Streams]
+K --> L[Receive Data Stream]
+
+subgraph Host
+    A
+    B
+    C
+    D
+    E
+    F
+    G
+end
+
+subgraph Audience
+    H
+    I
+    J
+    K
+    L
+end
+
+classDef default fill:#f9f,stroke:#333,stroke-width:2px;
+class Host, Audience default

@@ -1,0 +1,7 @@
+flowchart LR
+    A[Enable local audio collection] --> B[Audio pre-processing]
+    B --> C[Audio Encoding]
+    C --> D[Join channel]
+    D --> E[Audio Decoding]
+    E --> F[Audio post-processing]
+    F --> G[Set up playback device or audio]

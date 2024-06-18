@@ -1,0 +1,33 @@
+flowchart TB
+    openApp[Opens the app]
+    engageSDK[Engages with the Video SDK]
+    leaveCall[Leaves the call]
+    closeApp[Closes the app]
+    startCall[Starts a call]
+    hostLeaveCall[Leaves the call]
+    initSDK[Initiation of the Video SDK engine]
+    setupLocalStream[Setting up the local video stream]
+    setClientRole[Setting the client role to broadcaster]
+    startLocalVideo[Starting the local video]
+    joinChannel[Joining the channel]
+    setupRemoteVideo[Retrieving streaming from another user]
+    dataStream[Sending and receiving data streams]
+    stopPreview[Stopping the local video preview]
+    leaveChannel[Leaving the channel]
+    cleanup[Cleansing up local resources]
+    
+    subgraph User Operations
+        openApp --> engageSDK
+        engageSDK --> leaveCall --> closeApp
+    end
+    
+    subgraph Host Operations
+        startCall --> hostLeaveCall
+    end
+    
+    subgraph System Interactions
+        initSDK --> setupLocalStream --> setClientRole --> startLocalVideo --> joinChannel --> setupRemoteVideo --> dataStream --> stopPreview --> leaveChannel --> cleanup
+    end
+
+    User Operations --> System Interactions
+    Host Operations --> System Interactions

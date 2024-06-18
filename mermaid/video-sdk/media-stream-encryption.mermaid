@@ -1,0 +1,11 @@
+flowchart TB
+    A([Start the app]) -->|Implemented by you| B([Initiate the Video SDK engine])
+    B --> C([Setup media stream encryption])
+    C -->|Login to the authentication system| D([Retrieve a 32-byte key])
+    C -->|Retrieve a 32-byte salt in Base64 format| E([Retrieve salt])
+    C -->|Create an encryption configuration using the key and salt| F([Create encryption config])
+    C -->|Set the encryption configuration| G([Set encryption config])
+    G --> H([Select a channel to join])
+    H -->|App| I([Retrieve an access token])
+    I -->|Provided by Agora| J([Join a that channel using Agora services])
+    J --> K([Communicate over an encrypted media stream])

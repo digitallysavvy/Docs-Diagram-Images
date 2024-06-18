@@ -1,0 +1,25 @@
+flowchart TD
+    A[User opens app] --> B[Initiate Agora Video SDK]
+    B --> C[Enable audio/video modules]
+    C --> D[Set channel profile]
+
+    D --> E[Host starts live stream]
+    E --> F[Retrieve host token]
+    F --> G[Set host role as broadcaster]
+    G --> H[Setup local video on host device]
+    H --> I[Host joins channel and starts streaming]
+
+    D --> J[Audience joins live stream]
+    J --> K[Retrieve audience token]
+    K --> L[Set audience role]
+    L --> M[Audience joins channel and receives stream]
+    M --> N[Optional: Set up remote view]
+
+    I --> O[End of session]
+    N --> O
+    O --> P[Host leaves channel]
+    O --> Q[Audience leaves channel]
+    P --> R[Host closes app]
+    Q --> S[Audience closes app]
+    R --> T[Release local resources]
+    S --> T

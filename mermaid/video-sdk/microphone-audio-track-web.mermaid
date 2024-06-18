@@ -1,0 +1,5 @@
+flowchart TD
+    A[MicrophoneAudioTrack] --> B[AudioBuffer]
+    B -->|Call play()| C[LocalPlayback]
+    B -->|Call publish()| D[AudioBuffer]
+    D --> E[Agora SD-RTN™]

@@ -1,0 +1,32 @@
+flowchart TB
+    subgraph User [User]
+        User_Action[User Actions]
+    end
+    subgraph Admin [Admin]
+        Admin_Init[Initialize & Set Proxy]
+    end
+    subgraph App [App]
+        App_Request[Request Access]
+        App_Join[Join Channel]
+        App_Leave[Leave Channel]
+    end
+    subgraph Enterprise_Firewall [Enterprise Firewall]
+        Firewall_Check[Check Whitelist]
+    end
+    subgraph Cloud_Proxy [Cloud Proxy]
+        Proxy_Access[Request SD-RTN Access]
+    end
+    subgraph SD_RTN [SD-RTN]
+        SDRTN_Stream[Stream Data]
+    end
+
+    User_Action -->|Initiates| App_Request
+    Admin_Init --> Firewall_Check
+    Firewall_Check -->|Grant Access| App_Request
+    App_Request --> Proxy_Access
+    Proxy_Access --> SDRTN_Stream
+    App_Request -->|After Successful Proxy Access| App_Join
+    App_Join --> SDRTN_Stream
+    SDRTN_Stream -->|Real-time Streaming| User_Action
+    User_Action -->|Leave| App_Leave
+    App_Leave -->|Disconnect| SDRTN_Stream

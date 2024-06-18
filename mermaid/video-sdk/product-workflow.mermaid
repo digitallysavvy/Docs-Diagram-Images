@@ -1,0 +1,17 @@
+flowchart TD
+    A[User opens app with integrated video SDK] --> B[Create Agora Engine instance]
+    B --> C[Enable audio and video capabilities]
+    C --> D[Retrieve authentication token]
+    D --> E[Join communication channel]
+    E --> F[Publish camera and microphone streams]
+    E --> G[Subscribe to streams from other users]
+    G --> H[Manage local and remote streams]
+    E --> I[Start screen sharing]
+    E --> J[Capture and publish screen]
+    E --> K[Adjust/mute volume]
+    L[Leave the communication channel] --> M[User exits application]
+    H --> L
+    I --> L
+    J --> L
+    K --> L
+    F --> L

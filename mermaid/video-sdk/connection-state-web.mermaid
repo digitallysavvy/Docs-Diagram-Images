@@ -1,0 +1,11 @@
+flowchart TD
+    A1[UID 1 joins channel at T0] -->|completed at T1| A2[State changed to CONNECTED]
+    A11[UID 2 joins channel at T0] -->|reaches T2| B1[Client.on("user-joined") reports UID 1 has joined]
+    A2 --> B2[UID 1 publishes local track at T3]
+    B1 --> B3[Client.on("user-published") reports UID 1 published by T4]
+    B2 --> C1[Network interruption between T3 and T5]
+    C1 --> C2[Client.on("user-unpublished") reports UID 1 stopped publishing at T5]
+    C1 --> D1[Connection RECONNECTING by T6]
+    D1 --> D2[Connection restored to CONNECTED by T9]
+    C2 --> C3[Error: UID 1 video not received at T7]
+    C3 --> D3[UID 1 rejoins channel reported at T10 by Client.on("user-joined")]

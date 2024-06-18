@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant User
+    participant App
+    participant SDK
+    User->>App: Request a Device Test
+    App->>SDK: Start Echo Test
+    Note over User,SDK: Audio Test
+    User->>User: Speak into the recording device
+    User->>User: Hear your own voice after 2 seconds
+    Note over User,SDK: Video Test
+    User->>User: Enable the camera
+    User->>App: See the camera feed in the app
+    User->>App: Request to Stop Testing
+    App->>SDK: Stop Echo Test

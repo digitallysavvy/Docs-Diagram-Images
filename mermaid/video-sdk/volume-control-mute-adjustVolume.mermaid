@@ -1,0 +1,17 @@
+graph TD
+    A[Recording Device] -->|adjustRecordingSignalVolume| B[Audio Engine]
+
+    C[Playback Device] -->|adjustAudioMixingPlayoutVolume| B
+    C -->|setEffectsVolume| B
+    C -->|setVolumeOfEffect| B
+
+    B -->|adjustAudioMixingPublishVolume| D[Remote Stream]
+    B -->|adjustAudioMixingVolume| D
+    B -->|adjustPlaybackSignalVolume| D
+    B -->|adjustPlaybackSignalVolume| E[Receiving End]
+
+    A -->|Sender| B
+    B -->|Local Stream| C
+    B --> D
+
+    F[Additional Features] -->|setInEarMonitoringVolume| G[In Ear Monitoring]

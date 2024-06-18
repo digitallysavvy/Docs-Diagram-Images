@@ -1,0 +1,27 @@
+sequenceDiagram
+    participant Client
+    participant TokenServer
+    participant AgoraPlatform
+
+    rect rgb(200, 200, 255)
+    note over Client, AgoraPlatform: Setup client
+    Client->>+TokenServer: Request token (host/audience)
+    TokenServer-->>-Client: Respond with token
+    Client->>+AgoraPlatform: Initialize audio/video
+    Client->>AgoraPlatform: Set role (host/audience)
+    end
+
+    rect rgb(255, 230, 200)
+    note over Client, AgoraPlatform: Run call
+    Client->>+AgoraPlatform: Join channel with token
+    AgoraPlatform-->>-Client: Confirm channel joined
+    Client->>AgoraPlatform: Manage audio/video connections
+    Client->>AgoraPlatform: Communicate over channel
+    end
+
+    rect rgb(200, 255, 200)
+    note over Client, AgoraLightPlatform: End call
+    Client->>+AgoraPlatform: Leave channel
+    AgoraPlatform-->>-Client: Confirm left channel
+    Client->>AgoraPlatform: Close connections
+    end

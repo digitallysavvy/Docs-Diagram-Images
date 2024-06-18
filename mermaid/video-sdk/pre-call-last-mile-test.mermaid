@@ -1,0 +1,12 @@
+flowchart TD
+    A[Start Last Mile Probe Test] --> B[Send Uplink Network Probe Packet]
+    B --> C[Return the Uplink Confirmation Packet]
+    C --> D[Send Downlink Network Probe Packet]
+    D --> E[Report Network Quality Statistics]
+    E --> F[Stop Last Mile Probe Test]
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#ccf,stroke:#333,stroke-width:2px
+    style C fill:#cfc,stroke:#333,stroke-width:2px
+    style D fill:#cff,stroke:#333,stroke-width:2px
+    style E fill:#fcf,stroke:#333,stroke-width:2px
+    style F fill:#ff9,stroke:#333,stroke-width:2px

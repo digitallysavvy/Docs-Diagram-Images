@@ -1,0 +1,9 @@
+flowchart TD
+    A[User Interaction: User starts the application] --> B[Authentication System: User logs in]
+    B --> C[Authentication System: Retrieve encryption key & salt]
+    C --> D[Encryption Setup: Create and set encryption configuration]
+    D --> E[Signaling: Initiate signaling engine]
+    E --> F[Channel Selection: User selects channel]
+    F --> G[Channel Selection: Retrieve channel access token]
+    G --> H[Communication: Join channel & communicate over encrypted stream]
+    H --> I[Provided by Agora: SD-RTN manages streaming & encryption]

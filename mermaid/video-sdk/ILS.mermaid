@@ -1,0 +1,7 @@
+flowchart LR
+    A[Set Client Role] --> B[Retrieve Token]
+    B --> C[Join Channel]
+    C -->|Host| D[Publish Local Video and Audio]
+    C -->|Audience| E[Subscribe to Host's Video and Audio]
+    D --> F{Interaction via Video and Audio}
+    E --> F

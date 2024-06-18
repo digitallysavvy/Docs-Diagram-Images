@@ -1,0 +1,17 @@
+flowchart LR
+    A1[Set up high-quality scene] -->|Initiate| B1[Video SDK Start Setup]
+    B1 -->|Publish setup| C1[Agora Publish Setup]
+    A2[Start screen capture] -->|Initiate| B2[Video SDK Start Capture]
+    B2 -->|Publish stream| C2[Agora Start Stream]
+    A3[Set screen sharing scene] -->|Initiate| B3[Video SDK Set Scene]
+    B3 -->|Update stream| C3[Agora Update Stream]
+    A4[Join channel] -->|Initiate| B4[Video SDK Join Channel]
+    B4 -->|Stream live| C4[Agora Live Streaming]
+    A5[Update screen sharing parameters] -.->|Update| B5[Video SDK Update Parameters]
+    B5 -.->|Update stream| C5[Agora Update Parameters]
+    A6[Stop screen sharing] -->|Terminate| B6[Video SDK Stop Sharing]
+    B6 -->|Cease stream| C6[Agora Stop Stream]
+
+    style A1,A2,A3,A4,A5,A6 fill:#f9f,stroke:#333,stroke-width:2px
+    style B1,B2,B3,B4,B5,B6 fill:#ccf,stroke:#333,stroke-width:2px
+    style C1,C2,C3,C4,C5,C6 fill:#cfc,stroke:#333,stroke-width:2px

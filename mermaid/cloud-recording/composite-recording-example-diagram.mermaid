@@ -1,0 +1,6 @@
+flowchart TB
+    channel[Channel] -->|Data Flow| av_handling[Audio and Video Handling]
+    av_handling -->|M3U8 file| m3u8[M3U8 File]
+    av_handling -->|Multiple TS files| ts_files[TS Files]
+    av_handling -- "Dashed Line" -->|One or more MP4 files| mp4_files[MP4 Files]
+    av_handling -->|Set avFileType| avFileType[avFileType as ["hls", "mp4"]]

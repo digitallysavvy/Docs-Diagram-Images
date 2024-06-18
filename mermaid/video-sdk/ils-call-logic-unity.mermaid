@@ -1,0 +1,34 @@
+sequenceDiagram
+    participant User as User
+    participant Game as Game
+    participant RtcEngine as RtcEngine
+    participant Channel as Channel
+
+    User->>Game: Open Game
+    Game->>RtcEngine: Initialize
+    RtcEngine->>RtcEngine: Create instance
+    RtcEngine->>RtcEngine: Set channel profile to CHANNEL_PROFILE_LIVE_BROADCASTING
+    RtcEngine->>RtcEngine: Set context (App ID, etc.)
+
+    User->>RtcEngine: Start Live Streaming (Host)
+    RtcEngine->>RtcEngine: Enable video module (host)
+    RtcEngine->>RtcEngine: Set user role as host
+    RtcEngine->>Channel: Join channel (host)
+
+    User->>RtcEngine: Join Live Streaming (Audience)
+    RtcEngine->>RtcEngine: Enable video module (audience)
+    RtcEngine->>RtcEngine: Set user role as audience
+    RtcSearch->>Channel: Join channel (audience)
+
+    User->>RtcEngine: End Session
+    opt Audience
+        RtcEngine->>Channel: Leave channel (audience)
+        RtcEngine->>RtcEngine: Disable video (audience)
+    end
+    opt Host
+        RtcEngine->>Channel: Leave channel (host)
+        RtcEngine->>RtcEngine: Disable video (host)
+        RtcEngine->>RtcEngine: Clean up (dispose)
+    end
+
+    User->>Game: Close Game

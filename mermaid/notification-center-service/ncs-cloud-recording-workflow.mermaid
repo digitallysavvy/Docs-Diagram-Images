@@ -1,0 +1,28 @@
+sequenceDiagram
+    participant User
+    participant WebServer as Web Server
+    participant AppServer as App Server
+    participant Agora as Agora Cloud Recording
+    participant CloudStorage as Third-Party Cloud Storage
+
+    User->>WebServer: Request to start recording
+    WebServer->>AppServer: Start recording
+    AppServer->>Agora: Request recording resources
+    Agora-->>AppServer: Recorder started (Notification 40)
+    AppServer-->>WebServer: 200 OK
+    WebServer-->>User: Recorder started
+
+    User->>WebServer: Send stop recording command
+    WebServer->>AppServer: Stop recording
+    AppServer->>Agora: Manage recorded data
+    Agora-->>AppServer: Uploader started (Notification 30)
+    AppServer-->>WebServer: 200 OK
+    WebServer-->>User: Recording stopped
+
+    Agora->>CloudStorage: Upload recording file
+    CloudStorage-->>Agora: Upload complete (Notification 31)
+    Agora-->>AppServer: 200 OK
+    AppServer-->>WebServer: Upload confirmed
+    WebServer-->>User: File uploaded
+
+    AppServer->>User: Session exit (Notification 11)

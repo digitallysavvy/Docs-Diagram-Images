@@ -1,0 +1,24 @@
+flowchart TD
+    UserActivity[User opens app and initiates channel join]
+    AdminTasks[Admin whitelists IP and ports in firewall]
+    
+    ConfigureFirewall[Enterprise Firewall setup]
+    VideoSDKInit[Initialize Agora Video SDK]
+    JoinChannel[Attempt to join video channel]
+    JoinFail{Join Failed?}
+    ProxyRequest[Request access through cloud proxy]
+    ProxySuccess{Proxy Success?}
+    JoinSuccess[Successful channel join]
+    SendReceive[Continuous data send/receive]
+
+    UserActivity --> AdminTasks
+    AdminTasks --> ConfigureFirewall
+    ConfigureFirewall --> VideoSDKInit
+    VideoSDKInit --> JoinChannel
+    JoinChannel --> JoinFail
+    JoinFail -- Yes --> ProxyRequest
+    JoinFail -- No --> JoinSuccess
+    ProxyRequest --> ProxySuccess
+    ProxySuccess -- No --> JoinChannel
+    ProxySimulator -- Yes --> JoinSuccess
+    JoinSuccess --> SendReceive

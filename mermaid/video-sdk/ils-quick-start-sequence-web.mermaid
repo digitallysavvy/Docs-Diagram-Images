@@ -1,0 +1,11 @@
+flowchart TB
+    createClient("Create a Local Client") --> setUserRole("Set User Role")
+    setUserRole --> joinChannel("Join Channel")
+    joinChannel --> roleDecision{User Role Host?}
+    roleDecision -- Yes --> createPublishTracks("Create and Publish Local Audio and Video Tracks")
+    roleDecision -- No --> subscribeRemote("Subscribe to Remote Users")
+    createPublishTracks --> subscribeRemote
+    subscribeRemote --> leaveChannel("Leave the Channel")
+
+    classDef startNode fill:#f9f,stroke:#333,stroke-width:2px;
+    class createClient startNode;

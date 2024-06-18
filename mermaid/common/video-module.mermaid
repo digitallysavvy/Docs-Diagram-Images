@@ -1,0 +1,10 @@
+flowchart TD
+    A[Enable Local Video Collection] --> B[Video Module]
+    B --> C1[Video Pre-processing]
+    B --> C2[Video Encoding]
+    B --> C3[Local Preview]
+    A --> D[Network Module]
+    D --> E[Join Channel]
+    E --> F[Video Decoding]
+    F --> G[Video Post-processing]
+    G --> H[Video Rendering Display]

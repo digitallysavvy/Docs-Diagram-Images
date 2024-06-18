@@ -1,0 +1,31 @@
+flowchart TB
+    user[User] --> appStart[Start App]
+    appStart --> sdk[Initiate Video SDK Engine]
+    
+    user --> login[Login via App]
+    login --> requestKey[Request 32-byte Key from Dev System]
+    requestKey --> generateKey[Generate Key using OpenSSL]
+    generateCase("Key Generated") --> provideKey[Provide Key to App]
+    generateKey --> provideKey
+    
+    provideKey --> requestSalt[Request 32-byte Salt]
+    requestSalt --> generateSalt[Generate Salt using OpenSSL]
+    generateSalt --> provideSalt[Provide Salt to App]
+    
+    provideSalt --> createConfig[Create Encryption Config]
+    
+    user --> selectChannel[Select Channel]
+    selectChannel --> setConfig[Set Encryption Configuration]
+    setConfig --> joinChannel[Join Channel]
+    joinChannel --> joinAccepted[Join Request Accepted]
+
+    joinChannel --> encryptedStream[Encrypted Media Stream]
+    encryptedStream --> userInteraction[Interaction Continues]
+
+    classDef user fill:#dddddd,stroke:#333, stroke-width:2px
+    classDef agora fill:#2743c9,stroke:#fff, stroke-width:2px, color:#fff
+    classDef app fill:#76c3ef,stroke:#333, stroke-width:2px
+    
+    class user,userInteraction user
+    class appStart,sdk,login,requestKey,provideKey,requestTooltip,generateSalt,provideSalt,createConfig,selectChannel,setConfig,joinChannel,joinAccepted app
+    class generateKey agora

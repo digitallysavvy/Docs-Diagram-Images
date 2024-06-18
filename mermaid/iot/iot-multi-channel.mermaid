@@ -1,0 +1,7 @@
+flowchart TB
+    SetupAgoraEngine[Setup Agora Engine] --> CreateMultipleConnections[Create Multiple Connections]
+    CreateMultipleConnections --> StreamToMultipleChannels[Stream to Multiple Channels]
+    CreateMultipleConnections --> PushMultipleStreams[Push Multiple Streams to a Single Channel]
+    StreamToMultipleChannels --> LeaveChannels[Leave Channel(s)]
+    PushMultipleStreams --> LeaveChannels
+    LeaveChannels --> CleanUp[Clean Up]

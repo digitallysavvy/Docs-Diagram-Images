@@ -1,0 +1,23 @@
+flowchart TD
+    A[Set log file configuration and create engine] --> B[Pre-call tests]
+    B --> C[Join Channel Process]
+    C --> D[Monitor in-call quality]
+    D --> E[Echo cancellation]
+    
+    A --> |Parameters setting for log files| A1
+    A --> |Creating an instance of the Agora Engine| A2
+    
+    B --> |Echo Test| B1
+    B --> |Network Probe Test| B2
+    
+    C --> |Setting the audio profile| C1
+    C --> |Joining a communication channel| C2
+    
+    D --> |Enabling and receiving statistics| D1
+    D --> |Receiving notifications about state changes| D2
+    D --> |Taking corrective actions| D3
+    
+    E --> |Selecting an audio file| E1
+    E --> |Specifying mixing options| E2
+    E --> |Starting audio mixing| E3
+    E --> |Utilizing echo-cancellation features| E4

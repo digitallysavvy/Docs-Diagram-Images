@@ -1,0 +1,15 @@
+flowchart TB
+    A[Open App and Initiate Agora Engine] --> B{Establish Agora Connection}
+    B --> C[Join and Start Live Streaming]
+    C --> D[Set User Role to 'host']
+    D --> E[Join Channel]
+    E --> F[Publish Media to Channel]
+    F --> G[Setup Channel Media Relay]
+    G --> H[Set Source Info]
+    H --> I[Set Destination Info]
+    I --> J[Initiate Relay]
+    J --> K[Manage Relay State]
+    K --> L[Join Multi-channel]
+    L --> M[Publish to New Channels]
+    M --> N[Stop Media Relay]
+    N --> O[Exit All Channels]

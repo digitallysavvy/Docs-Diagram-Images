@@ -1,0 +1,14 @@
+flowchart TB
+    createLocalClient(["Create a local client\n`AgoraRTC.createClient`"])
+    joinChannel(["Join channel\n`AgoraRTCClient.join`"])
+    createPublishLocalAudio(["Create and publish local audio track\n- `AgoraRTC.createMicrophoneAudioTrack`\n- `AgoraRTCClient.publish`"])
+    subscribeRemoteUsers(["Subscribe to remote users\n- Detect `user-published` event\n- `AgoraRTCClient.subscribe`"])
+    leaveChannel(["Leave the channel\n- `MicrophoneAudioTrack.close`\n- `AgoraRTCClient.leave`"])
+
+    createLocalClient --> joinChannel
+    joinChannel --> createPublishLocalAudio
+    createPublishLocalAudio --> subscribeRemoteUsers
+    subscribeRemote
+
+
+Users --> leaveChannel

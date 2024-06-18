@@ -1,0 +1,32 @@
+flowchart TB
+    subgraph User_A ["User A - App A with SDK A"]
+        enableEncryptionA[("enableEncryption")]
+        avCollectionA[("Audio & Video Collection & Encoding")]
+        builtInEncryptionA[("Built-in Encryption")]
+        sendStreamA[("Send Encrypted Media Stream")]
+        enableEncryptionA --> avCollectionA
+        avCollectionA --> builtInEncryptionA
+        builtInEncryptionA --> sendStreamA
+    end
+
+    subgraph User_B ["User B - App B with SDK B"]
+        enableEncryptionB[("enableEncryption")]
+        avCollectionB[("Audio & Video Collection & Encoding")]
+        builtInEncryptionB[("Built-in Encryption")]
+        sendStreamB[("Send Encrypted Media Stream")]
+        enableEncryptionB --> avCollectionB
+        avCollectionB --> builtInEncryptionB
+        builtInEncryptionB --> sendStreamB
+    end
+
+    subgraph Server ["Key Generation Server"]
+        keyGen[("Generate Keys & Salts")]
+    end
+
+    subgraph AgoraNetwork ["Agora SD-RTN™"]
+        transportEncrypt[("Transport Encryption")]
+        sendStreamA --> transportEncrypt
+        transportEncrypt --> sendStreamB
+    end
+
+    keyGen --> transportEncrypt

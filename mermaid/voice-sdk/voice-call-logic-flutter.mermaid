@@ -1,0 +1,11 @@
+flowchart TB
+    User_Interaction("User Interaction: A user interacts with the app, initiating the SDK by opening the app.")
+    Voice_SDK_Operations("Voice SDK Operations: Initialize Agora Voice SDK engine, Register event handler.")
+    SD_RTN_Connections("SD-RTN Connections: Set up client roles, Set up channel profile, Retrieve authentication token.")
+    Voice_Call_Execution("Voice Call Execution: User joins channel with token, Remote user joins, Data streams are sent and received.")
+    Ending_the_Call("Ending the Call: User leaves channel, User closes the app.")
+
+    User_Interaction -->|createAgoraRtcEngine| Voice_SDK_Operations
+    Voice_SDK_Operations -->|agoraEngine.registerEventHandler| SD_RTN_Connections
+    SD_RTN_Connections -->|agoraEngine.joinChannel| Voice_Call_Execution
+    Voice_Call_Execution -->|agoraEngine.leaveChannel| Ending_the_Call

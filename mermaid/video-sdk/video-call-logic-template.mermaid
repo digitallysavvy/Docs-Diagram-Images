@@ -1,0 +1,11 @@
+flowchart TD
+    A[User Opens the App] --> B[Initiate the Video SDK Engine]
+    B --> C[Start Video in the Engine]
+    C --> D[Host Starts the Call]
+    D --> E[All Users Broadcast to the Channel]
+    E --> F[Join the Channel]
+    F --> G[Retrieve Streaming and Data Streams]
+    G --> H[User Leaves the Call]
+    H --> I[Stop Local Video and Leave the Channel]
+    I --> J[Clean Up Local Resources]
+    J --> K[Close the Application]

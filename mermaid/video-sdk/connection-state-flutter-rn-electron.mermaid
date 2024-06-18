@@ -1,0 +1,17 @@
+flowchart TB
+    start1([Start]) --> J1[Join Channel]
+    J1 --> C1[Confirm Join]
+    C1 --> N1[Network Connection Successful]
+    N1 --> I1[Network Interruption]
+    I1 --> R1[Reconnection Attempt]
+    R1 --> L1[Loss of Network Connection]
+    L1 --> F1[Failed Network Recovery]
+
+    start2([Start]) --> J2[Join after Initial Setup]
+    J2 --> O2[User Online]
+    O2 --> off2[UserOfflineDropped]
+
+    classDef user1 fill:#f9d0c4,stroke:#333,stroke-width:2px;
+    classDef user2 fill:#c4e1f9,stroke:#333,stroke-width:2px;
+    class start1,J1,C1,N1,I1,R1,L1,F1 user1;
+    class start2,J2,O2,off2 user2;

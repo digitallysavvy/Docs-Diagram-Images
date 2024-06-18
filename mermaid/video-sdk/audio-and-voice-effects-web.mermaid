@@ -1,0 +1,9 @@
+flowchart TD
+    Start[User opens the app] --> Init[Create an instance of Agora Engine]
+    Init --> EnableAV[Enable Audio and Video]
+    EnableAV --> JoinChannel[Join a channel using authentication token]
+    JoinChannel --> AudioMixing[Start audio mixing]
+    AudioMixing --> MixingProcess[Process audio mixing]
+    MixingProcess --> StopAudio[Stop audio mixing]
+    StopAudio --> ChangeAudioRoute[Change audio routes]
+    ChangeAudioRoute --> Leave[Leave the channel]

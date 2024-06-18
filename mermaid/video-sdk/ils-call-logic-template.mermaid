@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant User
+    participant Host
+    participant Audience
+
+    User->>Host: Opens app
+    Host->>User: App provides options (Host/Audience)
+    User->>Host: Chooses role
+    Host->>Agora SD-RTN: Starts video streaming
+    Audience->>Host: Joins video streaming
+    Host->>Agora SD-RTN: Sends data stream
+    Agora SD-RTN->>Audience: Receives data stream
+    Host->>Agora SD-RTN: Receives data stream
+    Audience->>Host: Sends data stream
+    Audience->>Host: Closes app
+    Host->>Agora SD-RTN: Ends video streaming
+    Host->>User: Cleans up resources
+    User->>Host: Closes app

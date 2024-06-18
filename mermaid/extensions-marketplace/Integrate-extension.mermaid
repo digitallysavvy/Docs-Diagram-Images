@@ -1,0 +1,24 @@
+flowchart TB
+    subgraph enhancement[Image Enhancement Section]
+    imageFilters>Image Enhancement Filters] --> faceFilter>Face Filter]
+    faceFilter --> faceChange>Face Chase]
+    voiceEffect>Voice Effect] --> voiceChanger>Voice Changer]
+    voiceChanger --> noiseCancel>Noise Cancellation]
+    end
+    
+    subgraph integration[Audio/Video Data Integration]
+    enhCapabilities>Enhanced Capabilities] --> AVE[Audio/Video Filter Extensions]
+    end
+    
+    subgraph sdk[Video SDK Process]
+    capture(Capture) --> preProcess(Pre-Process)
+    preProcess --> encode(Encode)
+    encode -->> transmit(Transmit)
+    transmit --> decode(Decode)
+    decode --> postProcess(Post-Process)
+    postProcess --> play(Play)
+    end
+    
+    enhancement --> integration
+    integration --> sdk
+    sdk --> output>Output]

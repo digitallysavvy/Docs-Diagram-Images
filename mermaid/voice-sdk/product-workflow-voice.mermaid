@@ -1,0 +1,15 @@
+flowchart TD
+    A[User opens an application with Voice SDK] --> B[Create Agora Engine instance]
+    B --> C[Join a Channel]
+    C --> D[Retrieve authentication token]
+    D --> E[User joins the channel]
+    E --> F[Publish Microphone Stream]
+    E --> G[Subscribe to Streams]
+    F & G --> H[Manage Streams]
+    H --> I[Adjust Volume]
+    H --> J[Leave Channel Option]
+    I & J --> K[User leaves the channel]
+    K --> L[Session Ends]
+    
+    classDef action fill:#f9f,stroke:#333,stroke-width:2px;
+    class A,B,C,D,E,F,G,H,I,J,K,L action;

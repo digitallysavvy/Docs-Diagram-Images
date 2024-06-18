@@ -1,0 +1,5 @@
+flowchart TD
+    A[App Initiates Request] -->|uid, channel name| B[Token Generation on Your Server]
+    B -->|Token| C[Join the Channel]
+    C -->|Token| D[Token Verification via Agora SD-RTN]
+    D --> E[Successful Join]

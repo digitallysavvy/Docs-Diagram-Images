@@ -1,0 +1,21 @@
+flowchart TD
+    A((Start)) --> B[Open App]
+    B --> C{Is User Host?}
+    C -->|Yes| D[Create & Initialize agoraEngine]
+    D --> E[Retrieve Token & Join as Host]
+    E --> F[Set Role to Broadcaster]
+    F --> G[Publish & Send Data Streams]
+    G --> H[Manage Local View with RtcLocalView.SurfaceView()]
+    C -->|No| I[Retrieve Token & Join as Audience]
+    I --> J[Set Role to Audience]
+    J --> K[Receive Data Streams]
+    K --> L[View Stream with RtcRemoteView.SurfaceView()]
+    H --> M[Consistent Functionalities]
+    L --> M[Consistent Functionalities]
+    M --> N[Leave Channel via agoraEngine.leaveChannel()]
+    N --> O[Destroy Resources via agoraEngine.destroy()]
+    O --> P((End))
+    SDRTN[Agora's SD-RTN]
+    SDRTN --> B
+    SDRTN --> E
+    SDRTN --> I

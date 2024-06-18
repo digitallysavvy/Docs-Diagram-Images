@@ -1,0 +1,13 @@
+flowchart TD
+    A[Open App] --> B(Voice SDK Operations)
+    B --> C{Join}
+    C -->|Retrieve Token| D[Join a channel]
+    C -->|SDK Command| E[Join the channel]
+    E --> F[Publish and Subscribe]
+    F --> G[Publish the microphone track]
+    F --> H[Subscribe to tracks from other users]
+    F --> I[Manage local and remote audio tracks]
+    F --> J[Common Workflows]
+    J --> K[Adjust volume, Mute/Unmute audio]
+    J --> L[Unpublish the local audio track]
+    J --> M[Leave the channel]
