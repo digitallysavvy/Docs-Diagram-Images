@@ -1,0 +1,29 @@
+This image is a flowchart detailing the process of using the Agora Video SDK within a live streaming scenario integrated into a game. The flowchart includes three main participants: User, Host, and Audience, and it maps out their interactions through the game using the Agora Video SDK engine.
+
+1. **User**:
+   - Opens the game.
+   - Initiates the Agora Video SDK engine.
+   - Sets up and enables the local video stream.
+   - Enables the video observer.
+   - Closes the game, disables the video stream and observer, cleans up local resources, and destroys the engine.
+
+2. **Host**:
+   - Starts a live streaming event.
+   - Retrieves an authentication token to join a channel.
+   - Sets the channel profile for live broadcasting.
+   - Sets the user role as host.
+   - Joins the channel.
+   - Sends the data stream.
+
+3. **Audience**:
+   - Joins the live streaming event.
+   - Retrieves the same authentication token to join the channel.
+   - Sets the user role as audience.
+   - Joins the channel.
+   - Receives callbacks to start remote video.
+   - Retrieves streaming from the host.
+   - Sets up the remote view.
+   - Receives the data stream.
+   - Leaves the live streaming event and the channel.
+
+This elaboration essentially describes the setup, user interaction, and cleanup processes associated with using the Agora Video SDK for live streaming in a gaming context, emphasizing roles and state transitions involved.

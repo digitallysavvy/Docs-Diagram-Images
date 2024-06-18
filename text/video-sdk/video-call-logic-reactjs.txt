@@ -1,0 +1,20 @@
+The image illustrates a sequence diagram for a video call application using an SDK (Software Development Kit) from Agora. This diagram maps out the user and system interactions required to successfully handle a video call session. Here's a breakdown of the steps shown in the diagram:
+
+1. **Your App Initiating**: The process starts with the user opening an app, which then sets up the app to handle local hardware and streaming capabilities.
+
+2. **Starting the Call**:
+   - **Creating the Agora Engine**: The agoraEngine is initialized using `useRTCClient` which is likely a function to create a new client instance from the AgoraRTC SDK.
+   - **Authentication**: The app retrieves an authentication token to join a channel.
+   - **Joining a Channel**: The user executes a `useJoin` command to enter a channel. The joining is accepted by the server.
+   - **Local Media Tracks**: The app creates local media tracks (for camera and microphone) using `useLocalCameraTrack()` and `useLocalMic()` functions respectively.
+   - **Publishing Media Tracks**: These local media tracks are then pushed to the channel so other participants can receive them.
+
+3. **During the Call**:
+   - **Retrieving and Playing Remote Streams**: The application retrieves media streaming from other participants (using a `<RemoteUser>` component or similar) and plays both video and audio.
+
+4. **Ending the Call**:
+   - **Leaving the Channel**: The user leaves the channel by executing the `useJoin()` function again in the context of leaving.
+  
+5. **Post-Call**: The process culminates with the user having exited the application with the Video SDK handling any necessary clean-up of resources or sessions.
+
+This diagram is useful for developers or system architects who are integrating real-time communication features into applications using the Agora platform.

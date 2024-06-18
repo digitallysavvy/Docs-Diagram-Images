@@ -1,0 +1,21 @@
+The image depicts a flowchart detailing the process for a live streaming event using a video SDK (Software Development Kit), likely for an app built with the Agora platform. The flowchart is divided into different sections, each corresponding to a user or host's interaction with the app from start to finish.
+
+1. **User Section:**
+   - User opens the app.
+   - The app initializes the Video SDK engine.
+   - Video is enabled in the engine.
+   - Upon finishing the live stream, the user stops the preview, leaves the channel, and the SDK cleans up local resources by destroying the engine instance.
+   - Finally, the user closes the app.
+
+2. **Host Section:**
+   - The host starts a live streaming event.
+   - Sets their role to broadcaster in the live event settings.
+   - Starts local video output.
+   - Joins the streaming channel and then sends the data stream to the viewers.
+
+3. **Audience Section:**
+   - Joins the live streaming event as an audience, setting their role accordingly.
+   - Joins the channel to view the stream.
+   - Retrieves and receives the streaming data from the host.
+
+Each section directly correlates to interactions either initiated by a user, host, or audience with the app and the backend SDK processes that manage those interactions. This setup is typical for applications that enable live video streaming and interaction, such as social media platforms, webinars, or interactive courses.

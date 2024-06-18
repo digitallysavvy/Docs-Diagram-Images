@@ -1,0 +1,21 @@
+This image represents a flowchart detailing the integration and operational sequences for utilizing the Agora Video SDK in an application, specifically concerning video streaming functionalities. Here's a breakdown of the steps illustrated in the diagram:
+
+1. **User Opens and Closes Game:** Marks the start and end of interaction in the app.
+2. **Video SDK Initiations and Settings:**
+   - Initiating the Agora Video SDK engine (`IRtcEngine.GetEngine()`).
+   - Setting up and enabling the local video stream (`EnableVideo()`).
+   - Enabling the video observer (`EnableVideoObserver()`).
+
+3. **Joining and Leaving Calls:**
+   - Joining a video call or channel (`JoinChannelByKey()`).
+   - Handling the callback triggered when a user joins (`OnUserJoined()`).
+   - Retrieving and setting up streaming video for another user (`RemoteView.SetForUser(uid)`).
+   - Managing the sending and receiving of the data stream.
+   - Leaving the channel (`leaveChannel()`).
+   - Stopping the local video stream (`DisableVideo()`).
+   - Disabling the video observer (`DisableVideoObserver()`).
+
+4. **Resource Management:**
+   - Cleaning up local resources after ending a video call or closing the application (`destroy()`).
+
+The diagram also shows a connection to "Agora" and "SD-RTN," likely indicating how the SDK connects to external services for real-time network (RTN) streaming and data handling.

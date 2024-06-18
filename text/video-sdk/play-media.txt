@@ -1,0 +1,29 @@
+The image is a flowchart that describes the user interaction and software operations involved in using a Video Software Development Kit (SDK), likely associated with the Agora Engine, for media playback within an application. 
+
+Here’s a breakdown of the flow illustrated in the chart:
+
+1. **User Opens App**: The user starts the app.
+   
+2. **Video SDK Initialization**: 
+   - The app uses a Video SDK to create an instance of the Agora Engine.
+   - Audio and video in the engine are enabled.
+
+3. **Joining a Channel**:
+   - The app retrieves an authentication token.
+   - The user joins a channel with the token.
+
+4. **Playing Media Files**:
+   - The user selects a media file.
+   - An instance of Media Player is created using the Video SDK.
+   - The media file is opened using the Media Player.
+   - The local video panel is configured to display the output from the Media Player.
+   - The channel’s media options are updated to publish Media Player output.
+   - The media file is played.
+
+5. **Pause or Resume Playback**:
+   - During playback, there is the option to pause or resume the media.
+
+6. **Completing Media Playback**:
+   - Once the media file has been completely played, the camera and microphone publishing are resumed.
+
+This flowchart serves as a visual guide for developers or users to understand the steps involved in operating media files within an app using the specified SDK, detailing the transitions from user actions to backend processes.

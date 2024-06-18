@@ -1,0 +1,26 @@
+The image depicts a flowchart outlining the process of using a video Software Development Kit (SDK), specifically for the Agora Video SDK. Here's a breakdown of the steps and interactions shown in the chart:
+
+1. **User Actions**:
+   - **Open App**: The user initiates the process by opening an application that utilizes the Agora Video SDK.
+   - **Close App**: The user ends their session by closing the application.
+
+2. **Video SDK Integration**:
+   - **Initiate SDK Engine**: The SDK engine is created with `RtcEngine.create`.
+   - **Enable Video Module**: The video functionality is enabled with `agoraEngine.enableVideo()`.
+   - **Set Channel Profile**: This is set to `CHANNEL_PROFILE_LIVE_BROADCASTING`, indicating a live streaming scenario.
+   - **Set Client Role**: Different roles are set for Host and Audience. The Host uses `CLIENT_ROLE_BROADCASTER` and the Audience uses `CLIENT_ROLE_AUDIENCE`.
+   - **Setup Local Video**: Host sets up local video through `VideoCanvas`.
+   - **Start Local Preview**: Host starts viewing the locally captured video using `agoraEngine.startPreview()`.
+   - **Join Channel**: Both Host and Audience join the video channel through `agoraEngine.joinChannel`.
+   - **Send and Receive Data Stream**: Involves broadcasting and receiving the video stream.
+   - **Setup Remote Video**: Audience sets up to receive the video stream from the host.
+   - **Leave Channel and Clean-up**: Both roles eventually leave the channel and clean up resources with `agoraEngine.leaveChannel()` and `agoraEngine.destroy()` respectively.
+
+3. **Roles**:
+   - **Host**: Responsible for starting the live streaming event, broadcasting video, and sending data streams.
+   - **Audience**: Joins to watch the live streaming event and receives the data stream.
+
+4. **External System (Agora SD-RTN)**:
+   - Indicates that the Agora system supports Software-Defined Real-Time Network (SD-RTN), optimizing the video streaming delivery.
+
+This diagram is useful for developers integrating Agora's video SDK into their applications, detailing step-by-step the API calls and processes needed for a live broadcast scenario.

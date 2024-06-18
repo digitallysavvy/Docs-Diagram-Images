@@ -1,0 +1,19 @@
+The image shows a sequence diagram depicting the interaction between a user, a chat SDK, and a chat server in the context of using the Agora Chat service. It details the steps taken from initializing the chat client in the user's application to sending and receiving messages, and finally logging out. The process is broken down into distinct phases:
+
+1. **Initialize**
+   - The app is opened, and the `ChatClient` instance is obtained and initialized with the necessary context and options.
+   - Event callbacks for messages and connection events are added.
+
+2. **Log in**
+   - The user retrieves an authentication token, logs into the chat server with this token, and a connection callback is triggered.
+
+3. **Send messages**
+   - The user creates and sends a chat message using the method provided by the chat manager.
+
+4. **Receive messages**
+   - The app listens for incoming messages through a message-received callback and displays the message to the user.
+
+5. **Close**
+   - The user leaves the chat and logs out of the chat client.
+
+This diagram is crucial for developers implementing Agora's chat functionality, ensuring they understand the flow and integration of the chat service into their applications.

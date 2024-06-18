@@ -1,0 +1,26 @@
+The image you provided is a flowchart diagram that describes the process for a user joining a channel with authentication using an app, a developer’s authentication system, and an API provided by a service called Agora. Here's a breakdown of the steps illustrated in the diagram:
+
+1. **User Interaction with App:**
+   - The user starts the app.
+   - The user selects a channel to join.
+
+2. **App's Interaction with Developer's Authentication System:**
+   - The user logs into the developer's authentication system.
+
+3. **Request for Authentication:**
+   - The app requests an Agora authentication token using details such as channel name, user role, token type, and user ID.
+
+4. **Validation and Token Generation:**
+   - The developer's authentication system validates the user request against internal security measures.
+   - The developer's system uses an integrated Agora library to generate a token.
+
+5. **Token Handling:**
+   - The token is returned to the client (app).
+
+6. **Joining a Channel:**
+   - The user joins a channel using their user ID, the channel name, and the token provided.
+
+7. **Final Steps in App:**
+   - After the user is added to the channel, a callback is triggered within the app.
+
+The diagram effectively outlines the technical process involving user authentication and token management for accessing a channel, presumably for a communication or content delivery service. The overall process ensures that interactions are secure and authenticated properly using the Agora API.

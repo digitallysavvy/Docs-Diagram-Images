@@ -1,0 +1,25 @@
+The image displays a flowchart that outlines the process steps involved when a user interacts with a voice SDK (Software Development Kit) integrated with the Agora service. Here’s a breakdown of key functionalities depicted in the flowchart:
+
+1. **User and Your App Integration**: 
+   - A user opens an application that utilizes a Voice SDK.
+   - The Voice SDK is used to create an instance of the Agora Engine.
+
+2. **SD-RTN (Software Defined Real-time Network)**:
+   - This is part of the Agora infrastructure that seems integral to managing real-time voice data.
+
+3. **Joining a Channel**:
+   - The process includes the user joining a channel.
+   - The application retrieves an authentication token to join a channel.
+   - The user successfully joins the channel.
+
+4. **Publish and Subscribe**:
+   - The user publishes a microphone stream to the channel.
+   - The user also subscribes to streams from other users and manages both local and remote streams.
+
+5. **Common Workflows**:
+   - Various actions such as adjusting the volume through API methods and the ability to leave the channel are highlighted as common workflows.
+
+6. **Ending the Session**:
+   - This entails the user finally leaving the channel, concluding their session.
+
+This diagram effectively outlines the integration and operational workflow between a user’s application interfacing with Agora’s Voice SDK, detailing interactions from app opening to session conclusion, emphasizing real-time communication functionalities facilitated by the SDK.

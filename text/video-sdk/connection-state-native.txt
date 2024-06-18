@@ -1,0 +1,21 @@
+This image depicts a flowchart describing the sequence of events and state changes in a network connection process for users within a software application, likely managed by an SDK (Software Development Kit). Here are the steps and processes outlined in the chart:
+
+1. **User Identification and Joining (UID 1 and UID2):**
+   - Users are identified as UID 1 and UID 2, with both attempting to join a channel at Time 0 (T0).
+   
+2. **Successful Channel Joining (UID 1):**
+   - UID 1 successfully joins the channel, as indicated by the "joinChannel" event progressing to "onJoinChannelSuccess" where the channel is joined successfully at Time 1 (T1).
+   - The connection states are shown transitioning from an attempt to join ("join channel") to a stable connection as indicted by "connection_state_connected" at T1.
+
+3. **Network Connection Changes and Issues (UID 1):**
+   - At Time 3 (T3), there is a network interruption, after which the connection state changes to reconnecting.
+   - At Time 4 (T4), the SDK attempts to re-establish the connection automatically, shown as "SDK automatically reconnects".
+   - At Time 5 (T5), another network connection interruption occurs.
+   - The proposed flow covers scenarios up to a complete failure to reconnect at Time 7 (T7), where the state changes to failed.
+
+4. **Other User Activities (UID 2):**
+   - UID 2 also joins at T0 and reaches T2 alongside UID 1 initially without issues.
+   - At some point, the event "onUserJoined" implies that UID 2 successfully comes online, meaning that another participant has joined.
+   - At Time 6 (T6), the "onUserOffline (reason dropped)" event indicates that UID 2 has gone offline due to being dropped.
+
+This flowchart is crucial for understanding how the application handles network connectivity issues, user session management, and the actions taken by an automated system to maintain connection integrity. It helps developers trace and diagnose issues related to user connectivity in the application.

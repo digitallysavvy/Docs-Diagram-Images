@@ -1,0 +1,31 @@
+The image you provided is a flowchart diagram that outlines the process of integrating and managing a video SDK within an application. It illustrates numerous steps, starting from creating the Agora engine and setting up the application to joining a channel and monitoring the quality of the service during calls.
+
+Here's a breakdown of the key sections in the flowchart:
+
+1. **Create Agora Engine**:
+   - Set log file path, log level, and file size.
+   - Create the Agora engine instance.
+
+2. **Best Practice for App Initiation**:
+   - Enable dual-stream mode to allow users to select a stream type.
+   - Set options for local publishing and remote subscribe fallback.
+
+3. **Settings Check**:
+   - Specify audio profile and scenario based on the application's nature.
+   - Set the video encoder configuration.
+   - Start the network probe test to check connectivity.
+
+4. **Join Channel**:
+   - Enable video features.
+   - Actually join the channel for communication.
+
+5. **In-call Quality Monitoring**:
+   - Enable statistics monitoring for quality assurance.
+   - Receive updates on network, call, audio, and video quality statistics.
+   - React to state change notifications and take corrective actions if necessary.
+
+6. **User Interaction**:
+   - Initially, the user opens the app which uses the Video SDK.
+   - Finally, the user is informed about the quality and any issues or notifications during the call.
+
+Overall, the diagram is used to visualize the process of setting up and ensuring the effective functioning of video communications within an application using the Agora SDK and SD-RTN (Software Defined Real-Time Network).

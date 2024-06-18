@@ -1,0 +1,25 @@
+This image presents a flowchart illustrating a user interaction and system response process in a network application, involving components implemented by you and components provided by Agora and ActiveFence. Here's what the flowchart depicts:
+
+1. **User Actions:**
+   - The user logs in and joins a channel through an application (App) hosted on a web server.
+
+2. **Integration with Agora and ActiveFence:**
+   - The login process involves authentication handled by an SD-RTN (Software-Defined Real-Time Network) provided by Agora.
+   - The user then joins a channel where ActiveFence is activated to monitor the content within the channel.
+
+3. **Monitoring and Response:**
+   - ActiveFence continuously monitors the content in the channel to identify potential risks.
+   - If the content matches a pre-defined workflow risk, an action webhook triggers an alert.
+
+4. **Webhook Actions:**
+   - In response to the webhook alert, a prescribed action such as using the Channel Management REST API to remove a user from the channel may be taken.
+
+5. **User Logs Out:**
+   - Eventually, the user logs out of the system, which might involve logging out from both the application side and the Agora SD-RTN.
+
+6. **Columns Defined:**
+   - The leftmost column describes actions "Implemented by you" such as managing the web server and app functionalities.
+   - The middle column shows services "Provided by Agora" such as login authentication and session handling through SD-RTN.
+   - The rightmost column involves services "Provided by ActiveFence" for content monitoring and risk management within the channel.
+
+This flowchart is likely designed for developers or system architects to understand the roles of various components in handling user interactions and maintaining security and operational integrity in a communication platform.

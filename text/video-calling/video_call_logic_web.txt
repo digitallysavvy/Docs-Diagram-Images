@@ -1,0 +1,24 @@
+This image depicts a flowchart for the process of a Video Software Development Kit (SDK) interaction within an app. It outlines the sequence of steps taken from the user opening the app to using the video SDK functions through to leaving a call. The flowchart is divided into three main columns: one for user actions, one for actions within the Video SDK, and one marked "Agora" which is likely referring to the backend service or network interactions ("SD-RTN," possible a service delivery real-time network).
+
+Here are the steps as outlined in the flowchart:
+
+1. **User Open App**: The user starts the app.
+2. **Initiate the Video SDK Engine**: `agoraEngine = AgoraRTC.createClient`
+3. **Start Video in the Engine**: `agoraEngine.init`
+4. **Start Local Media**: 
+   - `localStream = AgoraRTC.createStream`
+   - `localStream.init`
+   - `localStream.play`
+5. **User Starts a Call**: The user initiates a call.
+6. **Retrieve Authentication Token to Join Channel**: The system fetches an authentication token.
+7. **Join the Channel**: `agoraEngine.join` (upon success, "join accepted" is returned)
+8. **Push Local Media to the Channel**: `agoraEngine.publish`
+9. **Retrieve Streaming from the Other User**: 
+   - `agoraEngine.on("stream-added")`
+   - `agoraEngine.subscribe`
+   - `agoraEngine.on("stream-subscribed")`
+10. **Receive and Send Data Streams**: Continuous data exchange as streams are active.
+11. **User Leaves Call**: The user ends the call.
+12. **Leave the Channel**: `agoraEngine.leave`
+
+This flowchart provides a concise illustration of how a typical video conferencing app might interact with a video SDK and backend services to handle video calls.

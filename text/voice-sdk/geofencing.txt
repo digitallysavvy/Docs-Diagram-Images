@@ -1,0 +1,17 @@
+This image is a flowchart representing the interaction process between a user, an app, and SD-RTN, which seems to be a network service provided by Agora. Here's a breakdown of the process depicted:
+
+1. **User Interaction**:
+   - The user starts the application, which is represented by the action "Start the app".
+   - Later, the user selects a channel to join, which triggers further actions within the app.
+
+2. **App Responsibilities** ("Implemented by you"):
+   - Once the app is started by the user, it initiates a series of interactions with the SD-RTN via geofencing.
+   - The app sets the SD-RTN region in the Agora engine configuration.
+   - It then initiates the Agora engine.
+   - The app connects to SD-RTN in a specific region, and upon success, the app receives a positive (success) response.
+   - After selecting a channel, the app processes the user ID, channel name, and token to join a channel. The channel join is then accepted.
+
+3. **SD-RTN Responsibilities** ("Provided by Agora"):
+   - This service responds to the connection requests and channel joins initiated by the app.
+
+The flowchart uses simple icons and labels to represent the user, the app, and interactions with the SD-RTN service, highlighting the division of responsibilities and the sequence of operations for connecting to a network service and joining a channel. The diagram is likely used for technical documentation or development process mapping.

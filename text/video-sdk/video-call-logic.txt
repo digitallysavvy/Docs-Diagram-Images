@@ -1,0 +1,26 @@
+This image is a flowchart diagram that explains the process of how a user interacts with a video SDK (Software Development Kit) within an app, possibly using the Agora platform (as indicated by the API references). Here’s a breakdown of the steps shown in the diagram:
+
+1. **User Opens the App**:
+   - The user opens your application.
+
+2. **Video SDK Initialization**:
+   - The `RTCEngine.create` function initializes the video SDK engine.
+   - `Engine.enableVideo` enables video functionalities within the SDK.
+   - `Engine.joinChannel` allows the user to join a channel.
+   - `Engine.on("joinChannelSuccess")` is a callback that confirms successful channel joining.
+
+3. **Host (Starting the Broadcast)**:
+   - The host starts the broadcast.
+   - The host publishes the video stream using the `Publish` function.
+   - As the data stream is sent, the `Send data stream` function is triggered.
+   - The host sets up a local video view using `Widget = RtcLocalView.SurfaceView`.
+
+4. **Join Broadcast (User Side)**:
+   - As other users join, `Engine.on("userJoined")` is triggered to notify the host of new participants.
+   - The host then subscribes to the incoming video streams using the `Subscribe` function.
+   - The host receives the data stream and sets up remote video views for other participants using `Widget = RtcRemoteView.SurfaceView`.
+
+5. **User Leaves the Broadcast**:
+   - The user can leave the channel by invoking `Engine.leaveChannel`.
+
+This diagram is commonly used to depict the interaction flow in real-time communication applications, focusing on video streaming and broadcasting functionalities.

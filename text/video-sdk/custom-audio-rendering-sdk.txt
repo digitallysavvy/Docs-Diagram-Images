@@ -1,0 +1,9 @@
+This image shows a flowchart of an audio processing system. It illustrates the process whereby an audio frame is handled within a software development kit (SDK) environment. The steps are as follows:
+
+1. **SDK**: This is the starting point where an audio frame is processed or generated.
+2. **Pass rendered audio frame**: Here, the audio frame that has been initially processed or created by the SDK is passed along to the next module.
+3. **Rendering Module**: This module further processes the audio frame, potentially making adjustments, applying effects, or optimizing it for playback.
+4. **Rendered audio frame**: This symbolizes the completion of processing by the Rendering Module.
+5. **Play locally**: After processing, the audio frame is played back locally on a device, such as a computer, smartphone, or another audio playback system.
+
+This flow is typical in applications where real-time audio processing is critical, such as in multimedia applications, video games, or interactive software.

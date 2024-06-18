@@ -1,0 +1,11 @@
+The image depicts a flow diagram of the Agora Web SDK for processing audio and video data. The diagram illustrates the various stages involved which are:
+
+1. **Capture**: This is the initial stage where audio and video data are captured.
+2. **Pre-Process**: After capturing, the data goes through a pre-processing stage. 
+3. **Encode**: The pre-processed data is then encoded.
+4. **Transmit**: The encoded data is transmitted.
+5. **Decode**: After transmission, the data is decoded.
+6. **Post-Process**: Post decoding, the data undergoes post-processing.
+7. **Play**: Finally, the processed data is played back.
+
+Additionally, the diagram shows an arrow from "Audio and Video Data" pointing upwards to "Agora Extensions" which includes features like Virtual Background and AI Denoiser. This indicates that the Agora Web SDK incorporates extensions for enhancing audio and visual data quality during the process.

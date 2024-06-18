@@ -1,0 +1,26 @@
+The image presents a flowchart detailing the process of setting up and using a secure media streaming app, specifically using services provided by "Agora." The flowchart is divided into three main sections:
+1. **Implemented by you**: These are the steps and components a developer would need to implement.
+2. **App**: This section represents actions performed within the application itself.
+3. **Provided by Agora**: This outlines the services or processes managed by Agora.
+
+Here's a step-by-step breakdown of the flowchart:
+
+### User Side
+1. **Start the app**: The user initiates the application on their device.
+
+### App Implementation (by the developer)
+2. **Initiate the Video SDK engine**: The app starts up the engine used for handling video streaming.
+3. **Setup media stream encryption**:
+   - **Login to the authentication system**: Authenticate the user to access a secure key and salt.
+   - **Retrieve a 32-byte key**: Securely fetch the encryption key.
+   - **Retrieve a 32-byte salt in Base64 format**: Get the salt needed along with the key for encryption; it's encoded in Base64 format.
+   - **Create an encryption configuration using the key and salt**: Configure the key and salt for secure communication.
+   - **Set the encryption configuration**: Apply the encryption settings to the media stream.
+4. **Select a channel to join**: The user (via the app) chooses a specific communication channel.
+5. **Retrieve an access token**: Acquire a token that grants access to the selected channel, ensuring that the user has permission to join.
+
+### Interaction with Agora’s Services
+6. **Join a channel**: Enter the chosen channel using the Agora services.
+7. **Communicate over an encrypted media stream**: Begin secure communication through the media channel facilitated by the SD-RTN (Software-Defined Real-Time Network) provided by Agora.
+
+This flowchart is an excellent tool for developers looking to implement Agora’s video SDK with a focus on security through encryption. It clearly divides responsibilities between the developer (and user actions) and Agora’s provided services.

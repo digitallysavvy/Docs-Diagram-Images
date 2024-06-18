@@ -1,0 +1,35 @@
+The image displays a flowchart detailing the integration and usage process of a spatial audio extension within a video SDK (Software Development Kit) connected to Agora's services. Here's a breakdown of the various stages and actions depicted in the image:
+
+1. **User & Your App**:
+   - The user interacts with your application which integrates Agora's Video SDK.
+
+2. **Setup the Spatial Audio Extension**:
+   - The application calls `AgoraRTC.createClient` to create a new RTC (Real-Time Communication) client.
+   - The spatial audio extension is registered using `AgoraRTC.registerExtension`.
+   - The user position is updated with `spatialAudioExtension.updateSelfPosition`.
+
+3. **Join Channel**:
+   - The user joins a channel via `AgoraRTCClient.join`.
+
+4. **Realize Remote User's Spatial Sound**:
+   - When a user publishes their feed (`client.on("user-published")`), the application:
+     - Subscribes to the remote user’s feed with `AgoraRTCClient.subscribe`.
+     - Creates a processor for the spatial audio using `spatialAudioExtension.createProcessor`.
+     - Pipes the remote track through the processor and then to the destination with `remoteTrack.pipe(processor).pipe(track.processorDestination)`.
+     - Plays the remote track using `remoteTrack.Play`.
+     - Updates the position of the remote feed in the spatial audio context using `processor.updateRemotePosition`.
+
+5. **Spatial Audio Effect for Media Player**:
+   - To play a media file with spatial audio effects:
+     - Creates a buffer source audio track using `AgoraRTC.createBufferSourceAudioTrack`.
+     - Pipes this track through the spatial audio processor to the destination.
+     - Plays the track using `track.Play`.
+     - Updates the player position information using `processor.updatePlayerPositionInfo`.
+
+6. **Cleanup**:
+   - When a user unpublishes their feed (`client.on("user-unpublished")`), the following cleanup tasks are performed:
+     - Removes the remote position using `processor.removeRemotePosition`.
+     - Leaves the RTC channel using `AgoraRTC.leave`.
+     - Clears the remote position data using `processor.clearRemotePosition`.
+
+This flowchart serves as a technical guide for developers implementing spatial audio capabilities using the Agora platform, enhancing the audio experience in applications by providing more realistic, directional sound effects based on the position of users and media sources.

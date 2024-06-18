@@ -1,0 +1,21 @@
+The image displays a sequence diagram, which is used to depict the interaction between a user, your application integrated with a Voice SDK, and the Agora backend via the SD-RTN (Software-Defined Real-Time Network). Here's a breakdown of the flow shown in the diagram:
+
+1. **User Interaction**:
+   - The user opens your app.
+   - The user starts a call.
+
+2. **Your App and Voice SDK**:
+   - Your app creates an instance of the Voice SDK engine using `agoraEngine.createAgoraRtcEngine`.
+   - Initializes the engine with `agoraEngine.initialize`.
+   - Retrieves an authentication token to join a voice channel.
+
+3. **Communication with Agora**:
+   - Your app using the Voice SDK sends a request to join a channel via `agoraEngine.joinChannel`.
+   - The channel join is accepted by Agora.
+   - Audio stream is received and sent during the call.
+   - Upon ending the call, your app directs the Voice SDK to leave the channel using `agoraEngine.leaveChannel`.
+
+4. **End of Call**:
+   - The user leaves the call.
+
+This flow illustrates how voice communication is initiated and managed within an app using the Agora Voice SDK, highlighting the steps from opening the app to ending a call.

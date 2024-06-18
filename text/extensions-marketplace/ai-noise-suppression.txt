@@ -1,0 +1,12 @@
+This image depicts a flowchart outlining the process for handling audio and video data, specifically focusing on the utilization of AI-powered noise suppression. Here’s a breakdown of each step shown in the diagram:
+
+1. **Audio & Video Data**: Indicates the type of data being handled.
+2. **Capture**: The initial process where audio and video data are recorded.
+3. **Pre-Process**: The stage where the captured data is prepared for encoding, which might include optimization and initial noise reduction steps.
+4. **Encode**: The data is encoded, making it suitable for transmission. This step compresses the data to reduce bandwidth or storage requirements.
+5. **Transmit**: The encoded data is sent to the desired destination. This could be over the internet or a network.
+6. **Decode**: At the receiving end, the transmitted data is decoded back into a form that can be used for further processing.
+7. **Post-Process**: Additional processing of the data occurs here, which might include further noise reduction, enhancing the quality, synchronization, etc.
+8. **Play**: Finally, the processed data is played back to the user.
+
+Above this flow, a separate element labeled "AI Noise Suppression" interactively points to the "Audio Data," suggesting the AI's role specifically in managing audio noise levels during the data handling process.

@@ -1,0 +1,19 @@
+The image you've shared is a flow diagram that illustrates the process of integrating and managing a custom video capture system with a Software Development Kit (SDK), in this case, named "Agora SD-RTN," to handle real-time video streaming in an application. Here’s the process breakdown as shown in the diagram:
+
+1. **App Initialization**:
+   - **Create and initialize the engine**: The application begins by creating and initializing the engine needed to handle the video capturing and streaming processes.
+
+2. **Custom Video Capture**:
+   - **Create a custom video track**: The application sets up a custom video track specifically designed to accommodate its video capturing requirements.
+   - **Join channel(s)**: The application, using the SDK, makes a request to join specific channels. This is necessary for commencing the video streaming or conferencing session.
+   - **Push video frames to SDK using the custom video track**: The video captured through the custom track is sent to the SDK. This step is fundamental for actual video streaming.
+   - **Destroy the custom video track**: Once the video streaming is done or no longer needed, the custom video track is terminated or ended.
+
+3. **Channel Management**:
+   - **Leave channel(s)**: After the video session, the app sends a request to leave the channels it had joined previously.
+   - **Destroy the engine**: Finally, the app cleans up by destroying the engine it created at the start, effectively ending the session completely and freeing up resources.
+
+4. **SDK and Agora SD-RTN**:
+   - These elements in the diagram represent how the SDK interacts with the Agora SD-RTN (presumably a cloud-based real-time networking solution) for processing join and leave requests for channels, facilitating video transmission through the networks.
+
+This type of diagram is commonly used in software development, especially when integrating and using SDKs for specific functions like video streaming, and it helps developers understand the sequence and dependencies of the various processes involved.

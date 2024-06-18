@@ -1,0 +1,17 @@
+The image illustrates a flowchart representing the process flow for a user interacting with an application using Agora's Video SDK and SD-RTN (Software Defined Real-Time Network). The flowchart includes multiple steps categorized into different functionalities such as opening the app, joining a channel, playing audio effects, audio mixing, applying voice effects, and finally leaving the channel.
+
+Key functionalities outlined include:
+
+1. **Opening the App:** The user opens the app which then involves creating an instance of Agora Engine using the Video SDK, and enabling audio and video.
+
+2. **Joining a Channel:** The user joins a channel, which involves retrieving an authentication token and joining the desired channel.
+
+3. **Playing Audio Effects:** This involves triggering a sound effect, playing the effect, pausing and resuming the effect, setting the position and volume of the effect, and handling the event when the audio effect is finished.
+
+4. **Audio Mixing:** This includes controlling the audio mixing through starting and stopping the mix.
+
+5. **Voice Effects:** The user can apply voice effects, set preset voice effects, and disable voice effects as needed.
+
+6. **Leaving the Channel:** Finally, the user leaves the channel and exits the interaction.
+
+This flowchart would typically be useful for developers integrating Agora's functionalities into their applications, providing a visual guide to the sequence of operations and interactions within the system.

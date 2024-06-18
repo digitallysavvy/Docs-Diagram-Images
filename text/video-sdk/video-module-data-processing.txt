@@ -1,0 +1,21 @@
+This image is a flowchart diagram depicting a process related to video management and streaming within a network. Here's what each step in the diagram signifies:
+
+1. **Enable Local Video Capture**: This is the initial step where video capture functionality is activated on a local device.
+
+2. **Video Pre-processing**: Following capture, the video is pre-processed which could include adjustments like resizing, cropping, or applying filters to enhance the video.
+
+3. **Local Preview**: After pre-processing, there is potentially an option to preview the video locally, which allows for checking video quality and content before it gets encoded.
+
+4. **Pre-encoding processing**: Further processing that might be required specifically to prepare the video for encoding, improving encoding efficiency or quality.
+
+5. **Video Encoding**: The pre-processed video is encoded, typically to reduce its size and format it appropriately for transmission over networks.
+
+6. **Join Channel**: The encoded video is then sent over a network to a channel, indicating that the video stream is being distributed or broadcasted for viewers.
+
+7. **Video Decoding**: At the receiving end, the video is decoded back into a viewable format.
+
+8. **Video Post-processing**: After decoding, the video might undergo additional processing such as adjusting brightness, contrast, or applying other visual effects to enhance viewing quality.
+
+9. **Video Rendering Display**: Finally, the post-processed video is displayed on the viewer's device.
+
+Overall, this flowchart illustrates a comprehensive process from capturing video on a local device, processing it, encoding, transmitting, receiving, decoding, and displaying it, typically used in live streaming or video conferencing technologies.

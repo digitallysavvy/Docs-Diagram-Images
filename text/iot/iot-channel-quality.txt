@@ -1,0 +1,13 @@
+The image is a flowchart diagram that shows the operational process of a software system involving an IoT SDK and an SD-RTN (Software-Defined Real-Time Network) integrated with the Agora platform. It covers the interaction sequence between a user's application and the Agora engine for managing real-time communications. The flowchart is structured into several main processes:
+
+1. **Setup Agora engine**: Initiating the Agora RTC (Real-Time Communication) engine, setting options such as log file path and logging level, verifying license, and initializing the engine.
+
+2. **Join a channel**: Establishing a connection by joining a communication channel, setting bandwidth estimation parameters, selecting audio codec, sampling rate, and channel number, and handling the successful joining of a channel.
+
+3. **Send and receive audio and video**: Starting threads to send and receive audio and video data, and rendering audio and video frames.
+
+4. **Detect and respond to network bandwidth changes**: Adjusting the sending bitrate and resolution in response to changes in target bitrate, and sending a keyframe upon request.
+
+5. **Manage audio and video streams**: Options to mute or unmute local or remote audio and video streams, with callbacks to suspend or resume these feeds as directed by user interactions.
+
+The flowchart provides a systematic overview of the steps involved in managing real-time audio and video streams using the Agora platform, reflecting the necessary software interactions to maintain effective communication.

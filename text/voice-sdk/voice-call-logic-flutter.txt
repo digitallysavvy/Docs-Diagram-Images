@@ -1,0 +1,24 @@
+The image displays a flowchart representing the process involved in using a voice SDK with the Agora voice SDK engine for handling voice calls within an application. Here's a breakdown of the steps illustrated in the diagram:
+
+1. **User Interaction:**
+   - A user interacts with the app, initiating the SDK by opening the app.
+
+2. **Voice SDK Operations:**
+   - The app initializes the Agora Voice SDK engine (`createAgoraRtcEngine()`).
+   - Registers the event handler using (`agoraEngine.registerEventHandler`).
+
+3. **SD-RTN Connections:**
+   - Setting up client roles through `agoraEngine.setClientRole`.
+   - Setting up the channel profile via `agoraEngine.setChannelProfile`.
+   - Retrieving authentication token to be used for joining the channel.
+
+4. **Voice Call Execution:**
+   - The user joins a channel with obtained authentication token using `agoraEngine.joinChannel`.
+   - It captures when a remote user joins the session through an event handler (`RtcEngineEventHandler onUserJoined`).
+   - The data streams are sent and received during the session.
+
+5. **Ending the Call:**
+   - The user leaves the channel with `agoraEngine.leaveChannel()` command.
+   - The user finally closes the application.
+
+Each of these steps is critical in establishing, maintaining, and terminating a voice communication session using this specific SDK within an interactive application environment, managing connections between the user’s app, the voice SDK itself, and the backend infrastructure of Agora (depicted as SD-RTN).

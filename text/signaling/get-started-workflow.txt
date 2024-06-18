@@ -1,0 +1,22 @@
+This image is a sequence diagram that illustrates the process of interaction between a user, a mobile or web application ("Your app"), and a signaling system provided by "Agora." The diagram highlights how the Signaling Software Development Kit (SDK) is used within the application to handle different operations associated with messaging.
+
+Here’s a breakdown of each step in the sequence diagram:
+
+1. **Initialize**:
+   - The user opens the application.
+   - The application creates an instance of the signaling engine.
+   - Event listeners are added.
+   - An authentication token is set.
+   - The application logs in to the signaling system.
+
+2. **Messages**:
+   - The application subscribes to a channel using the signaling engine (`signalingEngine.subscribe`).
+   - It publishes a message to that channel (`signalingEngine.publish`).
+   - The application listens for message events.
+   - Once a message is received, it's relayed to the user or the app (`message` event).
+
+3. **Close**:
+   - The user logs out.
+   - The application logs out of the signaling system.
+
+This kind of diagram is common in software development for planning and documenting system architectures and interactions, particularly for understanding asynchronous operations involving communication systems like real-time messaging.

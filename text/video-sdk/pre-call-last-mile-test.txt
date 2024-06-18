@@ -1,0 +1,15 @@
+This image depicts a flowchart illustrating a network testing process between an application (App), a software development kit (SDK), and a server labeled "SD-RTN Edger Server." Here's a breakdown of the depicted process:
+
+1. **Start Last Mile Probe Test:** The process begins in the app, which sends a command to start last mile probe testing.
+
+2. **Send Uplink Network Probe Packet:** The SDK sends an uplink network probe packet to the SD-RTN Edger Server.
+
+3. **Return the Uplink Confirmation Packet:** After receiving the uplink packet, the server sends back an uplink confirmation packet to the SDK.
+
+4. **Send Downlink Network Probe Packet:** Next, the server sends a downlink network probe packet back to the SDK.
+
+5. **Report Network Quality Statistics:** The SDK analyzes the received data and reports network quality statistics back to the app.
+
+6. **Stop Last Mile Probe Test:** Finally, the app sends a command via the SDK to stop the last mile probe testing.
+
+The flowchart uses arrows to indicate directions of communication and has various stages highlighted to outline the sequential steps of network testing. This kind of flowchart is typically used to clarify the communication protocols and processes in network testing scenarios.

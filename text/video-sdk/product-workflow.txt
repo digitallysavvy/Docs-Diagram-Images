@@ -1,0 +1,29 @@
+This image depicts a flowchart that outlines the interactions and processes between a user's app, a video SDK (Software Development Kit), and Agora's SD-RTN (Software-Defined Real Time Network) for enabling video communications.
+
+Here's a breakdown of the sequence and functionalities depicted in the flowchart:
+
+1. **User Interaction**:
+   - The user opens an app that integrates the video SDK.
+   
+2. **App Setup with Video SDK**:
+   - The video SDK is used to create an instance of the Agora Engine.
+   - Audio and video capabilities are enabled in the engine.
+
+3. **Join a Channel**:
+   - The user must retrieve an authentication token to join a communication channel.
+   - The user then joins the channel.
+
+4. **Publish and Subscribe**:
+   - The user publishes camera and microphone streams to the channel.
+   - They also subscribe to streams from other users and manage local and remote streams.
+
+5. **Common Workflows**:
+   - Features include starting screen sharing, capturing and publishing the screen to the channel, and adjusting or muting the volume through API methods.
+
+6. **Leaving the Channel**:
+   - The user disconnects by leaving the channel.
+
+7. **Ending Session**:
+   - The user exits the application.
+   
+The flowchart illustrates the core functionalities offered by video SDKs like Agora, highlighting how they manage real-time audio and video streams within applications.

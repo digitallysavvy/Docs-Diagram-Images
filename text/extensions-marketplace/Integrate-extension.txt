@@ -1,0 +1,21 @@
+This image depicts a flowchart that outlines the process for enhancing audio and video data using various filters and extensions in a software development kit (SDK). Here's a breakdown of the flowchart:
+
+1. **Image Enhancement Section**:
+   - Various filters such as Image Enhancement, Face Filter, Face Change, Voice Effect, Voice Changer, and Noise Cancellation are mentioned. These are part of a group that can encapsulate audio or video processing capabilities to be used in an SDK.
+
+2. **Audio/Video Data Integration**:
+   - The enhanced capabilities are then channeled into Audio/Video Filter Extensions.
+
+3. **Video SDK Process**:
+   - **Capture**: Initial capturing of audio and video data.
+   - **Pre-Process**: Initial processing of the captured data.
+   - **Encode**: Encoding the processed data for transmission.
+   - **Transmit**: Sending the encoded data to the required destination.
+   - **Decode**: Decoding the received data.
+   - **Post-Process**: Further processing of decoded data if necessary.
+   - **Play**: Finally, playing the processed audio/video in the application.
+
+4. **Output**:
+   - The processed audio and video data are utilized within an application, indicated by the app logo at the bottom right.
+
+This diagram is likely used as a technical illustration for engineers or developers who are working on incorporating audio/video enhancements in applications through an SDK.

@@ -1,0 +1,16 @@
+This image depicts a sequence diagram that outlines the interaction workflow involving a user, the user's application, a Voice SDK, and the Agora system with its SD-RTN (Software Defined Real-Time Network). Here’s a breakdown of the process shown in the diagram:
+
+1. **User Opens the App**: The user initiates the process by opening the application.
+2. **Use Voice SDK to Create an Instance of Agora Engine**: The application uses the Voice SDK to create an instance of the Agora Engine, which prepares the system for audio operations.
+3. **Setup External Source**: 
+   - **Check External Source for Compatibility**: The app checks if the external audio source is compatible.
+   - **Set External Audio Source**: After checking compatibility, the external audio source is set.
+4. **Join a Channel**:
+   - **Retrieve Authentication Token**: Before joining a channel, an authentication token is retrieved.
+   - **Join the Channel**: After obtaining the token, the user joins the desired channel.
+5. **Process Data**: Manage the capturing and processing of audio using external methods.
+6. **Stream Data**: Once processing is done, the external audio frame is pushed to the channel.
+7. **Leave the Channel**: When needed, the command to leave the channel is sent and processed.
+8. **Voice SDK and SD-RTN Return to Idle**: Both the Voice SDK and SD-RTN components return to their idle state after leaving the channel.
+
+The diagram serves to illustrate how various system components interact from the point when a user opens the app to when they exit a communication channel, utilizing external audio sources integrated through Voice SDK in the Agora environment.

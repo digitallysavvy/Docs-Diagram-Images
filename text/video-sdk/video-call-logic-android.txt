@@ -1,0 +1,18 @@
+This image is a flowchart describing the operations of a Video SDK (Software Development Kit) integrated within an application that interacts with the Agora SD-RTN (Software-Defined Real-Time Network). The flowchart outlines the following steps:
+
+1. **User Opens App**: This triggers the initiation of the Agora Video SDK engine.
+2. **Initiate Agora Video SDK Engine**: This is done by creating an instance of the `RtcEngine`.
+3. **Enable Video Module**: The video capabilities of the engine are activated.
+4. **User Joins a Call**:
+    - **Setup Local Video**: The local video is configured using a `VideoCanvas` object.
+    - **Start Local Preview**: A preview of the local video starts.
+    - **Retrieve Authentication Token**: An authentication token is retrieved to enable joining a channel.
+    - **Join the Channel**: The user joins a designated video channel.
+    - **Remote User Joined**: Detects when a remote user joins the channel.
+    - **Display Video from Remote User**: The video feed from a remote user is set up for display.
+5. **User Leaves the Call**: The user leaves the video channel.
+6. **Close App**:
+    - **Leave Channel**: The user formally leaves the channel.
+    - **Clean up Local Resources**: The local resources associated with the Video SDK are cleaned up and the engine is destroyed.
+
+The flowchart demonstrates the user's interaction from opening the app, managing video communication, to closing the app and cleaning up resources.

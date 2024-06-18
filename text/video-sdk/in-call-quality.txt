@@ -1,0 +1,13 @@
+The image is a diagram illustrating the architecture of a communications system using the Agora Video SDK, specifically detailing the audio data flow. The diagram shows various components and processes involved in transmitting audio data from a sending end to a receiving end. Here's a rundown of the key components and steps shown:
+
+1. **App** - Represents the user interface or the application layer where the SDK is implemented.
+2. **Agora Video SDK** - Software development kit provided by Agora for integrating real-time video communication features into applications.
+3. **Audio Module** - Part of the SDK that handles audio signals.
+4. **Sending End** - Shows the initial stage where audio data is prepared for transmission.
+5. **Last Mile** - This typically refers to the final leg of the network journey, from the aggregation point to the end user. In this context, it represents the network path from the app to the Agora edge server.
+6. **Agora Edge Server** - These servers are strategically placed to minimize latency and improve quality of service as the data travels across the internet.
+7. **Receiving End** - Where the audio packet arrives after transmission across the internet.
+8. **Network Jitter and Buffering** - The processes that handle variation in packet delay and temporary storage to smooth out the data stream respectively.
+9. **Steps and Flow** - The diagram also shows numerical steps (1 to 6) indicating the sequence of data flow from the app, through the network, processed by Agora's servers, and all the way to the receiving end’s app.
+
+This diagram is typically used to understand how the SDK manages and optimizes audio communication in applications, illustrating the handling of data through its lifecycle from sender to receiver.

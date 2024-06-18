@@ -1,0 +1,12 @@
+This image depicts a diagram related to a system using the Agora Video SDK to enable real-time communication between a host and an audience via a streaming channel. The communication flow and functionalities are outlined with arrows and steps showing how both the host and audience connect to a channel and manage streaming:
+
+1. **Host and Audience Systems**: Both are equipped with the Agora Video SDK. Each rectangle represents either the host's setup or the audience's setup, which includes a computer or computing device capable of handling video communications.
+
+2. **Arrow Directions and Actions**:
+   - The host joins a channel and publishes a stream to the Agora cloud service, illustrated by the cloud labeled "Agora SD-RTN".
+   - The audience joins the same channel and subscribes to the stream that the host publishes. This allows real-time viewing and interaction between the host and the audience.
+
+3. **Agora SD-RTN Cloud**:
+   - This symbolizes Agora's Software-Defined Real-Time Network which manages the data transfer between hosts and audiences, ensuring efficient, high-quality video streaming and communication.
+
+The diagram effectively visualizes the concept of a real-time streaming network, showing how data flows from the host to the audience through a centralized cloud system.

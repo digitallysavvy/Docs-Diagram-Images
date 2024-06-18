@@ -1,0 +1,23 @@
+The image shows a flowchart representing the process interaction between a user, an application using a Voice SDK, and a service referred to as "Agora SD-RTN." The chart details various functions and procedures within a typical software system setup for handling voice communications.
+
+Here are the key stages depicted:
+
+1. **Open App**: The user opens the application which utilizes the Voice SDK to interact with the Agora Engine (part of Agora SD-RTN).
+
+2. **Voice SDK Operations**: Includes creating and playing a local audio track and handling cases where autoplay might be blocked.
+
+3. **Join**:
+   - **Join a channel**: Involves retrieving an authentication token and then joining a communication channel.
+   - **Join the channel**: Specifically commands within the SDK to initiate channel join.
+
+4. **Publish and Subscribe**:
+   - **Publish the microphone track**: Send the user's audio to the channel.
+   - **Subscribe to tracks from other users**: Receive audio from other users.
+   - **Manage local and remote audio tracks**: Includes operational management like volume control and muting/unmuting.
+
+5. **Common Workflows**:
+   - **Adjust volume**, **Mute/Unmute audio**: User-side audio controls.
+   - **Unpublish the local audio track**: Stop sending user's audio to the channel.
+   - **Leave the channel**: Procedures to exit from the communication channel.
+
+This flowchart is useful for developers integrating voice capabilities into their apps using Agora's software development kits and services. The "Agora" service mentioned probably refers to a real-time communication platform enabling features like voice and video calls.

@@ -1,0 +1,19 @@
+The image describes a process or data flow involving multimedia content streaming or delivery. Here's how it breaks down:
+
+1. **Channel**: This box may represent a source or channel that contains multimedia elements. Inside it, there are two circular symbols labeled "UID 1" and "UID 2", suggesting user or stream IDs.
+
+2. **Data Flow**: A solid line leads from the channel to another box. This line likely represents the flow of data or information from the source.
+
+3. **Audio and Video Handling**: The first receiving box on the right part of the image mentions "Audio and video of all users" encapsulated within HTML tags (`<p><span>`), suggesting that the content involves both audio and video.
+
+4. **Multiple Formats and Files**:
+   - **M3U8 file**: This is mentioned within paragraph HTML tags and indicates a playlist format used commonly for HLS (HTTP Live Streaming). M3U8 files are essentially playlists that point to several other files (usually TS files).
+   - **Multiple TS files**: Used for storing MPEG-2 part of the stream in HLS.
+  
+   In addition, there are dashed lines leading to another box, hinting at optional or additional paths for file handling.
+  
+   - **One or more MP4 files**: Also found in paragraph tags, indicating that the video can also be directly delivered or stored in MP4 format.
+
+5. **avFileType**: The text "Set avFileType as ["hls", "mp4"]" suggests configuration settings that dictate the type of audio-video files to be used, which are HLS and MP4 in this context.
+
+This diagram overall seems to describe a multimedia streaming or broadcasting scenario, where the audio and video of users (possibly in a multimedia application or broadcasting environment) are being streamed or stored in different formats (HLS and MP4).

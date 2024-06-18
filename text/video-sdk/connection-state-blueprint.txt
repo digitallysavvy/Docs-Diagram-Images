@@ -1,0 +1,16 @@
+The image you provided is a flowchart diagram depicting different network connection states and transitions that occur during a connection process within a networked system or application, possibly involving a Software Development Kit (SDK) that handles network connectivity. Here's an overview of the flowchart content:
+
+- **JoinChannel**: The process starts with a user (UID 1) initiating a channel joining event labeled "Join channel".
+- **FOnJoinChannelSuccess**: There is a successful channel join, denoted by "Joined the channel successfully".
+- **FOnConnectionStateChanged**: This shows various states of the network connection:
+  - Initially, the connection is successful ("NETWORK CONNECTION SUCCESSFUL").
+  - It then experiences a network interruption and attempts to reconnect ("Re-establishing Network connection").
+  - The connection faces multiple states, including disconnected due to interruption and finally being lost ("Network connection interrupted").
+- **FOnConnectionStateChanged (CONNECTION_STATE_FAILED, CONNECTION_CHANGED_JOIN_FAILED)**: This indicates a total failure in joining the channel after the connection was lost.
+- **SDK automatically reconnects**: This indicates the SDK's inherent capability to attempt reconnection automatically after connection loss.
+- **UID 2 Flow**: This runs parallel and is less detailed but includes:
+  - Another user (UID 2) joining the channel at the same moment.
+  - **FOnUserJoined**: A notification that a remote user comes online.
+  - **FOnUserOffline (reason USER_OFFLINE_DROPPED)**: Eventually, the user goes offline due to dropping out.
+  
+This diagram likely serves as a visual aid for developers to understand or debug the network connection and user state management process in a software application or platform that involves real-time communication or data exchange.

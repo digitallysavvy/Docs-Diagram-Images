@@ -1,0 +1,17 @@
+The image is a flowchart outlining the steps required for setting up a project that involves audio and video communication using the Agora platform. Here’s a breakdown of the steps shown in the flowchart:
+
+1. **Create an Agora Account**: This is the initial step where a user needs to sign up for an account with Agora.
+
+2. **Log in to the console**: After creating an account, the next step is to log into the Agora account console.
+
+3. **Create a Project**: Within the console, the user creates a new project.
+
+4. **Get your App ID and App Certificate**: For the newly created project, retrieve the App ID and App Certificate.
+
+5. **Generate a temporary token**: This step involves generating a temporary token for the app.
+
+6. **Experience Demo**: This seems to be an optional or a testing step where the user can experience a demonstration of what has been set up.
+
+7. **Implement audio and video communication**: Finally, the user implements audio and video communication functionalities within the project.
+
+The flowchart is nicely organized within a dark-themed background featuring a dotted grid and clear directional arrows between the steps. The section containing steps to be performed in the console is highlighted using a dashed outline.

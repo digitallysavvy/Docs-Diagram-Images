@@ -1,0 +1,18 @@
+The image depicts a flowchart for a live streaming process using the Agora Video SDK, which is structured as a sequence of operations around three main entities: the user, the host, and the audience.
+
+1. **User/Host Interaction:**
+   - The user opens an app integrated with the Agora Video SDK.
+   - The SDK engine (`agoraEngine`) is created and initialized to enable video.
+   - If the user decides to host a live streaming event, they retrieve an authentication token and join a channel as the host. The role is set using `setClientRole(ClientRole.Broadcaster)`.
+   - Once joined, the host can publish and send data streams. The local view where the host can see their output is managed by `RtcLocalView.SurfaceView()`.
+
+2. **Audience Interaction:**
+   - Audience members can join the live streaming event after retrieving their own authentication tokens.
+   - They set their role to audience using `setClientRole(ClientRole.Audience)` and join the channel.
+   - They receive the data stream broadcast by the host, which is displayed on `RtcRemoteView.SurfaceView()`.
+
+3. **Consistent functionalities for:**
+    - Leaving the broadcast (`agoraEngine.leaveChannel()`).
+    - Closing the app, which includes cleaning up local resources via `agoraEngine.destroy()`.
+
+Across the top, a connection to Agora's SD-RTN (Software Defined Real-time Network) is illustrated, indicating that this network supports the live streaming functionality by providing scalable and reliable network infrastructure for real-time, high-quality video transmission.

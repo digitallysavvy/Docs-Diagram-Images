@@ -1,0 +1,18 @@
+The image displays a diagram illustrating the process of secure media streaming between two clients (Client A and Client B) using Agora's SD-RTN™ technology, which ensures TCP and UDP encryption.
+
+1. **Clients and Apps Setup:**
+   - Each client (Client A and Client B) uses an app (App A for Client A and App B for Client B) and an SDK (SDK A for Client A and SDK B for Client B).
+
+2. **Media Stream Encryption & Transmission from Client A to Client B:**
+   - App A captures audio/video and encodes it via the SDK A.
+   - Encryption is enabled in SDK A with a customized encryption mode and encryption key.
+   - The encrypted media stream is transmitted to the Agora cloud which uses both TCP and UDP encryption algorithms.
+   - The encrypted data is then transmitted from the Agora cloud to Client B's SDK B.
+   - SDK B decrypts the received media stream using its built-in decryption features, which utilize the same encryption mode and key existing in the app.
+   - The decrypted audio/video data is then rendered in App B.
+
+3. **Encryption Key and Mode Transmission:**
+   - Both clients have processes to enable encryption, and transmission of the encryption mode and encryption key are illustrated as occurring within both apps and SDKs.
+   - It is noted that the encryption mode and key are built into the encryption and decryption process and only exist within the apps, ensuring security.
+
+This setup guarantees a secure communication environment, with encryption and decryption operations confined within the applications, enhancing both security and privacy of the transmitted data.

@@ -1,0 +1,19 @@
+This image illustrates a sequence diagram for handling video calls using the Agora Video SDK and its interaction with the Agora SD-RTN (Software Defined Real-Time Network). The diagram demonstrates the steps involved in operating an app that utilizes the Agora technology for video streaming. Here's a breakdown of the sequence:
+
+1. **Open App**: The user opens your application which utilizes the Video SDK.
+2. **Initiate Agora Video SDK engine**: The app creates an instance of the Agora Video SDK engine.
+3. **Setup the local video stream**: 
+   - `agoraEngine.enableVideo()` - Enables video functionality.
+   - `agoraEngine.setupLocalVideo(VideoCanvas)` - Sets up the local video display area.
+4. **Join a call**: 
+   - **Retrieve authentication token to join channel** - The app retrieves a token for authentication.
+   - `agoraEngine.joinChannel()` - The user joins the video call channel.
+5. **Streaming**:
+   - `agoraEngine.setupRemoteVideo(VideoCanvas)` - Sets up the video display for streams from other users.
+   - **Receive and send data stream** - Ongoing data exchange happens to facilitate video communication.
+6. **Leave the call**:
+   - `agoraEngine.leaveChannel()` - The user leaves the video call channel.
+7. **Close App**:
+   - **Clean up local resources**: `agoraEngine.destroy()` - Destroys the Agora engine instance to release local resources.
+
+The diagram shows the data and control flow between the user, your app, and the Agora system effectively delineating the process from opening the app to closing it post usage of the video call function.

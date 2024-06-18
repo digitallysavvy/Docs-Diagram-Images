@@ -1,0 +1,25 @@
+This image appears to be a flowchart depicting the process of handling network connections, state changes, and user actions in a software system using SDK (Software Development Kit) functionalities. The chart details the sequence of events experienced by two users (UID 1 and UID 2) as they interact with a system, including joining channels, publishing local tracks, handling network interruptions, and reconnecting. Here are the key elements and steps outlined in the flowchart:
+
+1. **Initial Actions**:
+   - **UID 1** joins a channel (`join Join channel`) at `T0` and completes this action by `T1`.
+   - Simultaneously, **UID 2** joins a channel at `T0` and reaches `T2`.
+
+2. **State Reporting and Publishing**:
+   - A callback reports that the client's state has changed to `CONNECTED` at `T1`.
+   - UID 1 then publishes the local track (`Client.publish Publishes the local track`) by `T3`.
+
+3. **User Actions Events**:
+   - At `T2`, the `Client.on("user-joined")` indicates that UID 1 has joined the channel.
+   - By `T4`, another event (`Client.on("user-published")`) shows UID 1 publishing a channel.
+
+4. **Network Interruption and Reconnection**:
+   - A network interruption occurs between `T3` and `T5`.
+   - At `T5`, an event reports that UID 1 has stopped publishing (`Client.on("user-unpublished")`) due to the network issue, and the connection is re-established as `RECONNECTING` by `T6`.
+   - The system, through SDK, automatically reconnects.
+   - The recovery from the network issue is completed by `T9`, where `Client.on("connection-state-change")` again reports `CONNECTED`.
+
+5. **User Reconnection**:
+   - At `T7`, an error event is triggered because UID 1's video is not received (`The Agora server did not receive the stream of UID 1 for 10 sec`).
+   - By `T10`, UID 1 rejoins the channel, as noted by another `Client.on("user-joined")`.
+
+This flowchart is useful in understanding how the software's SDK handles user activity and network issues, including the event-driven model to manage connection states and interruptions, reporting via callbacks, and automatic handling of reconnections.

@@ -1,0 +1,23 @@
+This image depicts a flowchart of a video processing and transmission system, often used in video conferencing or streaming applications. Here’s a breakdown of each step and its function:
+
+1. **Enable Local Video Collection**: This initial step involves activating the video capture from a local source, such as a webcam.
+
+2. **Video Module**: This part of the system handles all video-related processes.
+
+    - **Video Pre-processing**: Enhancements and adjustments (like resizing, filtering, or color adjustment) are made to the raw video input to improve quality.
+  
+    - **Video Encoding**: The pre-processed video is compressed and encoded into a format suitable for transmission. This reduces bandwidth usage while maintaining quality.
+
+    - **Local Preview**: Simultaneously, the video is also displayed locally so the user can see what is being captured and sent.
+
+3. **Network Module**: This handles the connectivity over networks.
+
+    - **Join Channel**: This step involves connecting to a communication channel or server, which allows the transmission of the encoded video data to other users or servers.
+
+4. **Video Decoding**: At the receiving end, the incoming encoded video data is decoded back into a usable video format.
+
+5. **Video Post-processing**: After decoding, further enhancements and adjustments may be applied to the received video for optimal display quality.
+
+6. **Video Rendering Display**: Finally, the post-processed video is displayed to the viewer.
+
+This flowchart outlines a typical workflow in real-time video communication applications, ensuring video is efficiently processed, transmitted, and displayed with minimal delay.

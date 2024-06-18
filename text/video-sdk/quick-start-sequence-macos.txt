@@ -1,0 +1,22 @@
+This image depicts a flowchart detailing the process of setting up and managing video interaction between a "Host" app and an "Audience" app, using the Video SDK (Software Development Kit). On the left side is the workflow for the Host app, and on the right side is the workflow for an Audience app. The central column shows interactions with the Video SDK.
+
+Here is a breakdown of the flowchart:
+
+### Host App Workflow:
+1. **Initialize AgoraRtcEngineKit** - The host app initializes the real-time communication engine with an App ID.
+2. **Set Local View** - The host app configures its local video view by enabling the video, starting a preview, and setting up the local video.
+3. **Configure ChannelMediaOptions** - It configures the media channel options by setting the channel profile to live broadcasting and specifying the client role as a broadcaster.
+4. **Join a Channel** - The host joins a specific channel, identified as "demoChannel."
+5. **Start Audio and Video Interaction** - It starts sending both audio and video into the stream.
+
+### Audience App Workflow:
+1. **Initialize AgoraRtcEngineKit** - Similar to the host, the audience app initializes the engine with an App ID.
+2. **Configure ChannelMediaOptions** - Sets its channel profile to live broadcasting and specifies the client role as an audience.
+3. **Join a Channel** - The audience joins the same "demoChannel" and acknowledges the host's presence.
+4. **Set up Remote View** - Configures the remote video to receive the broadcast.
+5. **Receive Audio and Video** - It starts receiving the audio and video feed from the host.
+
+### Video SDK Integration:
+- The connection between the two apps happens through the shared use of the Video SDK, which manages the audio and video streams across the channel, establishing a live broadcasting interaction between the host and the audience.
+
+This diagram is useful for developers implementing real-time video interactions in applications, showing key steps and SDK functions necessary to configure and manage live video streaming.

@@ -1,0 +1,24 @@
+The image depicts a flowchart representing the use of a Voice SDK (Software Development Kit) integrated with your mobile or web application. Here’s a breakdown of the sequence of operations depicted:
+
+1. **Set log file configuration and create engine**:
+   - Parameters setting for log files.
+   - Creating an instance of the Agora Engine using the Voice SDK.
+
+2. **Pre-call tests**:
+   - *Echo Test*: To test hardware and network quality by sending and receiving audio back after a delay.
+   - *Network Probe Test*: Starting a network evaluation to measure and deliver network quality scores and statistics.
+
+3. **Join Channel Process**:
+   - Setting the audio profile based on the app’s nature, specifying audio parameters and usage scenarios.
+   - Joining a communication channel.
+
+4. **Monitor in-call quality**:
+   - Enabling and receiving statistics for network, call, and audio quality.
+   - Receiving notifications about state changes.
+   - Taking corrective actions if necessary to enhance call quality.
+
+5. **Echo cancellation**:
+   - Selecting an audio file and specifying mixing options.
+   - Starting audio mixing and utilizing echo-cancellation features to improve audio clarity.
+
+This flowchart outlines important steps involved in setting up and managing audio interactions using the Voice SDK, ensuring quality communication by configuring audio settings, testing network conditions, actively monitoring in-call performance, and addressing audio issues like echo.

@@ -1,0 +1,22 @@
+This image is a flowchart illustrating the interaction between a user, a video SDK (Software Development Kit), and an API within the context of a video streaming or broadcasting application. The flowchart outlines several steps for both the user and host roles:
+
+1. **User:**
+   - Opens the app.
+   - The app uses the video SDK to create an RTC (Real-Time Communication) engine.
+   - The engine enables video.
+   - The engine then joins a channel.
+   - Confirmation of successful channel joining is handled with "Engine.on('joinChannelSuccess')".
+
+2. **Host:**
+   - The host starts the broadcast.
+   - Publishes the broadcast and sends a data stream.
+   - A widget (possibly a UI component) displays the local view using `RtcLocalView.SurfaceView`.
+   - The host's engine notifies when another user joins the channel with "Engine.on('userJoined')".
+   - The host then subscribes to this event.
+   - Receives the data stream.
+   - A different widget displays the remote view using `RtcRemoteView.SurfaceView`.
+
+3. **User/Host Interaction:**
+   - If needed, the user can leave the broadcast, which is handled by the engine through "Engine.leaveChannel".
+
+The diagram uses symbols and directional arrows to represent the flow of actions and interactions between components of the system, illustrating how functional operations are mapped and executed within the application framework. It's a typical schematic used in software development documentation and design to communicate how various functions and processes interact.

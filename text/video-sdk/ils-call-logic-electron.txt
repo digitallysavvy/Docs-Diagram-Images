@@ -1,0 +1,27 @@
+This image is a flowchart describing the sequence of operations required to setup and manage a live streaming event using a Video SDK, specifically the Agora SDK. Here's a detailed breakdown of the flowchart's components:
+
+1. **User and Your app**:
+   - The process begins with the user opening an application equipped with a video SDK.
+
+2. **Video SDK Setup and Instance Creation**:
+   - An instance of the Video SDK engine is created and initialized (`agoraEngine.createAgoraRtcEngine` and `agoraEngine.initialize`).
+   - Callback functions are set up (`agoraEngine.registerEventHandler`).
+   - The channel profile is configured (`agoraEngine.setChannelProfile`).
+
+3. **Host Operations**:
+   - The host starts a live streaming event.
+   - Local video setup includes setting and enabling the local video (`agoraEngine.setupLocalVideo` and `agoraEngine.enableVideo`).
+   - A local preview starts (`agoraEngine.startPreview`).
+   - The user role is set to host (`agoraEngine.setChannelProfile(ChannelProfileType.ChannelProfileLiveBroadcasting)`).
+   - The host retrieves an authentication token and joins a channel (`agoraEngine.joinChannel`).
+   - Finally, the host sends the data stream.
+
+4. **Audience Operations**:
+   - The audience begins by joining the live streaming event.
+   - The audience retrieves an authentication token and sets their user role to an audience member (`agoraEngine.setChannelProfile(ClientRoleType.ClientRoleAudience)`).
+   - After joining the channel, they can retrieve streaming from other users (`agoraEngine.setupRemoteVideo`).
+
+5. **End of Event**:
+   - Once the live event has concluded, the user (audience/host) leaves the channel (`agoraEngine.leaveChannel`).
+
+This flowchart effectively visualizes the user paths and the required SDK methods for setting up and managing both host and audience roles in a live streaming environment using the Agora Video SDK. The Agora SDK interfaces with SD-RTN (Software Defined Real-Time Network) to facilitate the live streaming process.

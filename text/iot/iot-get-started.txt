@@ -1,0 +1,32 @@
+This image is a flowchart diagram illustrating the sequence of operations in an application integrated with the Agora.io SDK, specifically for handling real-time audio and video communication. Here’s a breakdown of the various stages represented in the diagram:
+
+1. **User - Your app - IoT SDK - Agora - SD-RTN**:
+   - **User**: Indicates the user's role.
+   - **Your app**: The application layer where most user interactions occur.
+   - **IoT SDK**: The SDK interfacing with the Agora service.
+   - **Agora**: Represents the backend services provided by Agora.io.
+   - **SD-RTN**: Possibly stands for a real-time networking or transmission technology used by Agora.
+
+2. **Set up Agora Engine**:
+   - **Instantiate the Agora engine**: Initial creation of an Agora engine instance.
+   - **Set engine options**: Configure the engine with required settings.
+   - **Verify license and initialize the engine**: License verification followed by engine initialization.
+   - **Create a connection**: Establishing network connections required for channel operations.
+
+3. **Join a Channel**:
+   - **Call the method to join a channel**: Executes the function call to begin the channel joining process.
+   - **On join channel success callback**: Callback triggered upon successful joining of the channel.
+
+4. **Send and Receive Audio and Video**:
+   - **Send audio and video**: Starts separate threads to send audio and video data.
+   - **Receive audio and video**: Listens for incoming audio and video data.
+       - **Render audio/video frame**: Processing and output of audio and video frames.
+
+5. **Leave Channel**:
+   - **Call the leave channel method**: Function to initiate leaving the channel.
+   
+6. **Clean up**:
+   - **Destroy the connection**: Terminating the connection established with Agora.
+   - **Call the finish method to release resources**: Ensuring all resources used by the application are properly released.
+
+This flowchart is particularly useful for developers integrating Agora's SDKs for real-time communication features within their applications, detailing the application lifecycle from initialization to cleanup.

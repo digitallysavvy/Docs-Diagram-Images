@@ -1,0 +1,34 @@
+The image is a flowchart that describes how to integrate and use the Agora Video SDK in an application for a live-streaming event. Here is a step-by-step breakdown of the flow in the chart:
+
+1. **User Side:**
+   - **Open App**: The user opens the application.
+   - **Initialize the Agora Video SDK Engine**: `agoraEngine = createAgoraRtcEngine()`
+   - **Enable the Video Module**: `agoraEngine.enableVideo()`
+   - **Register the Event Handler**: `agoraEngine.registerEventHandler`
+   - **Setup AgoraVideoView Widget**: This is set up for displaying either local or remote video.
+
+2. **Host Actions:**
+   - **Start a Live Streaming Event**: The host starts the streaming event.
+   - **Set the Client Role to Host**: `agoraEngine.setClientRole(role: ClientRoleType.clientRoleBroadcaster)`
+   - **Set a Channel Profile**: `setChannelProfile(ChannelProfileType.channelProfileLiveBroadcasting)`
+   - **Retrieve Authentication Token**
+   - **Join a Channel Using the Token**: `agoraEngine.joinChannel`
+   - **Send Data Streams**
+   - **Start Local Preview**: `agoraEngine.startPreview()`
+   - **Display Local Video Using AgoraVideoView**: Shows the video stream from the host's device.
+
+3. **Audience Actions:**
+   - **Join a Live Streaming Event**: Indicates the audience's participation.
+   - **Set the Client Role as Audience**: `agoraEngine.setClientRole(role: ClientRoleType.clientRoleAudience)`
+   - **Set a Channel Profile**: Same as host setup.
+   - **Retrieve Authentication Token**
+   - **Join a Channel Using the Token**: `agoraEngine.joinChannel`
+   - **Remote User Joined**: Triggered by an event handler.
+   - **Receive Data Streams**
+   - **Render Remote Video Using AgoraVideoView**: Displays the host's video stream on the audience's devices.
+
+4. **User Actions Post Event:**
+   - **Leave Broadcast**: Indicating the user (either host or audience) leaves the channel by `agoraEngine.leaveChannel()`.
+   - **Close App**: The application is closed.
+
+The interaction between "Your app", the "Video SDK", and the "Agora" components indicates the integration and operational flow involving the software, SDK, and the backend service provided by Agora for live video streaming.

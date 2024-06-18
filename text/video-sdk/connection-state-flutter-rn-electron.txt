@@ -1,0 +1,16 @@
+This image appears to be a flow chart diagramming the sequence of events and states associated with network connections for two users (UID 1 and UID 2) in a software or SDK (Software Development Kit). The chart includes methods and events that handle network status changes such as successful connection, reconnection, interruptions, and failure scenarios.
+
+- **UID 1** follows a path where:
+  - The user joins a channel.
+  - Receives confirmation of a successful channel join.
+  - Experiences a network connection change indicating a successful network connection.
+  - Faces a network interruption, leading to a reconnection attempt.
+  - Encounters a total network connection loss.
+  - Experiences a failed network connection after attempts to regain connectivity.
+
+- **UID 2** has a simpler flow:
+  - The user joins at a point after an initial setup or connection (not fully detailed in the part of the chart we see).
+  - An event occurs when this remote user comes online again.
+  - Eventually, the remote user goes offline for a reason listed as `userOfflineDropped`, indicating perhaps an abrupt or unexpected disconnection.
+
+Overall, the flowchart is likely utilized in the development or documentation phase for a network-related software application or service to detail how the system should respond to various network conditions, facilitating debugging, and improving software robustness against network instability.

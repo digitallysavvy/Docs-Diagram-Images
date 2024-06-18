@@ -1,0 +1,37 @@
+This image is a flowchart that describes the process for setting up and managing a video call using the Agora Video SDK and integrating it with your application. Here's a breakdown of the steps depicted:
+
+1. **Open Your App**: The user opens your application.
+
+2. **Initialize the Agora Video SDK Engine**: 
+   - `agoraEngine = createAgoraRtcEngine()` – Initializes the SDK engine.
+
+3. **Enable the Video Module**:
+   - `agoraEngine.enableVideo()` – This step enables video functionality.
+
+4. **Register the Event Handler**:
+   - `agoraEngine.registerEventHandler` – Registers an event handler to handle various events during the video call.
+
+5. **Setup AgoraVideoView Widgets**:
+   - This step involves setting up the video widgets for displaying local and remote videos.
+
+6. **Join a Video Call**:
+   - `agoraEngine.setClientRole()` – Sets the client role (e.g., broadcaster or audience).
+   - `agoraEngine.setChannelProfile()` – Sets the channel profile.
+   - Retrieve an authentication token (if required).
+   - `agoraEngine.joinChannel()` – Joins a channel with the provided token, allowing the user to participate in a video call.
+
+7. **Start Local Preview**:
+   - `agoraEngine.startPreview()` – Starts the local video stream preview.
+
+8. **During the Call**:
+   - As remote users join, the system handles events like `onUserJoined`.
+   - Data streams are sent and received.
+   - Remote videos are displayed using `AgoraVideoView`.
+
+9. **Leave the Video Call**:
+   - `agoraEngine.leaveChannel()` – Disconnects from the video call.
+
+10. **Close the App**:
+   - The user closes the application.
+
+The entire process is facilitated by interaction between your app (`Video SDK` column), the Agora backend services (`SD-RTN` column), and the user actions/events. This flowchart provides a comprehensive guide for developers integrating Agora's video call services into their applications.

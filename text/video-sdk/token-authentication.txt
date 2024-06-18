@@ -1,0 +1,13 @@
+This image represents a flowchart diagram illustrating a token authentication process used in software applications that involve a client app, a server, a video software development kit (SDK), and a service called Agora SD-RTN (Software-Defined Real-Time Network). Here's a step-by-step breakdown of the process depicted in the diagram:
+
+1. **App Initiates Request**: The application (App) initiates a request for a token by sending a user ID (uid) and channel name to your server.
+
+2. **Token Generation on Your Server**: Upon receiving the request, your server generates a token based on the provided uid and channel name, and then returns the token back to the app.
+
+3. **Join the Channel**: Using the uid, channel name, and the newly generated token, the app attempts to join the corresponding channel through the video SDK.
+
+4. **Token Verification via Agora SD-RTN**: Finally, the video SDK interacts with Agora SD-RTN, which verifies the token.
+
+5. **Successful Join**: Once the token is verified, the app successfully joins the channel, and this is confirmed back to the app.
+
+The diagram uses a combination of solid and dotted lines to illustrate different flows of information and processes across the components involved, effectively mapping out the authentication mechanism within a distributed network architecture.

@@ -1,0 +1,16 @@
+The image you've provided is a sequence diagram that outlines the interaction between different components for a call implementation using the Agora platform. Here's a breakdown of the steps depicted in the diagram:
+
+1. **Run Call Phase:**
+   - **Clients**: Two clients are shown, both initiating actions to set up a call.
+   - **Connecting to Resources**: Both clients connect to their local audio and video resources.
+   - **Joining Channel**: After connecting to audio and video resources, the clients join a communication channel.
+   - **Sending Audio and Video**: Both clients send their audio and video streams to the channel.
+
+2. **Communicate:**
+   - The clients communicate with each other through the Agora platform, possibly transmitting live audio and video data.
+
+3. **End Call Phase:**
+   - **Closing Audio and Video**: When the call ends, both clients close their audio and video streams.
+   - **Leaving Channel**: Finally, the clients leave the communication channel.
+
+The regions are labeled "Client" and "Agora Platform," indicating the boundaries of the systems interacting during this communication process. Overall, the diagram effectively visualizes the flow of a call from initiation, through operation, to termination, using the Agora communication technology.

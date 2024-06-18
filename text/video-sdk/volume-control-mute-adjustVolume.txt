@@ -1,0 +1,20 @@
+The image displays a diagram related to audio processing and volume control features within an audio engine, specifically referencing "Agora SD-RTN™". This diagram illustrates various methods used for managing audio signals. Key elements include:
+
+1. **Recording Device**:
+   - `adjustRecordingSignalVolume`: Method to adjust the volume of the recording signal.
+
+2. **Playback Device**:
+   - `adjustAudioMixingPlayoutVolume`: Method to adjust the local playback volume of music files.
+   - `setEffectsVolume`: Method to adjust local playback volume of all sound files.
+   - `setVolumeOfEffect`: Method to adjust the local playback volume of a specified sound file.
+
+3. **Audio Engine**:
+   - `adjustAudioMixingPublishVolume`: Method to adjust the playback volume of music files at the remote end.
+   - `adjustAudioMixingVolume`: Method to adjust the playback volume of music files both locally and remotely.
+   - `adjustPlaybackSignalVolume`: Method to adjust the volume of all remote users.
+   - `adjustPlaybackSignalVolume`: Method to adjust the volume of the specific remote user for local playback.
+
+4. **Additional Features**:
+   - `setInEarMonitoringVolume`: Method to set the volume of the ear return.
+
+The diagram also depicts the flow of audio through different paths: sender, local stream, and remote stream. The terms "Sender", "Local Stream", "Remote Stream", and "Receiving End" are used to represent different stages or elements in the audio signal path.

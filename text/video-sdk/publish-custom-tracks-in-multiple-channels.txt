@@ -1,0 +1,15 @@
+This image depicts a diagram of the Agora SDK and its interaction with various third-party video capture modules and output channels. The workflow shown in the diagram is as follows:
+
+1. **Video to be captured**: This is the input from various video sources, indicated as "Video to be captured" for each third-party module.
+  
+2. **Third-party video capture modules 1, 2, ... N**: These modules capture the video inputs. They are labeled as "Third-party video capture module 1", "Third-party video capture module 2", through "Third-party video capture module N", which indicates multiple video sources or inputs.
+
+3. **Captured video frames**: The video frames captured by each third-party video capture module are then forwarded to the Agora SDK, as indicated by the arrows pointing from each capture module to the SDK.
+
+4. **Agora SDK**: The central element in the diagram processes the incoming video frames. It acts as an interface or processor before outputting to different channels.
+
+5. **Custom video track 1, 2, ... N**: The processed video tracks or streams output from the Agora SDK, each corresponding to one of the input modules.
+
+6. **Channel 1, Channel 2, ... N**: Each custom video track is then directed towards its respective channel for further use or broadcasting.
+
+The diagram essentially elaborates the processing and channeling of video data through specific modules and the central SDK in a systematic and multi-channel environment.

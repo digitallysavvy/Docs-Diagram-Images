@@ -1,0 +1,22 @@
+The image you provided is a flowchart diagram that outlines the process and interactions involved in a live streaming event using a Video SDK integrated with the Agora platform's SD-RTN (Software-Defined Real-Time Network).
+
+Here’s the breakdown of the sequence:
+
+1. **User**
+   - Opens the app, initiating the Video SDK engine (`AgoraRTC.createClient`).
+
+2. **Host**
+   - Starts video and local media streams in the SDK.
+   - Retrieves an authentication token, sets the role as host (`setClientRole("host")`), joins a channel, and then publishes local media to the channel.
+
+3. **Audience**
+   - Joins the live streaming event.
+   - Retrieves an authentication token, sets their user role as an audience, joins the stream, and subscribes to receive the data stream from the host.
+
+4. **Leaving the Event**
+   - Both host and audience leave the live streaming event using the `agoraEngine.leave` command.
+  
+5. **Software Interaction**
+   - Interactions between the app, Video SDK, and Agora's SD-RTN are visible, with each step mapped out clearly, showing the sequential logic and collaboration between user, host, audience, and back-end services.
+
+This flowchart is essential for understanding the structure and system flow handling in the software during a live streaming setup, particularly useful for developers integrating the Agora Video SDK into their applications.

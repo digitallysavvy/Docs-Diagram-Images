@@ -1,0 +1,10 @@
+This image illustrates a flow diagram detailing a process for video capture and handling using third-party software and the Agora SDK (Software Development Kit). Here’s a breakdown of each step:
+
+1. **Video to be captured:** The starting point where the video originates.
+2. **Third-party video capture module:** The initial handling of the video involves using a third-party module to capture the video.
+3. **Captured video frames:** The output from the third-party module, which are the frames of the captured video.
+4. **Agora SDK:** These video frames are then processed or passed through the Agora SDK.
+5. **Custom video track:** Post processing, the video is converted into a custom video track suitable for further use.
+6. **Main channel:** Finally, the custom video track is sent to the main channel for distribution or broadcasting.
+
+This flowchart is typical for applications or systems that need to integrate video capture with additional processing or encoding before final output or transmission.

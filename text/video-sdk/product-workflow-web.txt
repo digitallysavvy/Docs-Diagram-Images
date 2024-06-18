@@ -1,0 +1,16 @@
+This image appears to be a flowchart that details the interaction between a user and video SDK (Software Development Kit), specifically addressing functionalities associated with the Agora platform's SD-RTN (Software-Defined Real-Time Network). Here's a breakdown of the process as depicted:
+
+1. **Your App**: This represents the user's application that interacts with the video SDK.
+   
+2. **Video SDK**: Initial user actions within the app such as opening the app, creating and playing local audio/video tracks, and handling autoplay blocks via the `onAutoplayFailed` event initiate interactions with the video SDK.
+
+3. **SD-RTN**:
+   - Interaction with Agora’s software-defined real-time network, suggesting network activities related to streaming and channel management.
+
+4. **Process Steps**:
+   - Join a channel: User retrieves an authentication token and then joins the channel.
+   - Publish and Subscribe: User publishes their camera and microphone tracks to the channel, subscribes to tracks from other users, and manages audio/video tracks.
+   - Common Workflows: Includes steps like starting screen sharing, creating screen tracks, adjusting volume, muting/unmuting video, and unpublishing or publishing specific tracks.
+   - Leave the channel: Finally, the user leaves the channel.
+
+This flowchart is typical for applications that involve real-time video and audio streaming or conferencing functionalities, explaining both the client-side actions and their interactions with backend services.

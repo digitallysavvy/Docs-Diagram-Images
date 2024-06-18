@@ -1,0 +1,22 @@
+The image depicts a flowchart illustrating the process involved in setting up and using a cloud-based communication or proxy system, likely for real-time network applications. Here is a detailed breakdown of the components and processes shown:
+
+1. **Entities Involved:**
+   - **User:** A generic user of the application.
+   - **Admin:** Likely the administrator or someone with higher-level access to the app's settings.
+   - **App:** The application that interfaces with the user and admin.
+   - **Enterprise Firewall:** Security mechanism to protect the internal network.
+   - **Cloud Proxy:** Acts as an intermediary for requests from clients seeking resources from other servers.
+   - **SD-RTN (Software-Defined Real-Time Network):** Helps in managing the network's data transferring efficiently in real-time.
+
+2. **Procedure:**
+   - **Initialization and Proxy Setting:** The admin whitelists IP addresses and ports for the Cloud Proxy in the firewall, after which the app facilitates the initialization of a signaling engine and calls a method to enable a cloud proxy connection.
+   - **Proxy Access and Channel Join:**
+     - The app requests access to the cloud proxy.
+     - The enterprise firewall checks the whitelist to grant access, and the cloud proxy requests access to the SD-RTN.
+     - Successful access and proxy information allow the user to join a communication channel.
+     - That channel allows the user to send and receive data streams in real-time.
+   - **Leave Channel:** Eventually, the user and admin can leave the channel, which involves leaving the communication channel properly.
+
+3. **Flowchart Design:** The flowchart is categorized into columns for clarity, each showing the responsibilities of different components from user actions to backend processes provided by a company named Agora. It lays out a clear sequence of actions and checks that are required to securely and effectively manage data streams within a protected network environment.
+
+This kind of flowchart is commonly used in IT and communications to plan and demonstrate system architectures and workflows, especially to ensure compliance with security protocols and efficient operation.

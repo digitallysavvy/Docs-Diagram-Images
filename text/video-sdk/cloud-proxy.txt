@@ -1,0 +1,19 @@
+This image is a flowchart detailing the steps involved in setting up and using a video SDK (Software Development Kit) engine within a network, particularly involving the use of an enterprise firewall and a cloud proxy service. The flowchart includes several key elements and procedures divided into different sections for clarity:
+
+1. **Implemented by You:**
+   - **User** activity: Opening the app and initiating the channel join process.
+   - **Admin** tasks: Responsible for whitelisting IP addresses and ports for the cloud proxy in the firewall.
+
+2. **Enterprise Firewall:** 
+   - Acts as a security barrier controlling the traffic between the internal network (user and app) and the external services (cloud proxy and SD-RTN).
+
+3. **Provided by Agora:**
+   - **Cloud Proxy and SD-RTN:** These are the services facilitating the secure video transmission. SD-RTN likely refers to a real-time network for data handling.
+
+4. **Process Flow:**
+   - Initialization of the Agora video SDK engine.
+   - Process options to join a video channel directly and handle scenarios where joining fails (e.g., retrying connection using TLS 443).
+   - Handling failures by requesting access to a cloud proxy if a direct connection attempt on TLS 443 fails.
+   - Continuous sending and receiving of data once a successful channel join is established.
+
+The flowchart employs decision nodes (like checking whether channel join failed or succeeded), process steps, and data exchanges indicating the step-by-step process required for a robust implementation of a video communication setup. This aids in understanding how to handle different network security configurations and providing uninterrupted video service.

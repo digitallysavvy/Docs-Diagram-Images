@@ -1,0 +1,32 @@
+The image is a flowchart describing the sequence of operations for using the Agora Video SDK within an application. Here’s a detailed step-by-step breakdown:
+
+1. **User Opens the App**:
+   - The user starts the application on their device.
+
+2. **Initiation of the SDK**:
+   - The app triggers the initiation of the Agora Video SDK engine.
+   - Command used: `agoraEngine = agora::rtc::ue::createAgoraRtcEngine()`
+
+3. **Enabling Modules**:
+   - The app enables video and audio functionalities of the SDK.
+   - Commands used: 
+     - `agoraEngine->enableVideo()`
+     - `agoraEngine->enableAudio()`
+   
+4. **User Joins a Call**:
+   - The user performs an action to join a call.
+   - The app sets up the local video feed using `agoraEngine->setupLocalVideo(videoCanvas)`.
+   - It retrieves an authentication token and joins the channel using `agoraEngine->joinChannel()`.
+   - On a remote user joining, an event `onUserJoined()` is triggered.
+   - The streaming from the remote user is established using `agoraEngine->setupRemoteVideo(videoCanvas)`.
+   - Data streams are continuously sent and received.
+   
+5. **User Leaves the Call**:
+   - The user decides to leave the call.
+   - The SDK leaves the channel using `agoraEngine->leaveChannel()`.
+
+6. **User Closes the App**:
+   - The user closes the application.
+   - Cleaning up local resources happens through `agoraEngine->release()`.
+
+The diagram also emphasizes the connection between the user actions and the Agora backend services (indicated as "Agora" and "SD-RTN"), with lines showing the sequence and flow of actions and responses. This visualization helps developers understand the implementation and integration of the Agora Video SDK into their applications for handling video calls.

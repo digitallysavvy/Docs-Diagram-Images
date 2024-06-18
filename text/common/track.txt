@@ -1,0 +1,12 @@
+This image is a flowchart diagram representing the process flow of video and audio data in a multimedia communication system, possibly related to streaming or online communication technologies. The diagram is separated into two main tracks:
+
+1. **Upstream Track (Sending End):**
+   - **Input Source:** This involves collecting video data which goes through various pre-processing filters such as "Beauty" (likely for enhancing video appearance), "Virtual background" (for replacing or altering the background in a video), and other video pre-processing techniques.
+   - **Output:** The processed video data is then sent through a "Video link" and "Audio link", moving through the system labeled "Agora SD-RTN™️" indicating a specific technology or protocol which might be handling the streaming or real-time network data.
+
+2. **Downlink Track (Receiving End):**
+   - **Input Source:** This connects to a "video decoder" and "audio codec" which further handles the pre-processed video and audio data.
+   - **Filter (Pre-processing):** The video goes through additional filters like "super resolution" (which improves video quality by enhancing resolution) and other video and audio pre-processing including "spatial sound effects" (likely to provide a more immersive audio experience).
+   - **Output:** Following the processing, the video and audio are ready for "Render/Playback" along with being directed to other output channels.
+
+This flowchart illustrates the complexity and the layers of processing involved in modern multimedia communication systems to ensure high-quality video and audio delivery.

@@ -1,0 +1,15 @@
+The image appears to represent a flowchart for managing connections and streams using an SDK (Software Development Kit), in coordination with Agora's services and a feature called SD-RTN. Here's a breakdown of the flowchart:
+
+1. **Setup Agora Engine** - The process begins with setting up the Agora engine, which includes instantiating the engine, setting options, and verifying the license to initialize.
+
+2. **Create Multiple Connections** - The next step involves creating multiple connections, specifically connection-1 and connection-2, which suggests the capability to handle multiple channels simultaneously.
+
+3. **Stream to Multiple Channels** - This step outlines joining different channels via the established connections (connection-1 and connection-2) and then sending audio and video data to those respective channels.
+
+4. **Push Multiple Streams to a Single Channel** - In this module, both connections are used to join the same channel (channel-1) but under different user IDs. It highlights simultaneous streaming of audio and video data on a single channel using multiple connections.
+
+5. **Leave Channel(s)** - This involves leaving the channels and terminating the connections.
+
+6. **Clean Up** - The final step is cleaning up the resources by destroying the connections and calling a finish method to release resources.
+
+Overall, this seems to depict the infrastructure for a streaming or broadcasting application, allowing for complex management of connections and channels for multimedia data delivery. The integration of IoT SDK (Internet of Things Software Development Kit) suggests possible applications in devices connected to the Internet of Things, emphasizing interoperability and scalable communication solutions.

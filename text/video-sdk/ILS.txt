@@ -1,0 +1,13 @@
+The image is a graphical representation of the workflow for using the Agora Video SDK in an application. It outlines the steps that users (hosts and audience) need to follow to interact via video and audio. The workflow includes:
+
+1. Setting the client role.
+2. Retrieving a token.
+3. Joining a channel.
+
+For the Host role:
+- Once the host has joined the channel, they publish local video and audio.
+
+For the Audience role:
+- Members in the audience subscribe to the video and audio published by the host.
+
+The image uses simple iconography and flow arrows to show how data moves between the host and the audience, facilitated by the Agora Video SDK indicated by the Agora logo in the image.

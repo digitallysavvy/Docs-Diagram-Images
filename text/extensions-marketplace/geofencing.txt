@@ -1,0 +1,11 @@
+This image describes the process flow of audio and video data from capture to playback. Here's a breakdown of each step shown in the diagram:
+
+1. **Capture:** This is the first stage where both audio and video data are captured.
+2. **Pre-process:** After capturing, the data is pre-processed which typically involves operations such as calibration, noise reduction, and adjusting data formats.
+3. **Encode:** The pre-processed data is encoded in this step, which involves compressing the audio and video to make it suitable for transmission, reducing the bandwidth required to send the data.
+4. **Transmit:** This step involves the actual sending of the encoded data to another device or service.
+5. **Decode:** Once received, the data is decoded - this reverses the encoding process to restore the audio and video to a usable format.
+6. **Post-process:** After decoding, the data may undergo further processing such as enhancing image quality, synchronizing audio with video, etc.
+7. **Play:** The final step in the process is the playback of the audio and video data.
+
+Additionally, there is an "AI Noise Suppression" feature that specifically processes the audio data to remove unwanted noise. This step interacts with the pre-processing stage to improve the audio quality.

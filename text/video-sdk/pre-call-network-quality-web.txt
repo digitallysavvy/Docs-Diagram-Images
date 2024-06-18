@@ -1,0 +1,21 @@
+This image presents a flowchart that details the process for setting up and using the AgoraRTC SDK (Software Development Kit) to manage audio and video streaming sessions between an application and a server. Here’s a breakdown of the steps and interactions illustrated in the diagram:
+
+1. **Initial Setup**: 
+   - The app creates two clients, `uplinkClient` and `downlinkClient`, utilizing `AgoraRTC.createClient`.
+
+2. **Join Channel**:
+   - Both clients — `uplinkClient` and `downlinkClient` — join a channel through `join` function calls, and the requests to join are similarly sent through the SDK to Agora's SD-RTN (Software Defined Real-Time Network).
+
+3. **Create and Publish Tracks**:
+   - Local audio and video tracks are created using `AgoraRTC.createMicrophoneAndCameraTracks`.
+   - The `uplinkClient` publishes these tracks, sending audio and video data to the server.
+
+4. **Subscribe and Play Tracks**:
+   - The `downlinkClient` subscribes to these audio and video tracks after detecting that a user has published them (using `downlinkClient.on("user-published")`).
+   - The data is received and played through `track.play`.
+
+5. **Network Data Monitoring**:
+   - Both clients monitor network quality (`downlinkClient.on("network-quality")`, `uplinkClient.on("network-quality")`).
+   - The `uplinkClient` gathers local audio and video stats while the `downlinkClient` acquires remote audio and video stats.
+
+The flowchart is designed to clarify the data flow between a client application and server utilizing Agora's technology, highlighting how this platform supports real-time communication in applications by handling both uplink and downlink connections for a two-way exchange of multimedia and network data.

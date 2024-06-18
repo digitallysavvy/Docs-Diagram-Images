@@ -1,0 +1,18 @@
+The image depicts a sequence diagram for a software or a service interaction, specifically detailing an API (Application Programming Interface) interaction involving media streaming in an environment using Agora's media pull service.
+
+Here's a breakdown of what the diagram is showing:
+
+1. **User to Web Server and App Server Interaction**: It starts with a "User" interacting with a "Web server" and "Your app server". These components are defined as "Implemented by you", indicating that they are managed by the service developer.
+
+2. **Flow of Operations**:
+   - **Start pulling media into an Agora channel**: This initiates the process; the web server communicates this action to your app server which handles further operations.
+   - **Create Player API**: Your app server requests the Agora Media Pull to create a media player, and then receives a response contains player parameters.
+   - **Player Created**: Received as Notification event `eventType=1` from Agora, after which your app server authenticates the notification signature and sends a 200 OK status back.
+   - **Change Player Status**: The app server conveys a status change, which prompts Agora to update the player API. The new player parameters are passed back to your app server.
+   - **Player Status Changed**: This change is confirmed by a notification event `eventType=4` followed by signature authentication and a 200 OK response.
+   - **Stop Playing Media**: Indicates that the media playing should be terminated. Your app server instructs Agora to delete the player API.
+   - **Player Destroyed**: Agora confirms the destruction of the player with a notification event `eventType=2`, which is authenticated and acknowledged by the app server returning a 200 OK.
+   
+3. **Encapsulated in Agora's API Procedures**: The interactions from the creation of a player to its destruction are handled through APIs provided by Agora as detailed on the right side of the diagram marked "Provided by Agora Media Pull".
+
+This diagram is typically used in software development to model the interactions between systems (user interfaces, web servers, app servers) and APIs, demonstrating the flow of information and how these systems interact to achieve a task—in this case, managing media players for streaming content.

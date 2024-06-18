@@ -1,0 +1,14 @@
+This image depicts a flowchart or a system architecture for processing and streaming an audio file, specifically an mp3 file. Here’s a breakdown of the components and how they are connected:
+
+1. **BufferSourceAudioTrack:**
+   - This component appears to be the starting point where an mp3 file is taken as input. It is depicted by a file icon with an ".mp3" label.
+
+2. **AudioBuffer:**
+   - The mp3 file goes into an "AudioBuffer," which is likely used for processing the raw audio data. This AudioBuffer is part of a dashed area that may represent a specific process or module.
+
+3. **Processing Path:**
+   - From the "AudioBuffer," there are two pathways:
+        - One leads to another "AudioBuffer," labeled with "Call play()." This indicates that the audio data is used for local playback, which further connects to a "LocalPlayback" component. This path possibly handles local audio output.
+        - The other path leads from the first "AudioBuffer" with a label "Call publish()," indicating that the processed audio stream is sent over the network to another service or server. This particular path seems to connect to "Agora SD-RTN™," implying real-time network publication for distributable audio streaming.
+
+The overall flow shows how an audio file is processed, played locally, and/or published for broader distribution using Agora’s Software-defined Real-time Network (SD-RTN™), a network service for streaming audio and video content.

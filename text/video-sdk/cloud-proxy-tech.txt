@@ -1,0 +1,10 @@
+This image depicts a network diagram that illustrates the data flow between an Agora SDK and a cloud proxy, passing through an enterprise firewall. The process is divided into four steps:
+
+1. **Request Proxy:** The Agora SDK sends a request to the enterprise firewall to connect with a proxy.
+2. **Return Proxy Information:** The enterprise firewall returns proxy configuration information back to the SDK.
+3. **Send Data:** Data is sent from the SDK, presumably via the configured proxy settings, towards an intended destination.
+4. **Receive Data:** Data is received back at the SDK from the destination via the cloud proxy.
+
+The image also includes representation of two cloud icons labeled "Agora SD-RTN™" and "Cloud Proxy" indicating two separate components within the network where data is processed or routed.
+
+This overall flow is typical for corporate environments where secure data transfer is handled via proxies to comply with IT security policies.

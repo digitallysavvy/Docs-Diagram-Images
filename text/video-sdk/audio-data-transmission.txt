@@ -1,0 +1,6 @@
+This image displays a flow diagram detailing the process for handling audio data within a system. It shows the following steps:
+
+1. **Specially collected audio** - This is the initial input.
+2. **Collection Module** - This is where the specially collected audio is processed or managed.
+3. **Collected audio frames** - This is the output from the Collection Module, which seems to be some form of processed audio data.
+4. **SDK** - The collected audio frames are then sent to an SDK (Software Development Kit), which suggests further processing or integration into applications.

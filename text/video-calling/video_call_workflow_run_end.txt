@@ -1,0 +1,17 @@
+The image you provided is a sequence diagram, which is used in software engineering to represent the interaction between different system components to carry out a specific functionality—here, it appears to be illustrating a call process using the Agora Platform.
+
+The diagram shows three main entities: two clients and the Agora Platform. It details the sequence of operations during a call session, divided into three main stages:
+
+1. **Run call:**
+   - **Connecting to local audio and video resources**: Each client connects to local hardware needed for the call (e.g., microphone, camera).
+   - **Join channel**: Each client joins a communication channel provided by the Agora Platform.
+   - **Send audio and video to channel**: Audio and video inputs from the clients are sent to the Agora Platform, enabling communication.
+
+2. **Communication:**
+   - This is the ongoing interaction phase where audio and video are exchanged between clients via the Agora platform.
+
+3. **End call:**
+   - **Close audio and video**: Each client disconnects from the audio and video resources.
+   - **Leave channel**: Each client leaves the communication channel.
+  
+This sequence helps in understanding the flow of operations during a multimedia call using the Agora communication platform, detailing how clients interact with the communication service to initiate, conduct, and terminate a call.

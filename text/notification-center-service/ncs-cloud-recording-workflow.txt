@@ -1,0 +1,20 @@
+This image appears to be a sequence diagram that outlines a process involving user interactions and server communications for recording and managing digital audio or video files. It shows an interaction flow between different components, including a user, a web server, an app server, third-party cloud storage, and Agora Cloud Recording. Here’s a breakdown of the depicted process:
+
+1. **Starting the Recording**:
+   - The user initiates a request to start recording through a web server.
+   - The web server communicates with the app server, which then interacts with Agora Cloud Recording to get recording resources and start the recording.
+   - Agora sends a notification back (Notification 40), indicating the recorder has started.
+
+2. **Stopping the Recording**:
+   - The user sends a stop recording command.
+   - The app server then ends the recording session and interacts with Agora Cloud Recording to manage the recorded data.
+   - Upon successful completion, a notification indicating that the uploader has started (Notification 30) is sent.
+
+3. **Uploading the Recording File**:
+   - The recording file is uploaded from Agora Cloud Recording to the designated third-party cloud storage.
+   - Once the upload is complete, a notification (Notification 31) is sent to confirm the upload.
+
+4. **Session Exit**:
+   - Finally, a session exit notification (Notification 11) is sent, signaling the end of the interaction.
+
+The diagram is structured to show responses and status updates (such as "200 OK") between the services, illustrating the completion of each stage successfully. The separation between components "Implemented by you" and "Provided by Agora" clarifies the parts of the infrastructure managed by the user’s side and those managed by Agora.
