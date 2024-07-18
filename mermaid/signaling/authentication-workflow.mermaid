@@ -1,9 +1,0 @@
-flowchart TB
-    A[Your App] -- Log in to signaling --> B[Token Server]
-    B -- Authenticate & Send RTM/RTC Token --> A
-    A -- Init signaling engine with Token --> C[Agora Signaling System]
-    C -- Confirm signal ready --> A
-    A -- Join Stream Channel with Token --> C
-    C -- Allow Access to Stream --> A
-    A -- Request Token Renewal --> B
-    B -- Send New RTM/RTC Token --> A

@@ -1,8 +1,0 @@
-graph LR
-    App(App) -->|1| AVSDK(Agora Video SDK)
-    AVSDK -->|2| AudioM(Audio Module)
-    AudioM -->|3| SendingE(Sending End)
-    SendingE -->|4| LastM(Last Mile)
-    LastM -->|5| AgoraES(Agora Edge Server)
-    AgoraES -->|6| NetworkJB(Network Jitter and Buffering)
-    NetworkJB -->|7| ReceivingE(Receiving End)

@@ -1,8 +1,0 @@
-flowchart TB
-    host[Host System<br/>Agora Video SDK]
-    audience[Audience System<br/>Agora Video SDK]
-    agoraCloud[Agora SD-RTN Cloud]
-    
-    host -- "1. Joins channel<br/>2. Publishes stream" --> agoraCloud
-    agoraCloud -- "Stream available to join" --> audience
-    audience -- "Subscribes to stream" --> agoraCloud

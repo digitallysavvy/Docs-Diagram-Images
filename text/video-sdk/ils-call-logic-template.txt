@@ -1,3 +1,0 @@
-The image is a flowchart or sequence diagram that details the process of interaction between users, video SDK, and a service called Agora SD-RTN during a broadcast session. It explains the steps for a user operating an app, acting either as a host or as part of the audience during an interactive live streaming (ILS) event.
-
-The diagram is organized into three main vertical sections labeled "User," "Host," and "Audience." Each section details the flow of actions including opening the app, starting and joining the video streaming, sending and receiving data streams, and finally closing the app and cleaning up resources. Connections and data flow between different components and services are indicated by arrows and labels.

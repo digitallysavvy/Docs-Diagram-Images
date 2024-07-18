@@ -1,8 +1,0 @@
-flowchart TD
-    A[Disconnected] -->|Client calls joinChannel| B[Connecting]
-    B -->|Successfully joined the channel| C[Connected]
-    C -->|Connection interrupted| D[Reconnecting]
-    D -->|Rejoined channel successfully| C
-    B -->|Fail to connect| E[Failed]
-    D -->|Fail to reconnect within 20 minutes| E
-    C -->|Leave Channel| A

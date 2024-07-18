@@ -1,9 +1,0 @@
-flowchart TB
-    App[App] --> |Create and initialize the engine| SDK[SDK]
-    SDK --> |Set up an external audio source for use| CustomAudioCapture[Custom Audio Capture]
-    CustomAudioCapture --> |Join a channel| SDK
-    SDK --> |Request to join the front channel| Agora[Agora SD-RTN]
-    CustomAudioCapture --> |Send the processed audio data| Agora
-    CustomAudioCapture --> |Leave the channel| SDK
-    SDK --> |Request to leave the channel| Agora
-    SDK --> |Destroy the engine| App

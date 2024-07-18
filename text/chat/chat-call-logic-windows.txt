@@ -1,9 +1,0 @@
-This image depicts a sequence diagram for a chat application, illustrating the interactions between a user, the app's Chat SDK (Software Development Kit), and Agora Chat, a chat service. The diagram shows various stages of user interaction with the chat system, divided into sections: 
-
-1. **Initialize** - The user opens the app, which then initializes an instance of the AgoraChat SDKClient. This involves setting options, adding message event callbacks, and connection event callbacks.
-2. **Log in** - The user joins a chat, retrieves an authentication token, and logs in to Agora Chat, triggering the `onConnected()` callback.
-3. **Send messages** - The user sends a message by creating a `ChatMessage` object and the SDKClient's `ChatManager` sends the message.
-4. **Receive messages** - Messages received trigger the `onMessageReceived(messages)` callback and the app subsequently displays the message to the user.
-5. **Close** - The user leaves the chat and logs out through the SDKClient instance. 
-
-Overall, this sequence diagram is used to design or visualize the workflow and interactions between different components of a chat application, ensuring each part of the process is correctly implemented for effective communication.

@@ -1,9 +1,0 @@
-flowchart TD
-    A[User Opens the App] --> B[Initiation of the SDK]
-    B --> |agoraEngine = agora::rtc::ue::createAgoraRtcEngine()| C[Enabling Modules]
-    C --> |agoraEngine->enableVideo()<br>agoraEngine->enableAudio()| D[User Joins a Call]
-    D --> |agoraEngine->setupLocalVideo(videoCanvas)<br>agoraEngine->joinChannel()| E[Call in Progress]
-    E --> |onUserJoined()<br>agoraEngine->setupRemoteVideo(videoCanvas)| F[Data Streams]
-    F --> G[User Leaves the Call]
-    G --> |agoraEngine->leaveChannel()| H[User Closes the App]
-    H --> |agoraEngine->release()| I[End]

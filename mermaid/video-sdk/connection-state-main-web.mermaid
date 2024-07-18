@@ -1,8 +1,0 @@
-flowchart TD
-    A(Disconnected) -->|Client.join| B(Connecting)
-    B --> C(Connected)
-    C --> D(Disconnecting)
-    D --> A
-    C --> E(Reconnecting)
-    E -->|Fail| A
-    E -->|Success| C

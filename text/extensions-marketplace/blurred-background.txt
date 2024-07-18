@@ -1,7 +1,0 @@
-The image you provided appears to display a graphical representation or a UI mockup showing three different background options for an interface or software tool. From left to right, the labels describe:
-
-1. **Original Background** - This suggests the default or unaltered background state.
-2. **Blurred Background** (Users can choose blurring level) - This indicates an option where the background can be blurred, with adjustable levels of blurring.
-3. **Image Background** - This suggests a third option where an image can be used as a background.
-
-This graphical layout is typically used in presentations or software settings to demonstrate different background customization options available to a user.

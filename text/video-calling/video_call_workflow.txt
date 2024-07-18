@@ -1,9 +1,0 @@
-The image displays a flowchart which details the process flow for setting up and managing audio and video calls using a client, a token server, and the Agora platform. It is divided into three main processes:
-
-1. **Setup Client**: This process involves user login for security implementation, authentication, retrieval of token from the Token Server, and the creation of client instances with defined roles ("host" or "audience").
-
-2. **Run Call**: Here, the diagram explains how to connect to local audio and video resources, join a channel on the Agora Platform, and manage the sending and communication of audio and video.
-
-3. **End Call**: This section outlines the steps required to properly close audio and video connections and leave the call.
-
-Overall, the flowchart is a structured guide for developers or system integrators showing how to interact with the Agora Platform and Token Server to set up and manage calls effectively.

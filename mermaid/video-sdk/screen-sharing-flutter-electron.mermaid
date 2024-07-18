@@ -1,6 +1,0 @@
-flowchart TD
-    A[getScreenCaptureSources] -->|Screen Capture| B[startScreenCaptureByDisplayId]
-    A -->|Window Capture| C[startScreenCaptureByWindowId]
-    B --> D[joinChannelEx<br>(publishScreenTrack: true)]
-    C --> D
-    D --> E[Agora SD-RTN]

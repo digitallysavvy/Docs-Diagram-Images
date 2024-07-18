@@ -1,8 +1,0 @@
-flowchart TD
-   A["Time 0 (T0): UID 1 and UID 2 attempt to join"] --> B["Time 1 (T1): UID 1 joins channel successfully"]
-   A --> C["Time 2 (T2): UID 2 in channel, no issues"]
-   B --> D["Time 3 (T3): Network interruption for UID 1"]
-   D --> E["Time 4 (T4): SDK automatically reconnects UID 1"]
-   E --> F["Time 5 (T5): Another network interruption for UID 1"]
-   F --> G["Time 7 (T7): Connection failed for UID 1"]
-   C --> H["Time 6 (T6): UID 2 offline (reason: dropped)"]

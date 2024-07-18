@@ -1,6 +1,0 @@
-This image illustrates a diagram showing the interaction between a "Local User" and the "Agora SDK" through a technical process. There are two main steps noted in the diagram:
-
-1. Update the spatial location of local users and media players.
-2. Set the spatial sound parameters of the media player.
-
-The lines in the diagram indicate the flow or sequence of operations, connecting the Local User to the Agora SDK, following the two steps specified. The diagram represents an interface or a functional design possibly for an audio or multimedia application that utilizes spatial audio capabilities, which are controlled or enhanced by the Agora SDK (Software Development Kit).

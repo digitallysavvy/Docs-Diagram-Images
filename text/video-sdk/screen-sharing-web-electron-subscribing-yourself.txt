@@ -1,9 +1,0 @@
-This image appears to be a diagram illustrating a system of communication or data sharing among various clients in a network. The diagram shows three clients labeled Client A, Client B, and Client C. 
-
-- Client A is a "Sender" and sends an "Audio & Video track" to Client C, which is a "Subscriber." 
-- Client A also has a "Screen sharing track" that is available to Client B.
-- Further, it seems Client B can send a "Screen sharing track" to Client C. 
-
-There is a note at the bottom of the diagram stating: "To avoid additional costs, do not subscribe to a local screen sharing track." This suggests a cost-saving strategy regarding data transmission choices within the network.
-
-Overall, the diagram seems to delineate the paths through which audio, video, and screen sharing data are being transmitted among the clients within this particular network setup.

@@ -1,8 +1,0 @@
-flowchart LR
-    SDK[Agora SDK] -->|Request Proxy| FW[Enterprise Firewall]
-    FW -->|Return Proxy Information| SDK
-    SDK -->|Send Data| CP[Cloud Proxy]
-    CP -->|Receive Data| SDK
-    SDRTN[Agora SD-RTN™]
-    CP -->|Route Data| SDRTN
-    SDRTN -->|Route Data| CP

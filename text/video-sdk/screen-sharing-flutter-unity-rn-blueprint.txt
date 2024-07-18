@@ -1,9 +1,0 @@
-This image depicts a flowchart describing the screen sharing process in a software system. There are three main components shown:
-
-1. **Extension Process**: This initiates the screen sharing by sending a screen sharing command and publishing a screen sharing stream.
-
-2. **Main Process**: This component handles the publishing of the screen sharing stream to other parts of the system and also subscribes to other streams.
-
-3. **Agora SD-RTN**: This seems to represent a server or network service, possibly for distributing the screen sharing stream to other users or systems.
-
-The arrows between the components indicate the flow of commands and data among the Extension Process, Main Process, and Agora SD-RTN, showcasing how the screen sharing data is managed and distributed.
