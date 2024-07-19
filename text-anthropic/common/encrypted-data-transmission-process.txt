@@ -1,0 +1,38 @@
+1. Overall Structure:
+- Type of diagram: Flow diagram
+- Direction of the diagram: Left-to-right
+
+2. Main Entities and Elements:
+- Client A and Client B (main entities)
+- App A and App B (sub-elements within Client A and Client B)
+- SDK A and SDK B (sub-elements within Client A and Client B)
+- Agora (central entity labeled "Encrypted data transmission")
+- Customized Encryption and Built-in encryption (sub-elements within SDK A and SDK B)
+- Encrypted data (sub-element between SDK A/B and Agora)
+- Audio / Video & encoding (sub-element within SDK A)
+- Audio/Video decoding and rendering (sub-element within SDK B)
+
+3. Data Flow:
+- Solid lines connecting Client A and Client B to Agora, indicating data flow
+- Direction of flow: Bidirectional (Client A to Agora, and Agora to Client B)
+- Grouping: SDK A and SDK B are grouped within Client A and Client B, respectively
+
+4. Detailed Content:
+- Client A: No text content
+- App A: No text content
+- SDK A: No text content
+- Customized Encryption: No text content
+- Built-in encryption: No text content
+- Encrypted data (between SDK A and Agora): No text content
+- Agora: "Encrypted data newline transmission"
+- Encrypted data (between Agora and SDK B): No text content
+- Built-in encryption (within SDK B): No text content
+- Customized encryption (within App B): No text content
+- App B: No text content
+- Client B: No text content
+- Audio / Video & encoding: No text content
+- Audio/Video decoding and rendering: No text content
+
+5. Configuration or Additional Notes:
+- Encryption data upstream transmission (label below the line from Client A to Agora)
+- Encryption data downstream transmission (label below the line from Agora to Client B)

@@ -1,0 +1,31 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes labeled: UID 1, T0, T1, T3, T4, T5, T7, UID 2, T2, T6.
+- Within the rectangular boxes T0, T3, T4, and T7, there are smaller boxes containing text.
+
+3. Data Flow:
+- The connections between entities are shown using solid lines with arrows indicating the direction of flow.
+- There is a dashed line connecting T3 and T4, indicating a network interruption.
+- The elements are grouped into two parallel flows, one for UID 1 and another for UID 2.
+- The title "SDK automatically reconnects" is placed between T3 and T4, indicating an action taken by the SDK.
+
+4. Detailed Content:
+- UID 1: "JoinChannel" newline "Join channel"
+- T0 (smaller box): "FOnJoinChannelSuccess" newline "Joined the channel successfully"
+- T0 (larger box): "FOnConnectionStateChanged" newline "(CONNECTION_STATE_CONNECTED," newline "CONNECTION_CHANGED_JOIN_SUCCESS)" newline "Network connection successful"
+- T3: "FOnConnectionStateChanged" newline "(CONNECTION_STATE_RECONNECTING," newline "CONNECTION_CHANGED_INTERRUPTED)" newline "Re-establishing Network connection"
+- T4: "FOnConnectionStateChanged" newline "CONNECTION_STATE_RECONNECTING," newline "CONNECTION_CHANGED_LOST" newline "Network connection interrupted"
+- T5: "FOnConnectionStateChanged" newline "(CONNECTION_STATE_FAILED," newline "CONNECTION_CHANGED_JOIN_FAILED)" newline "Network connection failed"
+- T7: (no additional text)
+- UID 2: (no additional text)
+- T2: (no additional text)
+- T3: (same as above)
+- T4: (same as above)
+- T6 (smaller box): "FOnUserOffline (reason" newline "USER_OFFLINE_DROPPED)" newline "Remote user is offline"
+- T6 (larger box): (no additional text)
+
+5. Configuration or Additional Notes:
+- Between T3 and T4, there is a box with the text "SDK automatically reconnects".

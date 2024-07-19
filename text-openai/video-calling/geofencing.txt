@@ -1,0 +1,30 @@
+### Overall Structure
+- The diagram is a sequence diagram.
+
+### Main Entities and Elements
+- **User**: Represented by the stick figure icon at the beginning of the timeline.
+- **App**: Labeled as "App", there are two instances of this entity in the diagram.
+- **SD-RTN**: Labeled as "SD-RTN", belongs to the group labeled "Provided by Agora".
+- **Geofencing**: A labeled sub-sequence within the broader sequence including multiple operations related to the App and SD-RTN.
+
+### Data Flow
+- **Connections**: 
+  - Solid lines with arrows show the direction of operation or data flow. These lines connect from the User to the App and from the App to SD-RTN, indicating communication and data requests/responses.
+  - Dashed lines with arrows depict responses and are used for lines returning to the App from the SD-RTN and to the User from the App.
+
+- **Groupings**:
+  - "Implemented by you" includes the User and the two instances of the App.
+  - "Provided by Agora" includes the SD-RTN.
+
+### Detailed Content
+- **Text within App (Top Box)**:
+  - "Start the app"
+- **Text within Geofencing (Sub-elements within sequence)**:
+  - "Set SD-RTN region in the Agora engine configuration newline Initiate the Agora engine newline Connect to SD-RTN in a specific region newline Success response"
+- **Text in App (Bottom Box)**:
+  - "Select a channel to join newline Join a channel with user Id, channel name, and token newline Join accepted"
+
+### Configuration or Additional Notes
+- Labels indicating the setups or contexts:
+  - "Implemented by you" positioned above the User and App (top instance).
+  - "Provided by Agora" positioned above SD-RTN.

@@ -1,0 +1,26 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- The main entities are rectangular boxes labeled UID 1, UID 2, T0, T1, T2, T3, T4, T5, T6, and T7.
+- There are circles labeled "joinChannel", "onUserJoined", "onUserOffline (reason userOfflineDropped)", and "SDK automatically reconnects".
+
+3. Data Flow:
+- Solid lines connect the entities, indicating the flow direction from left to right.
+- There is a grouping of entities labeled "Network interruption".
+
+4. Detailed Content:
+- UID 1 box: "Join channel"
+- onJoinChannelSuccess box: "Joined the channel successfully" newline 
+- onConnectionStateChanged box (under UID 1): "connection_state_connected," newline "connection_changed_join_success" newline "Network connection successful"
+- onConnectionStateChanged box (under T1): "connection_state_reconnecting," newline "connection_changed_interrupted" newline "Re-establishing Network connection"
+- onConnectionLost box: "Network connection interrupted"
+- onConnectionStateChanged box (under T5): "connection_state_failed," newline "connection_changed_join_failed" newline "Network connection failed"
+- UID 2 box: (Empty)
+- onUserJoined box (under T2): "Remote user comes online"
+- onUserOffline box (under T6): "reason userOfflineDropped" newline "Remote user is offline"
+
+5. Configuration or Additional Notes:
+- The note "Network interruption" is positioned between T1 and T4.
+- The note "SDK automatically reconnects" is positioned below T3.

@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is left-to-right.
+
+2. **Main Entities and Elements:**
+   - There are five main rectangular entities labeled as "Disconnected", "Connecting", "Connected", "Reconnecting", and "Failed".
+   - Within the flow, there are intermediary circular or oval nodes containing actions and statuses like "The client calls joinChannel", "Successfully joined the channel", "Connection Interrupted", and "Rejoined channel successfully".
+
+3. **Data Flow:**
+   - Data flow is represented by solid and dashed lines connecting the entities and the action nodes.
+   - From "Disconnected", a dashed line leads to a circular node labeled "The client calls joinChannel", which connects via a solid line to "Connecting".
+   - From "Connecting", a solid line leads to "Successfully joined the channel" towards "Connected".
+   - From "Connected", one solid line moves towards "Reconnecting" with an intermediary node "Connection Interrupted". Another solid line loops back to "Disconnected" labeled "Leave Channel".
+   - From "Reconnecting", the solid line passes through "Rejoined channel successfully" and back to "Connected". Another line leads to "Failed", labeled "Unable to rejoin channel within 20 minutes".
+
+4. **Detailed Content:**
+   - Disconnected: No internal content.
+   - Connecting: No internal content.
+   - Connected: No internal content.
+   - Reconnecting: No internal content.
+   - Failed: No internal content.
+   - The client calls joinChannel: Text content in oval.
+   - Successfully joined the channel: Text content in oval.
+   - Connection Interrupted: Text content in oval.
+   - Rejoined channel successfully: Text content in oval.
+   - Unable to rejoin channel within 20 minutes: Text content in oval.
+
+5. **Configuration or Additional Notes:**
+   - No additional lines or notes indicating configuration settings are apparent in the diagram. The layout and labeling are directly related to the described connections and statuses.

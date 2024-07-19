@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - The diagram includes two primary vertical boxes labeled "Your app" and "Video SDK".
+   - Inside "Your app" there are sub-elements: Open App, Setup app to handle local hardware and streaming.
+   - Inside "Video SDK" multiple steps are detailed: 
+     - Create the agoraEngine
+     - Retrieve authentication token to join channel
+     - Join a channel: useJoin
+     - Join accepted
+     - Create local media tracks
+     - Push local media tracks to the channel
+     - Retrieve streaming from the other user
+     - Receive and send data streams
+     - Leave the channel.
+
+3. **Data Flow:**
+   - Solid lines with arrows are used to show interactions between the user and "Your app", and between "Your app" and "Video SDK", indicating the direction of the data flow.
+   - Dashed lines indicate a return or a response to a previous action within the same entity or between different entities.
+
+4. **Detailed Content:**
+   - Your App:
+     - Open App
+     - Setup app to handle local hardware and streaming newline
+   - Video SDK:
+     - Create the agoraEngine: const agoraEngine = useRTCClient(AgoraRTC.createClient)
+     - Retrieve authentication token to join channel newline
+     - Join a channel: useJoin newline
+     - Join accepted newline
+     - Create local media tracks: const { isLoading: isLoadingCam, localCameraTrack } = useLocalCameraTrack(); const { isLoading: isLoadingMic, localMicrophoneTrack } = useLocalMicroph newline
+     - Push local media tracks to the channel: usePublish([localMicrophoneTrack, localCameraTrack]); newline
+     - Retrieve streaming from the other user: RemoteUser user=(remoteUser) playVideo=(true) playAudio=(true) / newline
+     - Receive and send data streams newline
+     - Leave the channel: useJoin
+
+5. **Configuration or Additional Notes:**
+   - No specific configuration settings or additional notes are included outside the main entities in the provided sequence diagram.

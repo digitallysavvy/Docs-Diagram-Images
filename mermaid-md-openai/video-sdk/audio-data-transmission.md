@@ -1,0 +1,11 @@
+# Sequence Diagram
+
+```mermaid
+flowchart LR
+  A["Specially collected audio"]
+  B["Collection Cluster"]
+  C["SDK"]
+  
+  A --> B
+  B --> |"Collected audio frames"| C
+```

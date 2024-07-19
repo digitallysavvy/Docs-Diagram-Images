@@ -1,0 +1,18 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- There are three main rectangular boxes labeled: "Original Background", "Blurred Background (Users can choose blurring level)", and "Image Background".
+
+3. Data Flow:
+- The three main boxes are connected by solid arrows pointing from left to right, indicating the direction of the flow.
+- There are no groupings of elements.
+
+4. Detailed Content:
+- Original Background (box): No additional text content.
+- Blurred Background (Users can choose blurring level) (box): The text content inside is "Users can choose blurring level".
+- Image Background (box): No additional text content.
+
+5. Configuration or Additional Notes:
+- There are no additional configuration settings or notes in the diagram.

@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram focusing on the interaction between software components and data flow processes related to encrypted media streaming.
+
+2. **Main Entities and Elements:**
+   - **User A** and **User B**: These are main entities represented as boxes at the top on the left and right side, respectively.
+   - **App A** and **App B**: Each user has an associated app, depicted as dashed boxes under the respective user labels.
+   - **SDK A** and **SDK B**: Nested within App A and App B, these SDKs facilitate the encrypted media streaming, shown as smaller solid boxes.
+   - **Audio & Video collection & encoding** and **Built-in encryption**: These are sub-elements within each SDK box.
+   - **Encryption transport key and salt**: Positioned at the bottom, represented as a singular box with two connections leading up towards SDK A and SDK B.
+
+3. **Data Flow:**
+   - There are solid lines indicating direct flow and interactions:
+     - From "Audio & Video collection & encoding" to "Built-in encryption" within both SDK A and SDK B indicating the flow of data for encryption.
+     - From "Built-in encryption" to "Send encrypted media stream" pointing upwards within SDK boxes, representing the direction of media stream handling.
+     - Line from "Send encrypted media stream" in SDK A to Agora SD-RTN and then to "Send encrypted media stream" in SDK B, depicted with blue solid and dashed lines labeled as "TCP/UDP encrypted transmission media stream," illustrating network-level media streaming.
+   - Dashed lines symbolize less tangible interactions like transport of "Encryption transport key and salt" from the bottom box to both SDKs.
+
+4. **Detailed Content:**
+   - **App A and App B**:
+     - "enableEncryption"
+   - **SDK A**:
+     - "Send encrypted media stream" newline "Built-in encryption" newline "Audio & Video collection & encoding" newline "Transport encryption mode, key and salt"
+   - **SDK B**:
+     - "Send encrypted media stream" newline "Built-in encryption" newline "Audio & Video collection & encoding" newline "Transport encryption mode, key and salt"
+   - **Encryption transport key and salt**:
+     - "Generate keys and salts on your server"
+
+5. **Configuration or Additional Notes:**
+   - A label above SDK A to SDK B connection states: "Transport encrypted media streams," enhancing the understanding that this diagram deals with encrypted data transmission.

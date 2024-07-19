@@ -1,0 +1,33 @@
+1. **Overall Structure**: 
+   - The diagram is a sequence diagram, which is used to show the interactions among different parts of a system in the order that they occur.
+
+2. **Main Entities and Elements**:
+   - There are three main entities represented as columns:
+     - **User**: Symbolized by a stick figure icon at the top, representing the user's interactions.
+     - **Your app**: Represents the application interface handling specific tasks linked with a video SDK.
+     - **Agora / SD-RTN**: Represents an external service or interface called Agora's SD-RTN which interacts with "Your app".
+   - There are sub-group boxes categorizing sets of actions within the "Your app" entity:
+     - **Join**: Encloses actions regarding the user joining a channel.
+     - **Play media files**: Encapsulates the actions dealing with media file manipulation.
+     - **Pause or resume play**: Grouping actions related to pausing or resuming media play.
+  
+3. **Data Flow**:
+   - The flow of data is depicted using solid lines for direct interactions or calls and dashed lines for returns or responses.
+   - Solid lines depict calls like "Open App," "Join a channel," "Select media file," and responses are depicted by dashed lines such as "Use Video SDK to create an instance of Agora Engine," "Retrieve authentication token to join a channel."
+   - Each group (Join, Play media files, Pause or resume) shows interactions within them bounded by the grouping boxes.
+
+4. **Detailed Content**:
+   - **Video SDK (within Your app)**:
+     - Open App
+     - Use Video SDK to create an instance of Agora Engine newline
+     - Enable audio and video in the engine newline
+     - Retrieve authentication token to join a channel newline
+     - Use Video SDK to create an instance of Media Player newline
+     - Open media file using Media Player newline
+     - Open media file completed newline
+     - Set up local video panel to display Media Player output newline
+     - Update channel media options to publish Media Player output newline
+     - Call pause or resume methods
+  
+5. **Configuration or Additional Notes**:
+   - The configuration and positioning of the joins and actions are sequentially aligned within the respective user groupings, clearly showing the progression from app opening to playing media files, and handling pauses/resumptions.

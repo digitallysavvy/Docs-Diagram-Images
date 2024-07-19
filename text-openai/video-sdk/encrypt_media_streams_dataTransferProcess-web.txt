@@ -1,0 +1,28 @@
+1. Overall Structure:
+   - The diagram presented is a sequence diagram, detailing the process flow and interactions in a media streaming scenario using encrypted transport methods.
+
+2. Main Entities and Elements:
+   - **User A** and **User B**: Each block contains components involved in handling media streams.
+   - Within each user block:
+     - **App A** and **App B**: Represents applications handling specific tasks.
+     - **SDK A** and **SDK B**: Software development kits used for audio and video collection and encoding.
+   - **Edge Server A** and **Edge Server B**: Involved in media stream decryption.
+   - **Generate keys and salts on your server**: A standalone icon indicating an action for generating encryption keys and salts.
+
+3. Data Flow:
+   - Solid lines with arrows show the data flow direction:
+     - From **User A** to **Edge Server A** and from **User B** to **Edge Server B**, indicating DTLS-SRTP encrypted transport media stream.
+     - Lines from the standalone key generation icon to **User A** and **User B** indicate the flow of "Encryption transport key and salt."
+   - Dashed lines within each user entity indicate internal data handling or configuration, labeled **HTTPS/WSS** to show encryption transport key and salt handling.
+
+4. Detailed Content:
+   - **App A** and **App B**:
+     - Audio & Video Collection & Encoding.
+   - **SDK A** and **SDK B**:
+     - Audio & Video Collection & Encoding.
+   - Each application component includes the method or function `setEncryptionConfig`.
+   - **Edge Server A** and **Edge Server B**:
+     - Media stream decryption.
+
+5. Configuration or Additional Notes:
+   - The note "Transport encrypted media streams" is placed above the Agora SD-RTN™ cloud, indicating the overall function or goal of the system illustrated in the diagram.

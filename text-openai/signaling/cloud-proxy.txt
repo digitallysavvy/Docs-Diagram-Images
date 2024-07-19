@@ -1,0 +1,45 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram, used to illustrate the flow and interactions between different entities in a process involving multiple components.
+
+2. Main Entities and Elements:
+   - The diagram includes several entities represented as labeled boxes aligned vertically. The main entities are:
+     - User
+     - Admin
+     - App
+     - Enterprise Firewall
+     - Cloud Proxy
+     - SD-RTN
+   - Each of these entities has vertical dashed lines extending downwards which indicate the lifespan or the period of activity during the interactions.
+
+3. Data Flow:
+   - Solid lines with arrows are used to showcase the direction and sequence of interactions between entities:
+     - An arrow from User to App labeled "Open the app".
+     - Multiple arrows among App, Enterprise Firewall, and Cloud Proxy showing initialization and request processes.
+     - Arrows between App and SD-RTN showing actions like "Join a channel", "Send data stream", and "Leave the channel".
+   - Dashed arrows often denotes responses to requests, like "Join success" or feedback arrows labeled "Proxy information".
+
+4. Detailed Content:
+   - Content within App entity:
+     - "Whitelist IP addresses and portsnewlinefor Cloud Proxy in the firewall."
+     - "Initialize the Signaling Engine"
+     - "Enable cloud proxynewlineCall the method to enablenewlinea Cloud Proxy connectionnewlineRequest access tonewlineCloud Proxy"
+     - "Join a channel"
+     - "Send data stream"
+     - "Receive data stream"
+     - "Leave the channel"
+   - Enterprise Firewall:
+     - "Check whitelist to grantnewlineaccess"
+   - Cloud Proxy:
+     - "Request access tonewlineCloud Proxy"
+     - "Proxy information"
+   - SD-RTN:
+     - "Ask to join a channel"
+     - "Join success"
+     - "Send and receive data stream"
+     - "Channel leave"
+
+5. Configuration or Additional Notes:
+   - Additional labels above the App, Cloud Proxy, and SD-RTN entities:
+     - App: "Implemented by you"
+     - Cloud Proxy: "Provided by Agora"
+     - SD-RTN: "Provided by Agora"

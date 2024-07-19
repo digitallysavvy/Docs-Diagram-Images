@@ -1,0 +1,25 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that details interactions across different processes related to screen sharing functionality.
+
+2. **Main Entities and Elements:**
+   - **Extension process**: Represented by a vertical box on the left, with a sub-element, a circle with a plus symbol.
+   - **Main process**: A central vertical box with two sub-elements, each represented by a square with a layered square icon inside it.
+   - **Agora SD-RTN**: Located on the far right, depicted as a vertical box with a cloud icon.
+
+3. **Data Flow:**
+   - From **Extension process** to **Main process**, there is a blue solid line labeled "Publish a screen sharing stream" indicating the flow of stream data.
+   - Between instances within the **Main process**:
+     - A dashed line moves rightward labeled "Publish screen sharing stream".
+     - Another dashed line moves leftward labeled "Subscribe to other streams".
+   - From **Main process** to **Agora SD-RTN**, a blue solid line indicates the direction of publishing the stream.
+   - From **Extension process** to **Main process**, there is a dashed line moving rightward with the label "Send screen sharing command".
+
+4. **Detailed Content:**
+   - **Extension process**: Contains "Screen sharing" in a title position at the top of the box.
+   - **Main process**: Includes the following text, separated into two interactions:
+     - "Send screen sharing command" and "Publish a screen sharing stream" indicating a command is sent and a stream is published respectively.
+     - "Subscribe to other streams" suggesting the main process also receives other streams.
+
+5. **Configuration or Additional Notes:**
+   - The blue backgrounds within boxes might indicate different phases or parts of the processes, whereby lighter blue and areas without fill denote different activities or states within the process. 
+   - The labels next to the arrows ("Send screen sharing command", "Publish a screen sharing stream", "Subscribe to other streams", and "Publish screen sharing stream") provide clarification on the actions being performed at each step of the sequence.

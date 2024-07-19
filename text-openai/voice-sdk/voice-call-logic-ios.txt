@@ -1,0 +1,33 @@
+1. **Overall Structure**: 
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements**:
+   - There are three main vertical boxes representing different entities:
+     - **User**: with sub-elements labeled "Voice call", "Open app", "Start a call", "Leave the call", and "Close app".
+     - **Your app**: containing a "Video SDK" box with operations listed in several sub-elements.
+     - **Agora**: split into two sub-elements labeled "Video SDK" and "SD-RTN", both containing operational details for communication activities.
+   
+3. **Data Flow**:
+   - Solid and dashed lines connect the various entities. Solid lines generally indicate the flow of operations and dashed lines signify returns or notifications. 
+   - Lines initiate from the User to "Your app", and from "Your app" to "Agora", indicating the direction of operation calls.
+   - Data transfer happens mainly from left to right and vice versa, showing interaction between User, Your app, and Agora.
+
+4. **Detailed Content**:
+   - **User box**:
+     - Voice call: Open app (solid line to Your app)
+     - Start a call (solid line to Your app)
+     - Leave the call (solid line to Your app)
+     - Close app
+   - **Your app - Video SDK box**:
+     - Initiate the Video SDK engine: agoraEngine = AgoraRtcEngineKit.sharedEngine
+     - In a call, all users send to the channel: agoraEngine.setClientRole(broadcaster)
+     - Join the channel: agoraEngine?.joinChannel
+     - Receive notification of other users joining the channel
+     - Receive and send data streams
+     - Leave the channel: agoraEngine.leaveChannel(nil)
+     - Clean up local resources: AgoraRtcEngineKit.destroy()
+   - **Agora - Video SDK and SD-RTN box**:
+     - Directional arrows show data flow direction involving join and leave channel operations and data streaming activities.
+
+5. **Configuration or Additional Notes**:
+   - No additional separate notes or configurations are specified outside of the operational text included in the entities. The diagram maintains a focus on interaction and process flow without external annotations or configurations.

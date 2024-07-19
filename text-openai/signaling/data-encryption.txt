@@ -1,0 +1,46 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - The diagram features three main entities or boxes: "User," "App," and "SD-RTN."
+   - Each entity is connected to a lifecycle shown by dotted lines extending down from each entity.
+   - The main entities "App" has two minor entities within it, labeled "Authentication system" and "Signaling Engine," which are smaller internal boxes. 
+
+3. **Data Flow:**
+   - Solid lines indicate the interaction flows with arrows showing direction between entities.
+   - Interactions start from "User" to "App" with "Start the app."
+   - "App" interacts with itself on tasks like:
+       - "Login to the authentication system."
+       - "Retrieve a 32-byte key."
+       - "Retrieve a 32-byte salt in Base64 format."
+       - "Create a encryption configuration using the key and salt."
+       - "Set the encryption configuration."
+       - "Initiate the Signaling Engine."
+       - "Select a channel to join."
+       - "Retrieve an access token."
+       - "Join a channel."
+       - "Communicate over an encrypted data stream" which flows to "SD-RTN."
+
+4. **Detailed Content:**
+   - "User" to "App":
+       - "Start the app"
+   - "App" interactions:
+       - Authentication system:
+         - "Login to the authentication system" newline
+         - "Retrieve a 32-byte key" newline
+         - "Retrieve a 32-byte salt in Base64 format"
+       - Signaling Engine:
+         - "Initiate the Signaling Engine"
+       - General app actions:
+         - "Create a encryption configuration using the key and salt" newline
+         - "Set the encryption configuration" newline
+         - "Select a channel to join" newline
+         - "Retrieve an access token" newline
+         - "Join a channel" newline
+         - "Communicate over an encrypted data stream"
+
+5. **Configuration or Additional Notes:**
+   - Two banners:
+       - Above "User" and "Authentication system" of the "App": "Implemented by you"
+       - Above "SD-RTN": "Provided by Agora"
+   - Each interaction is elaborated with arrows showing sequences and method calls including bidirectional flow for configurations and retrieval operations.

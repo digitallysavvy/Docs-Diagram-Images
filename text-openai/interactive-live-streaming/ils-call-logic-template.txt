@@ -1,0 +1,44 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - The diagram includes three main vertical boxes labeled: "User", "Host", "Audience".
+   - The right side features a vertical line leading to a box labeled "Agora".
+   - Additionally, there is a blue rectangle framing parts of the sequence with a labeled box "SD-RTN" at the bottom end of this blue rectangle that aligns with the Agora line.
+
+3. **Data Flow:**
+   - Solids lines with arrows indicate the flow of actions or messages between different entities:
+     - Solid lines containing arrows between "User", "Host", "Audience", and "Agora’s SD-RTN" indicating methods or actions such as "Open app", "Initialize the Video SDK Engine", "Start ILS event", etc.
+     - Dotted lines represent return actions or responses like "Clean up local resources" and "Stop local video."
+   - There’s an implied sequential progression with actions and responses flowing vertically from the top to the bottom of the diagram.
+
+4. **Detailed Content:**
+   - User:
+       - Open app newline
+       - Close app
+
+   - Video SDK with lines connecting to User:
+       - Initiate the Video SDK engine newline
+       - Start video in the engine newline
+       - Clean up local resources
+
+   - Host:
+       - Start ILS event newline
+         In an ILS event, only the hosts broadcast to the channel. newline
+       - Start local video newline
+       - Join the channel newline
+       - Send data stream
+
+   - Audience:
+       - Join ILS event newline
+         In an ILS event, the audience views the broadcast made by channel hosts. newline
+       - Join the channel newline
+       - Retrieve streaming from the other user. newline
+       - Receive data streams newline
+       - Leave ILS event newline
+         Stop local video. newline
+         Leave the channel.
+
+5. **Configuration or Additional Notes:**
+   - There are configurations noted as part of the "Host" and "Audience" interactions with notations related to ILS events, local video functionalities, and channel interactions.
+   - “SD-RTN” is noted as a system-specific designation associated with "Agora", indicating a specialized service or layer handling streams.

@@ -1,0 +1,18 @@
+1. Overall Structure:
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+The main entities are "User", "Your app", and "Agora". Within "Your app", there is a sub-element labeled "Signaling SDK". Within "Agora", there is a sub-element labeled "Signaling".
+
+3. Data Flow:
+The data flow is represented by solid lines with arrows indicating the direction. There is also a dashed line grouping elements under the title "Initialize".
+
+4. Detailed Content:
+User: Initialize, Read and write user metadata, Change user information, Read and write channel metadata, Update channel information, Use locks, Update channel metadata with locking, Close, Leave the channel.
+
+Your app (Signaling SDK): Open app, Create a Signaling client, Add client event callbacks, Create a Signaling channel, Add channel event callbacks, Log in to Signaling, Join a channel, Set local user metadata, Add, update, or delete local user metadata, Subscribe to metadata of remote users, On user metadata updated callback, Retrieve metadata of a remote user, Set channel metadata, Add, update, or delete channel metadata, On channel metadata updated callback, Retrieve channel metadata, Set a lock, Acquire the lock, Specify the lock name when updating metadata, Release locks, Unsubscribe from user metadata update notifications, Log out of Signaling.
+
+Agora (Signaling): No text content within this entity.
+
+5. Configuration or Additional Notes:
+There are no additional lines or configuration settings specified in the diagram.

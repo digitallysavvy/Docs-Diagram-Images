@@ -1,0 +1,31 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is from left to right.
+
+2. **Main Entities and Elements:**
+   - There are three main entities in the diagram:
+     - **Agora Voice SDK**: Represented by a logo on the left.
+     - **Large Dashed Box (labeled A and B)**: Inside, there are sub-elements labeled A and B each containing icons of a desktop and mobile.
+       - **A**: Shows desktop and mobile icons.
+       - **B**: Shows desktop and mobile icons.
+     - **Cloud labeled Agora SD-RTN™**: Positioned on the right.
+
+3. **Data Flow:**
+   - Arrows flow from left to right indicating the direction of data flow:
+     - **Solid Arrow** from Agora Voice SDK to Group A.
+     - Multiple **Solid Arrows** among sub-elements A and B indicating interactions:
+       - From A to B: "Publish audio and subscribe to B".
+       - From B to A: "Publish audio and subscribe to A".
+     - Solid arrows leading to Agora SD-RTN™ from both A and B.
+   - Group A and B are linked with solid arrows showing the exchange of data:
+     - A exchanges data directly with B and vice versa.
+
+4. **Detailed Content:**
+   - Large Dashed Box:
+     - Sub-element A: 
+       - "1. Set the client role as host newline 2. Join a channel newline 3. Publish audio and subscribe to B newline 4. Publish audio and subscribe to A".
+     - Sub-element B:
+       - No explicit textual content; interaction specified via arrows and labels outside the boxes.
+
+5. **Configuration or Additional Notes:**
+   - No additional configuration settings or notes observed in the visual elements of the diagram.

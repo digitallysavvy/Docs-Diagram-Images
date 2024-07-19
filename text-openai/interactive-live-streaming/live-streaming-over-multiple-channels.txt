@@ -1,0 +1,21 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram depicting the interaction between different components during various stages of app operations involving video software development kit (SDK).
+
+2. Main Entities and Elements:
+   - There are three main vertical entities: "User", "Your app", and "Agora".
+   - Each main entity contains several smaller rectangular boxes representing operations or methods.
+   - The "Your app" entity includes a further categorized box labeled "Video SDK" subdivided into several operational steps.
+   - The "Agora" entity also includes a subdivided area labeled "SD-RTN".
+
+3. Data Flow:
+   - Solid arrows indicate data flow or method calls, pointing from the actor or initiating process to the target process.
+   - Dashed arrows typically represent return of control or callbacks to the calling entity.
+   - The flow connects "User" to "Your app" to "Agora" and between different steps within each entity.
+
+4. Detailed Content:
+   - "User" entity: Starts with "Open App", proceeds with operations like "Join a channel", "Start live streaming" and ends with "Leave the live streaming event".
+   - "Your app" entity: Begins with "Initiate the Agora engine", "Set the user role as host", "Join a channel as host", "Publish local media to the channel" to various operations under "Channel media relay" and "Join multiple channels".
+   - "Agora" entity: Involves instructions and operations within the "SD-RTN" section such as "Relay stream to the destination channel", "Stop media relaying", and "Leave all the channels".
+
+5. Configuration or Additional Notes:
+   - Positioned around the "Your app" and "Agora" entities are additional notes indicating configurations and details related to channel information, like source channel name, token, and uid, as part of setting up and managing live streaming channels.

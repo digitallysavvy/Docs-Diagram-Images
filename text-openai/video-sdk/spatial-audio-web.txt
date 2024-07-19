@@ -1,0 +1,23 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show the interactions between entities in a specific time sequence.
+
+2. **Main Entities and Elements:**
+   - The main entities or boxes in the diagram include "Your app," "User," "Video SDK," "Agora," and "Spatial Audio Extension."
+   - Sub-elements include smaller boxes labeled with specific functions such as "AgoraRTC.createClient," "AgoraRTC.registerExtension," "spatialAudioExtension.updateSelfPosition," etc.
+
+3. **Data Flow:**
+   - The connections between entities are depicted using solid and dashed lines. Solid lines typically indicate the direction of the flow of information or commands.
+   - There are dashed lines showing returns or acknowledgements, like in the transactions between "Your app," "Agora," and "Spatial Audio Extension."
+   - The diagram includes groupings of elements under titles like "Setup the spatial audio extension," "Join Channel," "Realize remote user's spatial sound," "Spatial audio effect for media player," and "Cleanup."
+
+4. **Detailed Content:**
+   - "AgoraRTC.createClient" newline "AgoraRTC.registerExtension" newline "spatialAudioExtension.updateSelfPosition"
+   - "AgoraRTCClient.join" newline "client.on('user-published')" newline "AgoraRTCClient.subscribe"
+   - "spatialAudioExtension.createProcessor" newline "remoteTrack.pipe(processor).pipe(track.processorDestination)" newline "remoteTrack.Play" newline "processor.updateRemotePosition"
+   - "AgoraRTC.createBufferSourceAudioTrack" newline "spatialAudioExtension.createProcessor" newline "track.pipe(processor).pipe(track.processorDestination)" newline "track.Play" newline "processor.updatePlayerPositionInfo"
+   - "client.on('user-unpublished')" newline "processor.removeRemotePosition" newline "AgoraRTC.leave" newline "processor.clearRemotePosition"
+
+5. **Configuration or Additional Notes:**
+   - No explicit additional lines or notes such as configuration settings are visible in the diagram, except the function call lines and returns, which are self-explanatory within the context of the interactions between the main entities.
+
+This structured description systematically covers the sequence diagram's content and organization without the need for direct visual reference.

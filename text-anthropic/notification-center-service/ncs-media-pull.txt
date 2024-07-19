@@ -1,0 +1,37 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - Web server
+   - Your app server
+   - Agora Media Pull
+   - User (depicted with a stick figure icon at the top and bottom)
+
+3. Data Flow:
+   - The flow starts from the User towards the Web server with "Start pulling media into an Agora channel".
+   - From the Web server to Your app server, there is a solid line with the text "Start pulling media into an Agora channel".
+   - From Your app server to Agora Media Pull, there is a solid line with the text "Create player API".
+   - From Agora Media Pull to Your app server, there is a solid line with the text "Response containing player parameters".
+   - From Agora Media Pull to Your app server, there is a dashed line with the text "Notification eventType=1: Player created".
+   - From Your app server to Web server, there is a dashed line with the text "Authenticate notification signature".
+   - From Web server to Your app server, there is a solid line with the text "200 OK".
+   - From Web server to Your app server, there is a solid line with the text "Change player status".
+   - From Your app server to Agora Media Pull, there is a solid line with the text "Update player API".
+   - From Agora Media Pull to Your app server, there is a solid line with the text "Response containing player parameters".
+   - From Agora Media Pull to Your app server, there is a dashed line with the text "Notification eventType=4: Player status changed".
+   - From Your app server to Web server, there is a dashed line with the text "Authenticate notification signature".
+   - From Web server to Your app server, there is a solid line with the text "200 OK".
+   - From Web server to Your app server, there is a solid line with the text "Stop playing media".
+   - From Your app server to Agora Media Pull, there is a solid line with the text "Delete player API".
+   - From Agora Media Pull to Your app server, there is a solid line with the text "Response confirming player delete".
+   - From Agora Media Pull to Your app server, there is a dashed line with the text "Notification eventType=2: Player destroyed".
+   - From Your app server to Web server, there is a dashed line with the text "Authenticate notification signature".
+   - From Web server to Your app server, there is a solid line with the text "200 OK".
+
+4. Detailed Content:
+   - Web server box content: "Web server"
+   - Your app server box content: "Your app server"
+   - Agora Media Pull box content: "Agora newline Media Pull"
+
+5. Configuration or Additional Notes:
+   - The diagram is divided into three sections: "Implemented by you", "Provided by Agora", and User sections at the top and bottom.

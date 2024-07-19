@@ -1,0 +1,38 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User, Your app, Agora, SD-RTN
+   - Within Your app: Video SDK
+   - Host (sub-element of Your app)
+   - Audience (sub-element of Your app)
+
+3. Data Flow:
+   - Solid lines show data flow from User to Your app, Your app to Agora, Your app to itself, Your app to SD-RTN, and Audience to Your app.
+   - Dashed lines indicate a return flow in the opposite direction.
+   - Elements are grouped under "Your app" title.
+
+4. Detailed Content:
+   - User: Open app newline Close app
+   - Your app: 
+     Initiate the Video SDK engine: newline agoraEngine = AgoraRtcEngineKit.sharedEngine
+     Start video in the engine: newline agoraEngine.enableVideo()
+     In an live streaming event, only the hosts broadcast to the channel: newline agoraEngine.setClientRole(.broadcaster)
+     Start local video: newline agoraEngine.setupLocalVideo(videoCanvas)
+     Join the channel: newline agoraEngine?.joinChannel
+     Stop local video: newline agoraEngine.stopPreview()
+     Leave the channel: newline agoraEngine.leaveChannel(nil)
+     Clean up local resources: newline AgoraRtcEngineKit.destroy()
+   - Agora: (no text content)
+   - SD-RTN: (no text content)
+   - Host: Start a live streaming event
+   - Audience: 
+     Join live streaming event  
+     In an live streaming event, the audience views the stream sent by channel hosts: newline agoraEngine.setClientRole(.audience)
+     Join the channel: newline agoraEngine?.joinChannel
+     Retrieve streaming from the hosts: newline agoraEngine.setupRemoteVideo(videoCanvas)
+     Leave live streaming event
+
+5. Configuration or Additional Notes:
+   - "Send data stream" note pointing from Your app to Agora
+   - "Receive data streams" note pointing from Agora to Audience

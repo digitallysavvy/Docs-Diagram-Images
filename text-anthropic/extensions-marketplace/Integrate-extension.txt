@@ -1,0 +1,36 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The overall direction of the diagram is from left to right.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes labeled: "Image Enhancement", "Face Filter", "Face Change", "Voice Effect", "Voice Changer", "Noise Cancellation", "Extension", "Audio/Video Filter Extensions", "Capture", "Pre-Process", "Encode", "Transmit", "Decode", "Post-Process", and "Play".
+- There is a smaller rectangular box within the "Audio/Video Filter Extensions" box labeled "Encapsulate audio or video processing capabilities".
+- There is a smaller oval shape labeled "App" next to the "Play" box.
+
+3. Data Flow:
+- Solid lines with arrowheads indicate the flow direction between the main entities.
+- The entities "Image Enhancement", "Face Filter", "Face Change", "Voice Effect", "Voice Changer", and "Noise Cancellation" are connected to the "Extension" box with solid lines pointing towards it.
+- The "Extension" box is connected to the "Audio/Video Filter Extensions" box with a solid line pointing downwards.
+- The "Audio/Video Filter Extensions" box is connected to the "Video SDK" group with a solid line pointing to the right.
+- Within the "Video SDK" group, the boxes "Capture", "Pre-Process", "Encode", "Transmit", "Decode", "Post-Process", and "Play" are connected in a left-to-right sequence with solid lines.
+- Two solid lines connect the "Audio and Video Data" labels to the "Video SDK" group, one pointing to the left and one pointing to the right.
+
+4. Detailed Content:
+- "Image Enhancement" box contains no additional text.
+- "Face Filter" box contains no additional text.
+- "Face Change" box contains no additional text.
+- "Voice Effect" box contains no additional text.
+- "Voice Changer" box contains no additional text.
+- "Noise Cancellation" box contains no additional text.
+- "Extension" box contains no additional text.
+- "Encapsulate audio or video processing capabilities" text is inside the "Audio/Video Filter Extensions" box.
+- "Capture" box contains no additional text.
+- "Pre-Process" box contains no additional text.
+- "Encode" box contains no additional text.
+- "Transmit" box contains no additional text.
+- "Decode" box contains no additional text.
+- "Post-Process" box contains no additional text.
+- "Play" box contains no additional text.
+
+5. Configuration or Additional Notes:
+- The "Video SDK" group is enclosed within a dashed rectangular border.

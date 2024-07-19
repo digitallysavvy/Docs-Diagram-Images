@@ -1,0 +1,40 @@
+### 1. Overall Structure:
+- The diagram is a sequence diagram, which is used to show the interactions between different entities over time.
+
+### 2. Main Entities and Elements:
+- **User**: Represented by a stick figure at both the top and bottom ends of the diagram.
+- **Your app**: A long vertical rectangle, or lifeline, labeled "Your app".
+- **Voice SDK**: Part of the "Your app" lifeline but specifically box is labeled "Voice SDK".
+- **Agora**: Another long vertical rectangle parallel to "Your app", labeled "Agora".
+- **SD-RTN**: Vertically aligned with "Agora", labeled "SD-RTN".
+
+### 3. Data Flow:
+- **Interactions**: Solid lines with arrows between entities indicate the direction of the flow, starting from "User" to "Voice SDK" and interactions between "Your app" and "Agora" as well as between "Voice SDK" and "SD-RTN".
+- **Groupings of elements**:
+  - **Join**: A group containing interactions such as "Join a channel" and "Retrieve authentication token to join a channel".
+  - **Publish and Subscribe**: Includes interactions like "Publish the microphone track to the channel" and "Subscribe to tracks from other users".
+  - **Common workflows**: Contains activities like "Unpublish the local audio track", "Adjust volume", and "Mute/Unmute audio".
+
+### 4. Detailed Content:
+- **Your app (Voice SDK)**:
+  - Open App
+  - Use Voice SDK to create an Agora Engine instance
+  - Create and play the local audio track
+  - Bypass autoplay block when onAutoplayFailed event occurs
+- **Join**:
+  - Join a channel
+  - Retrieve authentication token to join a channel newline Join the channel
+- **Publish and Subscribe**:
+  - Publish the microphone track to the channel
+  - Subscribe to tracks from other users
+  - Manage local and remote audio tracks
+- **Common workflows**:
+  - Bypass autoplay blocking
+  - Unpublish the local audio track
+  - Call API methods to adjust or mute the local or remote audio track
+  - Call the API method to mute or unmute the local audio track
+- **Voice SDK**:
+  - Leave the channel newline Leave the channel
+
+### 5. Configuration or Additional Notes:
+- There are no additional lines or notes such as configuration settings explicitly mentioned or positioned in the diagram outside the main entities and interactions described above.

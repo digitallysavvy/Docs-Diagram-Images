@@ -1,0 +1,36 @@
+1. Overall Structure:
+- Type of diagram: Flow diagram
+- Direction of the diagram: Left-to-right
+
+2. Main Entities and Elements:
+- Client A (left) and Client B (right)
+- App A and SDK A (left group)
+- App B and SDK B (right group)
+- Edge Server A and Edge Server B (center)
+- Agora SD-RTN cloud (center top)
+
+3. Data Flow:
+- Solid lines connecting Client A to Edge Server A, and Client B to Edge Server B (bi-directional)
+- Dashed lines connecting Edge Server A to Edge Server B, labeled "Encrypted data transmission"
+- App A and App B grouped with SDK A and SDK B respectively
+
+4. Detailed Content:
+- Client A: "Media stream encryption"
+- Client B: "Media stream decryption"
+- App A (within group):
+  - "Audio/Video capture and rendering" (newline)
+  - "DLTS encryption Media stream transmission" (icon)
+  - "setEncryptionMode" (newline)
+  "setEncryptionSecret" (lock icon)
+- App B (within group): 
+  - "Audio/Video capture and rendering" (newline)
+  - "DLTS encryption Media stream transmission" (icon)
+  - "setEncryptionMode" (newline)
+  "setEncryptionSecret" (lock icon)
+- Edge Server A: "Encrypted data transmission"
+- Edge Server B: "Encrypted data transmission"
+- Agora SD-RTN (cloud): "agora"
+
+5. Configuration or Additional Notes:
+- SDK A: "HTTPS/WSS encryption method and secret key transmission"
+- SDK B: "HTTPS/WSS encryption method and secret key transmission"

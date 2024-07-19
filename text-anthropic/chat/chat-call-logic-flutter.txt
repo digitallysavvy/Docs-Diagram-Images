@@ -1,0 +1,40 @@
+1. Overall Structure: This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box)
+  - Sub-element: Chat SDK (smaller box inside)
+- Agora (box)
+  - Sub-element: Chat Server (smaller box inside)
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of data or method calls between entities. The arrows indicate the direction of the flow.
+- Groupings of interactions are represented by dashed rectangles with titles such as "Initialize", "Log in", "Send messages", "Receive messages", and "Close".
+
+4. Detailed Content:
+- User: No text content.
+- Your app:
+  - Chat SDK: No text content.
+- Initialize group:
+    - Open app (from User to Your app)
+    - Get a ChatClient instance: newline agoraChatClient = ChatClient.getInstance
+    - Initialize the instance: newline agoraChatClient.init(options)
+    - Add message event callbacks: newline agoraChatClient.chatManager.addEventHandler(...)
+    - Add connection event callbacks: newline agoraChatClient.addConnectionEventHandler(...)
+- Log in group:
+    - Join a chat (from User to Your app)
+    - Retrieve authentication token for the user (from Your app to Your app)
+    - Log in to the chat server: newline agoraChatClient.loginWithAgoraToken(userId, token)
+    - onConnected() callback (from Agora to Your app)
+- Send messages group:
+    - Send a message (from User to Your app)
+    - Create a ChatMessage (from Your app to Your app)
+    - Send the ChatMessage: newline agoraChatClient.chatManager.sendMessage(message)
+- Receive messages group:
+    - onMessagesReceived(List<ChatMessage> messages) callback (from Agora to Your app)
+    - Display message (from Your app to User)
+- Close group:
+    - Leave the chat (from User to Your app)
+    - Log out: newline agoraChatClient.logout(...)
+
+5. Configuration or Additional Notes: There are no additional configuration settings or notes in the diagram.

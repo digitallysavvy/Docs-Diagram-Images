@@ -1,0 +1,35 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "User", "Your app" (containing "Video SDK"), and "Agora" (containing "SD-RTN").
+- Within "Your app", there is a sub-element labeled "Video SDK".
+- Within "Agora", there is a sub-element labeled "SD-RTN".
+
+3. Data Flow:
+- The diagram shows solid lines representing data flow between the entities.
+- The data flow is bi-directional, with arrows indicating the direction of the flow.
+- There are four groupings of elements, titled "Join a channel", "Channel media relay", "Join multiple channels", and "Leave the live streaming event".
+
+4. Detailed Content:
+- User: "Open App"
+- "Join a channel": "Start live streaming"
+- Your app to Agora: "Initiate the Agora engine"
+- Your app to Agora: "Set the user role as host" newline "Join a channel as host" newline "Publish local media to the channel"
+- "Channel media relay": "Start multi-channel live streaming"
+- Your app to Agora: "Set the source channel info: Source channel name, token, and uid"
+- Your app to Agora: "Set the destination channel info: Destination channel name, token, and uid"
+- Your app to Agora: "Call the method to start media relaying"
+- Agora to Your app: "Relay stream to the destination channel"
+- Agora to Your app: "Report the media relaying state with a callback functions"
+- "Join multiple channels": "Start multi-channel live streaming"
+- Your app to Agora: "Create a new channel"
+- Your app to Agora: "Set the user role as host for the new channel"
+- Your app to Agora: "Join the new channel"
+- Agora to Your app: "Join accepted"
+- Your app to Agora: "Publish to the new channel"
+- User to Your app: "Leave the live streaming event"
+- Your app to Agora: "Stop media relaying" newline "Leave all the channels"
+
+5. Configuration or Additional Notes:
+- There are no additional configuration settings or notes provided in the diagram.

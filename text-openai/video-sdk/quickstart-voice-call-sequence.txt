@@ -1,0 +1,42 @@
+1. **Overall Structure:**
+   - The diagram is a type of Sequence Diagram used to model the interactions between entities in a software system focusing on the sequence of messages exchanged.
+
+2. **Main Entities and Elements:**
+   - There are three primary vertical entities or columns: "App: Host," "Voice SDK," and "App: Audience."
+   - Each entity includes a rectangular box at the top labeled with its name.
+   - A dashed vertical line extends downward from each box representing the entity's timeline.
+
+3. **Data Flow:**
+   - **Initiate the Engine:**
+     - Solid lines with arrowheads illustrate the flow of commands between the entities.
+     - For instance, from "App: Host" to "Voice SDK" and from "App: Audience" to "Voice SDK" indicating "Create and initialize the engine."
+   - **Join Channel:**
+     - A solid line with arrow points from "App: Host" to "Voice SDK" labeled "Join the channel and set the user role as host."
+     - Similarly, another solid line points from "App: Audience" to "Voice SDK" labeled "Join the channel and set the user role as audience."
+     - Return messages are denoted by dashed lines with arrows pointing from "Voice SDK" to both applications confirming the channel join status.
+   - **Start Audio Interaction:**
+     - From "App: Host" to "Voice SDK" with the action labeled "Send audio."
+     - Corresponding receive action in "App: Audience" represented by a solid line from "Voice SDK."
+   - **End Audio Interaction:**
+     - Action to leave the channel starts at both "App: Host" and "App: Audience" and points toward "Voice SDK."
+     - Return notifications of leaving the channel are depicted by dashed lines pointing from "Voice SDK" to each app.
+
+4. **Detailed Content:**
+   - **App: Host**:
+     - "Create and initialize the engine"
+     - "Join the channel and set the user role as host" newline "Notify the host that the channel has been joined"
+     - "Send audio"
+     - "Leave the channel" newline "Notify the host that it has left the channel"
+     - "Destroy the engine"
+   - **Voice SDK**:
+     - Acts as an intermediary for executing commands and relaying statuses.
+   - **App: Audience**:
+     - "Create and initialize the engine"
+     - "Join the channel and set the user role as audience" newline "Notify the audience that the channel has been joined"
+     - "Receive audio"
+     - "Leave the channel" newline "Notify the audience that it has left the channel"
+     - "Destroy the engine"
+
+5. **Configuration or Additional Notes:**
+   - Along with the diagram, each entity is positioned side by side in the diagram without overlap, indicating a clear delineation of responsibilities and actions.
+   - The diagram uses arrows of varying styles (solid for commands, dashed for responses) to indicate the nature of message exchanges.

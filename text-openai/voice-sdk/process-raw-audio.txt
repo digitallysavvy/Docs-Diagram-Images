@@ -1,0 +1,39 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which depicts the interactions between different entities over time in a process.
+
+### Main Entities and Elements:
+1. **User**: Illustrated as a stick figure.
+2. **Your app**: Represented with a box containing sub-elements.
+3. **Agora**: Indicated by a box labeled "SD-RTN".
+
+#### Sub-elements:
+- **Voice SDK**: Found within the "Your app" box, contains grouped sequential actions.
+- **SD-RTN**: Found next to "Agora", but no sub-elements are detailed.
+
+### Data Flow:
+- **Solid Lines**: Represent the execution flow, initiating from the "User" and progressing through "Your app" with responses to "Agora".
+- **Dashed Lines**: Show the return of data or results back to either the "User" or "Your app".
+  
+### Groupings of Elements:
+1. **Setup raw data processing**
+   - Actions: "Setup the audio frame observer".
+2. **Join a channel**
+   - Actions: "Register the audio frame observer", "Set audio frame parameters", "Retrieve authentication token to join a channel", "Join the channel".
+3. **Process raw audio data**
+   - Actions: "Get the raw data in the callbacks", "Send the processed data back with the callbacks".
+4. **Leave**
+   - Actions: "Unregister the audio frame observer", "Leave the channel".
+  
+### Detailed Content:
+- **Open App**
+  - Present between the User and Voice SDK.
+- **Create an instance of Agora Engine using Voice SDK**
+  - Flow from Voice SDK to SD-RTN.
+- **Setup the audio frame observer**: In "Voice SDK" returning back.
+- **Register the audio frame observer** and **Set audio frame parameters**: Flow within "Voice SDK".
+- **Retrieve authentication token to join a channel** and **Join the channel**: Flow within "Voice SDK".
+- **Get the raw data in the callbacks** and **Send the processed data back with the callbacks**: Within "Voice SDK".
+- **Unregister the audio frame observer** and **Leave the channel**: Flow from "Voice SDK".
+
+### Configuration or Additional Notes:
+- There are no specific configuration settings or additional notes indicated, just the linear interaction flows and return paths depicted by solid and dashed lines respectively.

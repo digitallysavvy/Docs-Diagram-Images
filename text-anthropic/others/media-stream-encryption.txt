@@ -1,0 +1,33 @@
+1. Overall Structure: 
+- The provided image is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "User", "App", "Developer's Authentication System", and "API".
+- "Media stream encryption" is a sub-element within the "App" entity, containing smaller boxes and text.
+
+3. Data Flow:
+- The diagram shows interactions between entities using solid lines with arrows indicating the direction of the flow.
+- There is a grouping titled "Implemented by you" that includes the "App" and "Developer's Authentication System" entities.
+- There is another grouping titled "Provided by Agora" that includes the "API" entity.
+
+4. Detailed Content:
+- User: "Start the app" (text within the User entity)
+- App: "Initiate the Video SDK engine" (text within the App entity)
+- Media stream encryption (sub-element within App):
+  "Login to the developer's authentication system." newline
+  "Request a 32-byte key" newline
+  "Generate a 32-byte string using OpenSSL" newline
+  "Requested key" newline
+  "Request a 32-byte salt in Base64 format" newline
+  "Generate a 32-byte string in Base64 format using OpenSSL" newline
+  "Requested salt" newline
+  "Create a encryption configuration using the received salt and key" newline
+  "Call the method to set the encryption configuration"
+- App: "Select a channel to join"
+- App: "Join a channel with user Id, channel name, and token"
+- Developer's Authentication System: "Join accepted"
+- User: "Encrypted media stream" (text within the User entity)
+
+5. Configuration or Additional Notes:
+- There is a note below the "User" entity: "Implemented by you".
+- There is a note next to the "API" entity: "Provided by Agora".

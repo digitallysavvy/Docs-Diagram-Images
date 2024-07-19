@@ -1,0 +1,32 @@
+1. Overall Structure:
+   - The provided diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (represented by a person icon)
+   - Web server, App (boxes within "Implemented by you")
+   - SD-RTN (box within "Provided by Agora")
+   - ActiveFence (box within "Provided by ActiveFence")
+
+3. Data Flow:
+   - Solid lines represent data flow from the User to "Implemented by you" entities (Login, Join channel).
+   - Dashed lines represent data flow between "Implemented by you," "Provided by Agora," and "Provided by ActiveFence" entities.
+   - The flow is bi-directional for "Monitor content in channel" between SD-RTN and ActiveFence.
+   - There is a grouping titled "Implemented by you" containing Web server and App.
+   - There is a grouping titled "Provided by Agora" containing SD-RTN.
+   - There is a grouping titled "Provided by ActiveFence" containing ActiveFence.
+
+4. Detailed Content:
+   - Web server (no text content)
+   - App (no text content)
+   - SD-RTN (no text content)
+   - ActiveFence (no text content)
+   - User (no text content)
+   - "Login authentication" between User and SD-RTN
+   - "Join channel with ActiveFence activated" between SD-RTN and ActiveFence
+   - "Content matches workflow risk" from ActiveFence
+   - "Action webhook" between ActiveFence and SD-RTN
+   - "Act on webhook. For example, use Channel Management REST API to remove user from channel" between SD-RTN and User newline "Log user out" between SD-RTN and User
+   - "Logout" between User and Web server, App
+
+5. Configuration or Additional Notes:
+   - There is a note stating "Monitor content in channel" positioned between SD-RTN and ActiveFence, indicating the bi-directional data flow.

@@ -1,0 +1,41 @@
+1. Overall Structure:
+   - This is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (depicted as a stick figure icon)
+   - Your app (large box containing Video SDK sub-element)
+   - Agora (large box containing SD-RTN sub-element)
+   - Host (smaller box within Your app)
+   - Audience (smaller box within Your app)
+
+3. Data Flow:
+   - User to Your app: Open App (solid line, direction from User to Your app)
+   - Your app to Agora: Multiple communications (solid lines, direction from Your app to Agora)
+   - Host to Agora: Multiple communications (solid lines, direction from Host to Agora)
+   - Agora to Host: Remote user joined (dashed line, direction from Agora to Host)
+   - Audience to Agora: Multiple communications (solid lines, direction from Audience to Agora)
+   - Agora to Audience: Remote user joined, Receive data streams (dashed lines, direction from Agora to Audience)
+   - User to Your app: Leave broadcast, Close app (solid lines, direction from User to Your app)
+   - Your app to Agora: agoraEngine.leaveChannel() (solid line, direction from Your app to Agora)
+
+4. Detailed Content:
+   - Your app:
+     Initialize the Agora Video SDK engine: newline agoraEngine = createAgoraRtcEngine()
+     Enable the video module: newline agoraEngine.enableVideo
+     Register the event handler: newline agoraEngine.registerEventHandler
+     Setup AgoraVideoView widget newline for local or remote video
+
+   - Host:
+     Start a live streaming event
+     Set the client role as Host: newline agoraEngine.setClientRole(role: ClientRoleType.clientRoleBroadcaster);
+     Set a channel profile: newline setChannelProfile(ChannelProfileType.channelProfileLiveBroadcasting);
+     Retrieve authentication token
+
+   - Audience:
+     Join a live streaming event
+     Set the client role as Audience: newline agoraEngine.setClientRole(role: ClientRoleType.clientRoleAudience);
+     Set a channel profile: newline setChannelProfile(ChannelProfileType.channelProfileLiveBroadcasting);
+     Retrieve authentication token
+
+5. Configuration or Additional Notes:
+   - There are no additional lines or notes related to configuration settings.

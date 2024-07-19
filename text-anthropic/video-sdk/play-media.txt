@@ -1,0 +1,32 @@
+1. Overall Structure:
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Video SDK (box)
+- Agora SD-RTN (box with cloud icon)
+- Join (box)
+- Play media files (box)
+
+3. Data Flow:
+- The flow starts from the User, indicated by a solid line labeled "Open App" towards the Video SDK.
+- There are two dashed lines from the Video SDK to the Agora SD-RTN box, labeled "Use Video SDK to create an instance of Agora Engine" and "Enable audio and video in the engine".
+- From the Join box, a solid line labeled "Join a channel" goes to the Video SDK, and a dashed line labeled "Retrieve authentication token to join a channel" comes back.
+- Another solid line labeled "Join the channel" goes from the Video SDK to the Agora SD-RTN box.
+- From the Play media files box, a solid line labeled "Select media file" goes to the Video SDK, and a dashed line labeled "Use Video SDK to create an instance of Media Player" comes back.
+- A solid line labeled "Open media file using Media Player" goes from the Video SDK to the Agora SD-RTN box, and a dashed line labeled "Open media file completed" comes back.
+- A solid line labeled "Play media file" goes from the Play media files box to the Video SDK, followed by various dashed and solid lines indicating interactions between the Video SDK and Agora SD-RTN box.
+- A solid line labeled "Pause or resume play" goes from the Play media files box to the Video SDK, and a solid line labeled "Call pause or resume methods" goes to the Agora SD-RTN box.
+- A dashed line labeled "Media file played completely" comes back from the Agora SD-RTN box to the Video SDK.
+- Finally, a solid line labeled "Resume publishing of camera and microphone" goes from the Video SDK to the Agora SD-RTN box.
+
+4. Detailed Content:
+User: (no text content)
+Video SDK: (no text content)
+Agora SD-RTN: (no text content)
+Join: "Join newline a channel"
+Play media files: "Play media files newline Select media file newline Play media file newline Pause or resume play"
+
+5. Configuration or Additional Notes:
+There is a grouping titled "Join" that encompasses the "Join a channel" flow.
+There is a grouping titled "Play media files" that encompasses the media file playback flow.

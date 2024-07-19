@@ -1,0 +1,39 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram, which shows the interactions among entities over time for video processing and channel management.
+
+2. **Main Entities and Elements:**
+   - **App:** Represented as a labeled box on the leftmost part of the diagram.
+   - **SDK:** Labelled box adjacent to the App on its right.
+   - **Agora SD-RTN:** Labelled cloud icon on the far right.
+   - **Custom video capture:** A bordered group that includes interactions specifically about video capture, represented as a labeled rectangle encompassing several steps between App and SDK.
+
+3. **Data Flow:**
+   - **App to SDK:**
+     - Solid lines with arrows represent the various requests being sent from the App to the SDK, including:
+       - Create and initialize the engine
+       - Enable the video module
+       - Set up the external video source (within 'Custom video capture')
+       - Join the channel
+       - Send processed video data to SDK
+       - Leave the channel
+       - Destroy the engine
+   - **App/SDK to Agora SD-RTN:**
+     - SDK sends two requests to Agora SD-RTN depicted by solid lines with arrows:
+       - Request to join the channel
+       - Request to leave the channel
+   - Each of these interactions occurs within specified sections, physically separated and organized in the visual layout of the sequence diagram.
+
+4. **Detailed Content:**
+   - Each action or interaction is described in simple textual content within each connecting line:
+     - "Create and initialize the engine"
+     - "Enable the video module"
+     - "Set up the external video source" newline "You manage video collection and processing on your own"
+     - "Join the channel"
+     - "Send processed video data to SDK"
+     - "Request to join the channel"
+     - "Leave the channel"
+     - "Request to leave the channel"
+     - "Destroy the engine"
+
+5. **Configuration or Additional Notes:**
+   - No extraneous notes or configuration settings are visibly outlined or noted outside the main entities or the data flows depicted. However, the sequence and dependencies are indicated precisely by the arrangement and connecting lines within the diagram.

@@ -1,0 +1,47 @@
+1. **Overall Structure**:
+   - The diagram displayed is a sequence diagram used to show the interaction across different entities over time.
+
+2. **Main Entities and Elements**:
+   - **User**: Represented by an icon at the beginning and the end of interactions.
+   - **Video SDK**: Central vertical box interacting directly with User and Host and indirectly with the Audience.
+   - **Host**: A vertical box shown initiating and managing a live streaming event.
+   - **Audience**: A vertical box depicted receiving and interacting with the streaming event.
+   - **Agora**: Placed on the right in a separate vertical box, parallel to Video SDK, Host, and Audience but does not directly interact within the diagram.
+   - **SD-RTN**: At the utmost right, having no direct interaction shown.
+
+3. **Data Flow**:
+   - Solid lines indicate the direct flow of information or actions between entities.
+   - The User interacts primarily with the Video SDK, sending commands like "Open App," "Leave broadcast," and "Close app."
+   - The Host receives interactions such as 'Start a live streaming event' and responds with actions like initializing, enabling, and setting the client role within the Agora Video SDK.
+   - The Audience only has interactions related to joining and viewing the streaming event, including receiving data streams.
+   - Dashed lines generally signify responses or effects after an initial action, often represented as a return of control or data.
+  
+4. **Detailed Content**:
+   - **Your app**:
+      - Initialize the Agora Video SDK engine: agoraEngine = createAgoraRtcEngine() newline
+      - Enable the video module: agoraEngine.enableVideo newline
+      - Register the event handler: agoraEngine.registerEventHandler newline
+      - Setup AgoraVideoView widget for local or remote video
+  
+   - **Host**:
+      - Set the client role as Host: agoraEngine.setClientRole(role: ClientRoleType.clientRoleBroadcaster) newline
+      - Set a channel profile: .setChannelProfile(ChannelProfileType.channelProfileLiveBroadcasting) newline
+      - Retrieve authentication token newline
+      - Join a channel using the token: agoraEngine.joinChannel newline
+      - Send data streams newline
+      - Remote user joined: RtcEngineEventHandler onUserJoined: newline
+      - Start local preview: agoraEngine.startPreview() newline
+      - Display local video using AgoraVideoView
+  
+   - **Audience**:
+      - Set the client role as Audience: agoraEngine.setClientRole(role: ClientRoleType.clientRoleAudience) newline
+      - Set a channel profile: .setChannelProfile(ChannelProfileType.channelProfileLiveBroadcasting) newline
+      - Retrieve authentication token newline
+      - Join a channel using the token: agoraEngine.joinChannel newline
+      - Remote user joined: RtcEngineEventHandler onUserJoined: newline
+      - Receive data streams newline
+      - Render remote video using AgoraVideoView newline
+      - Leave broadcast: agoraEngine.leaveChannel()
+
+5. **Configuration or Additional Notes**:
+   - No additional configuration notes or settings are specified in the diagram. The interactions and commands illustrate the flow and functions involved within the usage of the SDK and connectivity with Agora services.

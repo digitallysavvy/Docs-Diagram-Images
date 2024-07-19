@@ -1,0 +1,22 @@
+1. **Overall Structure:**  
+   - The diagram is a sequence diagram, primarily used to illustrate the interaction and order of operations between various systems and processes.
+
+2. **Main Entities and Elements:**  
+   - There are three primary entities: 
+     - "Local User" represented by a rectangular box with an icon symbolizing a person.
+     - "Developer server" represented by a rectangular box with a computer/server icon.
+     - "Agora SDK" represented by a rectangular box.
+   - There are no sub-elements like circles or smaller boxes within these main entities.
+
+3. **Data Flow:**  
+   - Solid lines with arrows indicate the data flow, showing the sequence of operations:
+     1. From "Local User" to "Developer server," labeled "1. Send local user spatial position."
+     2. From "Developer server" to "Local User," labeled "2. Receive remote user spatial positions."
+     3. From "Developer server" to "Agora SDK," extending across the diagram, labeled "3. Update local and remote user's spatial positions, set spatial audio parameters."
+
+4. **Detailed Content:**  
+   - Inside "Local User" and "Developer server" there are no additional lines of text other than the labels.
+   - Inside "Agora SDK," there is no additional text.
+
+5. **Configuration or Additional Notes:**  
+   - No additional lines or configuration settings are noted in the diagram outside of the main content described. The positions and flows are clearly delineated by the directional arrows accompanying each step.

@@ -1,0 +1,74 @@
+### Overall Structure:
+- Type of diagram: Sequence Diagram
+
+### Main Entities and Elements:
+1. **App**:
+   - Main box labeled "App".
+2. **Video SDK**:
+   - Main box labeled "Video SDK".
+3. **Agora SD-RTN**:
+   - Main box labeled "Agora SD-RTN".
+4. **Groupings**:
+   - "Create and publish local audio and video tracks"
+   - "Subscribe to remote users"
+   - "Leave the channel"
+
+### Data Flow:
+- **Connections**:
+   - Solid lines run vertically alongside each main entity, showing the sequence of operations.
+   - Dashed horizontal lines represent data or requests being sent between entities.
+   - Arrows indicate the direction of data flow or request initiation.
+- **Grouping Titles**:
+   - The operations or actions within each of the groups (mentioned above) are segmented by labeled dashed lines across the diagram.
+
+### Detailed Content:
+- **App Content**:
+  - "Create a local client" newline
+    "AgoraRTC.createClient" newline
+    "Set mode to 'live'"
+  - "Set user role" newline
+    "Set the role to 'host' or 'audience'" newline
+    "AgoraRTCClient.setClientRole"
+  - "Join channel" newline
+    "AgoraRTCClient.join"
+  - "Create and publish local audio and video tracks" newline
+    "Create local audio track" newline
+    "AgoraRTC.createMicrophoneAudioTrack" newline
+    "Create local video track" newline
+    "AgoraRTC.createCameraVideoTrack" newline
+    "Publish local audio and video tracks" newline
+    "AgoraRTCClient.publish"
+  - "Subscribe to remote users" newline
+    "Remote users publish audio and video tracks" newline
+    "client.on('user-published')" newline
+    "Get remote user object" newline
+    "AgoraRTCClient.remoteUsers" newline
+    "Subscribe to remote user object" newline
+    "AgoraRTCClient.subscribe" newline
+    "Get remote audio object" newline
+    "AgoraRT
+
+CRemoteUser.audioTrack" newline
+    "Get remote video object" newline
+    "AgoraRTCRemoteUser.videoTrack"
+  - "Leave the channel" newline
+    "Turn off the local audio track" newline
+    "MicrophoneAudioTrack.close" newline
+    "Turn off the local video track" newline
+    "CameraVideoTrack.close" newline
+    "Leave the channel" newline
+    "AgoraRTCClient.leave"
+
+- **Video SDK Content**:
+  - No specific text content, acts as a relay for data.
+
+- **Agora SD-RTN Content**:
+  - No specific text content, acts as an endpoint for receiving channel join and leave requests, and relay of audio/video data.
+
+### Configuration or Additional Notes:
+- **Connections**:
+  - "Join channel request", "Send audio and video data", and "Receive audio and video data" are specifically marked, demonstrating flow initiation and reception between entities.
+- **Positioning**:
+  - Configuration settings for creating a local client are detailed within the App entity at the start of the flow.
+- **Additional Boxes**:
+  - Separate smaller boxes within the main entity boxes are used to encapsulate specific commands or method calls, clarifying the sequence of actions.

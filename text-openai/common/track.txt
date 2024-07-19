@@ -1,0 +1,35 @@
+**Overall Structure:**
+- Type of diagram: Flow diagram.
+- Direction of the diagram: Structured vertically with a left-to-right data flow within individual process stages.
+
+**Main Entities and Elements:**
+- **Left Section (Upstream Track - Sending End)**:
+  - Divided into three labeled columns: "Input Source", "Filter (pre-processing)", and "Output".
+  - Main boxes:
+    - "Collect Video Data" (near the top under "Input Source").
+    - Vertical sequence of process boxes under "Filter (pre-processing)": "Beauty", "Virtual background", "Other video pre-processing", "Automatic gain control", "AI Noise Reduction", and "Echo Cancellation".
+  
+- **Right Section (Downlink Track - Receiving End)**:
+  - Divided into three labeled columns in alignment with the left section.
+  - Main boxes:
+    - Positioned similarly under "Input Source", but without labeled tasks.
+    - Under "Filter (pre-processing)": "video decoder", "Audio codec", "super resolution", "Other video pre-processing", "Other audio pre-processing", and "spatial sound effects".
+    - "Render/Playback" and "Other output channels" positioned under "Output".
+
+**Data Flow:**
+- In the left section, data flows from "Collect Video Data" through multiple filter steps and then via "Video link" and "Audio link" exiting the section to a mid diagram feature labeled "Agora SD-RTN™".
+- In the right section, inputs seemingly connect from "Agora SD-RTN™", pass through several processing stages like "video decoder" and "Audio codec", and diverge into outputs "Render/Playback" and "Other output channels".
+
+**Detailed Content:**
+- **Upstream Track:**
+  - "Collect Video Data" connects sequentially to "Beauty", "Virtual background", "Other video pre-processing", "Automatic gain control", "AI Noise Reduction", finally "Echo Cancellation".
+  - Each step is connected by solid lines, indicating the flow of data, with arrows pointing downwards to the next process. 
+  - Additional lines branch off from several video pre-processing steps to collect more video data, indicating repeated input gathering.
+  
+- **Downlink Track:**
+  - "video decoder" and "Audio codec" receive direct inputs.
+  - "video decoder" connects to "super resolution" and "Other video pre-processing", which further connects to "Render/Playback" and "Other output channels".
+  - "Audio codec" connects directly to "Other audio pre-processing" and then to "spatial sound effects", also outputting to "Other output channels".
+
+**Configuration or Additional Notes:**
+- No additional configuration or notes outside the process boxes and labels indicating the types of processing or data transmission. The diagram focuses exclusively on depicting the video processing framework from input to output through various stages of pre-processing, decoding, and playback.

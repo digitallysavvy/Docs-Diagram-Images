@@ -1,0 +1,37 @@
+1. **Overall Structure:**
+   - Type of Diagram: Flow diagram
+   - Direction of the Diagram: Left-to-right
+
+2. **Main Entities and Elements:**
+   - Primary blue boxes with details:
+     - **FOJoinChannelSuccess:** Joined the channel successfully
+     - **FOOnConnectionStateChanged:** Multiple states documented, each adapting based on network status (e.g., CONNECTED, RECONNECTING, INTERRUPTED, LOST, FAILED)
+   - Grey boxes labeled as T0, T1, T2, T3, T4, T5, T6, T7: Represent operations or time points, connections proceeding through these indicate the progression of the process.
+   - Green boxes at the bottom for specific user-related statuses:
+     - **FOOnUserJoined:** Remote user comes online
+     - **FOOnUserOffline (reason USER_OFFLINE_DROPPED):** Remote user is offline
+   - Special elliptical blue box:
+     - **SDK automatically reconnects:** Signifies an automatic process handling reconnections.
+
+3. **Data Flow:**
+   - Solid lines denote direct connections between elements indicating progression or successful outcomes:
+       - "JoinChannel" connects to "FOJoinChannelSuccess" and "FOOnConnectionStateChanged" via T0
+   - Dashed lines indicate conditional or less frequent pathways:
+       - From T4 to "SDK automatically reconnects," suggesting an optional or error-based path.
+       
+4. **Detailed Content:**
+   - **JoinChannel box:** "Join channel"
+   - **UID 1 and UID 2 boxes:** Simply labeled as UID 1, UID 2 respectively, followed by "TO."
+   - **T0 to T7 boxes:** No text inside except the labels themselves (T0, T1, T2, T3, T4, T5, T6, T7).
+   - **Content details for connection state changes (FOOnConnectionStateChanged boxes):**
+       - "CONNECTION_STATE_CONNECTED, CONNECTION_CHANGED_JOIN_SUCCESS newline Network connection successful"
+       - "CONNECTION_STATE_RECONNECTING, CONNECTION_CHANGED_INTERRUPTED newline Re-establishing Network connection"
+       - "CONNECTION_STATE_RECONNECTING, CONNECTION_CHANGED_LOST newline Network connection interrupted"
+       - "CONNECTION_STATE_FAILED, CONNECTION_CHANGED_JOIN_FAILED newline Network connection failed"
+   - **User status details in green boxes:**
+       - "FOOnUserJoined newline Remote user comes online"
+       - "FOOnUserOffline (reason USER_OFFLINE_DROPPED) newline Remote user is offline"
+
+5. **Configuration or Additional Notes:**
+   - **Position of SDK reconnection note:** Below the grey boxes labeled T4 to T6, spans horizontally, indicating a functionality applicable in those stages. 
+   - The paths with labels such as "Network interruption" point towards T3 and T4, highlighting the condition only during these segments.

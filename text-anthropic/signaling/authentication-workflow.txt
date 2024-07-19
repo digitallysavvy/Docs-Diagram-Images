@@ -1,0 +1,44 @@
+1. Overall Structure:
+   - This is a sequence diagram.
+
+2. Main Entities and Elements:
+   - Token server
+   - Your app
+   - Signaling
+   - Smaller boxes within "Your app" labeled "Log in to Signaling using authentication" and "Join a stream channel"
+   - Smaller box within "Your app" labeled "Renew token"
+
+3. Data Flow:
+   - Solid lines connecting entities, indicating the direction of flow
+   - Dashed lines within "Your app", indicating internal processes
+   - A grouping labeled "Implemented by you" surrounds "Token server" and "Your app"
+
+4. Detailed Content:
+   - Token server:
+     - Configure your token server using newline your App Id and App Certificate
+     - Validate request against internal security newline and generate a token
+     - Return RTM token to App
+     - Validate request against internal security newline and generate token
+     - Return RTC token to App
+     - Validate request against internal security newline and generate a token
+     - Return RTM token to App
+   - Your app:
+     - Request an RTM token using a user Id
+     - Initiate the Signaling Engine using newline the App Id
+     - Log in to Signaling using newline the user Id and the RTM token
+     - Request an RTC token using newline a user Id, and a stream channel name
+     - Join a stream channel using newline channel name, user Id, and the RTC token
+     - Request an RTM token using newline the user ID
+   - Signaling:
+     - Validate the token
+     - Log in user, then trigger callback
+     - Validate the token
+     - Trigger callback
+     - Trigger event: newline token privilege will expire
+     - Send RTM token to Signaling with a newline call to renew token
+     - Validate the token
+
+5. Configuration or Additional Notes:
+   - "Join a stream channel" text is positioned below "Your app"
+   - "Renew token" text is positioned below "Your app"
+   - "Trigger event: token privilege will expire" text is positioned to the left of "Signaling"

@@ -1,0 +1,26 @@
+1. Overall Structure: 
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stickman icon)
+- Your app (box with "Your app" and sub-box "Video SDK")
+- Agora (box with "Agora" and sub-box "SD-RTN")
+- Host (box)
+- Audience (box)
+
+3. Data Flow:
+- Solid lines show flow from User to Your app and then to Agora.
+- Dashed lines show bi-directional communication between Your app and Agora.
+- Elements within Host and Audience boxes are connected to Your app and Agora via solid lines showing the flow of requests and responses.
+
+4. Detailed Content:
+- User: No text content.
+- Your app: "Video SDK" under "Your app".
+- Agora: "SD-RTN" under "Agora".
+- Host: "Start live streaming event" newline.
+- Audience: "Join live streaming event" newline "Leave live streaming event".
+
+The text content within the flows includes actions like "Initiate the Video SDK engine", "Start video in the engine", "Start local media", "Retrieve authentication token to join channel", "Set the user role as host/audience", "Join a channel as host/audience", "Push local media to the channel", "Retrieve streaming from the other user", "Receive data stream", and "agoraEngine.leave".
+
+5. Configuration or Additional Notes:
+There are no additional configuration settings or notes in the diagram.

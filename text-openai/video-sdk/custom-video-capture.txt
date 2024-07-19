@@ -1,0 +1,43 @@
+1. **Overall Structure**:
+   - The diagram is a sequence diagram, which visualizes interactions among entities over time.
+
+2. **Main Entities and Elements**:
+   - **App**: Depicted as a box with an icon of a screen inside on the left.
+   - **SDK**: Depicted as a box with a symbol similar to overlapping squares in the center.
+   - **Agora SD-RTN**: Shown as a box with a cloud icon on the right.
+   - Sub-elements include:
+      - **Custom video capture**: Labeled as a group with a titled box surrounding certain interactions on the left side of the App box.
+
+3. **Data Flow**:
+   - Arrows connect these main entities:
+     - Solid arrows indicate direct interactions or processes:
+       - From **App** to **SDK**: “Create and initialize the engine.”
+       - From the **App** Custom video capture group to **SDK**:
+         - “Create a custom video track”
+         - “Join channel(s)”
+         - “Push video frames to SDK using the custom video track”
+         - “Destroy the custom video track”
+         - “Leave channel(s)”
+         - “Destroy the engine”
+     - From **SDK** to **Agora SD-RTN**:
+       - “Request to join channel(s)”
+       - “Request to leave channel(s)”
+   - Dashed arrows show the return of interactions within the same flow, often indicating the completion or response to a request made by a solid arrow.
+
+4. **Detailed Content**:
+   - Content within the **App** box:
+     - "Create and initialize the engine"
+     - "Create a custom video track"
+     - "Join channel(s)"
+     - "Push video frames to SDK using the custom video track"
+     - "Destroy the custom video track"
+     - "Leave channel(s)"
+     - "Destroy the engine"
+   - Content within the **SDK** box related to **Agora SD-RTN**:
+     - "Request to join channel(s)"
+     - "Request to leave channel(s)"
+
+5. **Configuration or Additional Notes**:
+   - The flow sequence is encapsulated within two larger titled group areas:
+     - “Custom video capture” group surrounding specific actions within the App entity.
+   - No additional lines or notes such as configuration settings are visible outside the main and sub-entity interactions.

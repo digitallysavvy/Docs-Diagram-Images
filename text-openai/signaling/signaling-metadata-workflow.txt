@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram used to depict interactions between entities over time.
+
+2. **Main Entities and Elements:**
+   - Three main entities/boxes are labeled: "Your app", "Signaling SDK", and "Agora".
+   - Each main entity contains various operations represented as rectangles or groups of rectangles with labels.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads illustrate the flow of events and data starting from "User" to "Your app" and then further into the "Signaling SDK".
+   - Arrows point from the initiating entity to the receiving entity, showing request and response sequences.
+   - Grouping titles include: "Read and write user metadata", "Read and write channel metadata", "Use locks", and "Close".
+
+4. **Detailed Content:**
+   - "Your app" group:
+     - Initialize: "Open app"
+     - Main interactions: 
+       - "Create a Signaling client"
+       - "Add client event callbacks"
+       - "Create a Signaling channel"
+       - "Add channel event callbacks"
+       - "Log in to Signaling"
+       - "Join a channel"
+   - Operations under "Read and write user metadata":
+     - "Change user information": "Set local user metadata"
+     - Following responses: "Add, update, or delete local user metadata", "Subscribe to metadata of remote users", "On user metadata updated callback", "Retrieve metadata of a remote user"
+   - Operations under "Read and write channel metadata":
+     - "Update channel information": "Set channel metadata"
+     - Following responses: "Add, update, or delete channel metadata", "On channel metadata updated callback", "Retrieve channel metadata"
+   - Operations under "Use locks":
+     - "Update channel metadata with locking": "Set a lock"
+     - Following responses: "Acquire the lock", "Specify the lock name when updating metadata"
+   - Close operations:
+     - "Leave the channel"
+     - Following responses: "Release locks", "Unsubscribe from user metadata update notifications", "Log out of Signaling"
+
+5. **Configuration or Additional Notes:**
+   - Dashed lines are used to indicate the start and end of an interaction cycle between the user and the app, extending downwards from the "User" icon at the beginning to the end of the diagram.
+   - No explicit configuration settings or additional notes are labeled outside of the main entities and interactions described.

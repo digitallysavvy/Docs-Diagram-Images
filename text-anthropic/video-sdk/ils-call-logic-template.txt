@@ -1,0 +1,50 @@
+1. Overall Structure:
+- Type of diagram: Sequence diagram
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app
+  - Video SDK (sub-element box)
+- Agora
+  - SD-RTN (sub-element box)  
+- Host (box)
+- Audience (box)
+
+3. Data Flow:
+- Solid lines with arrows indicating the flow of information or actions.
+- Elements grouped under "Host" with a title "In an ILS event, only the hosts broadcast to the channel."
+- Elements grouped under "Audience" with a title "In an ILS event, the audience views the broadcast made by channel hosts."
+
+4. Detailed Content:
+User:
+- Open app (text label on arrow)
+
+Your app:
+Video SDK:
+- Initiate the Video SDK engine (text content) newline
+- Start video in the engine (text content)
+
+Host:  
+- Start ILS event (text label on arrow)
+- Start local video (text content)
+- Join the channel (text content)
+- Send data stream (text content)
+
+Audience:
+- Join ILS event (text label on arrow) 
+- Join the channel (text content)
+- Retrieve streaming from the other user (text content)
+- Receive data streams (text content)
+- Leave ILS event (text label on arrow)
+- Stop local video (text content)
+- Leave the channel (text content)
+
+User:
+- Close app (text label on arrow)
+
+Your app: 
+Video SDK:
+- Clean up local resources (text content)
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes present.

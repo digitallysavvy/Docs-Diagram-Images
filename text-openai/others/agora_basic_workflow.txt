@@ -1,0 +1,22 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is primarily top-to-bottom and left-to-right.
+
+2. **Main Entities and Elements:**
+   - **Cloud Icon:** Labeled "Platform".
+   - **Server Icon:** Located at the bottom center, no direct label but connected with text indicating functionality.
+   - **Three Different Device Icons:** Positioned horizontally and aligned center below the cloud icon. From left to right: a laptop, a desktop monitor, and a smartphone.
+
+3. **Data Flow:**
+   - Two primary flows are depicted:
+     1. A solid line flows from the server icon upward to each device, labeled "1. Retrieve AccessToken with user and call permissions".
+     2. Solid blue lines flow from each device up towards the cloud icon, labeled "2. Connect to Agora Platform with AccessToken and join call".
+
+4. **Detailed Content:**
+   - **Server Icon:** "Viewer does MeetTokServer 1.1"
+   - **Text Associated with Data Flow:**
+     - From the server to the devices: "Retrieve AccessToken with user and call permissions"
+     - From the devices to the cloud: "Connect to Agora Platform with AccessToken and join call"
+
+5. **Configuration or Additional Notes:**
+   - Each line connecting the devices to the Platform (cloud icon) has arrows indicating the direction of flow, moving data from the devices up to the cloud.

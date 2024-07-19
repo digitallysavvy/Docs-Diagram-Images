@@ -1,0 +1,31 @@
+### Overall Structure:
+- The diagram is a sequence diagram.
+
+### Main Entities and Elements:
+1. **User**: Represents a user interacting with an application.
+2. **App**: Box labeled "App" indicating the application module being used by the user.
+3. **SD-RTN**: Box labeled "SD-RTN" indicating an external service or network component managed by Agora.
+
+### Data Flow:
+- **Solid Lines**: Represent the sequence of steps and interactions between the user, app, and SD-RTN. These lines indicate the direction of the interaction from left to right and right to left, suggesting a request-response communication pattern.
+- **Dashed Lines**: Vertical dashed lines represent the flow of time for each participant in the scenario.
+- **Groupings and Titles**:
+   - A titled group called "Geofencing" encapsulates multiple interactions involving setting up and initiating a connection between the app and SD-RTN.
+
+### Detailed Content:
+- **User**:
+  - "Start the app"
+  - "Select a channel to join"
+- **App**:
+  - First Instance:
+    - "Set SD-RTN region in the Agora engine configuration newline Initiate the Agora engine"
+    - "Join a channel with user Id, channel name, and token"
+  - Second Instance (response to selecting a channel):
+    - "Join accepted"
+- **SD-RTN**:
+  - "Connect to SD-RTN in a specific region"
+  - "Success response"
+
+### Configuration or Additional Notes:
+- Above the "App" box, a note states "Implemented by you" indicating that the app component needs to be implemented by the user.
+- Next to the "SD-RTN" box, a note states "Provided by Agora" indicating that the SD-RTN is a service provided by Agora.

@@ -1,0 +1,30 @@
+1. **Overall Structure**:
+    - The diagram is a sequence diagram which visualizes the interactions among systems and entities in a temporal order.
+
+2. **Main Entities and Elements**:
+    - **Entities**:
+        - **Web Server**: Positioned on the left side.
+        - **Your App Server**: Positioned in the middle.
+        - **Agora Media Pull**: Positioned on the right side.
+    - **Sub-elements**:
+        - **User**: Icons representing users are present at the top and bottom, aligning with the Web Server and Your App Server.
+
+3. **Data Flow**:
+    - **Connections**:
+        - Solid lines with arrows indicating the direction of requests and responses between entities. 
+        - Dashed lines represent asynchronous notifications or background processes.
+    - **Groupings**:
+        - The data flow is grouped under headers:
+            - "Implemented by you": Group includes interactions between User, Web Server, and Your App Server.
+            - "Provided by Agora": Group includes interactions involving Agora Media Pull.
+    
+4. **Detailed Content**:
+    - **Web Server to Your App Server**:
+        - "Start pulling media into an Agora channel" (solid line, request) newline "Authenticate notification signature" (dashed line, response) newline "Change player status" (solid line, request) newline "Authenticate notification signature" (dashed line, response) newline "Stop playing media" (solid line, request) newline "Authenticate notification signature" (dashed line, response)
+    - **Your App Server to Agora Media Pull**:
+        - "Create player API" (solid line, request) newline "Response containing player parameters" (solid line, response) newline "Update player API" (solid line, request) newline "Response containing player parameters" (solid line, response) newline "Delete player API" (solid line, request) newline "Response confirming player delete" (solid line, response)
+    - **Notifications**:
+        - "Notification eventType=1: Player created" (dashed line, notification) newline "200 OK" (solid line, response) newline "Notification eventType=4: Player status changed" (dashed line, notification) newline "200 OK" (solid line, response) newline "Notification eventType=2: Player destroyed" (dashed line, notification) newline "200 OK" (solid line, response)
+    
+5. **Configuration or Additional Notes**:
+    - Notes indicating the configuration settings or operational notes are absent in this diagram. The only headers noted are "Implemented by you" and "Provided by Agora", which classify the implementing authority or responsibility over the different processes.

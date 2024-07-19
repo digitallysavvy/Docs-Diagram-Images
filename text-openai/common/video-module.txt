@@ -1,0 +1,43 @@
+1. **Overall Structure:**
+   - The diagram is a flowchart.
+   - The direction of the diagram is left-to-right and top-to-bottom.
+
+2. **Main Entities and Elements:**
+   - Main entities (rectangular boxes):
+     - "Enable local video collection"
+     - "Video pre-processing"
+     - "Video Encoding"
+     - "Local Preview"
+     - "Video post-processing"
+     - "Video Decoding"
+     - "Video rendering display"
+     - "Join channel"
+   - Sub-elements:
+     - Rectangular boxes: "video module" and "network module" placed on the top, slightly outside the main flow.
+
+3. **Data Flow:**
+   - Solid lines indicate the flow of data:
+     - From "Enable local video collection" to "Video pre-processing"
+     - From "Video pre-processing" to "Video Encoding"
+     - A separate line from "Video pre-processing" back down to "Video post-processing"
+     - From "Video Encoding" to "Local Preview"
+     - Downward line from "Local Preview" to "Join channel" in the network module
+     - From "Video post-processing" to "Video Decoding"
+     - From "Video Decoding" to "Video rendering display"
+
+4. **Detailed Content:**
+   - Contents within each box are:
+     - Enable local video collection
+     - Video pre-processing
+     - Video Encoding
+     - Local Preview
+     - Video post-processing
+     - Video Decoding
+     - Video rendering display
+     - Join channel
+
+5. **Configuration or Additional Notes:**
+   - Remarks on position:
+     - "video module" label is positioned above the sequence from "Enable local video collection" to "Local Preview".
+     - "network module" label is positioned above the "Join channel" box.
+     - The layout is configured with a backdrop of dashed lines that seem to divide the flow into two main sections with the sections labeled as "video module" and "network module".

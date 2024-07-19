@@ -1,0 +1,39 @@
+1. Overall Structure: 
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (depicted by a stick figure icon)
+   - Your app (box)
+     - Video SDK (smaller box inside)
+   - Agora (box)
+     - SD-RTN (smaller box inside)
+   - Setup external source (box)
+   - Join (box) 
+   - Process data (box)
+   - Stream data (box)
+
+3. Data Flow:
+   - Solid arrows show the flow of actions/messages between entities.
+   - The flow is bi-directional between User, Your app, and Agora.
+   - There is a grouping of elements titled "Setup external source".
+   - There is a grouping of elements titled "Join".
+   - There is a grouping of elements titled "Process data".
+   - There is a grouping of elements titled "Stream data".
+
+4. Detailed Content:
+   - User: 
+     - Open App
+   - Your app:
+     - Create an instance of the Video SDK engine newline Enable audio and video in the engine
+   - Setup external source:
+     - Check the external source for compatibility newline Set external video or audio source
+   - Join:
+     - Join a channel newline Retrieve authentication token to join a channel newline Join the channel
+   - Process data:
+     - Manage capturing and processing using external methods
+   - Stream data:
+     - Push external video or audio frame
+   - Leave the channel
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes shown in the diagram.

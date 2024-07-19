@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that illustrates the interaction and communication flow between different entities during a live streaming event using the Agora Video SDK.
+
+2. **Main Entities and Elements:**
+   - Entities represented as vertical columns (or lifelines) labeled as: "User", "Video SDK", and "Agora".
+   - Each main entity consists of sub-elements which are operation steps inside rectangles connected to their respective lifelines.
+   
+3. **Data Flow:**
+   - Solid lines with arrows depict the flow of actions or commands across entities. These lines demonstrate how data or control flows from one entity to another.
+   - Dashed lines represent response or return actions, showing how responses move back after a request or action is initiated.
+   - A grouping of elements under the header "Host" pertaining to interactions involved in hosting the live streaming event.
+   - Another grouping under "Audience" details the audience’s interactions during the event.
+
+4. **Detailed Content:**
+   - **User interactions:**
+     - Open App
+     - Leave the live streaming event
+     - Close app
+   - **Video SDK actions:**
+     - Initiate the Agora Video SDK engine: agoraEngine = RtcEngine.create
+     - Enable the video module: agoraEngine.enableVideo()
+     - Set the channel profile: agoraEngine.setChannelProfile(CHANNEL_PROFILE_LIVE_BROADCASTING)
+     - Retrieve authentication token to join channel
+     - Set the role as host: agoraEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER)
+     - Setup local video: agoraEngine.setupLocalVideo(VideoCanvas)
+     - Start local preview: agoraEngine.startPreview()
+     - Join a channel as host: agoraEngine.joinChannel
+     - Send data stream
+     - Set the user role as audience: agoraEngine.setClientRole(CLIENT_ROLE_AUDIENCE)
+     - Join the channel: agoraEngine.joinChannel
+     - Retrieve streaming from the hosts: agoraEngine.setupRemoteVideo
+     - Receive data stream
+     - Leave the channel: agoraEngine.leaveChannel()
+     - Clean up local resources: agoraEngine.destroy()
+
+5. **Configuration or Additional Notes:**
+   - Description about constants, roles, and additional SDK setup or clean up functions are mentioned within the diagram within the “Video SDK” and “Agora” columns.
+   - Operational notes and system commands are clearly defined in separate rectangles aligning vertically with each lifeline.

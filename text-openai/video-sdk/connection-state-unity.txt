@@ -1,0 +1,42 @@
+### Overall Structure:
+- The diagram is a flow diagram.
+- The direction of the diagram is left-to-right.
+
+### Main Entities and Elements:
+- **Blue Rectangles**: 
+  - "JoinChannel": Label "Join channel".
+  - "OnJoinChannelSuccess": Label "Joined the channel successfully".
+  - "OnConnectionStateChanged": Labels "CONNECTION_STATE_CONNECTED, CONNECTION_CHANGED_JOIN_SUCCESS" and "Network connection successful"; and "CONNECTION_STATE_RECONNECTING, CONNECTION_CHANGED_INTERRUPTED" respectively.
+  - "OnConnectionLost": Label "Network connection interrupted".
+  - "OnConnectionStateChanged": Label "CONNECTION_STATE_FAILED, CONNECTION_CHANGED_JOIN_FAILED" and "Network connection failed".
+
+- **Green Rectangles**:
+  - "OnUserJoined": Label "Remote user comes online".
+  - "OnUserOffline (reason USER_OFFLINE_DROPPED)": Label "Remote user is offline".
+
+- **Dark Rectangles (TIMERS)**:
+  - "T0", "T1", "T2", "T3", "T4", "T5", "T6", "T7": Basic timers or stages in the flow.
+  
+- **Black Rectangles with white text (UID)**:
+  - "UID 1"
+  - "UID 2"
+
+- **Blue Ellipse**:
+  - "SDK automatically reconnects".
+
+### Data Flow:
+- Solid arrows represent the flow of processes.
+- Dashed arrows indicate alternative or conditional flows.
+- The diagram has groups structured around connection states, with specific actions taken when user IDs are involved (UID 1 and UID 2).
+  
+### Detailed Content:
+- "JoinChannel": "Join channel".
+- "OnJoinChannelSuccess": "Joined the channel successfully".
+- "OnConnectionStateChanged": Text includes "CONNECTION_STATE_CONNECTED, CONNECTION_CHANGED_JOIN_SUCCESS", "Network connection successful" newline "CONNECTION_STATE_RECONNECTING, CONNECTION_CHANGED_INTERRUPTED", "Re-establishing Network connection".
+- "OnConnectionLost": "Network connection interrupted".
+- "OnConnectionStateChanged": "CONNECTION_STATE_FAILED, CONNECTION_CHANGED_JOIN_FAILED" newline "Network connection failed".
+- "OnUserJoined": "Remote user comes online".
+- "OnUserOffline (reason USER_OFFLINE_DROPPED)": "Remote user is offline".
+
+### Configuration or Additional Notes:
+- Configuration settings or additional notes are not explicitly described beyond the SDK's automatic reconnection indicated by a dashed arrow from "T5" reconnecting back to "T1".

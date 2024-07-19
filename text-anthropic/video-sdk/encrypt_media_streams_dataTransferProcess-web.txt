@@ -1,0 +1,26 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - Agora SD-RTN (cloud icon)
+   - Edge Server A and Edge Server B (boxes)
+   - User A and User B (stick figures)
+   - App A and App B (boxes with dashed borders)
+   - SDK A and SDK B (boxes within App A and App B)
+   - "Audio & Video Collection & Encoding" (text within SDK boxes)
+   - "setEncryptionConfig" (text within App A and App B boxes)
+
+3. Data Flow:
+   - Solid lines flow from User A to Edge Server A, and from User B to Edge Server B, labeled "DTLS-SRTP encrypted transport media stream"
+   - Dashed lines flow between Edge Server A/B and Agora SD-RTN, labeled "Transport encrypted media streams"
+   - Solid lines flow from App A to SDK A, and from App B to SDK B
+   - Dashed lines flow from "setEncryptionConfig" in App A/B boxes to the bottom, labeled "HTTPS/WSS Encryption transport key and salt"
+   - A grouping of two dots at the bottom, with the title "Generate keys and salts on your server"
+
+4. Detailed Content:
+   - Within SDK A and SDK B boxes: "Audio & Video newline Collection & Encoding"
+   - Within App A and App B boxes: "setEncryptionConfig"
+
+5. Configuration or Additional Notes:
+   - At the bottom, positioned between the two app boxes: "Encryption transport key newline and salt"
+   - Below the two dots: "Generate keys and salts on your server"

@@ -1,0 +1,32 @@
+1. **Overall Structure:**
+   - The diagram is a flowchart.
+   - The direction of the diagram is from left-to-right.
+
+2. **Main Entities and Elements:**
+   - Two large group areas are titled "Voice / Video Call Channel" and "Live Video Channel," each containing two smaller boxes labeled "User A : Host", "User B : Audience" and "User C : Host", "User D : Audience" respectively.
+   - On the left side, there's a larger box entitled "RTC SDK", and on the right side, there's a box entitled "Agora SD-RTN™".
+
+3. **Data Flow:**
+   - A solid line labeled "Connect" extends from the "RTC SDK" to the middle point between the channels "Voice / Video Call Channel" and "Live Video Channel".
+   - Inside the "Voice / Video Call Channel," solid lines connect "User A : Host" to "User B : Audience" indicating flow direction towards each other.
+   - Similarly, inside the "Live Video Channel," "User C : Host" connects to "User D : Audience" through solid lines, with flow towards each other.
+   - From "User A : Host" and "User C : Host", dashed lines go towards the box labeled "Agora SD-RTN™" with labels "Publish Audio & Video, Subscribe to B" and "Publish Audio & Video, Subscribe to other hosts" respectively.
+   - From "User B : Audience" and "User D : Audience", dashed lines connect to the "Agora SD-RTN™" with labels "Publish Audio & Video, Subscribe to A" and "Subscribe to all hosts", respectively.
+
+4. **Detailed Content:**
+   - Text inside "RTC SDK" is labeled as "RTC SDK".
+   - Text inside the right-side box reads "Agora SD-RTN™".
+   - Text inside "Voice / Video Call Channel":
+     - "User A : Host" 
+     - "User B : Audience"
+   - Text inside "Live Video Channel":
+     - "User C : Host"
+     - "User D : Audience"
+   - Conduit texts:
+     - Between "User A : Host" and "Agora SD-RTN™" reads "Publish Audio & Video, newline Subscribe to B"
+     - Between "User B : Audience" and "Agora SD-RTN™" reads "Publish Audio & Video, newline Subscribe to A"
+     - Between "User C : Host" and "Agora SD-RTN™" reads "Publish Audio & Video, newline Subscribe to other hosts"
+     - Between "User D : Audience" and "Agora SD-RTN™" reads "Subscribe to all hosts"
+
+5. **Configuration or Additional Notes:**
+   - There are additional dashed connection lines indicating publishing and subscribing functionalities towards "Agora SD-RTN™", showing configuration of interaction not only limited to users within the same channel but also extending towards the network system, positioned on the right edge of the diagram relative to the user entities.

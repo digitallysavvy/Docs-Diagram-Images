@@ -1,0 +1,18 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - There are two main entities labeled "HOST with Agora Video SDK" and "AUDIENCE with Agora Video SDK".
+   - Each main entity contains smaller sub-elements representing a computer and a monitor.
+
+3. Data Flow:
+   - There are bi-directional flows represented by lines between the main entities and the central "agora SD-RTN" cloud element.
+   - The flows are grouped and labeled as "Join a Channel", "Publish Stream", and "Subscribe to a Stream".
+
+4. Detailed Content:
+   - HOST entity: "with Agora Video SDK" newline "Join a Channel" newline "Publish Stream" newline "Subscribe to a Stream"
+   - AUDIENCE entity: "with Agora Video SDK" newline "Join a Channel" newline "Subscribe to a Stream"
+   - Central cloud element: "agora SD-RTN"
+
+5. Configuration or Additional Notes:
+   - No additional configuration settings or notes are present.

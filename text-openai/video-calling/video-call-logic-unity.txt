@@ -1,0 +1,36 @@
+### Overall Structure:
+- The diagram is a sequence diagram.
+
+### Main Entities and Elements:
+1. **User**: Represented by a stick figure icon at the start and end of the process.
+2. **Your app**: Contains a labeled box named "Video SDK".
+3. **Agora**: Contains a labeled box named "SD-RTN".
+
+### Data Flow:
+- Solid and dashed lines depict interaction and response flows between User, Video SDK, and SD-RTN:
+  - Solid lines typically represent a call or action initiation.
+  - Dashed lines generally represent a response or data return.
+
+### Detailed Content:
+1. **Video SDK box**:
+   - Initiate the Agora Video SDK engine: agoraEngine=IRtcEngine.GetEngine() newline
+   - Setup the local video stream: agoraEngine.EnableVideo() newline
+   - agoraEngine.EnableVideoObserver()
+
+2. **Operations between User and Video SDK**:
+   - Open game -> Initiate the Agora Video SDK engine. newline
+   - Start call -> Join the channel: agoraEngine.JoinChannelByKey() newline
+   - Join call -> A callback to start remote video: OnUserJoined() newline
+   - Receive and send data stream newline
+   - Leave call -> Leave the channel: agoraEngine.leaveChannel() newline
+   - Close game -> Clean up local resources: agoraEngine.destroy()
+
+3. **Operations within Video SDK during a call**:
+   - Start, monitor, and end of local video stream management including enabling and disabling the video and observer.
+
+4. **Interactions with SD-RTN**:
+   - Data streams flow between Video SDK and SD-RTN to handle video streaming services, indicated by actions like joining and leaving channels.
+
+### Configuration or Additional Notes:
+- The flow is sequenced from initiating a video call to the destruction of resources indicating a typical lifecycle of a video communication session using the Agora SDK.
+- The interactions are grouped under the different phases like opening the game, starting the call, joining the call, and leaving the call, visually separated by spaces for clarity.

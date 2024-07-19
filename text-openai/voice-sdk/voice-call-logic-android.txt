@@ -1,0 +1,33 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram, which illustrates interaction sequences between entities across time.
+
+2. Main Entities and Elements:
+   - There are three main vertical entities or boxes: "User", "Your app", and "Agora".
+   - Within "Your app", there are two sub-elements: "Voice SDK" at the beginning and the end of the diagram process.
+
+3. Data Flow:
+   - Connections between the entities are represented by solid and dashed lines indicating the flow of operations.
+   - Solid lines represent calls or actions moving from one entity to another.
+   - Dashed lines indicate a response or data return back to the calling entity.
+   - There are named segments grouped as "Open App", "Join a call", "Leave the call", and "Close app", indicating different phases of user interaction.
+
+4. Detailed Content:
+   - Inside "Voice SDK" (beginning):
+     - Initiate the Agora Voice SDK engine: newline
+     - agoraEngine = RtcEngine.create
+   - Actions from "User" to "Voice SDK" at different phases:
+     - Open App: User activates app leading to SDK engine initialization.
+     - Join a call: Sequence includes retrieving authentication token and joining the channel.
+     - Leave the call: Commands to leave the channel.
+     - Close app: Command to clean up local resources.
+   - Specific operations inside "Your app":
+     - Retrieve authentication token to join channel
+     - Join the channel: agoraEngine.joinChannel()
+     - Remote user joined: onUserJoined()
+     - Leave the channel: agoraEngine.leaveChannel()
+     - Clean up local resources: agoraEngine.destroy()
+   - Inside "Voice SDK" (ending), content is contained within the SDK entity without any special action depicted.
+
+5. Configuration or Additional Notes:
+   - The diagram uses blue boxes to depict user actions, grouping them, which correlates with different user actions such as opening, joining, leaving, and closing the app,
+   - The sequence flow is depicted clearly with arrows showing directions and actions across the user and application interaction lifecycle.

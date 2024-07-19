@@ -1,0 +1,28 @@
+1. Overall Structure:
+   - The diagram presented is a sequence diagram, which is utilized to depict the flow and interactions between entities in a process over time.
+
+2. Main Entities and Elements:
+   - There are four main entities in the diagram depicted as labeled boxes:
+     a. App
+     b. Your Server
+     c. Video SDK
+     d. Agora SD-RTN
+   - Each box contains a smaller box depicting a symbol or representation of the entity (for example, App shows a symbol resembling a mobile device).
+
+3. Data Flow:
+   - The sequences and interactions between entities are depicted using solid and dashed lines indicating data flow and response actions:
+     a. A solid line from "App" to "Your Server" labeled "Request a token with a uid and channel name"
+     b. A dashed line from "Your Server" back to "App" labeled "Generate and return a token"
+     c. A solid line from "App" to "Video SDK" labeled "Join the corresponding channel with uid, channel name, and token"
+     d. A dashed line from "Video SDK" back to "App" labeled "Successfully joined the channel"
+     e. A solid line from "Video SDK" to "Agora SD-RTN" labeled "Verify the token"
+     f. A dashed line from "Agora SD-RTN" back to "Video SDK"
+
+4. Detailed Content:
+   - App: newline "Token authentication"
+   - Your Server: Direct interactions/description are not within the visual detail aside from the connection labels.
+   - Video SDK: Engages in token verification as described by data lines but contains no further detailed text.
+   - Agora SD-RTN: Only has connections explained via incoming and outgoing lines with the label "Verify the token".
+
+5. Configuration or Additional Notes:
+   - An overarching banner or group title is shown above the interactions starting from "App" and ending at "Video SDK" labeled "Token authentication". This indicates a specific phase or component of the sequence focusing on authentication operations.

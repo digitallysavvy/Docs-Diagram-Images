@@ -1,0 +1,36 @@
+1. **Overall Structure**
+   - The diagram is a sequence diagram which is used to show the sequence of messages passed between different objects required to carry out a specific functionality in a system.
+
+2. **Main Entities and Elements**
+   - **App:** This box signifies an application component.
+     - Sub-element: A square icon representing the App interface.
+   - **SDK:** This box represents the Software Development Kit component.
+     - Sub-element: A square icon corresponding to the SDK.
+   - **Agora SD-RTN:** Represents the Agora Software Defined Real-Time Network component.
+     - Sub-element: A cloud icon to symbolize the network service.
+
+3. **Data Flow**
+   - Solid lines with arrows indicate the direction of the sequential flow from one component to the next.
+   - Dashed lines show alternative pathways or asynchronous operations between components.
+   - The flow is generally top-down symbolizing the progress over time.
+   - Groupings:
+     - **Custom audio rendering**: Encompasses interactions involving audio data manipulation and management indicated by a larger blue box encapsulating respective sequences.
+
+4. **Detailed Content**
+   - **App box:**
+     - "Create and initialize the engine" - (new line)
+     - "Turn on custom audio rendering" - (new line)
+     - "Join a channel" - (new line)
+     - "Pull remote audio data" - (new line)
+     - "Leave the channel" - (new line)
+     - "Destroy the engine"
+   - **SDK box:**
+     - Arrows to and from this box indicate responses to the actions mentioned in the App box, such as "Request to join the channel" and "Request to leave the channel."
+   - **Agora SD-RTN box:**
+     - Interactions with this box are primarily responses from the network, as indicated by incoming arrows from the SDK.
+
+5. **Configuration or Additional Notes**
+   - There are annotations beside the arrows for clearer understanding which specify actions such as "Pull remote audio data" leading from App to SDK and then onto Agora SD-RTN, indicating the direction and action taken regarding remote audio data.
+   - Configuration or setting specifics are not depicted aside from the action indicators adjacent to the arrows. 
+
+This structured approach provides clarity on the functions and roles of each component within the sequence, showing how the App interacts with SDK and Agora SD-RTN to manage audio data in a real-time context.

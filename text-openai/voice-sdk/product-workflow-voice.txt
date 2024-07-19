@@ -1,0 +1,25 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show interactions between entities in a time-sequential order.
+
+2. **Main Entities and Elements:**
+   - The main entities represented as boxes are "User", "Your app", "Voice SDK", and "Agora".
+   - Each entity "Your app" and "Agora" includes a sub-element "SD-RTN" as a smaller box.
+   - The "Voice SDK" is a component within "Your app" entity, shown twice, near the top and bottom.
+
+3. **Data Flow:**
+   - Solid lines show interactions between the entities, indicating the flow of data or commands with arrows pointing in the direction of the flow.
+   - There are dashed lines representing response or return actions within the sequence.
+   - The interactions are grouped into phases labeled directly on the diagram: "Join", "Publish and Subscribe", and "Common workflows".
+
+4. **Detailed Content:**
+   - Under "User" entity: 
+     "Open App" newline "Join a channel" newline "Adjust volume" newline "Leave the channel".
+   - Under "Your app" entity: 
+     "Use Voice SDK to create an Agora Engine instance" newline "Retrieve authentication token to join a channel" newline "Join the channel" newline "Publish microphone stream to the channel" newline "Subscribe to streams from other users" newline "Manage local and remote streams" newline "Call API methods to adjust or mute volume" newline "Leave the channel".
+   - Under "Agora" entity:
+     Only containing its "SD-RTN" sub-element.
+   - Under each "SD-RTN" sub-element in both "Your app" and "Agora" entities:
+     No specific interaction descriptions presented.
+
+5. **Configuration or Additional Notes:**
+   - No additional lines or notes are displayed that indicate configuration settings or specifications outside of the described interactions and entity details.

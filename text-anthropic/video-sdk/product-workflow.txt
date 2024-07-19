@@ -1,0 +1,43 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (stick figure symbol on the left and right)
+   - Your app (rectangle box)
+     - Video SDK (smaller rectangle inside Your app box)
+   - Agora (rectangle box on the right)
+     - SD-RTN (smaller rectangle inside Agora box)
+   - Join (rectangle box under Your app)
+   - Publish and Subscribe (rectangle box under Join)
+   - Common workflows (rectangle box at the bottom)
+
+3. Data Flow:
+   - Solid arrows indicate the flow of data or interactions between entities.
+   - Dashed arrows indicate the return flow or responses.
+   - The flow moves from left to right, starting with the User and ending at Agora (SD-RTN).
+   - There is a grouping titled "Use Video SDK to create an Agora Engine instance".
+
+4. Detailed Content:
+   - User: No text content
+   - Your app:
+     - Video SDK: No text content
+   - Agora:
+     - SD-RTN: No text content
+   - Join:
+     - Join a channel (newline)
+   - Publish and Subscribe:
+     - Publish camera and microphone streams to the channel (newline)
+     - Subscribe to streams from other users (newline)
+     - Manage local and remote streams
+   - Common workflows:
+     - Start screen sharing (newline)
+     - Adjust volume (newline)
+     - Leave the channel
+
+5. Configuration or Additional Notes:
+   - "Capture and publish your screen to the channel" (positioned under Start screen sharing)
+   - "Call API methods to adjust or mute volume" (positioned under Adjust volume)
+   - "Retrieve authentication token to join a channel" (positioned between Join a channel and Join the channel)
+   - "Join the channel" (positioned between Retrieve authentication token... and Publish camera and...)
+   - "Enable audio and video in the engine" (positioned between Use Video SDK... and Retrieve authentication token...)
+   - "Leave the channel" (positioned under Leave the channel)

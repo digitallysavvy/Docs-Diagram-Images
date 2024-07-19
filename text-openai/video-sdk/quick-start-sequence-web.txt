@@ -1,0 +1,36 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which is used to illustrate how processes interact with each other and in what order.
+
+### Main Entities and Elements:
+- There are three main entities represented as boxes in the diagram: "App", "Video SDK", and "Agora SD-RTN".
+- Each entity includes smaller boxes or rectangles, representing functions or actions taken by that entity.
+- The "App" entity contains several function call boxes such as "Create a local client", "Join channel", "Create and publish local audio and video tracks", "Subscribe to remote users", and "Leave the channel".
+- The "Video SDK" entity corresponds with actions triggered in the "App" through dashed lines leading to or from functions.
+- The "Agora SD-RTN" entity is involved primarily in the network interactions, as indicated by actions like "Join channel request" and "Receive audio and video data".
+
+### Data Flow:
+- Solid lines with arrows show the flow of function calls or actions moving between entities or within the same entity.
+- Dashed lines typically represent the return of data or a response action, such as "Subscribe to remote users" where the returned data is an event labeled "client.on('user-published')".
+- Grouped under "Subscribe to remote users", there is a sequential interaction process from the display of the remote users' data being published to the subscription and acquisition of audio and video tracks.
+
+### Detailed Content:
+- "Create a local client" contains:
+  - AgoraRTC.createClient
+  - Set mode to 'rtc'
+- "Join channel" contains:
+  - AgoraRTCClient.join
+- "Create and publish local audio and video tracks":
+  - Create local audio track: AgoraRTC.createMicrophoneAudioTrack
+  - Create local video track: AgoraRTC.createCameraVideoTrack
+  - Publish local audio and video tracks: AgoraRTCClient.publish
+- "Subscribe to remote users":
+  - Get remote user object: AgoraRTCClient.remoteUsers
+  - Subscribe to remote user object: AgoraRTCClient.subscribe
+- "Leave the channel":
+  - Turn off the local audio track: MicrophoneAudioTrack.close
+  - Turn off the local video track: CameraVideoTrack.close
+  - Leave the channel: AgoraRTCClient.leave
+
+### Configuration or Additional Notes:
+- Additional configuration settings or operational notes are specified within the smaller boxes in the sequence of operations such as setting the mode to 'rtc' when creating a local client.
+- Flow directions are clearly indicated by arrows showing data moving from one function or entity to another.

@@ -1,0 +1,37 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- Client (3 instances)
+- Call implementer
+- Agora Platform
+- Run call, End call (boxes within Call implementer)
+
+3. Data Flow:
+- Solid lines indicate flow from left to right: 
+    - Connect to local audio and video resources (from Run call to Client)
+    - Join channel (from Run call to Agora Platform)
+    - Send audio and video to channel (from Run call to Agora Platform)
+    - Join channel (from Agora Platform to Client) 
+    - Send audio and video to channel (from Agora Platform to Client)
+    - Communicate (bidirectional between Clients)
+    - Leave channel (from End call to Agora Platform)
+    - Leave channel (from Agora Platform to Client)
+- Dashed lines indicate opposite flow from right to left:
+    - Connect to local audio and video resources (from Client to Run call)
+    - Close audio and video (from End call to Client)
+    - Close audio and video (from Client to End call)
+
+4. Detailed Content:
+- Run call: newline Connect to local audio and video resources
+- Send audio and video to channel
+- Connect to local audio and video resources  
+- Join channel
+- Send audio and video to channel
+- Communicate
+- End call: newline Close audio and video
+- Close audio and video 
+- Leave channel
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes are present.

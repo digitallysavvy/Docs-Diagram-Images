@@ -1,0 +1,36 @@
+1. **Overall Structure**
+   - The diagram is a sequence diagram used to represent a process over time.
+
+2. **Main Entities and Elements**
+   - There are three main entities represented as boxes at the top of the diagram:
+     - **App**: Symbolized by a box with an icon of a desktop monitor.
+     - **Video SDK**: Indicated by a box with two overlapping square icons.
+     - **Agora SD-RTN**: Represented by a box with a cloud icon.
+   - A titled group "Screen sharing" encloses the sequence of actions related to screen sharing across the entities.
+
+3. **Data Flow**
+   - Starting from the **App** entity:
+     - Solid lines extend from **App** to **Video SDK** indicating directional flow of actions (e.g., "Get available screen or window information" and responses such as "Return available screen or window information").
+     - Within **App**, the flow continues downwards through several steps like "Start screen capture", "Set the screen sharing scene (optional)", and finally "Stop screen sharing".
+   - Lines connect the **Video SDK** to the **Agora SD-RTN** to show the forwarding of actions:
+     - "Publish the screen sharing stream in the channel" starts from **Video SDK** to **Agora SD-RTN**.
+     - This connection includes subsequent updates and eventual stopping of the stream publishing.
+
+4. **Detailed Content**
+   - In **App**: 
+     - Get available screen or window information newline
+     - Return available screen or window information newline
+     - Start screen capture newline
+     - Set the screen sharing scene (optional) newline
+     - Join the channel newline
+     - Update the screen sharing area or parameters newline
+     - Display stroke on the shared screen (optional) newline
+     - Block window (optional) newline
+     - Stop screen sharing
+   - In **Video SDK** to **Agora SD-RTN**:
+     - Publish the screen sharing stream in the channel newline
+     - Publish the updated screen sharing stream in the channel newline
+     - Stop publishing the screen sharing stream in the channel
+
+5. **Configuration or Additional Notes**
+   - No additional lines or notes indicated within the diagram outside the basic sequence and interactions described.

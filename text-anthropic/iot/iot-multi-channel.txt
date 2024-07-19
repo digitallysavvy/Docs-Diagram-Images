@@ -1,0 +1,46 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are labeled as "User", "Your app", and "Agora".
+- Within "Your app", there is a sub-element labeled "IoT SDK".
+- Within "Agora", there is a sub-element labeled "SD-RTN".
+
+3. Data Flow:
+- There are connections between "User" and "Your app" using solid lines, indicating a flow in both directions.
+- There are connections between "Your app" and "Agora" using solid lines, indicating a flow in both directions.
+- The diagram is grouped into several sections titled "Setup Agora engine", "Create multiple connections", "Stream to multiple channels", "Push multiple streams to a single channel", "Leave channel(s)", and "Clean up".
+
+4. Detailed Content:
+- Within the "Setup Agora engine" group, the text content includes:
+"Instantiate the Agora engine" newline
+"Set engine options" newline
+"Verify license and initialize"
+
+- Within the "Create multiple connections" group, the text content includes:
+"Create connection-1" newline
+"Create connection-2"
+
+- Within the "Stream to multiple channels" group, the text content includes:
+"Join channel-1 using connectionId-1" newline
+"Join channel-2 using connectionId-2" newline
+"Send audio and video data using connectionId-1 to stream to channel-1" newline
+"Send audio and video data using connectionId-2 to stream to channel-2"
+
+- Within the "Push multiple streams to a single channel" group, the text content includes:
+"Join channel-1 using connectionId-1 and userId-1" newline
+"Join channel-1 using connectionId-2 and userId-2" newline
+"Send audio and video data using connectionId-1" newline
+"Send audio and video data using connectionId-2"
+
+- Within the "Leave channel(s)" group, the text content includes:
+"Call leave channel using connectionId-1" newline
+"Call leave channel using connectionId-2"
+
+- Within the "Clean up" group, the text content includes:
+"Call destroy connection using connectionId-1" newline
+"Call destroy connection using connectionId-2" newline
+"Call the finish method to release resources"
+
+5. Configuration or Additional Notes:
+- There are no additional configuration settings or notes in this diagram.

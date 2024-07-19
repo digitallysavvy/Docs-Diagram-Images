@@ -1,0 +1,41 @@
+1. Overall Structure:
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- Image enhancement, Face Filter, Face change, Voice effect, Voice changer, Noise cancellation (boxes at the top)
+- Extension (box on the top right)
+- Audio/Video Filter Extensions (box in the middle)
+- Video SDK (box at the bottom containing smaller boxes)
+- Capture, Pre-process, Encode, Transmit, Decode, Post-process, Play (smaller boxes within Video SDK)
+- Audio or video data (sub-elements on the left and right of Audio/Video Filter Extensions)
+- App (box on the bottom right)
+
+3. Data Flow:
+- Dashed lines connect Image enhancement, Face Filter, Face change, Voice effect, Voice changer, and Noise cancellation to Audio/Video Filter Extensions.
+- A solid arrow points from Video SDK to Audio/Video Filter Extensions, and another solid arrow points from Audio/Video Filter Extensions to Video SDK.
+- Within Video SDK, the boxes are connected by solid arrows in the sequence: Capture -> Pre-process -> Encode -> Transmit -> Decode -> Post-process -> Play.
+- The group "Encapsulate audio or video processing capabilities" encompasses the boxes at the top.
+
+4. Detailed Content:
+Image enhancement (newline) 
+Face Filter (newline)
+Face change (newline)
+Voice effect (newline)
+Voice changer (newline)
+Noise cancellation (newline)
+Encapsulate audio or video processing capabilities (newline)
+Extension (newline)
+Audio/Video Filter Extensions (newline)
+Audio or video data (newline)
+Video SDK (newline)
+Capture (newline)
+Pre-process (newline)
+Encode (newline)
+Transmit (newline)
+Decode (newline)
+Post-process (newline)
+Play (newline)
+App
+
+5. Configuration or Additional Notes:
+No additional lines or configuration settings are present.

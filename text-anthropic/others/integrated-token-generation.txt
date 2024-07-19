@@ -1,0 +1,31 @@
+1. Overall Structure:
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+The main entities are User, App, Developer's Authentication System, and API.
+
+3. Data Flow:
+- The flow starts from the User to the App with "Join a Channel with Authentication".
+- The App communicates with the Developer's Authentication System through solid lines with text descriptions of the communication.
+- The Developer's Authentication System communicates with the API through dashed lines with text descriptions.
+- The API sends a response back to the Developer's Authentication System which is then forwarded to the App and back to the User.
+
+4. Detailed Content:
+User box: No text content.
+App box: No text content.
+Developer's Authentication System box: No text content.
+API box: No text content.
+
+Flow from User to App: "Join a Channel with Authentication" newline "Start the app".
+Flow from App to Developer's Authentication System: "Login to the developer's authentication system.".
+Flow from App to Developer's Authentication System: "Select a channel to join".
+Flow from App to Developer's Authentication System: "Request an Agora authentication token using channel name, role, token type and user Id".
+Note within Developer's Authentication System: "Validate user request against internal security".
+Note within Developer's Authentication System: "Use integrated Agora library to generate a token".
+Flow from Developer's Authentication System to App: "Return the token to the client".
+Flow from App to Developer's Authentication System: "Join a channel with user Id, channel name, and token".
+Note within API: "Validate the token".
+Flow from API to Developer's Authentication System: "Trigger the callback after adding user to the channel".
+
+5. Configuration or Additional Notes:
+The diagram is divided into two sections by a dashed line labeled "Implemented by you" and "Provided by Agora".

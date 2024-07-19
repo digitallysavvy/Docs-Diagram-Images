@@ -1,0 +1,24 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User and Admin (smaller boxes within larger boxes)
+- App (box)
+- Enterprise Firewall (box) 
+- Cloud Proxy (box)
+- SD-RTN (box)
+
+3. Data Flow:
+- Solid lines indicate data flow between entities, with arrows showing the direction.
+- There is a group titled "Implemented by you" containing User, Admin, and App.
+- There is a group titled "Provided by Agora" containing Enterprise Firewall, Cloud Proxy, and SD-RTN.
+- A dashed line connects "Whitelist IP addresses and ports for Cloud Proxy in the firewall" to the Enterprise Firewall box.
+
+4. Detailed Content:
+- User box: "Open the app" newline "Join a channel"
+- App box: "Initialize the Agora Video SDK engine" newline "alt" newline "[Join a channel directly]" newline "[Join Channel failed]" newline "Video SDK automatically attempts to connect securely on TLS 443" newline "[Connection attempt on TLS 443 failed: Enable cloud proxy]" newline "Call the method to enable a Cloud Proxy connection" newline "Request access to Cloud Proxy" newline "Request access to Cloud Proxy" newline "Join a channel" newline "Join success" newline "Send data stream" newline "Receive data stream"
+- Cloud Proxy box: "Check whitelist to grant access" newline "Proxy information"
+- SD-RTN box: "Join a Channel" newline "Join Success" newline "Send and receive data" newline "Join Success" newline "Send and receive data" newline "Request to join a channel" newline "Join success" newline "Send and receive data stream"
+
+5. Configuration or Additional Notes:
+- There is a note "Whitelist IP addresses and ports for Cloud Proxy in the firewall" below the Enterprise Firewall box.

@@ -1,0 +1,36 @@
+1. **Overall Structure**:
+   - The diagram is a sequence diagram, typically used in software engineering to show how processes interact with each other over time.
+
+2. **Main Entities and Elements**:
+   - **User**: Symbolized by a stick figure icon at both the top and bottom of the sequence. Represents the interaction start and end points for a human user.
+   - **Your app**: A box that represents the application through which the user interacts with the Video SDK.
+   - **Video SDK**: A box that represents the software development kit provided by Agora for handling video operations.
+   - **SD-RTN**: A box to the right side, likely representing a component or service related to routing or network delivery (specific function not defined in the diagram).
+
+3. **Data Flow**:
+   - Solid lines with arrows between the User, Your app, and Video SDK show the direct interactions and the flow of operations starting from the user opening the app and extending through operations such as initializing, setting roles, configuring video, and managing channel interactions.
+   - Dashed lines primarily indicate return paths or responses after initiating certain operations, such as initialization and setting up video.
+
+4. **Detailed Content**:
+   - **Your app**:
+     - "Create an instance of the Video SDK engine: agoraEngine = agoraEngine.createAgoraRtcEngine"
+     - "Initialize the created instance: agoraEngine.initialize"
+     - "Set the role as host: agoraEngine.setClientRole(ClientRoleType.ClientRoleBroadcaster)"
+     - "Setup the callback functions: agoraEngine.registerEventHandler"
+
+   - Interactions upon "Start call":
+     - "Retrieve authentication token to join channel"
+     - "Setup local video: agoraEngine.setupLocalVideo"
+     - "Enable the local video capturer: agoraEngine.enableVideo"
+     - "Start local preview: agoraEngine.startPreview"
+     - "Join a channel: agoraEngine.joinChannel"
+     - "Join accepted"
+     - "Retrieve streaming from the other user: agoraEngine.setupRemoteVideo"
+     - "Receive and send data streams"
+
+   - Actions upon "Leave call":
+     - "Stop the local preview: stopPreview"
+     - "Leave the channel: agoraEngine.leaveChannel"
+
+5. **Configuration or Additional Notes**:
+   - No specific configurations or additional notes appear outside of the entity descriptions and data flows already mentioned.

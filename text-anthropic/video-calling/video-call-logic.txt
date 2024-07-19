@@ -1,0 +1,20 @@
+1. Overall Structure: 
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (2 instances, represented by stick figures)
+   - Your app (containing Video SDK)
+   - Agora (containing API)
+   - Host (sub-element within Your app)
+
+3. Data Flow:
+   - User opens the app (solid line towards Your app)
+   - Data flow between Your app and Agora (mostly solid lines in both directions, with some dashed lines)
+   - Grouping of elements between Engine.joinChannel and Engine.leaveChannel under the title "Host. Start broadcast" and "Join broadcast"
+
+4. Detailed Content:
+   - Your app: "Video SDK" newline "RtcEngine.create" newline "Engine.enableVideo" newline "Engine.joinChannel" newline "Engine.on("joinChannelSuccess")" newline "Publish" newline "Send data stream" newline "Widget = RtcLocalView.SurfaceView()" newline "Engine.on("userJoined")" newline "Subscribe" newline "Receive data stream" newline "Widget = RtcRemoteView.SurfaceView()" newline "Engine.leaveChannel"
+   - Agora: "API"
+
+5. Configuration or Additional Notes:
+   - No additional lines or notes are present in the diagram.

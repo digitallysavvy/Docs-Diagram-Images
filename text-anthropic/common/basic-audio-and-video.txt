@@ -1,0 +1,40 @@
+1. Overall Structure:
+   - The diagram is a flow diagram.
+   - The direction of the diagram is left-to-right.
+
+2. Main Entities and Elements:
+   - RTC SDK (box)
+   - agora SD-RTN (box)
+   - Voice / Video Call Channel (group with dashed border)
+     - User A: Host (box)
+     - User B: Audience (box)
+   - Live Video Channel (group with dashed border)
+     - User C: Host (box)
+     - User D: Audience (box)
+   - Publish Audio & Video, Subscribe to B (box)
+   - Publish Audio & Video, Subscribe to A (box)
+   - Publish Audio & Video, Subscribe to other hosts (box)
+   - Subscribe to all hosts (box)
+
+3. Data Flow:
+   - Solid lines connecting RTC SDK to Voice/Video Call Channel and Live Video Channel groups (bidirectional)
+   - Solid lines from User A to "Publish Audio & Video, Subscribe to B" and from User B to "Publish Audio & Video, Subscribe to A" (bidirectional)
+   - Solid line from User C to "Publish Audio & Video, Subscribe to other hosts"
+   - Solid line from "Subscribe to all hosts" to User D
+
+4. Detailed Content:
+   - RTC SDK (no text content)
+   - agora SD-RTN (no text content)
+   - Voice / Video Call Channel (title of group)
+     - User A: Host (newline)
+     - User B: Audience
+   - Live Video Channel (title of group)
+     - User C: Host (newline)
+     - User D: Audience
+   - Publish Audio & Video, Subscribe to B
+   - Publish Audio & Video, Subscribe to A
+   - Publish Audio & Video, Subscribe to other hosts
+   - Subscribe to all hosts
+
+5. Configuration or Additional Notes:
+   - "Connect" label positioned between RTC SDK and Voice/Video Call Channel and Live Video Channel groups.

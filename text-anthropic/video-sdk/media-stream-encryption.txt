@@ -1,0 +1,34 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Authentication system (box labeled "Authentication system")
+- App (box labeled "App") 
+- SD-RTN (box labeled "SD-RTN")
+- Setup media stream encryption (sub-box within Authentication system)
+
+3. Data Flow:
+- Solid lines with arrows indicating the flow direction between entities.
+- A grouping titled "Implemented by you" containing User, Authentication system, and App.
+- A grouping titled "Provided by Agora" containing SD-RTN.
+
+4. Detailed Content:
+Start the app (from User to App)
+newline
+Initiate the Video SDK engine (from App to SD-RTN)
+newline
+Setup media stream encryption (within Authentication system)
+Login to the authentication system (from Setup... to Authentication system) 
+Retrieve a 32-byte key (from Authentication system to Setup...)
+Retrieve a 32-byte salt in Base64 format (from Authentication system to Setup...)
+Create a encryption configuration using the key and salt (within Setup...)
+Set the encryption configuration (from Setup... to SD-RTN)
+newline  
+Select a channel to join (from User to App)
+Retrieve an access token (bidirectional between App and SD-RTN)
+Join a channel (from App to SD-RTN)
+Communicate over an encrypted media stream (bidirectional between App and SD-RTN)
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes are present in the diagram.

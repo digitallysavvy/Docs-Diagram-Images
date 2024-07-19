@@ -1,0 +1,34 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box)
+  - IoT SDK (sub-element within Your app box)
+- Agora (box)
+  - SD-RTN (sub-element within Agora box)
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of data or method calls between entities.
+- Dashed lines with arrows represent the return flow or callbacks.
+- The flow is grouped into the following sections with titles:
+  - Set up Agora engine
+  - Join a channel
+  - Send audio and video
+  - Receive audio and video
+  - Leave channel
+  - Clean up
+
+4. Detailed Content:
+- User: (no text content)
+- Your app:
+  - IoT SDK (no text content)
+  - Set up Agora engine (newline) Instantiate the Agora engine (newline) Set engine options (newline) Verify license and initialize the engine (newline) Create a connection
+- Join a channel (newline) Join a channel (newline) Call the method to join a channel (newline) On join channel success callback
+- Send audio and video (newline) Start thread to send audio data (newline) Start thread to send video data
+- Receive audio and video (newline) Render audio frame (newline) Render video frame (newline) On audio data callback (newline) On video data callback
+- Leave channel (newline) Leave channel (newline) Call the leave channel method
+- Clean up (newline) Destroy the connection (newline) Call the finish method to release resources
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes related to configuration settings.

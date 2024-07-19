@@ -1,0 +1,31 @@
+### Overall Structure:
+- The diagram is a sequence diagram used to represent the interaction and data flow between different software components.
+
+### Main Entities and Elements:
+- **App**: Represented as a vertical box with the label "App". Inside, there is an icon of a mobile device.
+- **SDK**: A vertical box labeled "SDK", containing an icon of overlapping squares indicating software layers or integration.
+- **SD-RTN Edger Server**: Another vertical box labeled "SD-RTN Edger Server" with a cloud icon inside, symbolizing a server or cloud service.
+
+### Data Flow:
+- A solid line from "App" to "SDK" labeled "Start last mile probe test" indicating initiation of a process.
+- From "SDK" to "SD-RTN Edger Server", a solid line is marked "Send uplink network probe packet" showing data being sent to the server.
+- A dashed line returns from "SD-RTN Edger Server" to "SDK" labeled "Return the uplink confirmation packet", depicting the response from the server.
+- Another solid line from "SDK" to "SD-RTN Edger Server" labeled "Send downlink network probe packet" represents another data transfer to the server.
+- A dashed line from "SDK" to "App" labeled "Report network quality statistics", showing the results being sent back to the application.
+- A solid line from "App" to "SDK" labeled "Stop last mile probe test" marks the end of the testing process.
+
+### Detailed Content:
+- **App**:
+   - Start last mile probe test
+   - Stop last mile probe test
+   - Report network quality statistics (listed as incoming data on the dashed line)
+- **SDK**:
+   - Send uplink network probe packet
+   - Return the uplink confirmation packet
+   - Send downlink network probe packet
+- **SD-RTN Edger Server**:
+   - Textually, no specific actions are labeled inside the box; actions are described on connecting lines.
+
+### Configuration or Additional Notes:
+- The vertical dashed lines behind each entity mark the lifetime or period of activity of each entity during the sequence of operations.
+- The overall configuration and flow are set to illustrate the network testing procedures involving sending and receiving packets and reporting the statistics relevant to network performance.

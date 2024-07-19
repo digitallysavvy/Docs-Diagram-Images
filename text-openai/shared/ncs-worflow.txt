@@ -1,0 +1,27 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which details the interactions between different entities over time to perform various operations.
+
+2. **Main Entities and Elements:**
+   - There are three main vertical entities labeled "User," "Web server," and "App." Additionally, there is an entity labeled "SD-RTN" under the header "Provided by Agora."
+   - Within these main entities, the "Web server" and "App" also have smaller boxes indicating sequence events such as "Login," "Create channel," and so forth.
+
+3. **Data Flow:**
+   - Solid lines with arrows are used to indicate the flow of actions and messages. The direction of the arrow shows the direction of communication or action flow.
+   - Dashed lines are used to represent return messages or confirmations back to the sending entity.
+   - There is a noticeable grouping titled "Notifications sent and acknowledged for all channel events," which encapsulates several sequences of events between "Web server" and "App."
+  
+4. **Detailed Content:**
+   - "Web server" and "App" sequences include:
+     - "Login"
+     - "Create channel"
+     - "Notification 101: 'channel name' opened at 'time'"
+     - "Authenticate notification signature"
+     - "200 OK"
+     - "Close channel"
+     - "Notification 102: 'channel name' destroyed at 'time'"
+     - "Logout"
+   - The "SD-RTN" responses include "No notification" at two points in the sequence, occurring after "Login authentication" and "Logout."
+
+5. **Configuration or Additional Notes:**
+   - Notes are placed directly below or beside the entities they relate to. For example, "No notification" aligns directly with "SD-RTN" both times it appears.
+   - The header "Implemented by you" spans across the "Web server" and "App" indicating the scope of implementation.

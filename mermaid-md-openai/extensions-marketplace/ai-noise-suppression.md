@@ -1,0 +1,10 @@
+# Flow Diagram
+
+```mermaid
+flowchart LR
+    subgraph sg1["Audio & Video Data"]
+        Capture --> Pre-Process --> Encode --> Transmit --> Decode --> Post-Process --> Play
+    end
+    
+    Pre-Process -- " " --> AI_Noise_Suppression["AI Noise Suppression"]
+```

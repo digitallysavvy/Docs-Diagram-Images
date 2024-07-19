@@ -1,0 +1,22 @@
+1. Overall Structure: 
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are User, Your app, and Agora with labeled boxes.
+- Within the "Your app" entity, there is a sub-element labeled "Signaling SDK".
+
+3. Data Flow:
+- The diagram shows connections between entities using solid lines with arrows indicating the direction of data flow.
+- There are several groupings of elements, such as "Initialize", "Presence notifications", "Presence queries", "User status", and "Close".
+
+4. Detailed Content:
+- User box: "Initialize" newline "Open app"
+- "Your app" box: "Create a signalingEngine instance" newline "Add the presence event listener" newline "Set the authentication token" newline "Log in to Signaling"
+- "Presence notifications" group: "Join a channel" newline "Subscribe to a channel and enable presence events for the channel" newline "Presence event: A remote user joins, leaves or changes status in the channel" newline "Read the event arguments" newline "Inform users"
+- "Presence queries" group: "Load the list of users in the channel" newline "Load the channel list for a user"
+- "User status" group: "Set own status" newline "Query the status of a remote user"
+- Agora box: "Call getOnlineUsers" newline "Call getUserChannels" newline "Call setState" newline "Call getState"
+- "Close" group: "Log out" newline "Log out of Signaling"
+
+5. Configuration or Additional Notes:
+- There is a dashed line between the "Your app" entity and the "Agora" entity, indicating a configuration or additional note.

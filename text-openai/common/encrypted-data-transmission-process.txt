@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - Type of diagram: Flow diagram.
+   - Direction of the diagram: Top-to-bottom and bi-directional (left-to-right between two main entities).
+
+2. **Main Entities and Elements:**
+   - Two main entities labeled "Client A" and "Client B" are depicted at the far left and far right of the diagram.
+   - Each client contains two primary components: "App A/B" and "SDK A/B", each enclosed in dashed boxes. 
+     - "App A" and "App B" each have a sub-element labeled "Customized Encryption".
+     - "SDK A" and "SDK B" contain the elements "Built-in encryption", and smaller boxes labeled "Audio / Video & encoding" and "Audio/Video decoding and rendering", respectively.
+
+3. **Data Flow:**
+   - Data flows from "Client A" to "Client B":
+     - Begins from "Audio / Video & encoding" in SDK A, passes through "Built-in encryption" and "Encrypted data" (highlighted in a smaller box), and then moves upwards.
+     - Through the cloud labeled "Agora SD-RTN™", indicating encrypted data transmission.
+     - Data flows down into "SDK B" moving through "Encrypted data", "Built-in encryption", and finally into "Audio/Video decoding and rendering".
+   - The reverse flow for RETURN data is implied, though not explicitly visualized.
+
+4. **Detailed Content:**
+   - Labels at SDK A and SDK B:
+     - SDK A: "Built-in encryption" newline "Audio / Video & encoding"
+     - SDK B: "Built-in encryption" newline "Audio/Video decoding and rendering"
+   - At the central cloud: "Agora SD-RTN™" newline "Encrypted data transmission"
+   - Horizontal labels indicate the flow:
+     - Above the cloud: "Encryption data upstream transmission"
+     - Below the cloud: "Encryption data downstream transmission"
+
+5. **Configuration or Additional Notes:**
+   - Each large entity (Client A and Client B) has a boundary marked with dashed lines, indicating their separation and individual functionalities within the system.
+   - There are two horizontal arrows at the top and bottom of the cloud indicating bidirectional flow of encrypted data.

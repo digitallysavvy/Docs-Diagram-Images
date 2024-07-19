@@ -1,0 +1,33 @@
+1. **Overall Structure:**
+   The diagram is a sequence diagram which represents interactions among entities over time.
+
+2. **Main Entities and Elements:**
+   - **User**: Depicted as a person icon at the top-left.
+   - **App**: Represented by a square computer-like icon at the top-center.
+   - **Agora SD-RTN**: Shown as a cloud icon at the top-right.
+   - **Sub-elements**:
+     - A rectangle titled "Restrict area access" encompassing multiple operations between the "App" and "Agora SD-RTN", acting as a grouped action or subroutine.
+
+3. **Data Flow:**
+   - Solid lines with arrows indicate the direction of the interaction flow sequentially:
+     - From "User" to "App" for "Start the app."
+     - From "App" to "Agora SD-RTN" for interactions like "Set SD-RTN region in the Agora engine configuration," "Initiate the Agora engine," and "Connect to SD-RTN in a specific region."
+     - Return flow from "Agora SD-RTN" to "App" labeled "Success response."
+     - Flow continues downwards from "User" to "App" for "Select a channel to join."
+     - From "App" to "Agora SD-RTN" for "Join a channel with user Id, channel name, and token."
+     - Return flow from "Agora SD-RTN" to "App" labeled "Join accepted."
+
+4. **Detailed Content:**
+   - Within the "App":
+     - "Start the app"
+     - "Restrict area access" subgroup:
+       - "Set SD-RTN region in the Agora engine configuration"newline
+       - "Initiate the Agora engine"newline
+       - "Connect to SD-RTN in a specific region"
+     - "Select a channel to join"
+     - "Join a channel with user Id, channel name, and token"
+   - Within "Agora SD-RTN":
+     - Directed outputs: "Success response" and "Join accepted."
+
+5. **Configuration or Additional Notes:**
+   - The rectangle labeled "Restrict area access" encapsulates a sequence of three operations, indicating a multi-step configuration or initialization process between the "App" and "Agora SD-RTN" geared towards setting and connecting to the right service region.

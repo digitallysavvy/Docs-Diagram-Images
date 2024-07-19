@@ -1,0 +1,54 @@
+### Overall Structure:
+- The diagram is a sequence diagram that outlines the interaction between different components involved in using an SDK for multimedia operations.
+
+### Main Entities and Elements:
+1. **Your app** (Main entity box):  
+   - Sub-elements include:
+     - "IoT SDK"
+     - "SD-RTN"
+
+2. **User** (Symbols at the top and bottom connected via a dashed line depict user interaction).
+
+### Data Flow:
+- Connections between entities are predominantly solid lines with arrowheads indicating the direction of flow from the User or within "Your app." Dashed lines with arrowheads indicate responses or results back to the originator after a request is processed.
+
+- Grouping titles include:
+  - "Set Up Agora engine"   
+  - "Join a channel"
+  - "Send audio and video"
+  - "Receive audio and video"
+  - "Leave channel"
+  - "Clean up"
+
+### Detailed Content:
+- **Set up Agora engine**:
+  - "Instantiate the Agora engine" newline
+  - "Set engine options" newline
+  - "Verify license and initialize the engine" newline
+  - "Create a connection"
+  
+- **Join a channel**:
+  - "Call the method to join a channel" newline
+  - "On join channel success callback"
+  
+- **Send audio and video**:
+  - "Start thread to send audio data" newline
+  - "Start thread to send video data"
+  
+- **Receive audio and video**:
+  - "On audio data callback" newline
+  - "Render audio frame" newline
+  - "On video data callback" newline
+  - "Render video frame"
+
+- **Leave channel**:
+  - "Call the leave channel method"
+
+- **Clean up**:
+  - "Destroy the connection" newline
+  - "Call the finish method to release resources"
+
+### Configuration or Additional Notes:
+- Connection lines:
+  - Solid lines signify the initiation of actions or data transfers.
+  - Dashed lines signify callbacks or responses.

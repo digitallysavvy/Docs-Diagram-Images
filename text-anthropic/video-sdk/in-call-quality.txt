@@ -1,0 +1,30 @@
+1. Overall Structure:
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- Two main entities labeled "App" on the left and right sides.
+- Within the left "App" entity, there are two sub-elements: "Agora Video SDK" and "Audio Module".
+- Within the right "App" entity, there are three sub-elements: "Agora Video SDK", "Receiving End", "Network Jitter", and "Audio Module".
+- A central entity labeled "agora" with two sub-elements: "SD-RTN™" and "Agora edge server" (appears twice).
+
+3. Data Flow:
+- A solid line flows from "Audio Module" to "Last Sending End" within the left "App" entity.
+- A solid line labeled "Last Mile" flows from "Last Sending End" to the central "agora" entity.
+- A solid line labeled "Last Mile" flows from the central "agora" entity to "Receiving End" within the right "App" entity.
+- A solid line flows from "Receiving End" to "Network Jitter" within the right "App" entity.
+- A solid line flows from "Network Jitter" to "Audio Module" within the right "App" entity.
+- Six numbered markers (1 through 6) are present below the diagram, indicating a sequence or flow.
+
+4. Detailed Content:
+Left "App" entity:
+Agora Video SDK (newline) Audio Module
+
+Right "App" entity:
+Agora Video SDK (newline) Receiving End (newline) Network Jitter (newline) Audio Module
+
+Central "agora" entity:
+SD-RTN™ (newline) Agora edge server (appears twice)
+
+5. Configuration or Additional Notes:
+- Dashed lines enclose and separate the left and right "App" entities.
+- The term "Buffering" is shown near the "Receiving End" element within the right "App" entity.

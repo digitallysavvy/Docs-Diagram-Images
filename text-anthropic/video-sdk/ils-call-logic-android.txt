@@ -1,0 +1,53 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (stick figure icon)
+   - Your app (box)
+     - Video SDK (sub-box inside Your app)
+   - Agora (box)
+     - SD-RTN (sub-box inside Agora)
+   - Host (stick figure icon)
+   - Audience (stick figure icon)
+
+3. Data Flow:
+   - Solid lines with arrows represent the flow of data or interactions.
+   - The flow is bi-directional between Your app and Agora.
+   - There is a grouping of elements titled "Host" for the host-related interactions.
+   - There is a grouping of elements titled "Audience" for the audience-related interactions.
+
+4. Detailed Content:
+   - User: Open App
+   - Your app to Video SDK: Initiate the Agora Video SDK engine: newline agoraEngine = RtcEngine.create
+   - Video SDK to Your app: (response arrow)
+   - Your app to Video SDK: Enable the video module: newline agoraEngine.enableVideo()
+   - Video SDK to Your app: (response arrow)
+   - Your app to Video SDK: Set the channel profile: newline agoraEngine.setChannelProfile(CHANNEL_PROFILE_LIVE_BROADCASTING)
+   - Video SDK to Your app: (response arrow)
+   - Host: Start a live streaming event
+   - Your app to Agora: Retrieve authentication token to join channel
+   - Agora to Your app: (response arrow)
+   - Your app to Agora: Set the role as host: newline agoraEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER)
+   - Agora to Your app: (response arrow)
+   - Your app to Video SDK: Setup local video: newline agoraEngine.setupLocalVideo(VideoCanvas)
+   - Video SDK to Your app: (response arrow)
+   - Your app to Video SDK: Start local preview: newline agoraEngine.startPreview()
+   - Video SDK to Your app: (response arrow)
+   - Your app to Agora: Join a channel as host: newline agoraEngine.joinChannel
+   - Your app to Agora: Send data stream
+   - Audience: Join a live streaming event
+   - Your app to Agora: Retrieve authentication token to join channel
+   - Agora to Your app: (response arrow)
+   - Your app to Agora: Set the user role as audience: newline agoraEngine.setClientRole(CLIENT_ROLE_AUDIENCE)
+   - Agora to Your app: (response arrow)
+   - Your app to Agora: Join the channel: newline agoraEngine.joinChannel
+   - Your app to Agora: Retrieve streaming from the hosts: newline agoraEngine.setupRemoteVideo
+   - Agora to Your app: Receive data stream
+   - Audience: Leave the live streaming event
+   - Your app to Agora: Leave the channel: newline agoraEngine.leaveChannel()
+   - User: Close app
+   - Your app to Video SDK: Clean up local resources newline agoraEngine.destroy()
+   - Video SDK to Your app: (response arrow)
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes in the diagram.

@@ -1,0 +1,36 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (symbol representing a person)
+- Authentication system (box)
+- App (box)
+- SD-RTN (box)
+- The diagram contains a group box titled "Implemented by you" containing the Authentication system and App boxes.
+- The diagram contains a group box titled "Provided by Agora" containing the SD-RTN box.
+
+3. Data Flow:
+- Solid arrows represent the flow of data or actions.
+- Dashed arrows represent the flow of data or actions in the opposite direction.
+- The flow follows a sequence from the User to the Authentication system, App, and SD-RTN, and vice versa.
+
+4. Detailed Content:
+- User: No text content.
+- Authentication system: No text content.
+- App:
+  "Start the app" newline
+  "Setup media stream encryption" newline
+  "Login to the authentication system" newline
+  "Retrieve a 32-byte key" newline
+  "Retrieve a 32-byte salt in Base64 format" newline
+  "Create a encryption configuration using the key and salt" newline
+  "Set the encryption configuration" newline
+  "Initiate the Signaling Engine" newline
+  "Select a channel to join" newline
+  "Retrieve an access token" newline
+  "Join a channel" newline
+  "Communicate over an encrypted data stream"
+- SD-RTN: No text content.
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes with configuration settings in the diagram.

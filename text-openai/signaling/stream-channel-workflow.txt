@@ -1,0 +1,48 @@
+### Overall Structure
+- The diagram in question is a sequence diagram.
+
+### Main Entities and Elements
+- **Main Entities**: 
+  - **Your app**: Divided into sub-elements labeled as Signaling SDK.
+  - **Agora**: Divided into sub-elements labeled as Signaling.
+- **User**:
+  - Represented at the beginning and end of the sequence. Interaction with the app starts and ends here.
+
+### Data Flow
+- **Connections Using Lines**:
+  - Solid lines indicating direct actions or commands moving from the user or one part of the app to another.
+  - Dashed lines indicating responses or asynchronous events flowing back toward the user or between components.
+- **Groupings of Elements**: 
+  - Each phase of interaction is grouped into labeled sections: Initialize, Channel, Topic, Messages, Presence, and Close.
+
+### Detailed Content 
+#### Initialize
+- Open app -> Create a signalingEngine instance
+- Create a signalingEngine instance -> Add user event callbacks
+- Add user event callbacks -> Set the authentication token
+- Set the authentication token -> Log in to Signaling
+
+#### Channel
+- Create stream channel -> Create channel or add user to channel
+- Subscribe to a channel -> Channel events
+
+#### Topic
+- Join topic -> Create topic or add user to topic
+- Subscribe to topic -> Topic events
+
+#### Messages
+- Send message -> Publish message to topic
+- Listen for message events <- Publish message to topic
+- Receive message <- Message from topic
+- Leave topic
+
+#### Presence
+- Change status -> listen for user events
+- ConnectionStateChanged <- listen for user events
+- Inform users
+
+#### Close
+- Log out -> Log out of Signaling
+
+### Configuration or Additional Notes
+- The positions of the notes and lines are relative to the depicted actions and responses in the Signaling SDK and Agora signaling sections where applicable. The flow starts at the top with the user opening the app and concludes at the bottom with the user logging out.

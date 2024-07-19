@@ -1,0 +1,23 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is from left to right.
+
+2. **Main Entities and Elements:**
+   - There are three main rectangular boxes aligned horizontally. These include:
+     - "Specially collected audio"
+     - "Collection Module"
+     - "SDK"
+   - "Collected audio frames" is labeled on an arrow between the second and third boxes.
+
+3. **Data Flow:**
+   - Solid lines with arrows indicate the flow of data:
+     - From "Specially collected audio" to "Collection Module".
+     - From "Collection Module" to "SDK", through an intermediary arrow labeled "Collected audio frames".
+
+4. **Detailed Content:**
+   - The box labeled "Collection Module" does not contain additional text content inside.
+
+5. **Configuration or Additional Notes:**
+   - No additional lines or configuration notes are visible outside the main entities.
+
+There are no groupings with titles, and no other symbols or distinguishing marks outside the described elements and flow. The background is a dark grid, providing a visual guide but not contributing additional information to the function or content of the flow diagram.

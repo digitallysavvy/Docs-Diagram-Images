@@ -1,0 +1,39 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (stick figure icon)
+   - Web server (box)
+   - App (box)
+   - SD-RTN (box)
+   - No notification (smaller box within SD-RTN box)
+
+3. Data Flow:
+   - Solid lines with arrows represent the flow of messages/requests between entities.
+   - The flow is bi-directional between the App and SD-RTN boxes.
+   - The flow is from User to Web server to App, and back.
+   - There are two groupings: "Implemented by you" and "Provided by Agora".
+
+4. Detailed Content:
+   - User: No text content.
+   - Web server: No text content.
+   - App: No text content.
+   - SD-RTN: "No notification" (smaller box).
+   - Other text content:
+     Login (from User to App)
+     Login authentication (bi-directional between App and SD-RTN)
+     Create channel (from User to App, and from App to SD-RTN)
+     Open channel (from SD-RTN to App)
+     Notification 101: newline 'channel name' opened at 'time' (from SD-RTN to App)
+     Authenticate notification signature (from App to SD-RTN, bi-directional)
+     200 OK (from SD-RTN to App, bi-directional)
+     Notifications sent and acknowledged for all channel events (below User and Web server)
+     Close channel (from App to SD-RTN)
+     Notification 102: newline 'channel name' destroyed at 'time' (from SD-RTN to App)
+     Authenticate notification signature (from App to SD-RTN, bi-directional)
+     200 OK (from SD-RTN to App, bi-directional)
+     Logout (from User to App, and from App to SD-RTN)
+     No notification (smaller box within SD-RTN box)
+
+5. Configuration or Additional Notes:
+   - No additional lines or notes related to configuration settings are present.

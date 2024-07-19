@@ -1,0 +1,31 @@
+1. **Overall Structure**
+   - Type of diagram: Sequence.
+
+2. **Main Entities and Elements**
+   - There are four main rectangular boxes labeled:
+     1. `getScreenCaptureSources`
+     2. `startScreenCaptureByDisplayId`
+     3. `startScreenCaptureByWindowId`
+     4. `joinChannelEx (publishScreenTrack: true)`
+   - Each box is connected to smaller rectangular sub-elements labeled:
+     - `displayId` connected to the second box.
+     - `windowId` connected to the third box.
+   - A distinct cloud-shaped entity labeled "Agora SD-RTN™".
+
+3. **Data Flow**
+   - Solid lines show connections indicating the flow of activity. The flow is from left to right, signifying sequences of operations:
+     - A line from the `getScreenCaptureSources` box splits into two branches:
+       - One line flows into `startScreenCaptureByDisplayId`.
+       - Another line flows into `startScreenCaptureByWindowId`.
+     - Both `startScreenCaptureByDisplayId` and `startScreenCaptureByWindowId` converge into a single line that connects to `joinChannelEx`.
+     - A line from `joinChannelEx` extends to the cloud-shaped entity "Agora SD-RTN™".
+
+4. **Detailed Content**
+   - Text content within each box is as follows:
+     - `getScreenCaptureSources`: No internal text indicated.
+     - `startScreenCaptureByDisplayId`: No internal text indicated.
+     - `startScreenCaptureByWindowId`: No internal text indicated.
+     - `joinChannelEx`: (publishScreenTrack: true)
+
+5. **Configuration or Additional Notes**
+   - No additional notes or configuration settings are indicated beyond the labels and content directly associated with the diagram's boxes and connections.

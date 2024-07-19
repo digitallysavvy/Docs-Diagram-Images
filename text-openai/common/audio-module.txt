@@ -1,0 +1,40 @@
+1. **Overall Structure:**
+   - Type of diagram: Flow diagram.
+   - Direction of the diagram: Left-to-right and top-to-bottom.
+
+2. **Main Entities and Elements:**
+   - **Main Boxes:**
+     - "Enable local audio collection"
+     - "Audio pre-processing"
+     - "Audio Encoding"
+     - "Audio Decoding"
+     - "Audio post-processing"
+     - "Set up playback device or audio"
+     - "Join channel"
+   - **Sub-elements:**
+     - Two small oval labels: "audio module" (positioned above "Audio pre-processing" and "Audio Encoding") and "network module" (positioned above "Join channel").
+
+3. **Data Flow:**
+   - Connections: 
+     - Solid arrows connect the following boxes indicating the direction of flow:
+       - "Enable local audio collection" to "Audio pre-processing"
+       - "Audio pre-processing" to "Audio Encoding"
+       - "Audio Encoding" connects down to "Join channel" and left to "Audio Decoding"
+       - "Audio Decoding" to "Audio post-processing"
+       - "Audio post-processing" connects left to "Set up playback device or audio"
+   - Groupings:
+     - The set of operations from "Enable local audio collection" to "Audio Encoding" is grouped under "audio module".
+     - The operation "Join channel" is grouped under "network module".
+
+4. **Detailed Content:**
+   - Content within each box:
+     - "Enable local audio collection": Enable local audio collection
+     - "Audio pre-processing": Audio pre-processing
+     - "Audio Encoding": Audio Encoding
+     - "Audio Decoding": Audio Decoding
+     - "Audio post-processing": Audio post-processing
+     - "Set up playback device or audio": Set up playback device newline or audio
+     - "Join channel": Join channel
+
+5. **Configuration or Additional Notes:**
+   - The diagram features dashed lines to demarcate the boundaries of the "audio module" and "network module" groups, indicating a logical separation of these processes within the overall flow.

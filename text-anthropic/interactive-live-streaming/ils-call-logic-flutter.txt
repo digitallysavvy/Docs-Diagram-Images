@@ -1,0 +1,52 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (box)
+   - Your app (box)
+     - Video SDK (sub-box)
+   - Agora (box) 
+     - SD-RTN (sub-box)
+   - Host (box)
+   - Audience (box)
+
+3. Data Flow:
+   - Solid lines represent data flow between entities, with arrows indicating the direction of flow.
+   - There is a grouping titled "Host" that includes elements related to the host's actions.
+   - There is a grouping titled "Audience" that includes elements related to the audience's actions.
+
+4. Detailed Content:
+   User box: 
+     - Open App
+   Your app box:
+     Video SDK sub-box:
+       - Initiate the Agora Video SDK engine newline agoraEngine = RtcEngine.create
+       - Enable the video module: newline agoraEngine.enableVideo
+   Host grouping:
+     - Start a live streaming event
+     - Retrieve authentication token to join channel
+     - Enable live streaming in the channel: newline agoraEngine.setChannelProfile(ChannelProfile.LiveBroadcasting)
+     - Set the role as host: newline agoraEngine.setClientRole(ClientRole.Broadcaster)
+     - Join a channel as host: newline agoraEngine.joinChannel
+     - on "JoinChannelSuccess"
+     - Publish
+     - Send data stream
+     - Widget = RtcLocalView.SurfaceView()
+   Audience grouping:
+     - Join a live streaming event
+     - Retrieve authentication token to join channel
+     - Set the user role as audience: newline agoraEngine.setClientRole(ClientRole.Audience)
+     - Join the channel: newline agoraEngine.joinChannel
+     - on "JoinChannelSuccess"
+     - Retrieve streaming from the hosts: newline on "UserJoined"
+     - Receive data stream newline Widget = RtcRemoteView.SurfaceView()
+   User box:
+     - Leave broadcast
+     - Close app
+   Your app box:
+     Video SDK sub-box:
+       - agoraEngine.leaveChannel()
+       - Clean up local resources newline agoraEngine.destroy()
+
+5. Configuration or Additional Notes:
+   - No additional configuration settings or notes are present.

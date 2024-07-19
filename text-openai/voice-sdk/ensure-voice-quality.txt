@@ -1,0 +1,24 @@
+1. **Overall Structure:** 
+   - The diagram is a sequence diagram that represents the interactions between a user, a Voice SDK, and the systems involved organized sequentially over time.
+
+2. **Main Entities and Elements:**
+   - Three main vertical entities or boxes represent: "User," "Your app," and "Agora."
+   - Within "Your app," there are sub-elements highlighted as specific processes: "Voice SDK" and "SD-RTN."
+   - Additionally, various group headers are present spanning across the diagram: "Pre-call tests," "Set the audio profile," "Join channel," "Monitor in-call quality," and "Echo cancellation."
+
+3. **Data Flow:**
+   - Solid lines with arrows depict the direction of immediate interactions or calls between entities, indicating the flow of operations.
+   - Dashed lines represent return data or confirmation back to the calling service or user.
+   - Connections originate typically from the user or "Your app" and go towards "Voice SDK" and "SD-RTN," following through various stages designated by group headers.
+
+4. **Detailed Content:**
+   - Initial interaction involves the User opening the app, followed by "Set log file configuration and create engine" involving sub-actions like: "Set log file parameters" newline "Use Voice SDK to create an instance of Agora Engine."
+   - In "Pre-call tests," actions include: "Start the echo test," followed by "Call the method to start the echo test" which enables sending and receiving back audio to test hardware and network quality. Parallelly, "Start the network probe test" leads to "Deliver network quality score and network statistics."
+   - Under "Set the audio profile," the tasks delineated are: "Specify audio profile and scenario based on the nature of the app" newline "Call the method to set the audio profile and scenario."
+   - "Join channel" is straightforward with an action labeled "Join channel."
+   - The "Monitor in-call quality" section lists: "Enable the quality statistics," "Receive network, call, and audio quality statistics" newline "Receive state change notifications," and "Take corrective action."
+   - The "Echo cancellation" phase includes: "Choose the audio file to be played and specify mixing options," leading to "Call the method to start audio mixing" and employing "Uses echo-cancellation features to remove echo."
+
+5. **Configuration or Additional Notes:**
+   - Each section is framed, indicating they are separate processes or phases of the overall interaction.
+   - Strategic back-and-forth data flows highlighted by arrows show iterative or feedback-related interactions, vital for processes like testing and quality monitoring.

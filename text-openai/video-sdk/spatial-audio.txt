@@ -1,0 +1,32 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram which is typically used to show the interaction between entities or systems over time.
+
+2. **Main Entities and Elements:**
+   - There are four main entities represented as boxes at the top: "Your client and server", "Agora SDK", "Your Server", and "Agora".
+   - Sub-elements include two additional boxes within "Agora": "SD-RTN" and "Local Spatial Audio Engine".
+
+3. **Data Flow:**
+   - Solid lines with arrows depict the flow of processes or commands between the entities, showing the direction of operations.
+   - Lines connect as follows:
+     - From "User" to "Agora SDK" to enable spatial audio.
+     - Between "Agora SDK", "Your Server", "SD-RTN", and "Local Spatial Audio Engine" showing the initialization and operation sequences.
+     - The return flows follow the same routings.
+   - The processes are grouped into sections with labels indicating their purpose: "Initialize Local Spatial Audio Engine", "Spatial audio effects for users", "Spatial audio effects for media player", and "Clean up".
+
+4. **Detailed Content:**
+   - "Your client and server" section:
+     - "Initialize Local Spatial Audio Engine" with actions: "Create local spatial audio engine" and "Initialize the engine".
+     - "Spatial audio effects for users" with actions: "Send local spatial position", "Receive spatial position of remote user(s)", "Call update self position", and "Call update remote position".
+     - "Spatial audio effects for media player" with actions: "Set spatial position of the user" and "Set spatial position of the media player".
+     - "Clean up" with actions: "Clear remote positions" and "Destroy the spatial engine".
+   - "Agora SDK":
+     - Actions linked to enabling spatial audio and other commands run in parallel with "Your client and server".
+   - "Your Server" diagram backs “Send and receive spatial audio”.
+   - "SD-RTN" and "Local Spatial Audio Engine" are primarily involved in creating and initializing engines as well as sending and receiving audio spatial positions.
+
+5. **Configuration or Additional Notes:**
+   - Dashed lines indicate asynchronous or return processes.
+   - Solid lines often represent the initial calling of services or commands.
+   - The arrows point from initiating to receiving entities across the operations. 
+
+This format strictly multi-level describes operations starting from user input through to cleanup across various systems, showing both the flow of data and the lifecycle of spatial audio management in a networked environment.

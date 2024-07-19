@@ -1,0 +1,34 @@
+1. Overall Structure:
+   - The provided diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (depicted as a human figure)
+   - Your app (a rectangle labeled "Your app")
+     - Video SDK (a smaller rectangle inside "Your app")
+   - Agora (a rectangle)
+     - SD-RTN (a smaller rectangle inside "Agora")
+
+3. Data Flow:
+   - Solid lines represent flow of actions/events between entities.
+   - Dashed lines represent flow of information or data.
+   - The flow is bi-directional between "User" and "Your app", and between "Your app" and "Agora".
+   - There is a grouping titled "User" that encompasses the actions between the user and the application.
+
+4. Detailed Content:
+   - User: "Open App"
+   - Your app (Video SDK): "Initiate the Video SDK engine: newline agoraEngine = AgoraRTC.createClient"
+   - Your app (Video SDK): "Set the required event listners: newline agoraEngine.on("user-published") newline agoraEngine.on("user-unpublished")"
+   - User: "Start call"
+   - Your app: "Retrieve authentication token to join channel"
+   - Your app: "Join a channel: newline agoraEngine.join"
+   - Agora: "Join accepted"
+   - Your app: "Create local media tracks : newline AgoraRTC.createMicrophoneAudioTrack newline AgoraRTC.createCameraVideoTrack"
+   - Your app: "Push local media tracks to the channel: newline agoraEngine.publish"
+   - Your app: "Retrieve streaming from the other user: newline agoraEngine.on("user-published")"
+   - Your app: "Play remote media tracks: remoteVideoTrack.play newline remoteAudioTrack.play"
+   - Bidirectional between Your app and Agora: "Receive and send data streams"
+   - User: "Leave call"
+   - Your app: "leave the channel: newline agoraEngine.leave"
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes present in the diagram.

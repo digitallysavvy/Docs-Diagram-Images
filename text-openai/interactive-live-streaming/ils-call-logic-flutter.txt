@@ -1,0 +1,36 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are four main entities or boxes labeled "Your app", "Video SDK", "Agora", and "SD-RTN".
+   - The "Video SDK" box contains sub-elements such as activities and responses including initiation, enabling video, setting channel profiles, joining channels, and cleanup actions.
+   - There are roles defined as "Host" and "Audience" with their specific actions detailed in separate sections under "Video SDK".
+
+3. **Data Flow:**
+   - Solid lines indicate direct actions and requests initiated by the user, host, and audience, such as opening the app, starting a live streaming event, and joining a live event.
+   - Dashed lines signify responses or callback events such as "onJoinChannelSuccess", and data streams like sending and receiving video.
+
+4. **Detailed Content:**
+   - **User interaction with Video SDK Includes:**
+     - "Open App"
+     - "Initiate the Agora Video SDK engine newline agoraEngine = RtcEngine.create"
+     - "Enable the video module: newline agoraEngine.enableVideo"
+     - "Clean up local resources newline agoraEngine.destroy()"
+   - **Host's actions in Video SDK**:
+     - "Start a live streaming event"
+     - "Retrieve authentication token to join channel"
+     - "Enable live streaming in the channel: newline agoraEngine.setChannelProfile(ChannelProfile.LiveBroadcasting)"
+     - "Set the role as host: newline agoraEngine.setClientRole(ClientRole.Broadcaster)"
+     - "Join a channel as host: newline agoraEngine.joinChannel"
+     - "on 'joinChannelSuccess' newline Publish newline Send data stream"
+     - "Widget = RtcLocalView.SurfaceView()"
+   - **Audience's actions in Video SDK**:
+     - "Join a live streaming event"
+     - "Retrieve authentication token to join channel"
+     - "Set the user role as audience: newline agoraEngine.setClientRole(ClientRole.Audience)"
+     - "Join the channel: newline agoraEngine.joinChannel"
+     - "on 'joinChannelSuccess' newline Retrieve streaming from the hosts: newline on 'userJoined' newline Receive data stream"
+     - "Widget = RtcRemoteView.SurfaceView()"
+
+5. **Configuration or Additional Notes:**
+   - Lines connecting actions and responses indicate the flow and relationship between them, aiding in understanding the sequence of events and interactions among components in a live streaming session via the Agora SDK. The SD-RTN box to the right appears to symbolize the network infrastructure but does not have interactive elements displayed within this specific sequence.

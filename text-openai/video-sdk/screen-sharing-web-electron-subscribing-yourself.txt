@@ -1,0 +1,24 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram focused on showing data flows between different entities in a communication or network interaction.
+
+2. **Main Entities and Elements:**
+   - **Sender:** Labeled at the top left of the diagram. Includes:
+     - **Client A:** Rectangular box centered under the 'Sender' label.
+     - **Client B:** Rectangular box centered directly below Client A.
+   - **Subscriber:** Labeled at the top right of the diagram. 
+     - **Client C:** Large rectangular box directly aligned with Client A and B on the left side.
+
+3. **Data Flow:**
+   - **Audio & Video track:**
+     - Solid white arrow from Client A to Client B indicates the flow of audio and video tracks downward.
+     - Solid white arrow continues from Client B to Client C, indicating the ongoing flow of the audio and video track.
+   - **Screen Sharing Track:**
+     - Dashed white arrow flows from Client A to Client C, representing the transfer of a screen-sharing track bypassing Client B.
+
+4. **Detailed Content:**
+   - **Client A:** No internal text beyond the label “Client A.”
+   - **Client B:** No internal text beyond the label “Client B.”
+   - **Client C:** No internal text beyond the label “Client C.”
+
+5. **Configuration or Additional Notes:**
+   - A note is positioned at the bottom left of the diagram stating, "Note: To avoid additional costs, do not subscribe to a local screen sharing track."

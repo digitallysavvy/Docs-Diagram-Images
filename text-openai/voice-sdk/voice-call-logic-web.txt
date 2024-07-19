@@ -1,0 +1,20 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram which details the interactions between a user, a voice SDK, and a network service specified as "Agora" and "SD-RTN" for handling voice operations.
+
+2. **Main Entities and Elements:**
+   - There are three main entities or boxes labeled "User", "Voice SDK", and "Agora".
+   - The "Agora" box is connected to SD-RTN, which is indicated at the top right side.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads depict the data flow direction, and dashed lines denote responses or actions that return to the originating box.
+   - There is a direct interaction sequence from "User" to "Voice SDK" and from "Voice SDK" to "Agora".
+   - Vertical dashed lines from the "User" represent time or activity progression specifically related to the user operations.
+
+4. **Detailed Content:**
+   - Within "Voice SDK":
+     - Upon Open App: "Initiate the Voice SDK engine: agoraEngine = AgoraRTC.createClient" followed by "Set the required event listeners: newline agoraEngine.on('user-published') newline agoraEngine.on('user-unpublished')"
+     - Upon Start call: "Retrieve authentication token to join channel" switching to "Join a channel: agoraEngine.join" and then "Join accepted", "Create audio track: AgoraRTC.createMicrophoneAudioTrack", "Push local audio track to the channel: agoraEngine.publish", "Retrieve streaming from other users: agoraEngine.on('user-published')", "Play remote audio tracks: remoteAudioTrack.play", and finally "Receive and send data streams".
+     - Leave call action ends with "Leave the channel: agoraEngine.leave".
+     
+5. **Configuration or Additional Notes:**
+   - There are no additional notes outside the main sequence interactions marked in the diagram. The interactions and methods within the sequence are detailed through direct inline text and actions without external configuration details or notes.

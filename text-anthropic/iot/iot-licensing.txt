@@ -1,0 +1,22 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- There are two main entities labeled "You" depicted as human figures.
+- There is an entity labeled "Your IoT device" containing a sub-element box labeled "IoT SDK".
+- There is an entity labeled "Agora" containing three sub-element boxes labeled "Agora Sales", "REST API", and "IoT SDK" (appearing twice).
+
+3. Data Flow:
+- A solid line with an arrow pointing from "You" to "Agora Sales" is labeled "Contact Agora sales to request a license".
+- A dashed line with an arrow pointing from "Agora Sales" to "You" is labeled "Send license information".
+- A solid line with an arrow pointing from "You" to "IoT SDK" (within "Your IoT device") is labeled "Activate the license".
+- A dashed line with an arrow pointing from "IoT SDK" (within "Your IoT device") to "REST API" (within "Agora") is labeled "Send activation info".
+- A solid line with an arrow pointing from "REST API" (within "Agora") to "You" is labeled "Write a license to the device".
+
+4. Detailed Content:
+- The "You" entity does not contain any text content.
+- The "Your IoT device" entity does not contain any text content beyond the "IoT SDK" label.
+- The "Agora" entity does not contain any text content beyond the sub-element labels.
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes included in the diagram.

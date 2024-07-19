@@ -1,0 +1,36 @@
+### Overall Structure:
+- The type of diagram presented is a sequence diagram.
+
+### Main Entities and Elements:
+- **User**: Represents the actor initiating actions.
+- **App**: A system used by the user to interact with various services.
+- **Developer's Authentication System**: Handles secure authentication and key management.
+- **API**: An external interface provided by Agora to integrate with the app.
+
+### Data Flow:
+1. **Solid Lines with Arrows**: Indicate the direction of data requests and responses between entities.
+   - User to App: "Start the app", "Select a channel to join".
+   - App to Developer's Authentication System: "Initiate the Video SDK engine", multiple key and salt requests, and encryption configuration settings.
+   - Developer's Authentication System to API: Requests to generate strings using OpenSSL for keys and salts.
+   - API to Developer's Authentication System: Generated strings are returned.
+   - App to App: Join channel actions and encrypted media stream flows.
+
+2. **Groups of Elements**:
+   - "Media stream encryption": This group encapsulates interactions involving login to the authentication system, key and salt generation, and encryption configuration.
+
+### Detailed Content:
+- **User**:
+  - Actions: "Start the app" newline "Select a channel to join"
+  
+- **App**:
+  - Outgoing actions: "Initiate the Video SDK engine", "Request a 32-byte key", "Request a 32-byte salt in Base64 format", "Create a encryption configuration using the received salt and key", "Call the method to set the encryption configuration", "Join a channel with user Id, channel name, and token"
+  - Incoming actions/responses: "Requested key", "Requested salt", "Join accepted"
+
+- **Developer's Authentication System**:
+  - Outgoing instructions/actions: "Generate a 32-byte string using OpenSSL", "Generate a 32-byte string in Base64 format using OpenSSL"
+
+- **API**:
+  - Incoming instructions/actions: "Generate a 32-byte string using OpenSSL for keys and salts"
+  
+### Configuration or Additional Notes:
+- The diagram illustrates how encryption is set up and utilized within an app, detailing user interaction, system processing, and external API coordination, focused tightly on security features such as key and salt generation handled by specific systems to ensure confidentiality during transmission. Note boxes or additional lines further explaining configurations are not specifically visible outside the described interactions.

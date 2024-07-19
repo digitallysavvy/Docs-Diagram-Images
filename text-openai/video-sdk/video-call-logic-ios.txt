@@ -1,0 +1,35 @@
+### Overall Structure:
+- The diagram is a sequence diagram used to model the interactions between objects in a sequential order.
+
+### Main Entities and Elements:
+- **User**: Represents the user interacting with the application.
+- **Your app**: The application being used, interfaced by the Video SDK.
+- **Video SDK**: Acts as the medium through which the application processes are handled.
+- **Agora**: The back-end service (SD-RTN) for handling real-time interactions.
+
+### Data Flow:
+- **Lines between User and Your app**: Solid lines depict actions taken by the user such as "Open app" and "Close app".
+- **Lines between Video SDK and Agora**: Solid lines show requests and returns. For example, initiating video SDK engine uses a solid line going from the Video SDK to Agora with a return response.
+- **Dashed lines**: Represent return of data or confirmation of actions between Video SDK and Your app, such as the setup confirmation of video streams.
+
+### Detailed Content:
+- **User interactions**:
+  - Open app
+  - Start a call
+  - Leave the call
+  - Close app
+- **Your app to Video SDK communications**:
+  - Initiate the Video SDK engine: agoraEngine = AgoraRtcEngineKit.sharedEngine
+  - Setup the local video stream: agoraEngine.enableVideo()
+  - In a call, set the role to broadcaster: agoraEngine.setClientRole(.broadcaster)
+  - Start local video: agoraEngine.setupLocalVideo(videoCanvas)
+  - Join the channel: agoraEngine.joinChannel
+  - Retrieve streaming from another user: agoraEngine.setupRemoteVideo(videoCanvas)
+  - Data flow of receiving and sending streams
+  - Stop local video: agoraEngine.stopPreview()
+  - Leave the channel: agoraEngine.leaveChannel(nil)
+  - Clean up local resources: AgoraRtcEngineKit.destroy()
+
+### Configuration or Additional Notes:
+- **Horizontal gray bars** in the Video SDK column indicate state change or significant actions such as "Start a call" and "Leave the call".
+- **Vertical lines** indicate continuous activity or availability of the service throughout the session represented by dashed lines between the User and Video SDK entities.

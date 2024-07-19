@@ -1,0 +1,24 @@
+### Overall Structure:
+- The diagram depicted is a sequence diagram, showcasing the interaction between different entities in a software system related to a video SDK.
+
+### Main Entities and Elements:
+- There are two main entities represented as rectangular boxes with dashed borders, labeled "Host" and "Audience". Each box contains an icon of a smartphone.
+- To the left, there is a smaller icon labeled "Agora Video SDK".
+
+### Data Flow:
+- Solid lines with arrows signify data flow:
+  - A line extends from the "Agora Video SDK" pointing to the left side of the "Host".
+  - Another solid line with an arrow moves from the "Host" to the "Audience", suggesting a transmission or communication route.
+- There are no groupings of elements except for the individual representation of the entities "Host" and "Audience".
+
+### Detailed Content:
+- Inside the "Host" box, the following actions are listed: 
+  - "1. Set the client role"
+  - "2. Retrieve a token"
+  - "3. Join a channel"
+  - "4. Publish local video and audio"
+- Inside the "Audience" box, the following action is listed:
+  - "5. Subscribe to video and audio published by the host"
+
+### Configuration or Additional Notes:
+- No additional configuration settings or notes are visible in the diagram outside the primary content listed within the entities.

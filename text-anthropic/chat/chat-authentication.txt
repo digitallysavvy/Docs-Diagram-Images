@@ -1,0 +1,24 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "App Server" (gray box) and "Agora Chat Server" (blue box).
+- There are no sub-elements within the main entities.
+
+3. Data Flow:
+- There are solid lines with numbered arrows indicating the direction of the flow between the "App Server" and "Agora Chat Server".
+- The flow is grouped into two parts, with the first part showing the interaction between the two main entities, and the second part repeating the same entities with a note below indicating their implementation.
+
+4. Detailed Content:
+- App Server (gray box):
+  Line 1: Generate a token with newline app privileges
+
+- Agora Chat Server (blue box): No text content
+
+- Flow 1 (from App Server to Agora Chat Server): Generate a token with app privileges
+- Flow 2 (from App Server to Agora Chat Server): Use the token with app privileges to call Agora Chat RESTful APIs
+- Flow 3 (from Agora Chat Server to App Server): Validate the token with app privileges
+- Flow 4 (from Agora Chat Server to App Server): Return the response parameters after successful RESTful API calls
+
+5. Configuration or Additional Notes:
+- Below the main diagram, there is a note with two boxes: "Implemented by yourself" (gray box) and "Provided by Agora" (blue box), indicating the implementation responsibilities.

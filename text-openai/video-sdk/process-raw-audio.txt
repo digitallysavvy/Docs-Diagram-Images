@@ -1,0 +1,37 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - **App**: Depicted as a vertical rectangle with a top square containing an icon of a square within a square.
+   - **Video SDK**: Another vertical rectangle with a top square that has an icon resembling stacked squares.
+   - **Agora SD-RTN**: A third vertical rectangle, marked similarly with a cloud-like icon at the top.
+
+3. **Data Flow:**
+   - Solid arrows show requests and responses between entities, indicating interaction and data flow direction.
+   - **From App to Video SDK**:
+     - Directed solid blue lines are used for operations such as "Create an instance of Agora Engine", "Register the audio observer", "Join the channel", "Send the processed audio data back through the registered callback", "Unregister the audio observer", and "Leave the channel".
+   - **From Video SDK to App**:
+     - Dotted blue lines indicate data return or callback indications such as "Get raw audio data from SDK through registered callback".
+   - **From Video SDK to Agora SD-RTN**:
+     - Directed solid blue lines illustrate operations "Request to register the audio observer", "Request to join channel", and "Request to leave the channel".
+
+4. **Detailed Content:**
+   - **App**:
+     - "Create an instance of Agora Engine" newline
+     - "Register the audio observer" newline
+     - "Join the channel" newline
+     - "Get raw audio data from SDK through registered callback" newline
+     - "Process audio data for local playback or sending back to the SDK" newline
+     - "Send the processed audio data back through the registered callback" newline
+     - "Unregister the audio observer" newline
+     - "Leave the channel" newline
+     - "Destroy the engine"
+   - **Video SDK**:
+     - "Request to register the audio observer" newline
+     - "Request to join channel" newline
+     - "Request to leave the channel"
+   - **Agora SD-RTN**:
+     - No text content but involved in receiving requests from Video SDK.
+
+5. **Configuration or Additional Notes:**
+   - Each entity (App, Video SDK, and Agora SD-RTN) is encapsulated within its own component boundary, indicated by dashed rectangle outlines, sectioning off different functionalities or areas of responsibility within the sequence.

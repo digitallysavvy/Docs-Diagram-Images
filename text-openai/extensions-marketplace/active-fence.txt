@@ -1,0 +1,49 @@
+1. **Overall Structure**
+   - The diagram in discussion is a sequence diagram.
+
+2. **Main Entities and Elements**
+   - There are three main vertical groups:
+     - **Implemented by you**: Contains two elements, "Web server" and "App".
+     - **Provided by Agora**: Contains one element, "SD-RTN".
+     - **Provided by ActiveFence**: Contains one element, "ActiveFence".
+
+3. **Data Flow**
+   - **Login and Channel Joining**:
+     - Solid line from "User" to "Web server": "Login".
+     - Solid line from "Web server" to "SD-RTN": "Login authentication".
+     - Solid line from "User" to "Web server": "Join channel".
+     - Solid line from "Web server" to "SD-RTN": "Join channel with ActiveFence activated".
+     - Solid line from "SD-RTN" to "ActiveFence": "Monitor content in channel".
+     
+   - **Content Monitoring and Action**:
+     - Solid line from "ActiveFence" to "Web server": "Action webhook".
+     - Solid line from "ActiveFence" to "SD-RTN": "Content matches workflow risk".
+     - Solid line from "Web server" to "SD-RTN": "Act on webhook. For example, use Channel Management REST API to remove user from channel".
+     
+   - **Logout Process**:
+     - Solid line from "User" to "Web server": "Logout".
+     - Solid line from "Web server" to "SD-RTN": "Log user out".
+
+4. **Detailed Content**
+   - **User**: No text content inside.
+   - **Web server and App**:
+     - Login newline
+     - Join channel newline
+     - Action webhook newline
+     - Act on webhook. For example, use Channel Management REST API to remove user from channel newline
+     - Logout.
+   - **SD-RTN**:
+     - Login authentication newline
+     - Join channel with ActiveFence activated newline
+     - Monitor content in channel newline
+     - Content matches workflow risk newline
+     - Log user out.
+   - **ActiveFence**:
+     - Monitor content in channel newline
+     - Content matches workflow risk.
+
+5. **Configuration or Additional Notes**
+   - No explicit additional configurations or notes are visible external to the primary sequence flows detailed above. Each column in the diagram is labeled to indicate provider involvement:
+     - "Implemented by you" for the first column.
+     - "Provided by Agora" for the middle column.
+     - "Provided by ActiveFence" for the right column.

@@ -1,0 +1,34 @@
+1. **Overall Structure:** 
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are four main vertical entities labeled: "User", "Web server", "Your app server", and "Agora Media Push".
+   - There is a header at the top grouping "Web server" and "Your app server" under "Implemented by you", and "Agora Media Push" under "Provided by Agora".
+
+3. **Data Flow:**
+   - The connections between entities involve solid lines for actions or requests and dashed lines symbolizing responses. The flow progresses from left to right and right to left between the entity columns.
+   - Actions start from either “User”, “Web server”, or “Your app server” toward “Agora Media Push”, and responses follow the reverse path.
+   - Some specific flows:
+     - "Start media push" flows from "Web server" to "Your app server".
+     - “Create a converter” flows from "Your app server" to "Agora Media Push".
+     - Responses such as “Response confirming converter creation” flow from "Agora Media Push" back to "Your app server".
+
+4. **Detailed Content:**
+   - Actions from "Web server" to "Your app server":
+     - "Start media push"
+     - "Stop media push"
+   - Actions involving "Your app server" and "Agora Media Push":
+     - "Create a converter"
+     - "Response confirming converter creation"
+     - "Change converter configuration"
+     - "Response confirming configuration update"
+     - "Delete converter API"
+     - "Response confirming converter delete"
+   - Notification sequences include:
+     - "Notification eventType=1: Converter created" newline "Authenticate notification signature" newline "200 OK"
+     - "Notification eventType=2: Converter configuration changed" newline "Authenticate notification signature" newline "200 OK"
+     - "Notification eventType=3: Converter status changed" newline "Authenticate notification signature" newline "200 OK"
+     - "Notification eventType=4: Converter destroyed" newline "Authenticate notification signature" newline "200 OK"
+
+5. **Configuration or Additional Notes:**
+   - The configuration notes are placed at the top of the diagram, with "Implemented by you" covering the "Web server" and "Your app server", while "Provided by Agora" covers "Agora Media Push".

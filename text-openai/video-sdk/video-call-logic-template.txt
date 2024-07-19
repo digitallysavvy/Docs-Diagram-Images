@@ -1,0 +1,32 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - **User:** Represented with a stick figure icon and two actions: "Open app" and "Close app."
+   - **Your app:** 
+     - Sub-section: **Video SDK**
+       - Actions: Initiate the Video SDK engine, Start video in the engine, Clean up local resources.
+   - **Host:** Actions include Start call, Start local video, Join the channel, Retrieve streaming from the other user, Receive and send data streams, Stop local video, and Leave call.
+   - **Agora:** 
+     - Sub-section: **SD-RTN**
+       - No actions listed in this entity.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads show the direction of interaction and sequence flow between:
+     - User and Your app (from User to Your app and vice versa).
+     - Your app and Agora, and within sub-elements themselves (from Your app to Agora and vice versa).
+     - Host related actions and data flows are encapsulated within a grouping titled "In a call, all users broadcast to the channel," reflecting a scenario where the host is in a live streaming session.
+
+4. **Detailed Content:**
+   - User:
+     - Open app, Close app.
+   - Your app, Video SDK:
+     - Initiate the Video SDK engine newline Start video in the engine newline Clean up local resources.
+   - Host:
+     - Start call newline Start local video newline Join the channel newline Retrieve streaming from the other user newline Receive and send data streams newline Stop local video newline Leave call.
+   - Agora, SD-RTN:
+     - (No actions are detailed inside the SD-RTN box).
+
+5. **Configuration or Additional Notes:**
+   - The Your app and Host entities are encapsulated in a larger box labeled "In a call, all users broadcast to the channel,” indicating the context of these interactions is within a live call environment.
+   - Dashed lines indicate less direct interactions or secondary sequences within the primary sequence flow.

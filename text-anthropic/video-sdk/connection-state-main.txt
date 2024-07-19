@@ -1,0 +1,27 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right, following the sequence of states or stages.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes labeled as: "Disconnected", "Connecting", "Connected", "Reconnecting", and "Failed".
+
+3. Data Flow:
+- The connections between entities are shown by solid lines with arrows indicating the direction of flow.
+- There is a dashed line from "Connected" to "Reconnecting" representing an alternative path.
+- The elements are grouped together, forming a cycle or loop.
+
+4. Detailed Content:
+- "Disconnected": No text content within the box.
+- "Connecting": No text content within the box.
+- "Connected": No text content within the box.
+- "Reconnecting": No text content within the box.
+- "Failed": No text content within the box.
+- Transition from "Disconnected" to "Connecting": "The client calls joinChannel"
+- Transition from "Connecting" to "Connected": "Successfully joined the channel"
+- Transition from "Connected" to "Reconnecting": "Connection Interrupted"
+- Transition from "Reconnecting" to "Connected": "Rejoined channel successfully"
+- Transition from "Reconnecting" to "Failed": "Unable to rejoin channel within 20 minutes"
+- Transition from "Connected" to "Disconnected": "Leave Channel"
+
+5. Configuration or Additional Notes:
+- No additional lines or configuration settings are present in the diagram.

@@ -1,0 +1,33 @@
+1. Overall Structure: 
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- App: A box representing the application.
+- SDK: A box representing the software development kit.
+- Agora SD-RTN: A box representing the Agora SD-RTN.
+- Custom audio rendering: A sub-element box within the App entity.
+- You render the obtained audio data yourself: A sub-element box within the Custom audio rendering box.
+
+3. Data Flow:
+- Solid arrows indicate the flow of data or messages between entities.
+- The flow is typically left to right, with arrows pointing from the sender to the receiver.
+- There is a grouping box titled "Custom audio rendering" containing the App entity and its sub-element.
+
+4. Detailed Content:
+App box contains:
+Create and initialize the engine (newline)
+Turn on custom audio rendering (newline) 
+Join a channel (newline)
+Pull remote audio data (newline)
+Leave the channel (newline)
+Destroy the engine
+
+SDK box is empty.
+
+Agora SD-RTN box is empty.
+
+Custom audio rendering sub-element contains:
+You render the obtained audio data yourself
+
+5. Configuration or Additional Notes:
+There are no additional configuration settings or notes in this diagram.

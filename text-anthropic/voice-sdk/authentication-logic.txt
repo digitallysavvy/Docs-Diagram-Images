@@ -1,0 +1,40 @@
+1. Overall Structure:
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- Token server (box)
+- App (box)
+- SD-RTN (box)
+- Join a channel with authentication (sub-element within Token server)
+- Renew token (sub-element within Token server)
+
+3. Data Flow:
+- A solid line with an arrow flows from App to Token server, labeled "Request a token using channel name, role, token type, and user ID".
+- A dashed line flows from Token server to itself, labeled "Validate user against internal security".
+- A solid line with an arrow flows from Token server to App, labeled "Generate a token and return it to the client".
+- A solid line with an arrow flows from App to SD-RTN, labeled "Join a channel with uid, channel name, and token".
+- A dashed line flows from SD-RTN to itself, labeled "Validate the token".
+- A solid line with an arrow flows from SD-RTN to App, labeled "Trigger the callback after adding user to the channel".
+- A dashed line with an arrow flows from App to Token server, labeled "Trigger event: Token Privilege will Expire".
+- A solid line with an arrow flows from App to Token server, labeled "Request a fresh token using channel name, role, token type, and user ID".
+- A dashed line flows from Token server to itself, labeled "Validate user request against internal logic".
+- A solid line with an arrow flows from Token server to App, labeled "Generate a fresh token and return it to the client".
+- A solid line with an arrow flows from App to SD-RTN, labeled "Send the fresh token with a RenewToken request".
+
+4. Detailed Content:
+Token server box content:
+"Join a channel with authentication" newline
+"Validate user against internal security" newline
+"Generate a token and return it to the client"
+"Renew token" newline
+"Validate user request against internal logic" newline
+"Generate a fresh token and return it to the client"
+
+App box content:
+(No text content)
+
+SD-RTN box content:
+(No text content)
+
+5. Configuration or Additional Notes:
+The diagram is divided into three sections, labeled "Implemented by you", "Provided by Agora", and configuration settings are not present.

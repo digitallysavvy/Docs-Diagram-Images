@@ -1,0 +1,29 @@
+1. Overall Structure:
+   - This is a flow diagram.
+   - The diagram flows from left to right.
+
+2. Main Entities and Elements:
+   - The main entities are represented by rectangular boxes with rounded corners.
+   - There are two entities labeled "UID 1" and "UID 2" on the left side.
+   - There are several smaller boxes within the diagram, labeled with identifiers like "T0", "T1", "T2", etc.
+   - There are also some rounded rectangular boxes containing text descriptions.
+
+3. Data Flow:
+   - Solid lines with arrows connect the main entities and smaller boxes, indicating the direction of flow.
+   - There is a dashed line grouping with the title "SDK automatically reconnects".
+   - The flow starts from the "join" and "Client.on("connection-state-change")" boxes on the left.
+
+4. Detailed Content:
+   - "join" box: Join channel
+   - "Client.on("connection-state-change")" box (first occurrence): "CONNECTED" newline callback report
+   - "Client.publish" box: Publishes the local track
+   - "Client.on("connection-state-change")" box (second occurrence): "RECONNECTING" newline callback reports
+   - "Client.on("connection-state-change")" box (third occurrence): "CONNECTED" newline callback reports
+   - "Client.on("user-joined")" box (first occurrence): UID 1 joins channel
+   - "Client.on("user-published")" box: UID 1 release channel
+   - "Client.on("user-unpublished")" box: The Agora server did not newline receive the stream of newline UID 1 for 10 sec
+   - "Client.on("user-left")" box: The Agora server did not newline receive the message for 20sec newline Heartbeat packet to UID1
+   - "Client.on("user-joined")" box (second occurrence): UID 1 rejoin channel
+
+5. Configuration or Additional Notes:
+   - The note "Network interruption" is positioned above the "T5" box, indicating a network interruption occurring at that point in the flow.

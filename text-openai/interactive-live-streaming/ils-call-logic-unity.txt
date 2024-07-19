@@ -1,0 +1,46 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram used to represent interactions between different components of a video streaming setup using lifecycle events and actions.
+
+2. Main Entities and Elements:
+   - There are three main entities represented as vertical dashed lines named:
+     - User
+     - Host
+     - Audience
+   Each entity corresponds to different roles in the video streaming scenario.
+
+3. Data Flow:
+   - The connections between entities are represented by solid and dashed lines, indicating the flow of actions and responses.
+   - Solid lines generally represent actions like method calls, while dashed lines indicate returns or callbacks.
+   - The solid lines with arrowheads point from the initiating entity to the receiving entity.
+
+4. Detailed Content:
+   - User:
+     - Open game newline
+       Initiate the Agora Video SDK engine: agoraEngine=IRtcEngine.GetEngine() newline
+       Setup the local video stream: agoraEngine.EnableVideo() newline
+       agoraEngine.EnableVideoObserver()
+     - Close game newline
+       Stop local video stream: agoraEngine.DisableVideo() newline
+       Disable the video observer: agoraEngine.DisableVideoObserver() newline
+       Clean up local resources: agoraEngine.destroy()
+   - Host:
+     - Start a live streaming event newline
+       Retrieve authentication token to join channel newline
+       Enable live streaming in the channel: agoraEngine.SetChannelProfile(CHANNEL_PROFILE.CHANNEL_PROFILE_LIVE_BROADCASTING) newline
+       Set the user role as host: agoraEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER) newline
+       Join a channel as host: agoraEngine.JoinChannelByKey() newline
+       Send data stream
+   - Audience:
+     - Join the live streaming event newline
+       Retrieve authentication token to join channel newline
+       Set the user role as audience: agoraEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_AUDIENCE) newline
+       Join the channel: agoraEngine.JoinChannelByKey() newline
+       A callback to start remote video: onUserJoined() newline
+       Retrieve streaming from the hosts: RemoteView.SetForUser(uid) newline
+       Receive data Stream newline
+     - Leave the live streaming event newline
+       Leave the channel: agoraEngine.leaveChannel()
+
+5. Configuration or Additional Notes:
+   - The labels "Your game," "SD-RTN," and "Video SDK" appear as headers above respective entities, indicating systemic modules or frameworks.
+   - A configuration setting appears to the right, labeled "SD-RTN," aligned vertically with all entities, suggesting a broader system or network service that underpins the interactions.

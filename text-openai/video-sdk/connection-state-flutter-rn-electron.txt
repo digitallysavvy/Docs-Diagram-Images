@@ -1,0 +1,34 @@
+### Overall Structure:
+- The diagram is a flow chart.
+- The flow chart has a left-to-right direction.
+
+### Main Entities and Elements:
+- **joinChannel Box**: Large rectangular entity at the start of the flow, labeled "Join channel."
+- **onJoinChannelSuccess Box**: Next entity on the right, contains text for successful channel joining.
+- **onConnectionStateChanged Boxes**: Multiple instances across the chart, detailing various network connection states.
+- **onConnectionLost Box**: Indicates a scenario where the network connection is interrupted.
+- **SDK automatically reconnects**: Not inside a box but noted with an ellipsoidal shape showing automatic behavior.
+- **UID 1 and UID 2 Labels**: Positioned to the left, indicating start points for different users.
+- **T0 to T7**: Time stamps or specific event boxes used to show progress or actions over time.
+
+### Data Flow:
+- Solid lines indicate direct flow or steps between boxes, moving primarily from left to right.
+- Dashed lines show optional or conditional paths, such as automatic reconnections or other scenario branches.
+- Timed labels (T0 to T7) help mark the sequence or timeline of events.
+
+### Detailed Content:
+For context and granular information:
+- **joinChannel Box**: Contains "Join channel."
+- **onJoinChannelSuccess Box**: "onJoinChannelSuccess newline Joined the channel successfully."
+- **onConnectionStateChanged Boxes**: Different boxes containing variants of connection changes such as:
+   - "onConnectionStateChanged (connection_state_connected, connection_changed_join_success) newline Network connection successful."
+   - "onConnectionStateChanged (connection_state_failed, connection_changed_join_failed) newline Network connection failed."
+- **onConnectionLost Box**: "onConnectionLost newline Network connection interrupted."
+- **SDK automatically reconnects**: Shown in an ellipsoidal shape, stating "SDK automatically reconnects."
+
+### Configuration or Additional Notes:
+- **onUserJoined Box**: Appears under UID 2 path, indicating "onUserJoined newline Remote user comes online."
+- **onUserOffline Box**: Synced with the timeline, indicating "onUserOffline (reason userOfflineDropped) newline Remote user is offline."
+- Conditional flow: Showcased with a dashed line indicating scenarios like reconnection or loss of connection.
+
+These elements collectively map the flow and various conditions/states of a networked process involving multiple users and connection states.

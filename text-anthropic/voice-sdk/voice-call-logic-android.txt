@@ -1,0 +1,28 @@
+1. Overall Structure: This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon on the left and right)
+- Your app (box with "Voice SDK" sub-element)
+- Agora (box with "SD-RTN" sub-element)
+
+3. Data Flow:
+- Solid arrows show the flow of events and method calls between entities.
+- A dashed arrow flows from "Your app" to "Agora" with the text "Initiate the Agora Voice SDK engine: agoraEngine = RtcEngine.create".
+- A grouping titled "User" encloses flows related to joining/leaving a call.
+
+4. Detailed Content:
+- User (left icon): "Open App" 
+- User (within grouping): 
+   "Join a call" newline
+   "Retrieve authentication token to join channel" newline
+   "Leave the call" newline
+   "Close app"
+- Your app:
+   "Initiate the Agora Voice SDK engine: agoraEngine = RtcEngine.create" newline
+   "agoraEngine.joinChannel()" newline
+   "Remote user joined: onUserJoined()" newline
+   "agoraEngine.leaveChannel()" newline
+   "Clean up local resources: agoraEngine.destroy()"
+- Agora: No text content
+
+5. Configuration or Additional Notes: None.

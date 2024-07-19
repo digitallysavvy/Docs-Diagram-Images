@@ -1,0 +1,25 @@
+1. **Overall Structure**:
+   - The diagram is a flow diagram.
+   - The general direction is top-to-bottom.
+
+2. **Main Entities and Elements**:
+   - Top entity: Large cloud labeled "Platform".
+   - Middle entities: Three devices depicted as icons and labeled - a laptop on the left, a desktop in the middle, and a mobile device on the right.
+   - Bottom entity: A server or database represented with a stack of horizontal lines, labeled "Access Token Server".
+   - Sub-elements: None.
+
+3. **Data Flow**:
+   - Solid lines indicate the flow of data or interaction:
+     - A black line flows from the "Access Token Server" upwards splitting into three, connecting to the laptop, desktop, and mobile device respectively. This line contains an annotation: "1. Retrieve AccessToken with user and call permissions".
+     - Simultaneously, blue lines connect the three devices to the "Platform" cloud above, annotated with "2. Connect to Agora Platform with AccessToken and join call".
+   - Direction of flow:
+     - Upward from the "Access Token Server" to the three devices and further up from the devices to the "Platform".
+
+4. **Detailed Content**:
+   - Content within "Access Token Server" box: "Access Token Server".
+   - Annotations along the lines:
+     - Black arrow: "1. Retrieve AccessToken with user and call permissions" newline (This line is split and redirects toward each of the three devices).
+     - Blue arrow: "2. Connect to Agora Platform with AccessToken and join call" newline (This directs from each device towards the Platform).
+
+5. **Configuration or Additional Notes**:
+   - Footer note positioned below the "Access Token Server", indicating the software version: "Viewer does not support full SVG 1.1".

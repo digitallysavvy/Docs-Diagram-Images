@@ -1,0 +1,28 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is left-to-right.
+
+2. **Main Entities and Elements:**
+   - There are two main rectangular boxes labeled "Channel" and one containing HTML-like tags.
+   - Inside the "Channel" box, there are two smaller circles labeled "UID 1" and "UID 2".
+   - The other main rectangular box contains HTML-like tags that specify the content related to media files.
+
+3. **Data Flow:**
+   - There is a solid line connecting the "Channel" box to the second main box, indicating the flow of data from the channel to the media file descriptions.
+   - There is also a dashed line connecting to another separate box indicating additional configuration, which involves media file types.
+   - Data flows from the "Channel" box to the box tagged with media descriptions and then to a configuration box as indicated by the dashed line.
+
+4. **Detailed Content:**
+   - "Channel" box includes:
+      - UID 1
+      - UID 2
+   - The second main box includes:
+      - p span: Audio and video of all users /span
+      - p: One M3U8 file newline
+      - p: Multiple TS files
+   - Configuration box connected via dashed line includes:
+      - p: One or more MP4 files
+
+5. **Configuration or Additional Notes:**
+   - Along the dashed line, there is a configuration setting labeled:
+      - Set avFileType as ["hls", "mp4"] positioned in line with the flow to the configuration box.

@@ -1,0 +1,31 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are four primary vertical entities or boxes, each labeled as follows: "Web server", "App", "SD-RTN", "ActiveFence". 
+   - The entity "Web server" and "App" are grouped under the heading "Implemented by you".
+   - "SD-RTN" and "ActiveFence" are grouped under "Provided by Agora" and "Provided by ActiveFence" respectively.
+
+3. **Data Flow:**
+   - Solid arrows are used to depict the direction of interaction between entities:
+     - From "User" to "Web server" labeled "Login".
+     - From "Web server" to "SD-RTN" labeled "Login authentication".
+     - From "Web server" to "App" labeled "Join channel".
+     - From "App" to "SD-RTN" labeled "Join channel with ActiveFence activated".
+     - From "SD-RTN" to "ActiveFence" labeled "Monitor content in channel".
+     - From "ActiveFence" to "App" labeled "Content matches workflow risk".
+     - From "App" to "Web server" labeled "Act on webhook. For example, use Channel Management REST API to remove user from channel", followed by "Log user out".
+     - From "Web server" to "User" labeled "Logout".
+   - Dashed lines indicate return paths or acknowledgments for the sequences initiated.
+
+4. **Detailed Content:**
+   - "User" entity: N/A
+   - "Web server" entity contains the sequence of actions: "Login new line Join channel new line Act on webhook. For example, use Channel Management REST API to remove user from channel new line Log user out".
+   - "App" entity contains the sequence of actions: "Join channel new line Content matches workflow risk".
+   - "SD-RTN" entity: links directly, but does not show direct actions or internal processes.
+   - "ActiveFence" entity contains a single action labeled "Monitor content in channel".
+
+5. **Configuration or Additional Notes:**
+   - No additional lines or configuration notes are visibly specified outside the main sequence interactions depicted with the arrows. 
+
+This structured format of the sequence diagram highlights the interactions and data flow between user, web applications, services, and monitoring tools, through a series of login, authentication, monitoring, and logout sequences.

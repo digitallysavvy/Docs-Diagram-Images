@@ -1,0 +1,28 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from top to bottom.
+
+2. Main Entities and Elements:
+- Enterprise firewall (depicted as a box with a fingerprint icon)
+- Agora SDK (depicted as a circular icon)
+- Agora SD-RTN™ (depicted as a cloud icon)
+- Cloud Proxy (depicted as a cloud icon)
+
+3. Data Flow:
+- An upward solid arrow connects the Enterprise firewall to "1. Request Proxy".
+- A dashed arrow flows from "1. Request Proxy" to "2. Return proxy information".
+- "2. Return proxy information" connects to the Cloud Proxy with a downward solid arrow.
+- A bidirectional solid arrow connects Agora SD-RTN™ and the Cloud Proxy.
+- An upward solid arrow labeled "3. Send Data" connects the Cloud Proxy to the Agora SDK.
+- A downward solid arrow labeled "4. Receive Data" connects the Cloud Proxy to Agora SD-RTN™.
+
+4. Detailed Content:
+- Enterprise firewall: No text content.
+- 1. Request Proxy
+- 2. Return proxy information
+- Agora SD-RTN™
+- Cloud Proxy: No text content.
+- Agora SDK
+
+5. Configuration or Additional Notes:
+- No additional lines or notes.

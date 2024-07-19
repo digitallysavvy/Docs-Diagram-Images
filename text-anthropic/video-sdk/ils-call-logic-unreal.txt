@@ -1,0 +1,40 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (circle)
+- Your app (box with "Video SDK" sub-element)
+- Agora (box with "SD-RTN" sub-element)
+- Host (rectangle)
+- Audience (rectangle)
+
+3. Data Flow:
+- Solid lines represent data flow from User to Your app, Your app to Agora, Host to Your app, Your app to Host, Audience to Your app, and Your app to Audience.
+- Dashed lines represent data flow between Your app and Agora.
+- Elements are grouped into "Start a live streaming event" and "Join a live streaming event" sections.
+
+4. Detailed Content:
+- User: Open App
+- Your app:
+  - Initiate the Agora Video SDK engine: newline agoraRtc.ug::createAgoraRtcEngine()
+  - Enable the audio and video modules: newline agoraEngine.enableVideo() newline agoraEngine.enableAudio()
+  - Set the channel profile: newline RtcEngineContext context newline context.channelProfile = CHANNEL_PROFILE_COMMUNICATION;
+- Host (within "Start a live streaming event" group):
+  - Retrieve authentication token to join channel
+  - Set the role as host: newline agoraEngine->setClientRole(CLIENT_ROLE_BROADCASTER)
+  - Setup local video: newline agoraEngine.setupLocalVideo(videoCanvas)
+  - Join a channel as host: newline agoraEngine->joinChannel
+  - Send data stream
+- Audience (within "Join a live streaming event" group):
+  - Retrieve authentication token to join channel
+  - Set the user role as audience: newline agoraEngine->setClientRole(CLIENT_ROLE_AUDIENCE)
+  - Join the channel: newline agoraEngine->joinChannel
+  - Retrieve streaming from the hosts: newline agoraEngine->setupRemoteVideo
+  - Receive data stream
+- User: Leave the live streaming event
+  - Your app: Leave the channel: newline agoraEngine->leaveChannel()
+- User: Close app
+  - Your app: Clean up local resources newline agoraEngine->release()
+
+5. Configuration or Additional Notes:
+- No additional configuration or notes are present in the diagram.

@@ -1,0 +1,27 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which depicts the process flow involving multiple entities, mainly highlighting the interactions over time.
+
+2. **Main Entities and Elements:**
+   - **User:** Represented with a stick figure and two states, "Open App" at the top and "Start call" later in the sequence.
+   - **Your app:** A blue box containing an inner blue box labeled "Voice SDK".
+   - **Agora:** A light grey box at the top right, containing an inner grey box labeled "SD-RTN".
+
+3. **Data Flow:**
+   - The flow of activities is directed from the user to "Your app" (Voice SDK) and further interacts with "Agora" (SD-RTN).
+   - Lines:
+     - Dashed lines indicate the period during which the app is performing actions internally without user input.
+     - Solid lines with arrows show the direction of action initiation and completion through returns from various functions, moving primarily in vertical sequences from top to bottom between the entities.
+   - Groupings: Each major step is connected by solid and dashed lines indicating grouped interaction processes such as app initialization and call handling.
+
+4. **Detailed Content:**
+   - **Voice SDK:**
+     - Create an instance of the Voice SDK engine: "agoraEngine = agoraEngine.createAgoraRtcEngine"
+     - Initialize the created instance: "agoraEngine.initialize"
+     - Retrieve authentication token to join channel
+     - Join a channel: "agoraEngine.joinChannel"
+     - Join accepted
+     - Receive and send audio stream
+     - Leave the channel: "agoraEngine.leaveChannel"
+
+5. **Configuration or Additional Notes:**
+   - Annotations and notes are embedded within the sequence in callouts next to the appropriate lines. They describe specific actions such as creation, initialization, joining, and leaving channels. Each set of actions is visually separated to indicate different stages in the sequence.

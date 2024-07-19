@@ -1,0 +1,37 @@
+### Overall Structure:
+- The diagram is a sequence diagram that illustrates the interaction between software components and a user in the context of a live streaming event using a video SDK.
+
+### Main Entities and Elements:
+- **User**: Indicated at the left edge of the diagram. This entity interacts with the "Your app" component and represents the user's activities such as opening the app and joining or leaving the live streaming event.
+- **Your app**: This is a central entity that interacts directly with the "Video SDK" and represents the application interface where the user operates.
+- **Video SDK**: Central entity connected to "Your app", which executes commands related to video processing functionalities such as initializing, setting up local video, and managing live streaming sessions.
+- **Agora**: Located towards the right, though not directly interacted with, implies the backend service or technology used by "Video SDK".
+- **SD-RTN**: Also towards the right, indicating the real-time networking service used in the video streaming process.
+
+### Data Flow:
+- **Solid lines** indicate direct interactions and method invocations between entities. The flow generally moves from left to right or top to bottom, beginning with the user interacting with “Your app”, which in turn, sends commands to “Video SDK”.
+- **Dashed lines** represent response actions or data flow back to the originating entity, such as authentication tokens or video streams.
+
+### Detailed Content:
+- "Your app" methods:
+  - Open App
+- "Video SDK" procedures for the user include:
+    - Initialize: newline agoraEngine.initialize
+    - Setup callback functions: newline agoraEngine.registerEventHandler
+    - Set channel profile: newline agoraEngine.setChannelProfile
+- "Video SDK" procedures for the host include:
+    - Setup local video: newline agoraEngine.setupLocalVideo
+    - Enable local video capturer: newline agoraEngine.enableVideo
+    - Start local preview: newline agoraEngine.startPreview
+    - Set user role as host: newline agoraEngine.setChannelProfile(ChannelProfileType.ChannelProfileLiveBroadcasting)
+    - Authentication and channel join: newline agoraEngine.joinChannel
+    - Send data stream
+- "Video SDK" procedures for the audience include:
+    - Authentication for channel join
+    - Set user role as audience: newline agoraEngine.setChannelProfile(ClientRoleType.ClientRoleAudience)
+    - Join live streaming: newline agoraEngine.joinChannel
+    - Retrieve streaming: newline agoraEngine.setupRemoteVideo
+    - Leave channel: newline agoraEngine.leaveChannel
+
+### Configuration or Additional Notes:
+- **Lines connecting the "Video SDK" to "Agora" and "SD-RTN"** are shown with dashed patterns, likely indicating network or service connections used by the SDK to perform its functionalities. These lines do not carry specific method calls but are essential for understanding the backend integration.

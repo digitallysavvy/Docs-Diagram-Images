@@ -1,0 +1,27 @@
+1. **Overall Structure:**
+   - The diagram is a flowchart.
+   - The direction of the diagram is left-to-right.
+
+2. **Main Entities and Elements:**
+   - Two main rectangular boxes labeled "Host" and "Audience".
+   - Both boxes contain an icon of two overlapping devices, possibly representing a smartphone and a tablet.
+   - The "Host" box contains text "1. Set the client role newline 2. Retrieve a token newline 3. Join a channel" and has a sub-element inside the box with the text "4. Publish local video and audio".
+   - The "Audience" box contains the text "5. Subscribe to video and audio published by the host".
+
+3. **Data Flow:**
+   - Solid black arrows indicate data flow:
+     - From the "Host" to the right, signaling the publishing of video and audio.
+     - From the "Audience" to the right, signaling the subscription to the video and audio.
+   - A dashed arrow points from an external element (icon with label "Agora Video SDK") to both the "Host" and "Audience".
+
+4. **Detailed Content:**
+   - Host box:
+     - "1. Set the client role"
+     - "2. Retrieve a token"
+     - "3. Join a channel"
+     - Inside sub-element: "4. Publish local video and audio"
+   - Audience box:
+     - "5. Subscribe to video and audio published by the host"
+
+5. **Configuration or Additional Notes:**
+   - The connection setting of "Host" and "Audience" with "Agora Video SDK" is indicated by a yellow icon with the label "Agora Video SDK", which has a directed dashed arrow to both main boxes, indicating dependency or usage.

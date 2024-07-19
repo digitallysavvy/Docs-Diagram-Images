@@ -1,0 +1,25 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as vertical boxes: "User," "Your app" (containing sub-element "Video SDK"), and "Agora" (containing sub-element "SD-RTN").
+   - **User**: Represented with a human figure icon.
+   - **Your app**: Contains the entity "Video SDK".
+   - **Agora**: Contains the entity "SD-RTN".
+
+3. **Data Flow:**
+   - Solid lines with arrows show the direction of interaction and data flow between the "User" and the "Video SDK" within "Your app", and between "Video SDK" and "SD-RTN" within "Agora".
+   - Each interaction step is directed from "User" to "Video SDK" and back, followed by several interactions directly within "Video SDK" or between "Video SDK" and "SD-RTN".
+
+4. **Detailed Content:**
+   - **"Your app" / "Video SDK" Box Content**:
+     - "Open App" new line "→" new line "Initiate the Agora Video SDK engine: agoraEngine = RtcEngine.create" new line "→" new line "Enable the video module: agoraEngine.enableVideo()"
+     - "Join a call" new line "→" new line "Setup local video: agoraEngine.setupLocalVideo(VideoCanvas)" new line "→" new line "Start local preview: agoraEngine.startPreview()" new line "→" new line "Retrieve authentication token to join channel" new line "→" new line "Join the channel: agoraEngine.joinChannel()" new line "Remote user joined: onUserJoined()" new line "Display video from a remote user: agoraEngine.setupRemoteVideo(VideoCanvas)"
+     - "Leave the call" new line "→" new line "Leave the channel: agoraEngine.leaveChannel()"
+     - "Close app" new line "→" new line "Clean up local resources: agoraEngine.destroy()"
+
+   - **"Agora" / "SD-RTN" Box Content**:
+     - Represents remote functions related to video streaming but does not have specific internal actionable steps detailed in the diagram.
+
+5. **Configuration or Additional Notes:**
+   - No additional lines or configuration settings specified outside of the main entities. All notes and actions are embedded within the interactions between entities.

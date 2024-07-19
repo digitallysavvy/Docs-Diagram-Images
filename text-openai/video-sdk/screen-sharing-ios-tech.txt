@@ -1,0 +1,23 @@
+### Overall Structure
+- The diagram is a sequence diagram, illustrating the process flow between various components involved in screen sharing using "Agora SD-RTN™".
+
+### Main Entities and Elements
+- **Main Process**: A rectangular box located in the middle-left of the diagram.
+- **Extension**: A rectangular box located towards the middle-right of the diagram.
+- **Agora SD-RTN™**: Shown as a cloud icon at the bottom center, labeled with the logo and name.
+- **Other Streams**: A dashed rectangular area on the left enclosing the "Main Process" and the cloud icon.
+
+### Data Flow
+1. **From Main Process to Extension**:
+   - A solid line labeled "Screen sharing instructions" runs from the "Main Process" box to the "Extension" box, indicating a directional data flow from "Main Process" to "Extension".
+2. **From Extension to Main Process**:
+   - A solid line labeled "Screen sharing stream" runs from the "Extension" box to the "Main Process" box.
+3. **From Main Process to Agora SD-RTN™**:
+   - A solid line labeled "Screen sharing stream" runs vertically downwards from the "Main Process" box to the cloud icon "Agora SD-RTN™".
+4. **From Agora SD-RTN™ encompassing "Other Streams"**:
+   - Multiple streams including the one labeled "Screen sharing stream" are indicated to flow towards the "Other Streams" area, highlighted by an upward arrow from the cloud representation towards the mentioned area.
+
+### Configuration or Additional Notes
+- The label "Other Streams" suggests additional data handling or routing functionalities, which may involve other parallel processes not detailed within this visual scope. These processes likely interact with the "Agora SD-RTN™" cloud service but are not directly shown.
+
+Each box and directional line effectively captures the core interactions and the flow of data within the sequence for screen sharing activities handled by Agora's framework. The use of a cloud icon emphasizes the involvement of a cloud-based service in processing and routing the data streams.

@@ -1,0 +1,20 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - There are three main entities labeled as "User," "Host," and "Audience." Each entity is depicted as a vertical column.
+   - The diagram includes an additional component on the right side labeled "Agora" with a sub-element named "SD-RTN."
+   
+3. Data Flow:
+   - The user communicates with the "Video SDK" with dashed lines indicating actions such as "Open app," "Initiate the Video SDK engine," "Start video in the engine," and repeated bi-directional interactions throughout the sequence.
+   - The host communicates sequentially with actions under a grouping titled "ILS event"; actions are indicated through dashed lines and include "Start ILS event," "Start local video," "Join the channel," and "Send data stream."
+   - The audience also shows interactions grouped under "Join ILS event" and "Leave ILS event" with similar communication patterns like "Join the channel," "Retrieve streaming from the other user," and "Receive data streams."
+   - Solid lines extending horizontally across the columns of the "Host" and "Audience" signify processes and data streaming, all connected to the Agora's SD-RTN component.
+   
+4. Detailed Content:
+   - User interactions include: Open app newline Initiate the Video SDK engine newline Start video in the engine newline Clean up local resources newline Close app newline Clean up local resources.
+   - Host interactions include: Start ILS event newline In an ILS event, only the hosts broadcast to the channel newline Start local video newline Join the channel newline Send data stream.
+   - Audience interactions include: Join ILS event newline In an ILS event, the audience views the broadcast made by channel hosts newline Join the channel newline Retrieve streaming from the other user newline Receive data streams newline Leave ILS event newline Stop local video newline Leave the channel newline Clean up local resources.
+   
+5. Configuration or Additional Notes:
+   - There are no additional lines or notes regarding configuration settings positioned around the main entities in the diagram.

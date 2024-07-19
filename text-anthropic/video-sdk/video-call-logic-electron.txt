@@ -1,0 +1,33 @@
+1. Overall Structure: 
+   - This is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are: User (2 instances), Your app, Video SDK, Agora, and SD-RTN.
+   - Your app contains a sub-element labeled "Video SDK".
+
+3. Data Flow:
+   - The flow starts from the User entity with "Open App".
+   - There is a grouped section titled "Video SDK" showing the interactions between Your app and Agora using solid lines with arrows indicating the direction of flow.
+   - Another grouped section shows interactions between the User and Your app, with solid lines and arrows.
+
+4. Detailed Content:
+   - User: "Open App" newline "Start call" newline "Leave call"
+   - Your app (Video SDK):
+     "Create an instance of the Video SDK engine:" newline "agoraEngine = agoraEngine.createAgoraRtcEngine"
+     "Initialize the created instance:" newline "agoraEngine.initialize"
+     "Set the role as host:" newline "agoraEngine.setClientRole(ClientRole.Type.ClientRoleBroadcaster)"
+     "Setup the callback functions:" newline "agoraEngine.registerEventHandler"
+   - User (Start call):
+     "Retrieve authentication token to join channel" 
+     "Setup local video: agoraEngine.setupLocalVideo"
+     "Enable the local video capture:" newline "agoraEngine.enableVideo"
+     "Start local preview :" newline "agoraEngine.startPreview"
+     "Join a channel:" newline "agoraEngine.joinChannel"
+     "Retrieve streaming from the other user:" newline "agoraEngine.setupRemoteVideo"
+     "Receive and send data streams"
+   - User (Leave call):
+     "Stop the local preview:" newline "stopPreview"
+     "leave the channel:" newline "agoraEngine.leaveChannel"
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration lines or notes present in the diagram.

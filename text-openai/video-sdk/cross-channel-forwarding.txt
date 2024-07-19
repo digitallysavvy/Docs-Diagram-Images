@@ -1,0 +1,44 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that details the interactions between different components during a process.
+
+2. **Main Entities and Elements:**
+   - **App: Host:** This box represents actions taken by the host application.
+   - **SDK:** Represents the software development kit interacting with the host and performing necessary operations.
+   - **Agora SD-RTN:** This is the network component that interfaces with the SDK.
+
+3. **Data Flow:**
+   - **From App: Host to SDK:**
+     - Solid lines with arrows represent directives or commands from the host to the SDK, indicating an action to be performed. Examples include creating and initializing the engine, joining the channel, starting media stream forwarding, updating channels, pausing and resuming streams, and finally stopping and exiting.
+   - **From SDK to Agora SD-RTN:**
+     - Solid lines with arrows are used for the SDK commands towards the network component, such as requesting to join the live channel as a host, requesting forwarding flows, updates, pauses, resumptions, and stopping of flows.
+   - **Backward Arrows:**
+     - Dashed lines with arrows pointing back to the App: Host indicate confirmations or status updates from the SDK or Agora SD-RTN back to the application, like successful joins, updates, and pauses in media stream forwarding.
+
+4. **Detailed Content:**
+   - **App: Host Text Content:**
+     - Create and initialize the engine newline
+     - Join the channel and set the user role as the host newline
+     - Start cross-channel media stream forwarding newline
+     - The source channel host successfully joined the target channel newline
+     - Update the target channel for media stream forwarding newline
+     - Target channels have been updated newline
+     - Pause forwarding of media streams to all target channels newline
+     - Pause forwarding media stream to target channel successful newline
+     - Resume forwarding media streams to all target channels, newline
+     - Resume forwarding media streams to the target channel successful newline
+     - Stop cross-channel media stream forwarding newline
+     - Stopped media stream forwarding newline
+     - Leave channel newline
+     - Destroy the engine
+   - **SDK Text Content:**
+     - Only the stream of a host can be forwarded newline Request to join the live channel as a host newline
+     - Request forwarding flow newline
+     - Request an update to the forwarding channel newline
+     - Request to pause forwarding flow newline
+     - Request to resume forwarding flow newline
+     - Request to stop forwarding flow newline
+     - Request to leave channel newline
+
+5. **Configuration or Additional Notes:**
+   - Groupings are marked for different phases such as "Start," "Renew," "Pause," "Recover," and "Stop," which partition the sequence of actions into logical sections.
+   - The configuration settings or special conditions are indicated, such as confirming that only a host's stream can be forwarded.

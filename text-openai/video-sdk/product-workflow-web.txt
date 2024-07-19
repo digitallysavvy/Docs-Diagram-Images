@@ -1,0 +1,46 @@
+### Overall Structure:
+- The diagram is a sequence diagram, illustrating the flow of actions between different elements in a system.
+
+### Main Entities and Elements:
+- **User**: Represented as a stick figure icon.
+- **Your app**: A box labeled "Your app".
+- **Video SDK**: A box labeled "Video SDK".
+- **Agora**: A box labeled "Agora".
+- **SD-RTN**: A box labeled "SD-RTN".
+
+### Data Flow:
+- **Connections**:
+  - Solid lines demonstrate actions or messages sent between the User, Your app, Video SDK, Agora, and SD-RTN, indicating a direct flow like method calls or instructions.
+  - Dashed lines indicate return responses or data flows back to the user or Video SDK.
+- **Groupings**:
+  - **Join**: Encompassing actions related to joining a channel.
+  - **Publish and Subscribe**: Encapsulates actions regarding publishing and subscribing to media tracks.
+  - **Common workflows**: Includes various common tasks performed once connected such as screen sharing and volume adjustment.
+
+### Detailed Content:
+- **Video SDK Box**:
+  - "Open App"
+  - "Use Video SDK to create an Agora Engine instance"
+  - "Create and play the local audio/video tracks"
+  - "Bypass autoplay block when onAutoplayFailed event occurs"
+  - "Retrieve authentication token to join a channel"
+  - "Join the channel"
+  - "Publish camera and microphone tracks to the channel"
+  - "Subscribe to tracks from other users"
+  - "Manage local and remote audio/video tracks"
+  - "Bypass autoplay blocking"
+  - "Create a screen track"
+  - "Unpublish the local video track"
+  - "Publish the screen track"
+  - "Call API methods to adjust or mute the local or remote audio track"
+  - "Call the API method to mute or unmute the local video track"
+  - "Leave the channel"
+- **Agora Box**:
+  - Linked to Video SDK and SD-RTN through various interactions as described in the flow.
+
+### Configuration or Additional Notes:
+- **Positioning**:
+  - Lines connecting Your app, Video SDK, and Agora demonstrate data and control flow, showing how components interact within the application ecosystem.
+  - Lines connecting to and from SD-RTN illustrate network operations reflecting data transit pathways.
+
+This structured outline covers the sequence diagram's key components and their interrelationships, focusing on the flow of operations and interactions between the system elements.

@@ -1,0 +1,37 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right and top to bottom.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes labeled as follows:
+  "RECONNECTING", "DISCONNECTED", "CONNECTING", "CONNECTED", "DISCONNECTING", "Establishing connection with Agora Server", "Successfully established connection with Agora server", "Disconnecting from Agora Server".
+- There is a smaller circle within the "RECONNECTING" box labeled "Automatic reconnection failed".
+
+3. Data Flow:
+- The connections between entities are represented by solid lines with arrowheads indicating the direction of flow.
+- There is a grouping of elements titled "The user is in any of the following stages: before calling join to join the channel; after calling leave to leave the channel; being removed from the channel or under abnormal circumstances such as connection failure".
+- Another grouping is titled "The transient state entered after calling join".
+- Another grouping is titled "Enter this state after successfully joining the channel. Users can publish or subscribe to media streams within a channel".
+- Another grouping is titled "The transient state entered after calling leave".
+
+4. Detailed Content:
+- RECONNECTING: [Empty]
+- DISCONNECTED: [Empty]
+- CONNECTING: [Empty]
+- CONNECTED: [Empty]
+- DISCONNECTING: [Empty]
+- Establishing connection with Agora Server: [Empty]
+- Successfully established connection with Agora server: [Empty]
+- Disconnecting from Agora Server: [Empty]
+- Below RECONNECTING: "Automatic reconnection newline successful"
+- Below DISCONNECTED: "Client.join"
+- Below CONNECTING: "SDK attempts to newline connect to the server"
+- Below CONNECTED: "Client.Leave"
+- Below DISCONNECTING: "Successfully disconnected from Agora Server"
+- Below "Establishing connection with Agora Server": "The transient state entered after calling join"
+- Below "Successfully established connection with Agora server": "Enter this state after successfully joining the channel. newline Users can publish or subscribe to media streams newline within a channel"
+- Below "Disconnecting from Agora Server": "The transient state entered after calling leave"
+
+5. Configuration or Additional Notes:
+- A note is positioned near the top of the diagram: "The user is in any of the following stages: before calling join to join the channel; after calling leave to leave the channel; being removed from the channel or under abnormal circumstances such as connection failure".
+- A note is positioned below "Automatic reconnection failed": "After the connection between the SDK and the server is interrupted due to network disconnection, the SDK automatically reconnects".

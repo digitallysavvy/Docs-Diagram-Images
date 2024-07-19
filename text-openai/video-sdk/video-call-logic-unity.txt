@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three primary vertical entities:
+     - **User**: Represents the actions of a user.
+     - **Video SDK**: Shows the interactions of the Video SDK.
+     - **Agora**: Outlines steps interacting with the Agora service.
+
+3. **Data Flow:**
+   - Connective lines:
+     - Solid lines with arrows indicate the direction of sequential tasks and data flow from the **User** to **Video SDK**, and **Video SDK** to **Agora**.
+     - Dashed lines with arrows return the control or feedback from **Video SDK** to **User** and from **Agora** back to **Video SDK**.
+   - Groupings:
+     - Actions and calls within the **Video SDK** entity are grouped under labels like "Video Call".
+
+4. **Detailed Content:**
+   - Content within **User**:
+     - Open game newline
+     - Start call newline
+     - Leave call newline
+     - Close game
+   - Content within **Video SDK**:
+     - Create an RtcEngine instance: RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine() newline
+     - Set the context: RtcEngineContext context = new RtcEngineContext(_appId, 0, true, CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT) newline
+     - Initialize RtcEngine: RtcEngine.Initialize(context) newline
+     - Enable the video module: RtcEngine.EnableVideo() newline
+     - Set the user role as broadcaster: RtcEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER) newline
+     - Join call: RtcEngine.JoinChannel() newline
+     - Leave the channel: RtcEngine.LeaveChannel() newline
+     - Disable the video modules: RtcEngine.DisableVideo() newline
+     - Clean up local resources: RtcEngine.Dispose()
+
+5. **Configuration or Additional Notes:**
+   - **To the right of the "Agora" box**:
+     - **SD-RTN**: Indicated with a dashed line placed vertically throughout the journey in the Agora, indicating ongoing server interaction or network activity.
+   - **Next to arrows**:
+     - Text indicating the specific action or command, aligning with the sequence of operations and the flow between entities.

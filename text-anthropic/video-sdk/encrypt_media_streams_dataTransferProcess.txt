@@ -1,0 +1,36 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are: User A, App A, SDK A, agora (cloud service), SDK B, App B, and User B.
+- Within App A and App B, there are smaller boxes labeled "enableEncryption" and "Audio & video collection & encoding".
+
+3. Data Flow:
+- There are solid lines connecting App A to SDK A, SDK A to the agora cloud, the agora cloud to SDK B, and SDK B to App B. These lines represent the flow of encrypted media streams.
+- There are also dashed lines from App A to SDK A, and from SDK B to App B, indicating the transport encryption mode, key, and salt.
+- The elements are grouped into two main sections separated by the agora cloud service.
+
+4. Detailed Content:
+- User A (no text content)
+- App A:
+  enableEncryption (newline)
+  Audio & video collection & encoding
+- SDK A:
+  Built-in encryption (newline)
+  Transport encryption (newline)
+  mode, key and salt (newline)
+  Send encrypted media stream
+- agora:
+  Transport encrypted media streams (newline)
+  TCP/UDP encrypted transmission media stream
+- SDK B:
+  Built-in encryption (newline)
+  Send encrypted media stream (newline)
+  TCP/UDP encrypted transmission media stream
+- App B:
+  enableEncryption (newline)
+  Audio & video collection & encoding
+
+5. Configuration or Additional Notes:
+- At the bottom, there are two smaller boxes with the text "Generate keys and salts on your server".
+- There are also two arrows pointing from these boxes to App A and App B, labeled "Encryption transport key and salt".

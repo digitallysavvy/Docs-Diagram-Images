@@ -1,0 +1,26 @@
+1. **Overall Structure**:
+   - The diagram is a flow diagram.
+   - The direction of the diagram is from left-to-right and has a sub-flow that moves from bottom-to-top.
+
+2. **Main Entities and Elements**:
+   - The diagram consists of several main boxes labeled: "Capture", "Pre-process", "Encode", "Transmit", "Decode", "Post-process", and "Play". 
+   - There is a separate box labeled "AI Noise suppression" connected by a vertical flow to part of the main flow.
+   - Each main box in the bottom flow contains a smaller square symbol inside it on the left.
+
+3. **Data Flow**:
+   - Solid arrows indicate the flow of data. These lines connect the boxes "Capture", "Pre-process", "Encode", "Transmit", "Decode", "Post-process", to "Play" sequentially.
+   - A solid arrow feeds from "Pre-process" vertically up to "AI Noise suppression" and a solid line returns from "AI Noise suppression" vertically down aligning with and entering "Post-process".
+
+4. **Detailed Content**:
+   - "Capture": no additional text.
+   - "Pre-process": no additional text.
+   - "Encode": no additional text.
+   - "Transmit": no additional text.
+   - "Decode": no additional text.
+   - "Post-process": no additional text.
+   - "Play": no additional text.
+   - "AI Noise suppression": no additional text.
+   
+5. **Configuration or Additional Notes**:
+   - There is a title above the linear sequence of boxes which reads "Audio and video data", indicating the type of data being processed in the flow.
+   - Small square symbols inside each box in the main flow might indicate a specific configuration or functionality setting but are not labeled with additional details.

@@ -1,0 +1,43 @@
+### Overall Structure:
+- The diagram is a sequence diagram used to model the interactions between entities over time.
+
+### Main Entities and Elements:
+1. **Token server** - An entity labeled as "Token server" indicating server operations related to token management.
+2. **App** - An entity labeled "App" showing the application side of operations.
+3. **SD-RTN** - An entity labeled "SD-RTN", representing a server or network component by Agora.
+
+### Data Flow:
+- **Between Token server and App:**
+  - Solid lines with arrows indicate the direction of data flow for requests and responses between "Token server" and "App". The flow is both to and from each entity, showing bidirectional communication.
+
+- **Between App and SD-RTN:**
+  - Solid lines with arrows show data flow from the "App" to "SD-RTN" primarily for joining the channel, token validation, and handling token expiration.
+
+### Detailed Content:
+- **Token server Box:**
+  1. **Join a channel with authentication**:
+     - Request a token using channel name, role, token type, and user ID newline
+     - Validate user against internal security newline
+     - Generate a token and return it to the client
+
+  2. **Renew token**:
+     - Request a fresh token using channel name, role, token type, and user ID newline
+     - Validate user request against internal logic newline
+     - Generate a fresh token and return it to the client
+
+- **App Box:**
+  1. **Join a channel with uid, channel name, and token** (arrow towards SD-RTN):
+     - Validate the token newline
+     - Trigger the callback after adding user to the channel
+  
+  2. **(Return path) Trigger event: Token Privilege will Expire**:
+     - Send the fresh token with a RenewToken request
+
+- **SD-RTN Box**:
+  - This entity only has arrows indicating actions it receives or triggers but does not have detailed text entries like "App" and "Token server".
+
+### Configuration or Additional Notes:
+- Titles indicate the implementation responsibility: 
+  - "Implemented by you" above "Token server" and "App"
+  - "Provided by Agora" above "SD-RTN"
+- Dashed lines partition different segments within the entities, grouping operational phases or steps related to a specific process (e.g., Join a channel with authentication, Renew token).

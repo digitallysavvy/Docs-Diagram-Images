@@ -1,0 +1,45 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - App: Host (box)
+     - Circle inside labeled "Start"
+     - Circle inside labeled "Renew"  
+     - Circle inside labeled "Pause"
+     - Circle inside labeled "Recover"
+     - Circle inside labeled "Stop"
+   - SDK (box)
+     - Sub-box with text "Only the stream of newline a host can be forwarded"
+   - Agora SD-RTN (box)
+
+3. Data Flow:
+   - Solid arrows showing flow from App: Host to SDK and SDK to Agora SD-RTN
+   - Dashed arrows showing flow from Agora SD-RTN to SDK and SDK to App: Host
+   - No specific groupings identified
+
+4. Detailed Content:
+   - App: Host
+     - "Create and initialize the engine"
+     - "Join the channel and set newline the user role as the host"
+     - "Start cross-channel newline media stream forwarding"
+     - "The source channel host successfully newline joined the target channel"
+     - "Update target channel newline for media stream forwarding" 
+     - "Pause forwarding of media streams newline to all target channels"
+     - "Pause forwarding media stream newline to target channel successful"
+     - "Resume forwarding media streams newline to all target channels,"
+     - "Resume forwarding media streams newline to the target channel successful"
+     - "Stop cross-channel newline media stream forwarding"
+     - "Stopped media stream forwarding"
+     - "Leave channel"
+     - "Destroy the engine"
+   - SDK
+     - "Request to join the newline live channel as a host"
+     - "Request forwarding flow"
+     - "Request an update to the newline forwarding channel"
+     - "Request to pause forwarding flow"
+     - "Request to resume forwarding flow"
+     - "Request to stop forwarding flow"
+     - "Request to leave channel"
+
+5. Configuration or Additional Notes:
+   - No additional configuration settings or notes present.

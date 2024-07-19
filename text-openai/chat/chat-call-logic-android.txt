@@ -1,0 +1,56 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - **Entities/Boxes:**
+     - User: Represented as a stick figure.
+     - Chat SDK: Labeled "Your app" and divided into several sub-sections.
+     - Agora: Labeled and outlined, divided into "Chat Server."
+
+   - **Sub-elements within Entities:**
+     - Initialize: Groups the initial setup processes.
+     - Log in: Contains the login process.
+     - Send messages: Groups message sending process.
+     - Receive messages: Involves the message receiving process.
+     - Close: Includes steps to terminate the session.
+
+3. **Data Flow:**
+   - **Lines:**
+     - Solid lines represent the primary flow of actions or interactions between the User, Chat SDK, and Chat Server.
+     - Dashed lines denote responses or asynchronous activities.
+
+   - **Flow Direction:**
+     - Lines start from the User or Chat SDK, moving towards the Agora Chat Server and back, indicating the flow of data and control.
+
+4. **Detailed Content:**
+   - **User to Chat SDK (and vice versa):**
+     - "Open app"
+     - "Join a chat"
+     - "Send a message"
+     - "Display message"
+     - "Leave the chat"
+
+   - **Chat SDK to Agora Chat Server (and vice versa):**
+     - "Get a ChatClient instance"
+        - "agoraChatClient = ChatClient.getInstance()"
+     - "Initialize the instance:"
+        - "agoraChatClient.init(context, options)"
+     - "Add message event callbacks:"
+        - "agoraChatClient.chatManager().addMessageListener(...)"
+     - "Add connection event callbacks:"
+        - "agoraChatClient.addConnectionListener(...)"
+     - "Retrieve authentication token for the user"
+     - "Log in to the chat server:"
+        - "agoraChatClient.loginWithAgoraToken(...)"
+        - "onConnected() callback"
+     - "Create a ChatMessage"
+     - "Send the ChatMessage:"
+        - "agoraChatClient.chatManager().sendMessage(message)"
+     - "Log out:"
+        - "agoraChatClient.logout(...)"
+
+   - **Chat Server to Chat SDK:**
+     - "onMessageReceived(messages) callback"
+
+5. **Configuration or Additional Notes:**
+   - Positioned at each step within the Chat SDK and Chat Server workflows, clarifying specific method calls and responses related to operations like initialization, authentication, message creation, sending, receiving, and termination of the chat session.

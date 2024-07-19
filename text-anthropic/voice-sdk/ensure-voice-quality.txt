@@ -1,0 +1,48 @@
+1. Overall Structure: The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (box)
+- Your app (box)
+  - Voice SDK (sub-box)
+- Agora (box) 
+  - SD-RTN (sub-box)
+- Pre-call tests (box)
+- Monitor in-call quality (box)  
+- Echo cancellation (box)
+
+3. Data Flow:
+- Open App (solid line from User to Your app)
+- Set log file configuration and create engine (solid line from Your app to Voice SDK, grouped)
+  - Set log file parameters (dashed line from Voice SDK to Your app)
+  - Use Voice SK to create an instance of Agora Engine (dashed line from Your app to Voice SDK)
+- Start the echo test (solid line from Pre-call tests to Your app)
+  - Call the method to start the echo test (solid line from Your app to SD-RTN)
+  - Send and receive back audio after a delay to test hardware and network quality (solid bi-directional line between Your app and SD-RTN)
+- Start the network probe test (dashed line from Your app to SD-RTN)
+  - Call the method to start the network probe test (solid line from Your app to SD-RTN)  
+  - Deliver network quality score and network statistics (dashed line from SD-RTN to Your app)
+- Set the audio profile (solid line from Your app to Voice SDK, grouped)
+  - Specify audio profile and scenario based on the nature of the app (dashed line from Voice SDK to Your app)
+  - Call the method to set the audio profile and scenario (solid line from Your app to SD-RTN)
+- Join channel (solid line from User to Your app, solid line from Your app to SD-RTN)
+- Enable the quality statistics (dashed line from Monitor in-call quality to Your app)
+- Receive network, call, and audio quality statistics (dashed line from SD-RTN to Your app)
+- Receive state change notifications (dashed line from SD-RTN to Your app)
+- Notify the user (dashed line from Your app to User)
+- Take corrective action (solid line from Your app to SD-RTN)
+- Choose the audio file to be played and specify mixing options (solid line from Echo cancellation to Your app) 
+  - Call the method to start audio mixing (solid line from Your app to SD-RTN)
+  - Uses echo-cancellation features to remove echo (dashed line from SD-RTN to Your app)
+
+4. Detailed Content:
+User: (no text)
+Your app: (no text)
+Voice SDK: (no text)
+Agora: (no text) 
+SD-RTN: (no text)
+Pre-call tests: Start the echo test
+Monitor in-call quality: (no text)
+Echo cancellation: Choose the audio file to be played newline and specify mixing options
+
+5. Configuration or Additional Notes:
+- Near the group "Set log file configuration and create engine", there is a note: "Set log file configuration and create engine"

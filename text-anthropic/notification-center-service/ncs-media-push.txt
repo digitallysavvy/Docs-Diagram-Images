@@ -1,0 +1,37 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (represented by a stick figure icon)
+- Web server (box)
+- Your app server (box)
+- Agora Media Push (box)
+
+3. Data Flow:
+- Solid lines represent the flow of requests or data between entities.
+- Dashed lines represent the flow of responses or notifications between entities.
+- The flow is bidirectional, with arrows indicating the direction of the flow.
+- Elements are grouped by dotted lines, with the title "Implemented by you" for the Web server and Your app server, and "Provided by Agora" for the Agora Media Push.
+
+4. Detailed Content:
+- User: No text content.
+- Web server: No text content.
+- Your app server:
+  "Start media push" newline
+  "Change converter configuration" newline
+  "Stop media push"
+- Agora Media Push:
+  "Create a converter" newline
+  "Response confirming conveter creation" newline
+  "Notification eventType=1: Converter created" newline
+  "Update converter API" newline
+  "Response confirming configuration update" newline
+  "Notification eventType=2: Converter configuration changed" newline
+  "Notification eventType=3: Converter status changed" newline
+  "Delete converter API" newline
+  "Response confirming converter delete" newline
+  "Notification eventType=4: Converter destroyed"
+
+5. Configuration or Additional Notes:
+- "Authenticate notification signature" is shown as a note below certain notification events.
+- "200 OK" is shown as a response from the Agora Media Push to certain requests or notifications.

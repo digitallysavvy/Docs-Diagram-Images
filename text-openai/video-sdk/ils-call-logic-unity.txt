@@ -1,0 +1,37 @@
+### Overall Structure
+- The diagram is a sequence diagram, primarily depicting the flow of operations between various entities involved in a video streaming setup.
+
+### Main Entities and Elements
+- There are five main entities represented as vertical dashed lines titled: User, Your game, Video SDK, Host, and Audience.
+- The Video SDK entity is centrally positioned and interacts frequently across most other entities.
+- There are no visible sub-elements like circles or smaller boxes within the main entities.
+
+### Data Flow
+- The data flow is shown using solid arrows representing method calls or actions, and returning dotted arrows indicating a response or return action.
+- The arrows begin from one entity and point towards another, clearly showing the direction of communication and interaction.
+  - For example, "Open game" initiates from User to Your game, and "Create an RtcEngine instance:" flows from Your game to Video SDK.
+- User actions signify the start and end ("Open game" and "Close game"), whereas other entities handle more specific tasks like initializing the engine or joining channels.
+
+### Detailed Content
+- **Your game** has multiple operations indexed chronologically:
+  1. Create an RtcEngine instance: 'RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine()'
+  2. Set channel profile: 'RtcEngine.SetChannelProfile(CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING)'
+  3. Set the context: 'RtcEngineContext context = new RtcEngineContext(appID, 0, true, CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING, AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT)'
+  4. Initialize RtcEngine: 'RtcEngine.Initialize(context)'
+
+- **Host** and **Audience** perform similar operations but differ primarily in setting their user roles:
+  - Host: 
+    1. Enable the video module: 'RtcEngine.EnableVideo()'
+    2. Set user role as host: 'RtcEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER)'
+    3. Join channel as host: 'RtcEngine.JoinChannel()'
+  - Audience:
+    1. Enable the video module: 'RtcEngine.EnableVideo()'
+    2. Set user role as audience: 'RtcEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_AUDIENCE)'
+    3. Join channel as audience: 'RtcEngine.JoinChannel()'
+
+- **User** events:
+  - Start with opening the game and end with closing the game. In between, there is a simple flow indicated to join and leave calls.
+
+### Configuration or Additional Notes
+- Configuration settings are mainly included within method parameters like setting up channel profiles and user roles.
+- Labels such as SD-RTN appear at the beginning and end of the sequence adjacent to Video SDK, possibly indicating a specific network or technology used.

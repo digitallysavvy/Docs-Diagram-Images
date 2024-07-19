@@ -1,0 +1,35 @@
+1. **Overall Structure:**
+   - Type of Diagram: Flow Diagram
+   - Direction of the Diagram: Left-to-right
+
+2. **Main Entities and Elements:**
+    - Main Boxes: 
+      1. Capture
+      2. Pre-Process
+      3. Encode
+      4. Transmit
+      5. Decode
+      6. Post-Process
+      7. Play
+    - Group Label: Agora Web SDK, containing Capture to Play
+    - Other Elements:
+      - Rectangular gray box labeled "Agora Extensions (Virtual Background, AI Denoiser)" positioned above the Agora Web SDK main flow.
+      - Small rectangle labeled "Audio and Video Data" with an arrow pointing towards "Agora Extensions".
+  
+3. **Data Flow:**
+   - Solid arrows connect: Capture -> Pre-Process -> Encode -> Transmit -> Decode -> Post-Process -> Play
+   - There is a dashed boundary indicating that these boxes are grouped under Agora Web SDK.
+   - A vertical arrow flows upwards from the label "Audio and Video Data" to the "Agora Extensions" box.
+
+4. **Detailed Content:**
+   - Capture: Capture
+   - Pre-Process: Pre-Process
+   - Encode: Encode
+   - Transmit: Transmit
+   - Decode: Decode
+   - Post-Process: Post-Process
+   - Play: Play
+   - Additional content for Agora Extensions: Agora Extensions newline (Virtual Background, AI Denoiser)
+
+5. **Configuration or Additional Notes:**
+   - Configuration settings or additional lines are not depicted beyond the main flow and group labels.

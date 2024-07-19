@@ -1,0 +1,29 @@
+### Overall Structure:
+- The diagram is a sequence diagram.
+
+### Main Entities and Elements:
+- There are four main entities represented as labeled rectangles:
+  1. Video to be captured
+  2. Third-party video capture module
+  3. Agora SDK
+  4. main channel
+
+### Data Flow:
+- Solid lines with arrows depict the data flow direction:
+  1. From "Video to be captured" to "Third-party video capture module"
+  2. From "Third-party video capture module" to "Captured video frames"
+  3. From "Captured video frames" to "Agora SDK"
+  4. From "Agora SDK" to "Custom video track"
+  5. From "Custom video track" to "main channel"
+
+### Detailed Content:
+- Each box is labeled with text representing the role/function:
+  - "Video to be captured"
+  - "Third-party video capture module"
+  - "Captured video frames"
+  - "Agora SDK"
+  - "Custom video track"
+  - "main channel"
+
+### Configuration or Additional Notes:
+- No additional lines or notes present in the diagram. The sequence is linear, visualized without branches or configurations explicitly noted external to the flow depicted by solid lines.

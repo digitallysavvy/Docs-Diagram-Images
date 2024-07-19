@@ -1,0 +1,36 @@
+### 1. Overall Structure:
+- The diagram is a sequence diagram, which models the flow of logic within the system in a visual manner, detailing how objects interact through sequenced events.
+
+### 2. Main Entities and Elements:
+- There are three main vertical boxes or entities named "User," "Your app," and "Agora." Each entity represents an actor or system component.
+  - "User": This entity has two icons of a user at the start and end.
+  - "Your app": This contains sub-elements named "Video SDK."
+  - "Agora": This contains a sub-element named "SD-RTN."
+
+### 3. Data Flow:
+- Arrows (both solid and dashed lines) illustrate interactions and the direction of flow between entities.
+  - From "User" to "Your app" initiating actions like "Open app," which leads to actions within "Video SDK" such as "Initiate the Video SDK engine."
+  - Communications between "Your app" and "Agora," where "Video SDK" interacts with "SD-RTN" throughout the sequence, including activities like "Start video in the engine" and eventually lead to "Stop local video."
+  - "Host," part of "Your app," handles major functions like "Start call" and "Leave call," with events like "Start local video" and "Clean up local resources."
+
+### 4. Detailed Content:
+- "User" actions: 
+  - Open app
+  - Initiate the Video SDK engine newline
+  - Start video in the engine
+  - Close app newline
+  - Clean up local resources
+- "Host" processes within "Your app":
+  - Start call
+  - In a call, all users broadcast to the channel.
+  - Start local video
+  - Join the channel
+  - Retrieve streaming from the other user newline
+  - Receive and send data streams newline
+  - Stop local video
+  - Leave the channel
+  - Leave call
+
+### 5. Configuration or Additional Notes:
+- Solid lines typically denote the start of an interaction while dashed lines denote return information or confirmations of completion.
+- The entire sequence covers full interaction from opening the app to resources cleanup upon closing it, highlighting essential actions needed to manage a video call through "Your app" using services provided by "Agora."

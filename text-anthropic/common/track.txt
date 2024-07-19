@@ -1,0 +1,25 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right, with two main sections: "Upstream Track (Sending End)" and "Downlink Track (Receiving End)".
+
+2. Main Entities and Elements:
+- The left section is titled "Upstream Track (Sending End)" and contains boxes labeled "Input Source", "Filter (pre-processing)", and "Output".
+- The right section is titled "Downlink Track (Receiving End)" and contains boxes labeled "Input Source", "Filter (pre-processing)", and "Output".
+- Within the "Input Source" box on the left, there are smaller boxes labeled "Collect Video Data", "Beauty", "Virtual background", "Other video pre-processing", "Automatic gain control", "AI Noise Reduction", and "Echo Cancellation".
+- Within the "Filter (pre-processing)" box on the left, there is a single box labeled "Collect Video Data" repeated multiple times.
+- Within the "Input Source" box on the right, there are smaller boxes labeled "super resolution", "video decoder", "Audio codec", and "spatial sound effects".
+- Within the "Filter (pre-processing)" box on the right, there are smaller boxes labeled "Other video pre-processing" and "Other audio pre-processing".
+- Within the "Output" box on the right, there are smaller boxes labeled "Other output channels" and "Render/Playback".
+
+3. Data Flow:
+- Solid lines with arrows connect the boxes within the "Upstream Track (Sending End)" section, indicating the flow direction.
+- A solid line with an arrow points from the "Collect Video Data" box in the "Output" section on the left to the "Video link" label.
+- A solid line with an arrow points from the "Collect Video Data" box in the "Output" section on the left to the "Audio link" label.
+- These two lines ("Video link" and "Audio link") flow towards the "Agora SD-RTNT™" label, which is positioned between the two main sections.
+- Within the "Downlink Track (Receiving End)" section, solid lines with arrows connect the boxes, indicating the flow direction.
+
+4. Detailed Content:
+- The text content within each box is provided, with newline indicators separating lines of text.
+
+5. Configuration or Additional Notes:
+- The "Agora SD-RTNT™" label is positioned between the two main sections, suggesting a configuration or software component involved in the data flow.

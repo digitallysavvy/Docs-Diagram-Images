@@ -1,0 +1,42 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (entity represented by a stick figure icon)
+   - Your app (box)
+     - Video SDK (sub-box inside "Your app")
+   - Agora (box)
+     - SD-RTN (sub-box inside "Agora")
+   - Host (entity represented by a box)
+   - Audience (entity represented by a box)
+
+3. Data Flow:
+   - Solid lines represent the flow of messages/events between entities.
+   - The arrows indicate the direction of the flow.
+   - There is a grouping of elements titled "Start live streaming event".
+   - There is another grouping titled "Join live streaming event".
+
+4. Detailed Content:
+   - User: "Open App"
+   - Your app: 
+     "Create an instance of the Video SDK engine: newline agoraEngine = agoraEngine.createAgoraRtcEngine"
+     "Initialize the created instance: newline agoraEngine.initialize"  
+     "Setup the callback functions: newline agoraEngine.registerEventHandler"
+     "Set the channel profile: newline agoraEngine.setChannelProfile"
+   - Host:
+     "Setup local video: newline agoraEngine.setupLocalVideo"
+     "Enable local video capturer: newline agoraEngine.enableVideo"
+     "Start local preview: newline agoraEngine.startPreview"
+     "Set the user role as host: newline agoraEngine.setChannelProfile(ChannelProfileType.ChannelProfileLiveBroadcasting)"
+     "Retrieve authentication token to join channel"
+     "Join a channel as host: newline agoraEngine.joinChannel"
+     "Send data stream"
+   - Audience:
+     "Retrieve authentication token to join channel"
+     "Set the user role as audience: newline agoraEngine.setChannelProfile(ClientRoleType.ClientRoleAudience)"
+     "Join the live streaming event: newline agoraEngine.joinChannel"
+     "Retrieve streaming from the other user: newline agoraEngine.setupRemoteVideo"
+     "Leave live streaming event: newline agoraEngine.leaveChannel"
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes provided in the diagram.

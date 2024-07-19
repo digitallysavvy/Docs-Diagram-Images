@@ -1,0 +1,27 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon on the left and right)
+- Your app (box containing "Voice SDK")
+- Agora (box with "SD-RTN")
+
+3. Data Flow:
+- There are solid lines connecting User to Your app, showing a flow between them.
+- There is a dashed line connecting Your app to Agora, indicating a different type of connection or flow.
+- The elements within Your app are grouped in a dashed box titled "Audio Call".
+
+4. Detailed Content:
+- User: "Open app" newline "Leave the call" newline "Close app"
+- Your app:
+"Create an Agora Voice SDK engine instance: newline RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine()"
+"Set the context: newline RtcEngineContext context = new RtcEngineContext(_appID, 0, true, newline CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING, newline AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT)"  
+"Initialize RtcEngine: newline RtcEngine.Initialize(context)"
+"Enable the audio module: newline RtcEngine.EnableAudio()"
+"Set the user role as broadcaster: newline RtcEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER)"
+"Join the channel: newline RtcEngine.JoinChannel()"
+"Leave the channel: newline RtcEngine.LeaveChannel()"
+"Disable the audio modules: newline RtcEngine.DisableAudio()"
+
+5. Configuration or Additional Notes:
+- There are no additional configuration settings or notes provided in the diagram.

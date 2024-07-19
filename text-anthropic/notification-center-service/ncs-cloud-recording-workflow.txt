@@ -1,0 +1,51 @@
+1. Overall Structure:
+- Type of diagram: Sequence
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Web server
+- Your app server
+- Your third-party cloud storage
+- Agora Cloud Recording
+
+3. Data Flow:
+- Solid lines show the flow of messages/requests between entities, with arrows indicating the direction.
+- Dashed lines group related interactions.
+
+4. Detailed Content:
+- User:
+(No text content)
+
+- Web server:
+(No text content)
+
+- Your app server:
+(No text content)
+
+- Your third-party cloud storage:
+(No text content)
+
+- Agora Cloud Recording:
+(No text content)
+
+- Messages/Requests:
+Start recording (from User to Your app server)
+Get recording resources (from Your app server to Agora Cloud Recording)
+resource ID (from Agora Cloud Recording to Your app server)
+Start recording (from Your app server to Agora Cloud Recording)
+Notification 40: `recorder_started` <status> (from Agora Cloud Recording to Your app server)
+200 OK (from Your app server to Agora Cloud Recording)
+Notifications sent and acknowledged for all recording events (note below the dashed group)
+Stop recording (from User to Your app server)
+End recording (from Your app server to Agora Cloud Recording)
+Notification 30: `uploader_started` <status> (from Agora Cloud Recording to Your app server)
+200 OK (from Your app server to Agora Cloud Recording)
+Upload recording file (from Your third-party cloud storage to Agora Cloud Recording)
+Notification 31: `uploaded` <status> (from Agora Cloud Recording to Your app server)
+200 OK (from Your app server to Agora Cloud Recording)
+Notification 11: `session_exit`<exitStatus> (from Agora Cloud Recording to Your app server)
+200 OK (from Your app server to Agora Cloud Recording)
+
+5. Configuration or Additional Notes:
+- The diagram is divided into two sections: "Implemented by you" and "Provided by Agora", separated by a vertical line.
+- The note "Notifications sent and acknowledged for all recording events" is positioned below the dashed group containing the interactions related to recording and uploading.

@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is left-to-right.
+
+2. **Main Entities and Elements:**
+   - There are several rectangular boxes evenly distributed across two vertical groupings. These boxes are labeled as follows on the left side:
+     - Streaming end 1, Streaming end A, Streaming end B, Streaming end C, Streaming end D.
+   - Each box in the left grouping is connected by arrows to a corresponding box labeled:
+     - Audio stream 1, Audio stream 2, Audio stream 3, Audio stream A, Audio stream B, Audio stream C, Audio stream D.
+   - In the center, there is a cloud-shaped entity labeled "Agora SD-RTN™".
+   - On the right side, boxes are contained within two vertical rectangular groups:
+     - Audio stream N1, Audio stream N2, Audio stream N3, Audio stream N4 newline (in the upper group).
+     - Audio stream A, Audio stream B, Audio stream C, Audio stream D newline (in the lower group).
+   - Each group on the right side converges to a box labeled "Receiving end".
+
+3. **Data Flow:**
+   - Solid arrows represent the data flow from each "Streaming end" box to its respective "Audio stream" box.
+   - Further solid arrows continue from each "Audio stream" box to the "Agora" cloud and then from the cloud to each "Audio stream" box on the right.
+   - The final set of arrows continues from the right-hand "Audio stream" boxes towards the "Receiving end" boxes.
+
+4. **Detailed Content:**
+   - Boxes labeled from "Streaming end 1" to "Streaming end D" and "Audio stream 1" to "Audio stream D".
+   - Central cloud entity labeled "Agora SD-RTN™".
+   - Right-side audio stream labels include "Audio stream N1" to "N4" newline and "Audio stream A" to "D".
+   - Boxes at the end of flows are consistently labeled "Receiving end".
+
+5. **Configuration or Additional Notes:**
+   - Group titles on the right side of the diagram separate upper and lower groups, but the diagram does not explicitly indicate titles for these groups.
+   - No additional configurations or notes are specified outside the main flow entities.

@@ -1,0 +1,42 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which visually represents the process and interactions in a system over time.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as vertical boxes labeled "User", "Video SDK", and "API". Inside "Video SDK", there are smaller rectangular elements:
+     - RTCEngine.create
+     - Engine.enableVideo
+     - Engine.joinChannel
+     - Engine.on("joinChannelSuccess")
+     - Engine.on("userJoined")
+     - Engine.leaveChannel
+   - The entity "API" does not contain any sub-elements or specific calls.
+
+3. **Data Flow:**
+   - The interactions between entities are depicted with both solid and dashed lines. Solid lines represent function calls or actions, while dashed lines represent responses or returns.
+   - Arrows indicate the direction of data flow, starting from the "User" and moving right towards the "API" through "Video SDK".
+   - The interactions are grouped into different phases of usage:
+     - Opening the app
+     - Joining a broadcast as a host
+     - Joining a broadcast as a user
+     - Leaving the broadcast
+
+4. **Detailed Content:**
+   - Within the "User" entity, the key actions are:
+     - Open App
+     - Start broadcast
+     - Join broadcast
+     - Leave broadcast
+   - Inside "Video SDK":
+     - RTCEngine.create
+     - Engine.enableVideo
+     - Engine.joinChannel
+     - Engine.on("joinChannelSuccess") newline Suscribe newline Receive data stream
+     - Engine.on("userJoined") newline Widget = RtcRemoteView.SurfaceView()
+     - Engine.leaveChannel
+   - Each box or action also lines up with others across entities, depicting specific triggers or data sent from one entity to the next.
+
+5. **Configuration or Additional Notes:**
+   - The interactions with "Widget" inside "Video SDK":
+     - Widget = RtcLocalView.SurfaceView()
+     - Widget = RtcRemoteView.SurfaceView()
+   - These illustrate specific user interface components being used within the software development kit interactions.

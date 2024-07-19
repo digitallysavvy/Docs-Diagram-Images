@@ -1,0 +1,33 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (represented by a human icon)
+   - App (a box labeled "App")
+   - SD-RTN (a box labeled "SD-RTN")
+   - Geofencing (a smaller box within the "App" entity)
+
+3. Data Flow:
+   - Solid arrows represent the flow of data or requests between entities.
+   - The flow starts from the User to the App ("Start the app").
+   - Within the "Geofencing" group, there are bi-directional arrows between the App and SD-RTN.
+   - After the "Geofencing" group, there is a solid arrow from the User to the App ("Select a channel to join").
+   - There are bi-directional arrows between the App and SD-RTN for joining a channel.
+
+4. Detailed Content:
+   - User: (No text content)
+   - App (first instance): (No text content)
+   - SD-RTN (first instance): (No text content)
+   - Geofencing:
+     - Set SD-RTN region in the Agora newline engine configuration
+     - Initiate the Agora engine
+     - Connect to SD-RTN in a newline specific region
+     - Success response
+   - App (second instance): (No text content)
+   - SD-RTN (second instance):
+     - Join a channel with user newline Id, channel name, and token
+     - Join accepted
+
+5. Configuration or Additional Notes:
+   - The diagram is divided into two groups: "Implemented by you" and "Provided by Agora".
+   - The "Geofencing" box is within the "Implemented by you" group.

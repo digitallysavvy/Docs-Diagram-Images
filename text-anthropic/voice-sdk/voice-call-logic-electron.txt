@@ -1,0 +1,26 @@
+1. Overall Structure:
+   - The diagram represents a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (represented by a stick figure icon)
+   - Your app (a box labeled "Your app" containing a sub-box labeled "Voice SDK")
+   - Agora (a box labeled "Agora" containing a sub-box labeled "SD-RTN")
+
+3. Data Flow:
+   - The flow starts from the User entity with an "Open App" line towards Your app.
+   - There are bidirectional dashed lines between Your app and Agora for initialization.
+   - The User has a "Start call" line towards Your app, followed by bidirectional dashed lines for retrieving authentication token.
+   - A solid line goes from Your app to Agora labeled "agoraEngine.joinChannel", and a dashed line returns labeled "Join accepted".
+   - Bidirectional solid lines represent "Receive and send audio stream" between Your app and Agora.
+   - The User has a "Leave call" line towards Your app.
+   - A solid line goes from Your app to Agora labeled "agoraEngine.leaveChannel".
+
+4. Detailed Content:
+   - Your app box contains:
+     "Create an instance of the Voice SDK engine: newline agoraEngine = agoraEngine.createAgoraRtcEngine"
+     "Initialize the created instance: newline agoraEngine.initialize"
+   - Between Your app and Agora:
+     "Retrieve authentication token to join channel"
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes in the diagram.

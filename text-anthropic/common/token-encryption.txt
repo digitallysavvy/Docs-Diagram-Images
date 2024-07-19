@@ -1,0 +1,28 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- The main entities are "App A" and "App B" on the left and right sides respectively, represented by dashed boxes.
+- Within "App A", there are three sub-elements: "Customized encryption" (lock icon), "Enable encryption" (checkmark icon), and "Built-in encryption" (lock icon).
+- Within "App B", there are three sub-elements: "Built-in decryption" (lock icon), "Enable encryption" (checkmark icon), and "Customized decryption" (lock icon).
+- There are also "SDK A" and "SDK B" boxes between the apps.
+- At the top, there is the "agora SD-RTN" cloud element.
+- "Client A" and "Client B" labels appear above the respective apps.
+
+3. Data Flow:
+- Solid lines connect "Customized encryption" to "Built-in encryption" in "App A", and "Built-in decryption" to "Customized decryption" in "App B".
+- Dashed lines connect "Built-in encryption" to "Audio/Video capture and encoding", and "Built-in decryption" to "Audio/Video decoding and rendering".
+- Solid bi-directional lines connect "App A" to "SDK A", and "App B" to "SDK B".
+- Solid bi-directional lines connect "SDK A" and "SDK B" to the "agora SD-RTN" cloud, labeled with "Encrypted data transmission".
+- Solid bi-directional lines connect "SDK A" and "SDK B" to the respective apps, labeled with "Encrypted media stream".
+- Dashed bi-directional lines connect "App A" and "App B" to the respective SDKs, labeled with "Encryption mode and encryption key transmission".
+
+4. Detailed Content:
+- Within "Customized encryption" box: "Encryption newline mode and newline encryption key newline only exist newline in the app".
+- Within "Built-in encryption" box: "Encryption mode and newline encryption key only exist newline in the app".
+- Within "Built-in decryption" box: "Encryption mode and newline encryption key only exist newline in the app".
+- Within "Customized decryption" box: "Encryption newline mode and newline encryption key newline only exist newline in the app".
+
+5. Configuration or Additional Notes:
+- Bi-directional arrows between the "agora SD-RTN" cloud and the SDKs are labeled "TCP and UDP encryption".

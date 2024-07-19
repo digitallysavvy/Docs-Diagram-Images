@@ -1,0 +1,30 @@
+1. Overall Structure:
+- Type of diagram: Sequence diagram.
+
+2. Main Entities and Elements:
+- User (stickman figure)
+- Your app (box with "Signaling SDK" sub-element)
+- Agora (box with "Signaling" sub-element)
+- Channel, Topic, Messages, Presence, Close (smaller boxes)
+
+3. Data Flow:
+- User to Your app: "Initialize", "Open app"
+- Your app to Agora: Grouped as "Create a signalingEngine instance", "Add user event callbacks", "Set the authentication token", "Log in to Signaling"
+- Channel to Agora: "Create stream channel", "Subscribe to a channel" (dashed line), "Create channel or add user to channel" (dashed line), "Channel events" (dashed line bi-directional)
+- Topic to Agora: "Join topic", "Subscribe to topic", "Create topic or add user to topic" (dashed line), "Topic events" (dashed line bi-directional)
+- Messages to Agora: "Send message", "Publish message to topic", "Message from topic" (dashed line), "Listen for message events" (dashed line), "Receive message", "Leave topic" (dashed line)
+- Presence to Agora: "Change status", "listen for user events" (dashed line), "ConnectionStateChanged" (dashed line)
+- Close to Agora: "Log out", "Log out of Signaling"
+
+4. Detailed Content:
+- User: (No text content)
+- Your app (Signaling SDK): (No text content)
+- Agora (Signaling): (No text content)
+- Channel: (No text content)
+- Topic: (No text content)
+- Messages: (No text content)
+- Presence: (No text content)
+- Close: (No text content)
+
+5. Configuration or Additional Notes:
+- Inform users (dashed line from Presence to User)

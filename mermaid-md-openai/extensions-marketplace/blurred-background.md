@@ -1,0 +1,7 @@
+# Flow Diagram
+
+```mermaid
+flowchart LR
+    A("Original Background") --> B("Blurred Background<br>Users can choose blurring level")
+    B --> C("Image Background")
+```

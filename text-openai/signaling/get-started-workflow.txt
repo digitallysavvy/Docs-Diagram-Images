@@ -1,0 +1,35 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show the interaction and order of operations between various entities over time.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as rectangular boxes labeled: "Your app," "Signaling SDK," and "Agora" under another box labeled "Signaling."
+   - Each entity is further associated with vertical, dashed lines that depict the lifespan or the period of activity during the sequence flow.
+   - There is a symbolic representation of a "User" shown as a stick figure on both the left and right sides of the diagram.
+
+3. **Data Flow:**
+   - Solid lines with arrows and labeled messages connect between different entities, indicating the direction and sequence of interactions. These are grouped into three main phases:
+     - **Initialize:** Here, actions flow primarily from "Your app" to "Signaling SDK" then to "Agora" and include messages such as "Open app," "Create a signalingEngine instance," "Add event listeners," "Set the authentication token," and "Log in to Signaling."
+     - **Messages:** This part shows messages like "Subscribe to a channel," "Publish message," "Listen for message events," and "Receive message." The flow cycles primarily between "Your app" and "Signaling SDK," and involves calls to and from "Agora."
+     - **Close:** This final phase includes "Log out" actions flowing from "Your app" and "Signaling SDK" to "Agora".
+
+4. **Detailed Content:**
+   - "Initialize" group contains the following detailed actions:
+     - Open app newline
+     - Create a signalingEngine instance newline
+     - Add event listeners newline
+     - Set the authentication token newline
+     - Log in to Signaling
+   - "Messages" group contains:
+     - Subscribe to a channel newline
+     - signalingEngine.subscribe newline
+     - Publish message newline
+     - signalingEngine.publish newline
+     - Listen for message events newline
+     - message newline
+     - Receive message
+   - "Close" group contains:
+     - Log out newline
+     - Log out of Signaling
+
+5. **Configuration or Additional Notes:**
+   - There are no explicit additional lines, configuration settings, or notes outside of the main sequence interactions provided within the diagram. The primary focus remains strictly on the flow of actions and messages across the entities involved.

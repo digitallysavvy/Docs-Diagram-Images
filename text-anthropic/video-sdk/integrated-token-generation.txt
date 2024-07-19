@@ -1,0 +1,31 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (depicted by a stick figure icon)
+   - App (a box labeled "App")
+   - Developer's Authentication System (a box labeled "Developer's Authentication System")
+   - SD-RTN (a box labeled "SD-RTN")
+
+3. Data Flow:
+   - The flow is represented by solid lines with arrows indicating the direction.
+   - There is a group titled "Join a Channel with Authentication" containing the entire sequence.
+
+4. Detailed Content:
+   - User: No text content.
+   - App:
+     Line 1: Start the app
+     Line 2: Select a channel
+   - Developer's Authentication System:
+     Line 1: Login to your identity management system.
+     Line 2: Request an Agora authentication token using channel name, role, token type and user id
+     Line 3: Validate user request against internal security
+     Line 4: Use integrated Agora library to generate a token
+     Line 5: Return the token to the client
+   - SD-RTN:
+     Line 1: Validate the token
+     Line 2: Trigger the callback after adding user to the channel
+
+5. Configuration or Additional Notes:
+   - There is a dashed line separating the "Implemented by you" and "Provided by Agora" sections.
+   - The text "Implemented by you" and "Provided by Agora" are placed above the respective sections.

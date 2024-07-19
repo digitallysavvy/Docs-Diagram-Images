@@ -1,0 +1,37 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (stick figure icon)
+   - Your app (box with "Your app" label, containing "Video SDK" sub-element)
+   - Agora (box with "Agora" label, containing "SD-RTN" sub-element)
+   - Join (box with "Join" label)
+   - Play audio effect (box with "Play audio effect" label)
+   - Audio mixing (box with "Audio mixing" label)
+   - Voice effects (box with "Voice effects" label)
+
+3. Data Flow:
+   - Solid lines represent data flow between entities, with arrows indicating the direction.
+   - Dashed lines group related elements, with the title "Join a channel" for one group.
+
+4. Detailed Content:
+   User box:
+     - Open App
+
+   Your app box:
+     - Create an Agora Engine instance using VideoSDK newline Enable audio and video in Agora Engine
+
+   Join box:
+     - Join a channel newline Retrieve authentication token to join a channel
+   
+   Play audio effect box:
+     - Trigger sound effect newline Play effect newline Pause and resume effect newline Set effect position newline Set effect volume newline On audio effect finished
+   
+   Audio mixing box:
+     - Control audio mixing newline Start audio mixing newline Stop audio mixing
+   
+   Voice effects box:
+     - Apply a voice effect newline Set preset voice effect newline Disable the voice effect
+
+5. Configuration or Additional Notes:
+   - Leave the channel (arrow from User to Agora box)

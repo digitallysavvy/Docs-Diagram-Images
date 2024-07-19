@@ -1,0 +1,24 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "App", "SDK", and "SD-RTN Edger Server".
+- Within the "App" entity, there is a smaller box icon.
+- Within the "SDK" entity, there is a smaller box icon.
+- Within the "SD-RTN Edger Server" entity, there is a cloud icon.
+
+3. Data Flow:
+- There is a solid line from "App" to "SDK" with the label "Start last mile probe test".
+- There is a solid line from "SDK" to "SD-RTN Edger Server" with the label "Send uplink network probe packet".
+- There is a dashed line from "SD-RTN Edger Server" to "SDK" with the label "Return the uplink confirmation packet".
+- There is a solid line from "SDK" to "SD-RTN Edger Server" with the label "Send downlink network probe packet".
+- There is a dashed line from "SDK" to "App" with the label "Report network quality statistics".
+- There is a solid line from "App" to "SDK" with the label "Stop last mile probe test".
+
+4. Detailed Content:
+- The "App" entity has no additional text content.
+- The "SDK" entity has no additional text content.
+- The "SD-RTN Edger Server" entity has no additional text content.
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes related to configuration settings.

@@ -1,0 +1,42 @@
+1. Overall Structure:
+   - This is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are "User", "Your game", "Agora", "Host", and "Audience".
+   - Within "Your game" there is a sub-element labeled "Video SDK".
+
+3. Data Flow:
+   - Solid lines represent the flow of data or method calls between entities.
+   - Dashed lines represent the return of data or methods.
+   - There is a grouping titled "Start a live streaming event" that encompasses interactions between "Your game", "Host", and "Agora".
+   - There is another grouping titled "Join the live streaming event" that encompasses interactions between "Audience" and "Agora".
+
+4. Detailed Content:
+   - User: "Open game"
+   - Your game (sub-element Video SDK): 
+     "Initiate the Agora Video SDK engine: newline agoraEngine=IRtcEngine.GetEngine()"
+     "Setup the local video stream: newline agoraEngine.EnableVideo()"
+     "agoraEngine.EnableVideoObserver()"
+   - Host (within "Start a live streaming event" group):
+     "Retrieve authentication token to join channel" 
+     "Enable live streaming in the channel: newline agoraEngine.SetChannelProfile(CHANNEL_PROFILE.CHANNEL_PROFILE_LIVE_BROADCASTING)"
+     "Set the user role as host: newline agoraEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER)"
+     "Join a channel as host: newline agoraEngine.JoinChannelByKey()"
+     "Send data stream"
+   - Audience (within "Join the live streaming event" group):
+     "Retrieve authentication token to join channel"
+     "Set the user role as audience: newline agoraEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_AUDIENCE)"
+     "Join the channel: newline agoraEngine.JoinChannelByKey()"
+     "A callback to start remote video: newline onUserJoined()"
+     "Retrieve streaming from the hosts: newline RemoteView.SetForUser(uid)"
+     "Receive data Stream"
+   - User: "Leave the live streaming event"
+   - Your game:
+     "Leave the channel: newline agoraEngine.leaveChannel()"
+     "Stop local video stream: newline agoraEngine.DisableVideo()"
+     "Disable the video observer: newline agoraEngine.DisableVideoObserver()"
+   - User: "Close game"
+   - Your game (sub-element Video SDK): "Clean up local resources: newline agoraEngine.destroy()"
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes shown in the diagram.

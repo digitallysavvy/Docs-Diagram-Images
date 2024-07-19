@@ -1,0 +1,38 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (represented by a stick figure icon)
+- Your app (a box labeled "Your app")
+  - Sub-element: Video SDK (a box inside "Your app")
+- Agora (a box labeled "Agora")
+  - Sub-element: SD-RTN (a box inside "Agora")
+
+3. Data Flow:
+- Solid lines with arrows indicate the direction of data flow between entities.
+- Dashed lines with arrows indicate a response or callback.
+- There are three main groupings of elements, titled:
+  - "Set up the music content center"
+  - "Find music from the content center"
+  - "Play DRM music"
+
+4. Detailed Content:
+- Your app box contains:
+  "Set up the music content center" newline
+  "Load the DRM extension framework." newline
+  "Create an instance of the music content center." newline
+  "Initialize the music content center."
+- "Find music from the content center" group contains:
+  "Find music." newline
+  "Call the method to search for music." newline
+  "Receive search results through the callback." newline
+  "Call the method to download music charts." newline
+  "Receive music charts data through the callback."
+- "Play DRM music" group contains:
+  "Press play" newline
+  "Preload selected music." newline
+  "Create an instance of music player." newline
+  "Open and play music files."
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes are provided.

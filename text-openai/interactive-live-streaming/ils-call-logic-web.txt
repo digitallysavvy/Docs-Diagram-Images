@@ -1,0 +1,32 @@
+1. **Overall Structure**:
+   - The diagram represented is a sequence diagram.
+
+2. **Main Entities and Elements**:
+   - **User**: Represented at the far left and far right ends with stick figure icons. Actions initiated by the User are labeled with text next to arrows.
+   - **Video SDK**: A large vertical rectangle in the center, between two instances of "User". Contains actions and responses related to video handling.
+   - **Agora**: A vertical rectangle on the right, labeled "SD-RTN" at the top. Contains actions related to the Agora real-time network.
+
+3. **Data Flow**:
+   - **Connection Between User and Video SDK**: Solid lines with arrows indicate the direction of operations between the User and Video SDK. Dashed lines represent responses or data sent back to the User.
+   - **Connection Between Video SDK and Agora**: Solid lines with arrows show commands sent from the Video SDK to Agora, while dashed lines indicate data or responses sent back to the Video SDK.
+   - **Host and Audience Grouping**:
+     - **Host**: Grouped in the middle section of the diagram, with interactions involving both the Video SDK and Agora.
+     - **Audience**: Grouped in the lower section of the diagram, also interacting with both the Video SDK and Agora.
+
+4. **Detailed Content**:
+   - **User Interaction with Video SDK**:
+     - Open App
+   - **Video SDK Operations**:
+     - Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient
+     - Start video in the engine: App.init
+     - Start local media: stream = AgoraRTC.createStream newline stream.init newline stream.play
+   - **Host-Audience Data Exchange**:
+     - Host:
+       - Start live streaming event newline Retrieve authentication token to join channel newline Set the user role as host: agoraEngine.setClientRole("host") newline Join a channel as host: agoraEngine.join newline Push local media to the channel: agoraEngine.publish
+     - Audience:
+       - Join live streaming event newline Retrieve authentication token to join channel newline Set the user role as audience: agoraEngine.setClientRole("audience") newline Join the live streaming event: agoraEngine.join newline Retrieve streaming from the other user: agoraEngine.on("stream-added") newline agoraEngine.subscribe newline agoraEngine.on("stream-subscribed") newline Receive data stream
+   - **End Interaction**:
+     - User leaves streaming event: agoraEngine.leave
+
+5. **Configuration or Additional Notes**:
+   - No specific configuration settings or additional notes are discernible outside the described data flows and interactions within the entities.

@@ -1,0 +1,20 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which displays interactions among different entities in a sequential order. The interactions primarily include method calls and responses between entities organized over time.
+
+2. **Main Entities and Elements:**
+   - There are four main vertical entities labeled as "User", "Your app", "Video SDK", and "Agora".
+   - Two additional entities labeled "Host" and "Audience" represent specific roles within the "User" entity but are separated by dotted lines for clarity in the sequence.
+   - Each main entity has associated lifelines, represented by dashed lines extending downwards from the entity.
+
+3. **Data Flow:**
+   - The diagram uses solid arrows to indicate the direction of interactions (method calls or data flows) between entities. These arrows point from the sender to the receiver.
+   - Dashed arrows are used for responses or return information after certain actions are executed.
+
+4. **Detailed Content:**
+   - "Your app" communicates with "Video SDK" initializing the SDK engine with the method call "Initiate the Video SDK engine: agoraEngine = AgoraRtcEngineKit.sharedEngine" followed by "Start video in the engine: agoraEngine.enableVideo()".
+   - "Host" performs several operations starting with "In a live streaming event, only the hosts broadcast to the channel: agoraEngine.setClientRole(broadcaster)", and also includes operations to start and join video streams and eventually sending data streams.
+   - "Audience" interacts distinctly by first setting their role to viewer with "agoraEngine.setClientRole(audience)", then joining the channel, retrieving, and receiving streaming data.
+   - At the end, the "Host" and "Audience" flow reunite at the "User" where the actions to close the app (i.e., stop video, leave channel, destroy SDK instance) are performed sequentially.
+
+5. **Configuration or Additional Notes:**
+   - To the right, there are additional entity placeholders paired with the labels "SD-RTN", although minimal interaction is shown with these in the provided diagram. The positioning suggests they represent some backend or external service provided by "Agora", interacting mainly with the "Video SDK".

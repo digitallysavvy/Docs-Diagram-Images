@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, utilized to describe the interactions among different components over time.
+
+2. **Main Entities and Elements:**
+   - There are three primary vertical entities: App, Agora Engine, and Spatial Audio Engine.
+     - The App entity is represented by a box labeled "App" with a square symbol at its header and footer.
+     - The Agora Engine entity is depicted with a box labeled "Agora Engine" containing two overlapping square symbols.
+     - The Spatial Audio Engine is shown with a box labeled "Spatial Audio Engine" and has a square icon with a speaker symbol.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads depict data flow or action sequences from one entity to another, tracing interactions from top to bottom.
+   - The top sequence initiates at the App, with calls directed towards both Agora Engine and Spatial Audio Engine, and then continues within the App itself.
+   - Grouped actions under "Spatial audio effect for users" and "Spatial audio effect for media player" indicate subgroup interactions primarily within the App but also involving data flow to Spatial Audio Engine.
+
+4. **Detailed Content:**
+   - App entity includes the following actions, separated by newline:
+      - Create and initialize Agora engine
+      - Initialize the spatial audio engine
+      - Set up an audio profile and audio scenario
+      - Set up a channel profile and client role
+      - Join a channel
+      - Mute all remote audio streams
+      - Set the number of receivable audio streams
+      - Set the audio receiving range
+      - Set the distance unit in meters
+      - Update self position
+      - Update remote user positions
+      - Update player position
+      - Clear remote positions
+      - Destroy the spatial audio engine
+      - Leave the channel
+      - Destroy Agora engine
+        
+   - The Agora Engine and Spatial Audio Engine entities each respond correlatively to initialization and termination from the App, with no distinct actions inside their dedicated columns.
+
+5. **Configuration or Additional Notes:**
+   - The entities are interconnected with solid arrows indicating the direction of command and information flow, predominantly moving horizontally from the App to both engine entities and within the vertical column of the App itself.
+   - There is a clear separation and visualization of process flow, starting with activation and configuration, moving through utility phases, and concluding with shutdown and clean-up processes. No additional notes or configurations are specified outside of these flows.

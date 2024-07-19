@@ -1,0 +1,35 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram outlining the interactions among different components (User, Your app, IoT SDK, Agora, SD-RTN) for performing tasks like setting up an engine, joining a channel, and managing audio and video streams.
+
+2. **Main Entities and Elements:**
+   - **Entities:**
+     - User: Positioned at the top and bottom, indicating the start and end of interaction.
+     - Your app: Central box connecting to various functions.
+     - IoT SDK: Positioned alongside 'Your app'.
+     - Agora: Positioned at the top right, interacts with 'Your app' mainly in setup functions.
+     - SD-RTN: Positioned at the top right, parallel to Agora.
+   - **Sub-elements:**
+     - There are boxes within the 'Your app' entity representing different functions: 'Setup Agora engine', 'Join a channel', 'Send and receive audio and video', 'Detect and respond to network bandwidth changes', 'Manage audio and video streams'. Each function box contains several smaller task boxes, e.g., 'Instantiate the Agora RTC engine', 'Set bandwidth estimation parameters', 'Start threads to send audio and video data'.
+
+3. **Data Flow:**
+   - Connections are mainly solid lines indicating the flow of processes and dashed lines indicating callbacks or condition checks.
+   - The direction of flow is predominantly from the User or 'Your app' outward to IoT SDK, Agora, or SD-RTN components and back, representing requests and responses.
+   - Groupings:
+     - Each major box in 'Your app' such as 'Setup Agora engine', 'Manage audio and video streams', etc., acts as a grouped set of tasks related to specific functionalities.
+
+4. **Detailed Content:**
+   - 'Setup Agora engine' includes multiple tasks:
+     - Instantiate the Agora RTC engine newline
+     - Set options including log file path and logging level newline
+     - Verify license and initialize the engine newline
+     - Create a connection
+   - 'Join a channel':
+     - Join a channel newline
+     - Set bandwidth estimation parameters newline
+     - Specify the audio codec, sampling rate, and the number of channels newline
+     - Call the join channel method newline
+     - On join channel success callback
+   - Each subsequent box provides similar line-separated instructions and task details that define the function's steps.
+
+5. **Configuration or Additional Notes:**
+   - The connection lines are labeled to indicate the type of action or response, such as 'Join a channel', which ties directly to the actual process step inside the corresponding box. There are no configuration settings or additional notes described outside the outlined functionalities within the procedure boxes.

@@ -1,0 +1,22 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram that visualizes the interaction between a User, Your app, and Agora’s services using Video SDK and SD-RTN.
+
+2. Main Entities and Elements:
+   - The main entities represented as vertical boxes are labeled as "User", "Your app", and "Agora". Within "Your app", there are sub-elements labeled as "Video SDK". Inside "Agora", there is "SD-RTN".
+   
+3. Data Flow:
+   - The diagram includes solid lines with arrows representing the sequence of actions and responses between the entities: User, Your app, and Agora.
+   - Solid lines indicate direct interactions while returning dashed lines indicate responses or data provided back to the source of the initial action.
+   - The diagram includes groupings of sequence actions under titles like "Join", "Play audio effect", "Audio mixing", and "Voice effects", indicating specific functionalities or processes within the interaction flow.
+
+4. Detailed Content:
+   - "Open App", "Create an Agora Engine instance using Video SDK" newline "Enable audio and video in Agora Engine"
+   - "Join a channel", "Retrieve authentication token to join a channel" newline "Join the channel"
+   - "Play audio effect", "Trigger sound effect" newline "Play effect" newline "Pause and resume effect" newline "Set effect position" newline "Set effect volume" newline "On audio effect finished"
+   - "Control audio mixing", "Start audio mixing" newline "Stop audio mixing"
+   - "Apply a voice effect", "Set preset voice effect" newline "Disable the voice effect"
+   - "Leave the channel", "Leave the channel"
+
+5. Configuration or Additional Notes:
+   - Each entity and sub-entity is clearly aligned vertically to denote the system or component responsible for each part of the process.
+   - Arrows directly connect each action to its appropriate response or next action, indicating flow direction from left to right and back.

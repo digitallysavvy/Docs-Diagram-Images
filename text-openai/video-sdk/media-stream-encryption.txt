@@ -1,0 +1,37 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that illustrates interactions between software components and systems over time.
+
+2. **Main Entities and Elements:**
+   - There are three main entities or boxes:
+     1. **User**: Represented by a stick figure symbol.
+     2. **Authentication system**: A rectangle with two instances, one near the top and the other near the bottom of the diagram.
+     3. **App**: A rectangle labeled "App", appears twice.
+     4. **SD-RTN**: A rectangle, part of infrastructure marked as "Provided by Agora".
+   - Sub-elements:
+     - '**Setup media stream encryption**': A dashed rectangle grouping several steps within.
+
+3. **Data Flow:**
+   - Solid lines with arrows show the sequence of interactions between entities:
+     - From "**User**" to the top "**App**" labeled 'Start the app', which initiates interaction.
+     - Multiple interactions between "**App**" and "**Authentication system**", involving steps like login, key retrieval, and setting encryption configurations.
+     - Interactions between "**App**" and "**SD-RTN**", like initiating the video SDK engine.
+   - Dashed lines indicate return of data or responses, like keys and token retrieval shown returning from "Authentication system" to "App".
+
+4. **Detailed Content:**
+   - **Authentication system** (top) and **App** interactions:
+     - Start the app" newline
+     - Initiate the Video SDK engine" newline
+     - Login to the authentication system" newline
+     - Retrieve a 32-byte key" newline
+     - Retrieve a 32-byte salt in Base64 format" newline
+     - Create an encryption configuration using the key and salt" newline
+     - Set the encryption configuration"
+   - **User** to **App** and **Authentication system** (bottom) for channel and token interactions:
+     - Select a channel to join" newline
+     - Retrieve an access token" newline
+     - Join a channel" newline
+     - Communicate over an encrypted media stream"
+
+5. **Configuration or Additional Notes:**
+   - The overall configuration is set broadly as "Implemented by you" on the left, interacting with "Provided by Agora" components on the right.
+   - Additional notes could be inferring that the diagram visualizes how authentication and encryption is set up before joining and communicating over a secure channel.

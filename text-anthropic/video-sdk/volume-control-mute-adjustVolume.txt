@@ -1,0 +1,27 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- Recording Device
+- Sender
+- Local Stream
+- Audio engine (with a dashed border indicating a grouping)
+- Agora SD-RTN (cloud icon)
+- Playback Device
+- Receiving End
+- Remote Stream
+- Sound File
+
+3. Data Flow:
+- Solid lines show communication between entities, with arrows indicating the direction.
+- A dashed line groups the Audio engine.
+- No specific grouping titles are shown.
+
+4. Detailed Content:
+- Recording Device: "Adjust volume of the recording signal" (adjustRecordingSignalVolume), "Set the volume of the ear return" (setInEarMonitoringVolume)
+- Audio engine: "Adjust the playback volume of music files at the remote end" (adjustAudioMixingPublishVolume), "Adjust the playback volume of music files locally and remotely" (adjustAudioMixingVolume), "Adjust the local playback volume of music files" (adjustAudioMixingPlayoutVolume)
+- Playback Device: "Adjust the volume of all remote users" (adjustPlaybackSignalVolume), "Adjust the volume of the specified remote user for local playback" (adjustPlaybackSignalVolume), "Adjust local playback volume of of all sound files" (setEffectsVolume), "Adjust the local playback volume of the specified sound file" (setVolumeOfEffect)
+- Sound File: (No text content)
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes are present.

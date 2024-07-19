@@ -1,0 +1,29 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box with "Chat SDK" sub-element)
+- Agora (box with "Chat Server" sub-element)
+
+3. Data Flow:
+- The flow is depicted by solid lines with arrows indicating the direction.
+- There are horizontal dashed lines grouping events under "Initialize", "Log in", "Send messages", "Receive messages", and "Close".
+
+4. Detailed Content:
+- User: "Initialize", "Log in", "Send messages", "Receive messages", "Close"
+- Your app:
+  "Open app" newline
+  "Get a ChatClient instance: newline agoraChatClient = ChatClient.getInstance()"
+  "Initialize the instance: newline agoraChatClient.init(context, options)"
+  "Add message event callbacks: newline agoraChatClient.chatManager().addMessageListener(...)"
+  "Add connection event callbacks: newline agoraChatClient.addConnectionListener(...)"
+  "Join a chat" newline "Retrieve authentication token for the user"
+  "Log in to the chat server: newline agoraChatClient.loginWithAgoraToken(...)" newline "onConnected() callback"
+  "Send a message" newline "Create a ChatMessage"
+  "Send the ChatMessage: newline agoraChatClient.chatManager().sendMessage(message)"
+  "Leave the chat" newline "Log out: newline agoraChatClient.logout(...)"
+- Agora: (no text content)
+
+5. Configuration or Additional Notes:
+- "onMessageReceived(messages) callback" arrow pointing from Agora to User.

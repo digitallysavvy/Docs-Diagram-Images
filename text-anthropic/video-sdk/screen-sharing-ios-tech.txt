@@ -1,0 +1,20 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - Main Process: A rectangular box labeled "Main Process".
+   - Extension: A rectangular box labeled "Extension".
+   - Agora SD-RTN: A cloud icon labeled "Agora SD-RTN".
+
+3. Data Flow:
+   - A dashed arrow from the Main Process to the Extension, labeled "Screen sharing instructions".
+   - A solid arrow from the Extension to the Main Process, labeled "Screen sharing stream".
+   - A solid line from the Main Process to the Agora SD-RTN cloud, labeled "Screen sharing stream".
+   - A solid line from the Main Process to the Agora SD-RTN cloud, labeled "Other Streams".
+
+4. Detailed Content:
+   - Main Process box: No text content.
+   - Extension box: No text content.
+
+5. Configuration or Additional Notes:
+   - The diagram is enclosed within a dashed rectangular border.

@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, utilized to demonstrate the interaction and data flow between components over time.
+
+2. **Main Entities and Elements:**
+   - Main entities represented as boxes:
+     - **Your app**: Central application using the Video SDK.
+     - **Agora**: Platform providing SD-RTN services.
+   - Sub-elements within "Your app" 
+     - **Video SDK**: Acts as the interface component in the app managing the interactions.
+   - Solid vertical lines represent the lifespan or period of activity for each entity.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads depict the active communication and requests between entities, indicating the flow of operations and responses:
+     - Lines flowing from **User** to **Your app** moving through **Video SDK** indicate user-initiated actions and system responses.
+     - Communication often involves back-and-forth messages between **Video SDK** and **SD-RTN** for joining channels, streaming, and leaving channels.
+   - Dashed lines (lifelines) indicate the timeline or the period during which interactions occur.
+
+4. **Detailed Content:**
+   - **User** interacts by:
+     - **Open App** 
+     - **Leave the channel**
+   - **Your app** operations within **Video SDK**:
+     - **Create an instance of the Video SDK engine** newline
+     - **Enable audio and video in the engine** newline
+     - **Setup external source**: newline
+         - **Check the external source for compatibility** newline
+         - **Set external video or audio source**
+     - **Join**: newline
+         - **Join a channel** newline
+         - **Retrieve authentication token to join a channel** newline
+         - **Join the channel**
+     - **Process data**: newline
+         - **Manage capturing and processing using external methods**
+     - **Stream data**: newline
+         - **Push external video or audio frame**
+
+5. **Configuration or Additional Notes:**
+   - No explicit configurations or additional notes outside the main descriptive content within the diagram are noted or represented in a distinguished manner. The diagram focuses primarily on the flow of operations within the designated software interactions.

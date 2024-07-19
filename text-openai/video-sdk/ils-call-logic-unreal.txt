@@ -1,0 +1,40 @@
+### Overall Structure
+- The diagram is a sequence diagram reflecting interactions among different components in a live streaming event using the Agora Video SDK.
+
+### Main Entities and Elements
+- **User**: Indicates the person using the application.
+- **Video SDK**: Represents the software development kit used for video functionalities.
+- **Your app**: Custom application utilizing the Video SDK.
+- **Agora**: External service used for handling live streaming functions.
+- **Host**: The entity responsible for starting and managing the live streaming event.
+- **Audience**: Represents viewers participating in the live streaming event.
+- **SD-RTN**: Symbolizes the service delivery real-time network.
+
+### Data Flow
+- Solid lines with arrows indicate direct requests or actions (e.g., "Open App", "Initiate the Agora Video SDK engine").
+- Dashed lines with arrows represent returns or responses (e.g., acknowledgment of initiating the SDK engine).
+- Each of these lines tracks from left to right or right to left, delineating interaction direction between entities.
+
+### Detailed Content
+- **User to Video SDK**:
+  1. Open App → Initiate the Agora Video SDK engine: `agora::rtc::createAgoraRtcEngine()`
+  2. Close app → Clean up local resources: `agoraEngine->release()`
+- **Video SDK to Your app**:
+  1. Enable the audio and video modules: newline
+     `agoraEngine.enableVideo()` newline
+     `agoraEngine.enableAudio()`
+  2. Set the channel profile: newline
+     `RtcEngineContext context` newline
+     `context.channelProfile = CHANNEL_PROFILE_COMMUNICATION;`
+- **Host interactions**:
+  1. Start a live streaming event → ...→ Send data stream
+  2. Corresponding responses and steps for setting up and starting the live streaming, including retrieving the authentication token and setting up local video.
+- **Audience interactions**:
+  1. Join a live streaming event → Retrieve streaming from the hosts: `agoraEngine->setupRemoteVideo()` → Receive data stream
+  2. Including obtaining authentication token and setting the user role as audience.
+- **Video SDK to Agora/SD-RTN and back**:
+  Illustrated through continued interactions between the components for operations like joining channels and data streaming.
+
+### Configuration or Additional Notes
+- The positioning of the Video SDK between User and Agora/SD-RTN represents its role as a middleware facilitating the video streaming functionalities by interfacing user actions and network operations.
+- The interactions are mainly command-response style facilitated through method calls and their returns.

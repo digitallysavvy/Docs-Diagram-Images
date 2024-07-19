@@ -1,0 +1,30 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show interactions among different parts of a system in the order that they occur.
+
+2. **Main Entities and Elements:**
+   - There are three main vertical boxes representing different entities:
+     - **User**: Represents the user's interactions with the system.
+     - **Your app**: Denotes the user application interfacing with video SDK functionalities.
+     - **Agora**: Represents the Agora system utilizing SD-RTN (Software-Defined Real-Time Network).
+   - Each main vertical box contains smaller boxes labeled with specific tasks or actions, such as "Video SDK" and sub-elements like "Create an instance of Agora Engine using Video SDK."
+
+3. **Data Flow:**
+   - Solid lines with arrowheads are used to indicate the direction of the sequence of operations between the entities. The lines indicate message exchanges starting from the "User" entity and moving towards "Your app" and "Agora."
+   - Dashed lines represent the return of control or data.
+   - Groupings of elements are evident with labeled sections:
+     - "Setup raw data processing"
+     - "Join"
+     - "Process raw audio and video data"
+     - "Leave"
+
+4. **Detailed Content:**
+   - "Open App"
+   - "Create an instance of Agora Engine using Video SDK"
+   - "Enable audio and video in Agora Engine"
+   - "Setup raw data processing": Contains actions "Setup the audio frame observer" and "Setup the video frame observer."
+   - "Join": Actions include "Join a channel", "Register the video frame observer", "Register the audio frame observer", "Set audio frame parameters", "Retrieve authentication token to join a channel", and "Join the channel."
+   - "Process raw audio and video data": Actions are "Get the raw data in the callbacks" and "Send the processed data back with the callbacks."
+   - "Leave": Contains "Leave the channel", "Unregister the video frame observer", "Unregister the audio frame observer", and another "Leave the channel".
+
+5. **Configuration or Additional Notes:**
+   - There are no explicit additional notes or configuration settings indicated outside of the main data flow and actions listed within the vertical boxes in the diagram. Each action and its corresponding response are clearly labeled, and control flows are described through the movement between boxes and the interactions depicted with arrows.

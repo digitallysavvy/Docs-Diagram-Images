@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram used for software development to specify how processes operate and interact.
+
+2. **Main Entities and Elements:**
+   - **User:** Depicting the end user’s role in the process.
+   - **Your app:** Labeled box representing the application interface that interacts with the SDK.
+   - **Chat SDK:** Central labeled box interacting between the user, the application, and the chat server.
+   - **Agora Chat Server:** Labeled box as an external server managed by "Agora".
+
+3. **Data Flow:**
+   - **Direction of Flow:** Events flow from top to bottom. Flow is depicted using solid and dashed lines.
+   - **Solid Lines:** Represent synchronous calls or actions, such as "Open app", "Send a message", and "Display message".
+   - **Dashed Lines:** Represent return data or asynchronous processes, such as the return of messages from the chat server.
+   - **Groupings and Tiles:**
+     - "Initialize," "Log in," "Send messages," "Receive messages," and "Close" depict phases of interaction, each encapsulated by a larger box encompassing related actions.
+
+4. **Detailed Content:**
+   - **Chat SDK Box:**
+     - "Init a chat SDK instance: SDKClient.Instance.InitWithOptions(options);"
+     - "Add message event callbacks: SDKClient.Instance.ChatManager.AddChatManagerDelegate(this);"
+     - "Retrieve authentication token for the user"
+     - "Log in to the chat server: SDKClient.Instance.LoginWithAgoraToken(...);"
+     - "Create a ChatMessage"
+     - "Send the ChatMessage: SDKClient.Instance.ChatManager.SendMessage(...);"
+     - "onMessageReceived(messages) callback"
+     - "Log out: agoraChatClient.Logout(...);"
+
+5. **Configuration or Additional Notes:**
+   - There are pointers for the sequence like "Join a chat", "Send a message", "Display message", "Leave the chat", etc., arranged vertically down the diagram. These pointers highlight specific tasks or events within each phase, structuring the user's journey through the chat service functionality.

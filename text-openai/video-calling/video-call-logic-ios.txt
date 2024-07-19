@@ -1,0 +1,41 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which visualizes the sequence of actions or interaction between various entities over time.
+
+2. **Main Entities and Elements:**
+   - **User**: Represented by an icon of a person at the top and bottom, alongside vertical dotted lines that depict the timeline of the user's interaction.
+   - **Your app**: A labeled box aligned vertically signifying an application's involvement, split into internal sections for specific actions.
+   - **Video SDK**: A labeled box adjacent to "Your app," also vertically arranged to display the interaction with the SDK functions.
+   - **Agora**: A labeled box on the right, indicating the Agora service's involvement, split into different segments aligning with various stages of the process.
+   - **SD-RTN**: Labeled to the right of the Agora box, indicating a service or network utilized by Agora, with a display of minimal direct interaction.
+
+3. **Data Flow:**
+   - **Lines**:
+     - Solid blue arrows indicate direct calls or actions, showing the flow of interaction from the user, through the application, and involving the SDK and Agora services.
+     - Solid grey backgrounds in lines indicate the return paths or the responses back through the same path.
+   - **Directions**:
+     - Arrows pointing downward show the sequence of actions initiating from the User to the systems involved.
+     - Arrows pointing upward represent return actions or responses back to the User.
+  
+4. **Detailed Content:**
+   - **Your app**:
+     - Initiate the Video SDK engine: "agoraEngine = AgoraRtcEngineKit.sharedEngine"
+     - Setup the local video stream: "agoraEngine.enableVideo()"
+   - **Video SDK**:
+     - Open app
+     - Start a call
+     - In a call, all users send to the channel: "agoraEngine.setClientRole(.broadcaster)"
+     - Start local video: "agoraEngine.setupLocalVideo(videoCanvas)"
+     - Join the channel: "agoraEngine?.joinChannel"
+     - Retrieve streaming from the other user: "agoraEngine.setupRemoteVideo(videoCanvas)"
+     - Receive and send data streams
+     - Stop local video: "agoraEngine.stopPreview()"
+     - Leave the channel: "agoraEngine.leaveChannel(nil)"
+     - Close app
+     - Clean up local resources: "AgoraRtcEngineKit.destroy()"
+   - **Agora**:
+     - Lines linking directly from actions within "Video SDK," indicating the handling or processing through Agora's systems.
+
+5. **Configuration or Additional Notes:**
+   - **Positioning and alignment**:
+     - Additional notes, setup details, or configurations are embedded inline with the action arrows and responses, mainly aligned with the specific segments within "Your app" and "Video SDK" boxes.
+     - The configuration settings within the text do not have a segmented 'notes' area but are integral to the description within each actionable item.

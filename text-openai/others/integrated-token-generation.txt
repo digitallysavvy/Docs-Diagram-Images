@@ -1,0 +1,33 @@
+### Overall Structure:
+- The diagram is a sequence diagram that visually depicts the process interactions over time among different entities involved in a user joining a channel with authentication.
+
+### Main Entities and Elements:
+- **User**: Shown as a stick figure at two instances, initiating and receiving responses from the App.
+- **App**: Represented as a labeled box where user actions and system responses are processed.
+- **Developer's Authentication System**: A labeled box showing the interaction between the App and the authentication mechanism implemented by the developer.
+- **API**: A labeled box indicating interactions involving external API calls to manage authentication and token generation.
+
+### Data Flow:
+- **From User to App**: Dashed lines show actions ("Start the app", "Select a channel to join") initiated by the user.
+- **Between App and Developer's Authentication System**: Solid lines indicate the request and response flow for authentication and token generation ("Login to the developer's authentication system", "Request an Agora authentication token using channel name, role, token type and user Id", "Return the token to the client").
+- **Within Developer's Authentication System**: Dashed lines show internal processes ("Validate user request against internal security", "Use integrated Agora library to generate a token").
+- **From App to API**: Solid line shows the API being called to validate the token.
+- **Completion Actions**: Returned to the user includes joining the channel and triggering a callback.
+
+### Detailed Content:
+- **User Actions**: 
+  - "Start the app" 
+  - "Select a channel to join"
+
+- **App Responses**: 
+  - "Return the token to the client" 
+  - "Join a channel with user Id, channel name, and token" 
+  - "Trigger the callback after adding user to the channel"
+
+- **Developer's Authentication System Processes**:
+  - "Login to the developer's authentication system.newline Request an Agora authentication token using channel name, role, token type and user Id"
+  - "Validate user request against internal security.newline Use integrated Agora library to generate a token"
+
+### Configuration or Additional Notes:
+- The grouping titled "Join a Channel with Authentication" spans from the user's initial action to the final response from the App.
+- Notes or additional configurations are not visibly indicated beyond the structured flow and labels in the current diagram.

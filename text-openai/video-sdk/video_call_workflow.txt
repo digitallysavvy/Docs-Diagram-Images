@@ -1,0 +1,34 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to illustrate processes and the order in which they occur.
+
+2. **Main Entities and Elements:**
+   - Four main boxes labeled: "Client", "Token Server", another "Client", and "Agora Platform".
+   - Each "Client" box has multiple action and interaction boxes inside it divided into three main processes: "Setup client", "Run call", and "End call".
+
+3. **Data Flow:**
+   - Solid lines with arrows depict the direction of the sequence flow from one process to another across different entities. Arrows show the sequential order and direction of actions.
+   - Dashed lines depict the response back to the original action requester.
+   - The diagram is grouped into three major sections across all entities: "Setup client", "Run call", and "End call". Each section spans all entities horizontally across the diagram.
+
+4. **Detailed Content:**
+   - First "Client":
+     - Setup client:
+       - "User login to implementor security newline Authenticate and retrieve token newline Create client instance newline Set client role: host"
+     - Run call:
+       - "Connect to local audio and video resources newline Join channel newline Send audio and video to channel newline Communicate"
+     - End call:
+       - "Close audio and video newline Leave call"
+   - Token Server:
+     - Interactions mostly involve receiving requests and sending back tokens indicated by action lines connecting to respective clients.
+   - Second "Client":
+     - Setup client:
+       - "User login to implementor security newline Authenticate and retrieve token newline Create client instance newline Set client role: audience"
+     - Run call:
+       - "Join channel newline Send audio and video to channel"
+     - End call:
+       - "Close audio and video newline Leave call"
+   - Agora Platform:
+     - Mostly receives connections, channel joins, and media streams from clients.
+
+5. **Configuration or Additional Notes:**
+   - There are no explicit additional notes or configuration settings detailed within the visible sections of the diagram. All actions are related to client interactions, token authentication, and handling audio/video calls via the Agora platform.

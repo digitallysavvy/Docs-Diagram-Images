@@ -1,0 +1,35 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram, used to model the interactions between entities in a system over a period of time.
+
+2. Main Entities and Elements:
+   - The diagram contains three primary vertical entities labeled "User", "App", and "SDK".
+   - Each entity has an icon at the top: "User" has a person icon, "App" has a mobile device icon, and "SDK" has a puzzle piece icon.
+   - There are two main sub-elements grouped under titles "Audio test" and "Video test", framed in blue rounded rectangles.
+
+3. Data Flow:
+   - Solid lines with arrowheads illustrate the direction of messages between the entities "User", "App", and "SDK".
+   - From "User" to "App" there's a line labeled "Request a device test", followed by a line from "App" to "SDK" labeled "Start echo test".
+   - Within the "Audio test" group, messages flow from "User" to "App" (labeled "Speak into the recording device"), from "App" to "SDK" (no label but implying an activity start), and then from "SDK" to "User" (labeled "Hear your own voice through the playback device") with a note "After 2 seconds (default delay)".
+   - Within the "Video test" group, from "User" to "App" there's a line labeled "Enable the camera", followed by a line from "SDK" to "User" labeled "See the camera feed in the app" with a note "After a short time".
+   - Finally, a message labeled "Request to stop testing" runs from "User" to "App", followed by "Stop echo test" from "App" to "SDK".
+
+4. Detailed Content:
+   - The labels of the communications are:
+     - "Request a device test"
+     - "Start echo test"
+     - Audio test sub-element:
+       - "Speak into the recording device"
+       - (implied message from "App" to "SDK" initiating echo test)
+       - "Hear your own voice through the playback device"
+       - Note: "After 2 seconds (default delay)"
+     - Video test sub-element:
+       - "Enable the camera"
+       - "See the camera feed in the app"
+       - Note: "After a short time"
+     - "Request to stop testing"
+     - "Stop echo test"
+
+5. Configuration or Additional Notes:
+   - There are configuration notes positioned near the lines within the "Audio test" and "Video test" sub-elements indicating timings: 
+     - For "Audio test": "After 2 seconds (default delay)"
+     - For "Video test": "After a short time"

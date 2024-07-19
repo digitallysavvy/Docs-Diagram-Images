@@ -1,0 +1,29 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that illustrates the interactions between a user and various components of an app integrated with the Agora Video SDK and SD-RTN (a streaming data real-time network).
+
+2. **Main Entities and Elements:**
+   - **User**: Represents the user or actor initiating actions.
+   - **Your app**: The main software application being interacted with.
+   - **Agora**: Represents the Agora service components split into:
+     - **Video SDK**: Software development kit used for video functionalities.
+     - **SD-RTN**: Network service used for data streaming.
+
+3. **Data Flow:**
+   - Connections are shown as solid and dashed lines indicating sequence and return of actions respectively.
+   - Starting from the **User**, actions flow rightward towards **Your app** and then to the **Video SDK** within the **Agora** service area.
+   - Actions like "Create an Agora Engine instance using Video SDK" and "Enable audio and video in Agora Engine" show interactions mainly between the **User** and the **Video SDK**.
+   - Further data flows involve interactions between the **Video SDK** and the **SD-RTN**, such as in the step "Leave the channel" where the flow returns to **SD-RTN** from **Video SDK**.
+
+4. **Detailed Content:**
+   - **User**: Has actions like "Open App" newline "Join a channel" newline "Leave the channel".
+   - **Your app - Video SDK**:
+      - "Create an Agora Engine instance using Video SDK" newline "Enable audio and video in Agora Engine" newline "Retrieve authentication token to join a channel" newline "Join the channel" newline "Leave the channel".
+   - **Your app - Actions under different Groupings**:
+     - *Join*: Includes actions "Join a channel".
+     - *Audio mixing*: Sub-actions are "Select an audio file" newline "Start audio mixing" newline "Stop mixing".
+     - *Change audio route*: Contains "Set default audio route" newline "Change the audio route temporarily".
+   - **Agora - SD-RTN**: Connection points from **Video SDK** returning to **SD-RTN** are shown in steps like "Join the channel" newline "Leave the channel".
+
+5. **Configuration or Additional Notes:**
+   - Each step from the **User** to various components involves either a direct action or a response, highlighted via solid lines for direct actions and dashed lines for responses or results. 
+   - The processes within **Your app** are sectioned into different logical groups which are titled as per their functionality, such as "Join", "Audio mixing", and "Change audio route", aiding in better visual categorization and understanding of related actions.

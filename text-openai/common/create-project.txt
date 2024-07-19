@@ -1,0 +1,36 @@
+1. Overall Structure:
+   - Type of diagram: Flow diagram.
+   - Direction of the diagram: Left-to-right.
+
+2. Main Entities and Elements:
+   - The diagram includes the following main rectangular entities with labels:
+     - "Create an Agora Account"
+     - "Log in to the console"
+     - "Create a Project"
+     - "Get your App ID and App Certificate"
+     - "Generate a temporary token"
+     - "Experience Demo"
+     - "Implement audio and video communication"
+   - A group enclosed by a dashed line is labeled "Console".
+
+3. Data Flow:
+   - Solid arrows indicate the data flow direction:
+     - "Create an Agora Account" connects to "Log in to the console".
+     - "Log in to the console" connects to "Create a Project".
+     - "Create a Project" connects to both "Get your App ID and App Certificate" and "Experience Demo".
+     - "Get your App ID and App Certificate" connects to "Generate a temporary token".
+     - "Generate a temporary token" connects to "Implement audio and video communication".
+   - Lines connect within the "Console" boundary indicating processes related to console setup and operations.
+
+4. Detailed Content:
+   - Contents within each box:
+     - Create an Agora Account: "Create an Agora Account"
+     - Log in to the console: "Log in to the console"
+     - Create a Project: "Create a Project"
+     - Get your App ID and App Certificate: "Get your App ID and App Certificate"
+     - Generate a temporary token: "Generate a temporary token"
+     - Experience Demo: "Experience Demo"
+     - Implement audio and video communication: "Implement audio and video communication"
+
+5. Configuration or Additional Notes:
+   - No additional configuration settings or notes specified in the diagram appears outside the main entities.

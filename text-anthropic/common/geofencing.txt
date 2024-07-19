@@ -1,0 +1,29 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (box)
+- App (box)
+- Agora SD-RTN (box)
+- Within the App box, there is a smaller box representing the "Restrict area access" process.
+
+3. Data Flow:
+- The flow starts from the User, with a solid line pointing towards the App, labeled "Start the app".
+- There is a solid line from the App to the "Restrict area access" box.
+- Within the "Restrict area access" box, there are multiple solid lines representing the flow between App and Agora SD-RTN, with labels indicating the actions.
+- After the "Success response", there is a solid line from the User to the App, labeled "Select a channel to join".
+- There is a solid line from the App to Agora SD-RTN, labeled "Join a channel with user Id, channel name, and token".
+- A dashed line comes back from Agora SD-RTN to the App, labeled "Join accepted".
+
+4. Detailed Content:
+- User (no text content)
+- App (no text content)
+- Agora SD-RTN (no text content)
+- "Restrict area access" box contains:
+  "Set SD-RTN region in the Agora" newline "engine configuration"
+  "Initiate the Agora engine"
+  "Connect to SD-RTN in a" newline "specific region"
+  "Success response"
+
+5. Configuration or Additional Notes:
+- There are no additional configuration settings or notes in the diagram.

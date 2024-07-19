@@ -1,0 +1,38 @@
+**1. Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show the sequence of messages that flow between different entities over time.
+
+**2. Main Entities and Elements:**
+   - **User**: Represented as a stick figure icon, labeled as 'User'.
+   - **Your app**: Represented as a box, labeled as 'Your app'. It includes smaller boxes inside for various operations.
+   - **Video SDK**: Represented as a box, labeled as 'Video SDK'. It includes smaller boxes inside for specific functions.
+   - **API**: Represented as a box, labeled on the far right side as 'API'.
+   - **Host**: Marked within the sequence but does not have a dedicated box, rather it is associated with actions in the flow.
+   - **Widget**: Mentioned twice within Video SDK area as smaller boxes labeled 'Widget = RtcLocalView.SurfaceView()' and 'Widget = RtcRemoteView.SurfaceView()'.
+
+**3. Data Flow:**
+   - Solid lines with arrows indicate the direction of message flow between the entities. Arrows point from 'User' to 'Your app', and then messages flow between 'Your app', 'Video SDK', and the 'API'.
+   - The diagram also shows the return messages indicated by dashed lines with arrows, which confirm actions are taken or show returned data.
+
+**4. Detailed Content:**
+   - **Your app** includes the following sequence of operations:
+     - Open App
+     - RTEngine.create
+     - Engine.enableVideo
+     - Engine.joinChannel
+     - Engine.on("joinChannelSuccess")
+   - **Video SDK** flows include:
+     - Start broadcast
+       - Publish newline
+       - Send data stream newline
+       - Widget = RtcLocalView.SurfaceView() newline
+       - Engine.on("userJoined") newline
+       - Subscribe newline
+       - Receive data stream newline
+       - Widget = RtcRemoteView.SurfaceView()
+     - Join broadcast
+     - Leave broadcast
+       - Engine.leaveChannel
+
+**5. Configuration or Additional Notes:**
+   - Specific functions and their triggers, like ‘Engine.joinChannel’ or ‘Engine.on("userJoined")’, show how different actions are processed within the SDK and App. 
+   - Arrows connecting user actions to application functions illustrate the user’s interaction with the system leading to reactions from the app and SDK.

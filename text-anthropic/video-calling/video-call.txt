@@ -1,0 +1,21 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The flow direction is from left to right, with some bi-directional connections.
+
+2. Main Entities and Elements:
+- Two main entities labeled as "HOST with Agora Video SDK" and "AUDIENCE with Agora Video SDK".
+- Each entity contains icons representing a computer and a monitor, enclosed in a rectangle.
+- A central cloud icon labeled "agora SD-RTN".
+
+3. Data Flow:
+- Solid arrows connecting the HOST entity to the cloud, labeled "Join a Channel", "Publish Stream", and "Subscribe to a Stream".
+- Dashed arrows connecting the AUDIENCE entity to the cloud, labeled "Join a Channel" and "Subscribe to a Stream".
+- The arrows indicate a bi-directional flow between the HOST, AUDIENCE, and the central cloud.
+
+4. Detailed Content:
+- HOST entity: "with Agora Video SDK" newline text.
+- AUDIENCE entity: "with Agora Video SDK" newline text.
+- Central cloud: "agora" newline "SD-RTN".
+
+5. Configuration or Additional Notes:
+- No additional configuration notes or lines are present.

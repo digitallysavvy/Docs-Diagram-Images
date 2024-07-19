@@ -1,0 +1,36 @@
+1. Overall Structure:
+- Type of diagram: Sequence diagram
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box with "Video SDK" sub-element)
+- Agora (box with "SD-RTN" sub-element)
+- Video Call (box with "Join a call" sub-element)
+
+3. Data Flow:
+- Solid lines connecting User to Your app, indicating function calls/responses.
+- Solid lines connecting Your app to Agora, indicating communication between app and Agora service.
+- Dashed lines within Video Call box, indicating internal operations.
+- Grouping of elements under "Video Call" with a titled box.
+
+4. Detailed Content:
+- Open app (from User to Your app)
+- Initialize the Agora Video SDK engine: newline agoraEngine = createAgoraRtcEngine() (from Your app)
+- Enable the video module: newline agoraEngine.enableVideo() (from Your app to Agora)
+- Register the event handler: newline agoraEngine.registerEventHandler (from Your app)
+- Setup AgoraVideoView widgets newline for local and remote videos (from Your app)
+- Join a call (sub-element in Video Call box)
+- Set a client role: newline agoraEngine.setClientRole (from Video Call to Agora)
+- Set a channel profile: newline agoraEngine.setChannelProfile (from Video Call to Agora)
+- Retrieve authentication token (within Video Call box)
+- Join a channel using the token: newline agoraEngine.joinChannel (from Video Call to Agora)
+- Start local peview: newline agoraEngine.startPreview() (from Video Call)
+- Remote user joined: newline RtcEngineEventHandler onUserJoined: (from Agora to Video Call)
+- Send and receive data streams (bidirectional between Video Call and Agora)
+- Display remote video using AgoraVideoView (from Video Call)
+- Leave call (from User to Your app)
+- Leave the channel newline agoraEngine.leaveChannel() (from Your app to Agora)
+- Close app (from User)
+
+5. Configuration or Additional Notes:
+- No additional configuration settings or notes present.

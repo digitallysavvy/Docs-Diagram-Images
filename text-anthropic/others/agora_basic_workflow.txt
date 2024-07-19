@@ -1,0 +1,19 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows in a clockwise direction.
+
+2. Main Entities and Elements:
+- The main entities are: "Platform" (cloud shape), "Laptop", "Desktop", "Mobile Device", and "Viewer" (server icon).
+- There are no sub-elements within the main entities.
+
+3. Data Flow:
+- A solid blue line connects all the entities, indicating the flow of data.
+- The flow starts from the "Viewer" entity, moves to the devices ("Laptop", "Desktop", "Mobile Device"), then to the "Platform", and back to the devices in a loop.
+- There are two labels on the lines indicating steps: "1. Retrieve AccessToken with user and call permissions" and "2. Connect to Agora Platform with AccessToken and join call".
+
+4. Detailed Content:
+- "Platform" (cloud shape): Contains the text "Platform".
+- "Viewer" (server icon): Contains the text "Viewer AccessToken Server 1.1".
+
+5. Configuration or Additional Notes:
+- There are no additional lines or configuration settings.

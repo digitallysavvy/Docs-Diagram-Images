@@ -1,0 +1,31 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which details the process flow and interaction between different entities to achieve a certain functionality, specifically joining a channel with authentication.
+
+2. **Main Entities and Elements:**
+   - **App**: Primary entity where the user initiates the process.
+   - **Developer's Authentication System**: Entity representing the system handling identity management and token generation.
+   - **SD-RTN**: Entity that validates user requests and tokens.
+   - Each entity is inside its own box, grouped under larger categories marked as "Implemented by you" (for App and Developer's Authentication System) and "Provided by Agora" (for SD-RTN).
+
+3. **Data Flow:**
+   - **Solid lines** with arrows depict the direction of the normal sequence flow from the user > App > Developer's Authentication System > SD-RTN and back through the respective systems.
+   - **Dashed lines** with arrows show the return paths of data from SD-RTN > Developer's Authentication System > App > User.
+   - There is a grouping titled "Join a Channel with Authentication" encompassing all interactions specific to this process.
+
+4. **Detailed Content:**
+   - **App**:
+     - Start the app
+     - Select a channel; newline
+     - Join a channel with user Id, channel name, and token; newline
+     - Trigger the callback after adding user to the channel.
+   - **Developer's Authentication System**:
+     - Login to your identity management system; newline
+     - Request an Agora authentication token using channel name, role, token type, and user Id; newline
+     - Return the token to the client.
+   - **SD-RTN**:
+     - Validate user request against internal security; newline
+     - Use integrated Agora library to generate a token; newline
+     - Validate the token.
+
+5. **Configuration or Additional Notes:**
+   - Two overarching group notes: "Implemented by you" placed above the App and Developer's Authentication System, and "Provided by Agora" placed above SD-RTN, indicating the responsible parties for those components within the sequence diagram.

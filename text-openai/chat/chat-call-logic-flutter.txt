@@ -1,0 +1,43 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three main vertical entities or boxes: a stick figure labeled "User", a larger box labeled "Your app", and a box labeled "Agora Chat Server".
+   - There are sub-elements within "Your app":
+     - "Chat SDK" spanning multiple operations/groups.
+
+3. **Data Flow:**
+   - Solid lines with arrows indicate the flow of actions and calls between the "User", "Your app", and "Agora Chat Server".
+   - Dashed lines typically represent returns or responses.
+   - There are labeled groupings within "Your app" for different phases of interaction:
+     - Initialize
+     - Log in
+     - Send messages
+     - Receive messages
+     - Close
+
+4. **Detailed Content:**
+   - "Initialize" group: 
+     * "Open app" newline
+     * "Get a ChatClient instance" newline "agoraChatClient = ChatClient.getInstance" newline 
+     * "Initialize the instance:" newline "agoraChatClient.init(options)" newline 
+     * "Add message event callbacks:" newline "agoraChatClient.chatManager.addEventHandler(...)" newline 
+     * "Add connection event callbacks:" newline "agoraChatClient.addConnectionEventHandler(...)" 
+   - "Log in" group:
+     * "Join a chat" newline 
+     * "Retrieve authentication token for the user" newline 
+     * "Log in to the chat server:" newline "agoraChatClient.loginWithAgoraToken(userid, token)" newline 
+     * "onConnected() callback"
+   - "Send messages" group:
+     * "Send a message" newline 
+     * "Create a ChatMessage" newline 
+     * "Send the ChatMessage:" newline "agoraChatClient.chatManager.sendMessage(message)"
+   - "Receive messages" group:
+     * "onMessagesReceived(List<ChatMessage> messages) callback" newline 
+     * "Display message"
+   - "Close" group:
+     * "Leave the chat" newline 
+     * "Log out:" newline "agoraChatClient.logout(...)"
+
+5. **Configuration or Additional Notes:**
+   - There are no additional lines or notes about configuration settings explicitly outside of the main entities and groups. All actions and commands are contained within the vertical alignments of "Your app" and "Agora Chat Server".

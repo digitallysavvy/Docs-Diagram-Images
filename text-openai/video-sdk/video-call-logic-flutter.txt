@@ -1,0 +1,38 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - There are three main entities or actors depicted as vertical dashed boxes with the following labels: "User", "Your app", and "Agora". Within "Your app", there is a sub-entity labeled "Video SDK". Within "Agora", there is a sub-entity labeled "SD-RTN".
+
+3. Data Flow:
+   - Connections between entities are represented by solid and dashed lines indicating the sequence of actions. Solid lines typically suggest the direction of initiating an action, while dashed lines indicate a response or result.
+   - The diagram is divided into two major groupings with titles indicating phases of interaction: "Open app" at the start and "Close app" at the end.
+   - The arrows flow predominantly from top to bottom, starting from the "User" and moving through "Your app" to "Agora", and responses flow in the opposite direction.
+
+4. Detailed Content:
+   - In "Your app":
+     - Initialize the Agora Video SDK engine:newline
+       agoraEngine = createAgoraRtcEngine()
+     - Enable the video module:newline
+       agoraEngine.enableVideo()
+     - Register the event handler:newline
+       agoraEngine.registerEventHandler
+     - Setup AgoraVideoView widgets for local and remote videos
+     - Set a client role:newline
+       agoraEngine.setClientRole()
+     - Set a channel profile:newline
+       agoraEngine.setChannelProfile()
+     - Retrieve authentication token
+     - Join a channel using the token:newline
+       agoraEngine.joinChannel()
+     - Start local preview:newline
+       agoraEngine.startPreview()
+     - Remote user joined:newline
+       RtcEngineEventHandler onUserJoined:newline
+     - Send and receive data streams
+     - Display remote video using AgoraVideoView
+     - Leave the channel:newline
+       agoraEngine.leaveChannel()
+   
+5. Configuration or Additional Notes:
+   - No explicit additional lines or configuration settings are included outside the main flow and structure outlined in the corresponding vertical boxes.

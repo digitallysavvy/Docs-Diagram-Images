@@ -1,0 +1,33 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which illustrates the interaction between entities following a time sequence from top to bottom.
+
+2. **Main Entities and Elements:**
+   - **Entities/Boxes:**
+     - **User:** Symbolized by a stick figure icon and labeled "User".
+     - **Your app:** Represented as a labeled box adjacent to the User entity.
+     - **Agora:** Positioned on the far right, represented as a labeled box.
+   - **Sub-elements:**
+     - **Voice SDK:** Shown twice, directly below "User" and "Your app" as part of the sub-process in the sequence.
+     - **SD-RTN:** Label found adjacent to the "Agora" box, indicating a service or a set of capabilities provided by Agora.
+
+3. **Data Flow:**
+   - **Connections between entities:**
+     - Solid lines with arrowheads depict the sequence and flow of communication between the entities, originating from the "User" and directed towards "Your app," looping back in several steps, and extending towards "Agora".
+   - **Groupings:**
+     - The diagram includes a distinct section labeled as "Audio Call" which groups several interactions related to starting, managing, and ending an audio call.
+
+4. **Detailed Content:**
+   - **Within Your app box:**
+     - "Open app"
+     - Create an Agora Voice SDK engine instance: newline RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine()
+     - Set the context: newline RtcEngineContext context = new RtcEngineContext(_appId, 0, true, CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING, newline AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT)
+     - Initialize RtcEngine: newline RtcEngine.Initialize(context)
+     - Enable the audio module: newline RtcEngine.EnableAudio()
+     - Set the user role as broadcaster: newline RtcEngine.SetClientRole(CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER)
+     - Join the channel: newline RtcEngine.JoinChannel()
+     - Leave the channel: newline RtcEngine.LeaveChannel()
+     - Disable the audio modules: newline RtcEngine.DisableAudio()
+     - "Close app"
+
+5. **Configuration or Additional Notes:**
+   - **SD-RTN:** This note appears adjacent to the "Agora" box, suggesting a particular setup or configuration specific to the Agora service being used within the application’s implementation scenario.

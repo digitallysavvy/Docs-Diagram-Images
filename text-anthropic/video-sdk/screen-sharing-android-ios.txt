@@ -1,0 +1,29 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are "App", "Video SDK", and "Agora SD-RTN", represented as boxes with labels.
+   - Within the "App" entity, there is a smaller box labeled "Screen sharing" containing several sub-elements.
+
+3. Data Flow:
+   - The connections between entities are represented by solid lines with arrows indicating the direction of flow.
+   - The sub-elements within the "Screen sharing" box are connected with directional arrows.
+   - There are no explicit groupings of elements in this diagram.
+
+4. Detailed Content:
+   - App entity: No text content.
+   - Video SDK entity: No text content.
+   - Agora SD-RTN entity: No text content.
+   - Screen sharing box within App:
+     "Set the high-quality scene (optional)" newline
+     "Start screen capture" newline
+     "Set the screen sharing scene (optional)" newline
+     "Join the channel" newline
+     "Publish the screen sharing stream in the channel" (from Video SDK to Agora SD-RTN) newline
+     "Update screen sharing parameters (optional)" newline
+     "Publish the updated screen sharing stream in the channel" (from Video SDK to Agora SD-RTN) newline
+     "Stop screen sahring" newline
+     "Stop publishing the screen sharing stream in the channel" (from Video SDK to Agora SD-RTN)
+
+5. Configuration or Additional Notes:
+   - There are no additional lines or notes shown in the diagram.

@@ -1,0 +1,30 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram which is used to model the interactions between different parts of a system in a sequential order.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as vertical rectangular boxes:
+     - **User**: Represents the user's actions in the sequence.
+     - **Voice SDK**: Represents the software development kit related to voice functionalities within your application.
+     - **SD-RTN (Agora)**: Represents the external service or network used for handling real-time communications.
+   - Inside the "Voice SDK" and "SD-RTN (Agora)" boxes, there are several smaller rectangular shapes which represent method calls or actions taken.
+
+3. **Data Flow:**
+   - Solid lines with arrows show the sequence of steps and interactions between the user, the Voice SDK, and the SD-RTN. The direction of the arrows indicates the flow of the process.
+   - For instance, arrows move from:
+     - "User" to "Voice SDK" indicating actions like "Open app".
+     - "Voice SDK" to "SD-RTN" for actions such as "Initialize the Agora Voice SDK engine".
+
+4. **Detailed Content:**
+   - **Voice SDK** box includes:
+     - "Initialize the Agora Voice SDK engine: agoraEngine = createAgoraRtcEngine()"
+     - "Register the event handler: agoraEngine.registerEventHandler"
+     - "Set a client role: agoraEngine.setClientRole"
+     - "Set a channel profile: agoraEngine.setChannelProfile"
+     - "Join a channel using the token: agoraEngine.joinChannel"
+     - "Leave the channel agoraEngine.leaveChannel()"
+   - **SD-RTN (Agora)** box does not have specific textual content but interacts with the methods called in "Voice SDK".
+   - There are also lifecycle states represented such as “Join a call”, “Retrieve authentication token”, “Remote user joined”, "Send and receive data streams", "Leave call", and "Close app".
+   
+5. **Configuration or Additional Notes:**
+   - Method calls between the "Voice SDK" and "SD-RTN (Agora)" are visually grouped under the "Voice Call" title indicating they are related to the voice calling functionality.
+   - There is an additional note of "Open app" initiated by the user and the final action by the user is to "Close app", indicating the start and end of the user's interaction with the application.

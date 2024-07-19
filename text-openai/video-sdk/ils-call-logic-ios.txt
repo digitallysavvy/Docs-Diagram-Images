@@ -1,0 +1,37 @@
+### Overall Structure:
+The diagram is a sequence diagram which visually represents a system's process or function over time between multiple entities or actors.
+
+### Main Entities and Elements:
+- **User**: An entity initiating and closing the application operations.
+- **Your app**: This box interacts directly with the "Video SDK" acting as the middleware.
+- **Video SDK**: This is the central entity handling detailed operations for video processing and streaming using an embedded platform ("Agora").
+- **Agora**: Depicted as SD-RTN in the diagram, indicating a specialized service or framework.
+- **Host**: Represents a user or system component that manages and broadcasts the live streaming event.
+- **Audience**: Users or systems receiving the data stream from the host.
+
+### Data Flow:
+- Solid arrows indicate direct actions or commands being sent from one entity to another.
+- Dashed arrows represent return responses or sequences.
+- Both solid and dashed lines are labeled with descriptions of their functionality such as "Open app", "Initiate the Video SDK engine", etc.
+
+### Detailed Content:
+- **User**:
+  - "Open app".
+  - "Close app".
+- **Your app**:
+  - Interacts sequentially with "Video SDK": 
+    - "Initiate the Video SDK engine: AgoraEngine = AgoraRtcEngineKit.sharedEngine".
+    - "Start video in the engine: agoraEngine.enableVideo()".
+- **Video SDK**:
+  - Commands to manage the video in live streaming and audience interaction:
+    - To **Host**: "agoraEngine.setClientRole(broadcaster)", "agoraEngine.setupLocalVideo(videoCanvas)", "agoraEngine?.joinChannel", "Send data stream".
+    - To **Audience**: "agoraEngine.setClientRole(audience)", "agoraEngine?.joinChannel", "agoraEngine.setupRemoteVideo(videoCanvas)", "Receive data streams".
+  - Cleanup on app close: "agoraEngine.stopPreview()", "agoraEngine.leaveChannel(nil)", "AgoraRtcEngineKit.destroy()".
+- **Host** actions:
+  - "Start a live streaming event", "Join the channel", "Start local video".
+- **Audience** actions:
+  - "Join live streaming event", "Retrieve streaming from hosts", "Leave live streaming event".
+
+### Configuration or Additional Notes:
+- The "Video SDK" and "Your app" have dedicated, respective connections to "SD-RTN" and "Agora" indicating that they operate with dependencies or are integrated with these technologies.
+- Notes on usage of "Agora" as a shared engine, use as "broadcaster" or "audience" clarifies different roles that entities can assume in the streaming process.

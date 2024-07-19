@@ -1,0 +1,29 @@
+1. **Overall Structure**: 
+   - The diagram is a sequence diagram which illustrates how different components interact over time.
+
+2. **Main Entities and Elements**:
+   - The diagram features four main entities or boxes; these are labeled as "User", "Your app”, "Video SDK", and "Agora".
+   - Inside the “Video SDK” there are multiple smaller boxes, which represent different actions or method calls.
+
+3. **Data Flow**:
+   - Dashed lines show interactions starting from the "User" to "Your app" and then solid lines flow from "Your app" to "Video SDK" to "Agora" and back, indicating the sequence of method calls and responses.
+   - There is a clear flow sequence grouping for "Open App", "Join a call", "Leave the call", and "Close app", which dictate different stages of the operation.
+
+4. **Detailed Content**:
+   - "Open App":
+     - Initiate the Agora Video SDK engine: agoraEngine = agora::rtc::ue::createAgoraRtcEngine()
+     - Enable the audio and video modules: agoraEngine->enableVideo() newline agoraEngine->enableAudio()
+   - "Join a call":
+     - Setup local video: agoraEngine->setupLocalVideo(videoCanvas)
+     - Retrieve authentication token to join channel
+     - Join the channel: agoraEngine->joinChannel()
+     - Remote user joined: onUserJoined()
+     - Retrieve streaming from the remote user: agoraEngine->setupRemoteVideo(videoCanvas)
+     - Receive and send data streams
+   - "Leave the call":
+     - Leave the channel: agoraEngine->leaveChannel()
+   - "Close app":
+     - Clean up local resources: agoraEngine->release()
+
+5. **Configuration or Additional Notes**:
+   - Each section below the "User" entity is divided into actions like "Open App", "Join a call", "Leave the call", and "Close app", separating them distinctly into different phases of the user interaction with the app and SDK.

@@ -1,0 +1,33 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box with "Your app" label)
+  - Sub-element: Video SDK (box inside "Your app")
+- Agora (box with "Agora" label)
+  - Sub-element: SD-RTN (box inside "Agora")
+- Join (box with "Join" label)
+- Audio mixing (box with "Audio mixing" label)
+- Change audio route (box inside "Audio mixing")
+
+3. Data Flow:
+- Connections flow from left to right, with solid lines indicating requests and dashed lines indicating responses.
+- The "Join" box is grouped with "Join a channel" request and related responses.
+- The "Audio mixing" box is grouped with related requests and responses for audio file processing.
+
+4. Detailed Content:
+- User: No text content.
+- Your app: No text content.
+  - Video SDK: No text content.
+- Agora: No text content.
+  - SD-RTN: No text content.
+- Join: "Join a channel" newline "Retrieve authentication token to join a channel" newline "Join the channel"
+- Audio mixing: "Select an audio file" newline "Start audio mixing" newline "Stop mixing" newline "Process the audio file" newline "Play the audio file" newline "Stop the audio file"
+- Change audio route: "Set default audio route" newline "Change the audio route temporarily"
+
+5. Configuration or Additional Notes:
+- "Open App" request from User to Video SDK.
+- "Create an Agora Engine instance using Video SDK" request from Video SDK to Agora.
+- "Enable audio and video in Agora Engine" response from Agora to Video SDK.
+- "Leave the channel" request from Video SDK to SD-RTN.

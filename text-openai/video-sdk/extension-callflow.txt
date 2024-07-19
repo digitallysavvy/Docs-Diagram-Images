@@ -1,0 +1,39 @@
+1. **Overall Structure**:
+   - The diagram is a sequence diagram that maps out the flow of data through various software components related to video processing.
+
+2. **Main Entities and Elements**:
+   - **Video SDK**:
+     - A large dashed box labeled "Video SDK" containing smaller boxes: Capture, Pre-process, Encode, Transmit, Decode, Post-process, and Play.
+   - **Audio/Video Filter Extensions**:
+     - A central box labeled "Audio/Video Filter Extensions" representing the integration point for various filtering extensions.
+   - **Extension**:
+     - A grouping in the upper right labeled "Extension", indicating additional plug-in capabilities associated directly with the main application.
+   - Within the **Extension** grouping:
+     - Smaller boxes labeled: Image enhancement, Face Filter, Face change, Voice effect, Voice changer, Noise cancellation.
+   - **App**:
+     - A symbol on the right representing an application that uses the output from the Video SDK.
+
+3. **Data Flow**:
+   - Solid arrows flowing from the Capture box through Pre-process, Encode, Transmit, Decode, Post-process to Play indicating the sequence of video processing within the Video SDK.
+   - Solid arrows connecting "Audio/Video Filter Extensions" box to and from the main data flow, indicating the integration of additional audio or video data processing.
+   - Dashed arrows from the sub-elements within the Extension grouping pointing to "Audio/Video Filter Extensions" box, reflecting the flow of specific processing enhancements like voice or image modifications.
+
+4. **Detailed Content**:
+   - **Video SDK**:
+     - Capture: "Capture newline"
+     - Pre-process: "Pre-process newline"
+     - Encode: "Encode newline"
+     - Transmit: "Transmit newline"
+     - Decode: "Decode newline"
+     - Post-process: "Post-process newline"
+     - Play: "Play newline"
+   - **Extension**:
+     - Image enhancement: "Image enhancement newline"
+     - Face Filter: "Face Filter newline"
+     - Face change: "Face change newline"
+     - Voice effect: "Voice effect newline"
+     - Voice changer: "Voice changer newline"
+     - Noise cancellation: "Noise cancellation newline"
+
+5. **Configuration or Additional Notes**:
+   - The diagram includes a note that encapsulates audio or video processing capabilities, positioned above and connected to the Extension grouping, emphasizing the modular nature of these capabilities.

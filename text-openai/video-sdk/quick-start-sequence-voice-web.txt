@@ -1,0 +1,25 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, used to detail the interactions and flow through time between different entities within a system.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented by labeled boxes at the top:
+     - **App**: Contains smaller boxes for different actions like "Create a local client", "Join channel", and so forth.
+     - **Voice SDK**: Interacts with the "App" entity and facilitates functionalities like "Join channel request", "Send audio data", and others.
+     - **Agora SD-RTN**: This entity is involved in processing "Join channel request" and "Send audio data".
+
+3. **Data Flow:**
+   - Solid lines with arrowheads illustrate direct interactions or method calls, indicating the direction of the flow predominantly from left to right, for instance:
+     - From "Create a local client" in App to "Join channel request" in Voice SDK.
+   - Dashed lines typically represent returns or asynchronous interactions, for instance:
+     - From "Receive audio data" in Voice SDK back to "Subscribe to remote users" in App.
+
+4. **Detailed Content:**
+   - Within the App entity:
+     - "Create a local client" contains "AgoraRTC.createClient newline Set mode to 'rtc'".
+     - "Join channel" contains "AgoraRTCClient.join".
+     - "Create and publish local audio track" contains "Create local audio track newline AgoraRTC.createMicrophoneAudioTrack newline Publish local audio track newline AgoraRTCClient.publish".
+     - "Subscribe to remote users" contains "Remote users publish audio track newline client.on('user-published') newline Get remote user object newline AgoraRTCClient.remoteUsers newline Subscribe to remote user object newline AgoraRTCClient.subscribe newline Get remote audio object newline AgoraRTCRemoteUser.audioTrack".
+     - "Leave the channel" contains "Turn off the local audio track newline MicrophoneAudioTrack.close newline Leave the channel newline AgoraRTCClient.leave".
+
+5. **Configuration or Additional Notes:**
+   - Not explicitly indicated in the diagram, additional notes or configuration settings might explain details like the mode settings, error handling or environmental prerequisites, though these specifics are not visible on the given diagram.

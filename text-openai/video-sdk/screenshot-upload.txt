@@ -1,0 +1,29 @@
+### Overall Structure:
+The diagram is a sequence type layout, illustrating a process that integrates various components involved in handling a screenshot upload from an application using an SDK.
+
+### Main Entities and Elements:
+1. **Your App**:
+   - This main entity box encapsulates an interior box labeled "Agora Video SDK" and an innermost box labeled "Video screenshot upload module".
+
+2. **Your third-party cloud storage**:
+   - Illustrated as a box containing two vertically aligned sub-elements, depicted as generic database symbols.
+
+3. **Agora SD-RTN™**:
+   - Represented as a cloud icon, indicating its function as a service in the process.
+
+4. **Your application Server**:
+   - Shown as a box similar to the cloud storage, containing two database symbol sub-elements.
+
+### Data Flow:
+1. **From "Video screenshot upload module" to "Agora SD-RTN™"**:
+   - A solid line with an arrow pointing downwards, labeled "Take a screenshot and upload an image", indicates the process initiation by the module.
+
+2. **From "Agora SD-RTN™" to "Your third-party cloud storage"**:
+   - Solid line with an arrow moving to the left indicates the action "Upload Image", representing the image being stored.
+
+3. **From "Agora SD-RTN™" to "Your application Server"**:
+   - Dashed line with an arrow moving to the right, labeled "HTTP callback notification", showing the notification process post image handling.
+
+### Configuration or Additional Notes:
+- The diagram uses dashed outlines around "Your App" to potentially indicate conceptual or logical encapsulation rather than physical containment.
+- All elements and actions are clearly labeled, showing the flow and interactions between distinct systems involved in the screenshot upload and notification process within a software architecture.

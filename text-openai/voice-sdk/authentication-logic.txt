@@ -1,0 +1,40 @@
+1. **Overall Structure:**
+   - The diagram is a UML sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three primary entities, each represented by a vertical dashed container:
+     - **Token Server**: Implemented by you.
+     - **App**: Implemented by you.
+     - **SD-RTN**: Provided by Agora.
+   - Inside each entity are one or more rectangles representing different processes or functional steps.
+
+3. **Data Flow:**
+   - Solid lines show the data flow between the entities with arrows indicating the direction of flow.
+   - The sequence starts at the "Token Server" where the "App" requests a token. This information is then used by the "App" to join a channel on "SD-RTN". 
+   - Upon the token nearing expiration, the "App" is notified by "SD-RTN", initiating a token renewal flow back through "Token Server" and "App".
+   - Grouping of elements:
+     - **Join a channel with authentication**: Includes the processes from the "Token Server" entity and "App" to initiate and validate token generation.
+     - **Renew token**: Includes processes indicating how a token renewal is requested and handled when expiry is near.
+
+4. **Detailed Content:**
+   - **Token Server:**
+     - **Join a channel with authentication**: 
+       - Request a token using channel name, role, token type, and user ID.
+       - Validate user against internal security.
+       - Generate a token and return it to the client.
+     - **Renew token**: 
+       - Request a fresh token using channel name, role, token type, and user ID.
+       - Validate user request against internal logic.
+       - Generate a fresh token and return it to the client.
+   - **App**:
+     - **Join a channel with authentication**: 
+       - Join a channel with uid, channel name, and token.
+       - Trigger the callback after adding user to the channel.
+     - **Renew token**: 
+       - Trigger event: Token Privilege will Expire.
+       - Send the fresh token with a RenewToken request.
+   - **SD-RTN**:
+     - Validate the token.
+
+5. **Configuration or Additional Notes:**
+   - There are no additional lines or configuration settings explicitly mentioned, but it is clear that the configuration for token handling and channel participation is governed by the described flows and interactions between the entities.

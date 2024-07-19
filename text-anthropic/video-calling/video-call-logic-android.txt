@@ -1,0 +1,31 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (represented by a stick figure icon)
+   - Your app (box with "Your app" label)
+     - Sub-element: Video SDK (box within "Your app")
+   - Agora (box with "Agora" label)
+     - Sub-element: SD-RTN (box within "Agora")
+
+3. Data Flow:
+   - Solid lines with arrows represent the data flow between entities.
+   - The flow is bi-directional between "Your app" and "Agora".
+   - User entity connects to "Your app" with solid lines indicating interactions.
+
+4. Detailed Content:
+   - User box: "Open App" newline "Join a call" newline "Leave the call" newline "Close app"
+   - Your app box:
+     - "Initiate the Agora Video SDK engine: newline agoraEngine = RtcEngine.create"
+     - "Setup the local video stream: newline agoraEngine.enableVideo()"
+     - "agoraEngine.setupLocalVideo(VideoCanvas)"
+     - "Retrieve authentication token to join channel"
+     - "Join the channel: newline agoraEngine.joinChannel()"
+     - "Retrieve streaming from the other user: newline agoraEngine.setupRemoteVideo(VideoCanvas)"
+     - "Receive and send data stream"
+     - "Leave the channel: newline agoraEngine.leaveChannel()"
+     - "Clean up local resources: newline agoraEngine.destroy()"
+   - Agora box: No text content.
+
+5. Configuration or Additional Notes:
+   - There is a grouping titled "SD-RTN" within the "Agora" box, but no additional content.

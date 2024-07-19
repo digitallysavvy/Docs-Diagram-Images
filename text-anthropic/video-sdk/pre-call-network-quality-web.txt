@@ -1,0 +1,39 @@
+1. Overall Structure:
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- App: A box representing the application.
+- SDK: A box representing the software development kit.
+- Agora SD-RTN: A box representing the Agora SD-RTN service.
+
+3. Data Flow:
+- There is a solid line from App to SDK labeled "AgoraRTC.createClient", indicating a request from App to SDK.
+- There are dashed lines from App to SDK labeled "uplinkClient.join" and "downlinkClient.join", indicating requests from App to SDK.
+- There are dashed lines from SDK to Agora SD-RTN labeled "Join channel request", indicating requests from SDK to Agora SD-RTN.
+- There is a solid line from App to SDK labeled "AgoraRTC.createMicrophoneAndCameraTracks", indicating a request from App to SDK.
+- There is a dashed line from App to SDK labeled "uplinkClient.publish", indicating a request from App to SDK.
+- There is a dashed line from SDK to Agora SD-RTN labeled "Send audio and video data", indicating data transfer from SDK to Agora SD-RTN.
+- There is a dashed line from Agora SD-RTN to SDK labeled "Receive audio and video data", indicating data transfer from Agora SD-RTN to SDK.
+- There are dashed lines from SDK to App labeled "downlinkClient.on("user-published")" and "downlinkClient.subscribe", indicating data transfer from SDK to App.
+- There is a dashed line from SDK to App labeled "track.play", indicating a request from SDK to App.
+- There are dashed lines from App to SDK labeled "downlinkClient.on("network-quality")" and "uplinkClient.on("network-quality")", indicating data transfer from App to SDK.
+- There are dashed lines from App to SDK labeled "uplinkClient.getLocalAudioStats", "uplinkClient.getLocalVideoStats", "downlinkClient.getRemoteAudioStats", and "downlinkClient.getRemoteVideoStats", indicating requests from App to SDK.
+
+4. Detailed Content:
+App box:
+Create two clients: newline uplinkClient and downlinkClient
+newline
+Create and publish local audio and video tracks
+newline
+Subscribe to audio and video tracks
+newline
+Get network data
+
+SDK box:
+(No text content within the box)
+
+Agora SD-RTN box:
+(No text content within the box)
+
+5. Configuration or Additional Notes:
+There are no additional lines or notes related to configuration settings.

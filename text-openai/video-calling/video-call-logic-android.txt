@@ -1,0 +1,28 @@
+1. Overall Structure:
+   - The diagram provided is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities, represented as vertical boxes, are labeled "User", "Your app", "Video SDK", and "Agora".
+   - Each box has interactions represented as horizontal solid and dashed lines. The "Video SDK" includes several smaller internal boxes indicating different processes or steps.
+
+3. Data Flow:
+   - Solid lines with arrows represent interactions initiating from the "User" toward "Your app" indicating actions like "Open App", "Join a call", "Leave the call", and "Close app".
+   - Within the "Video SDK" box, actions are indicated as bi-directional arrows between the "Video SDK" and "Agora", showing a flow of actions such as initiation, setup, joining channels, streaming, and cleanup.
+   - Dashed lines represent return actions or responses.
+
+4. Detailed Content:
+   - Inside "Your app - Video SDK" box: 
+     - "Initiate the Agora Video SDK engine: agoraEngine = RtcEngine.create" newline
+     - "Setup the local video stream: agoraEngine.enableVideo()" newline
+     - "agoraEngine.setupLocalVideo(VideoCanvas)"
+   - Additional steps in "Your app - Video SDK">> "Agora - SD-RTN" during a call:
+     - "Retrieve authentication token to join channel" newline
+     - "Join the channel: agoraEngine.joinChannel()" newline
+     - "Retrieve streaming from the other user: agoraEngine.setupRemoteVideo(VideoCanvas)" newline
+     - "Receive and send data stream"
+   - End of call:
+     - "Leave the channel: agoraEngine.leaveChannel()" newline
+     - "Clean up local resources: agoraEngine.destroy()" 
+
+5. Configuration or Additional Notes:
+   - No additional notes or configuration settings are explicitly indicated beyond the discrete steps and interactions in the diagram. The positioning of text and flows is structured to clearly indicate the sequence of operations within a video call session using "Agora".

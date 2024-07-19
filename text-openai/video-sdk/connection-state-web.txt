@@ -1,0 +1,26 @@
+1. **Overall Structure:**
+   - The diagram is a flowchart.
+   - The direction of the diagram is predominantly top-to-bottom and left-to-right.
+
+2. **Main Entities and Elements:**
+   - The main entities in the flowchart are rectangles, which are labeled with T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10.
+   - There are additional rectangles and smaller boxes/circles with special labels indicating client-related actions or states such as "Join channel," "Client.on('connection_state_change') callback report 'CONNECTED'," etc.
+   - Each primary rectangle is connected to either a client action/state box or another rectangle.
+
+3. **Data Flow:**
+   - Solid lines and arrows represent the connections indicating the direction of flow. These lines connect each rectangle to either the next step in the process or to a client action/state box.
+   - Dashed lines represent additional or alternative processes, specifically identifying steps like network interruption and reconnection processes.
+   - Two smaller flow paths at the bottom left and bottom right, represented with green colored boxes, respond to user events like "Client.on('user-joined')" and "Client.on('user-left')."
+
+4. **Detailed Content:**
+   - T0 to T1: "UID 1" and subsequent connection status reported as "CONNECTED."
+   - T1 to T3: Begins from callback report "CONNECTED" and leads to "Client.publish Publishes the local track."
+   - T5: Indicates a "Network interruption."
+   - T6: After network issue "Client.on('connection-state-change') callback reports 'RECONNECTING'."
+   - T9: "Client.on('connection-state-change') callback reports 'CONNECTED'," leading to T10 where "Client.on('user-joined') UID 1 rejoin channel."
+   - Lower green path: From "Client.on('user-joined') UID 1 joins channel" to "Client.on('user-published') UID 1 release channel."
+   - Lower green path also includes a response to "The Agora server did not receive the message for 20 seconds Heartbeat packet to UID1."
+
+5. **Configuration or Additional Notes:**
+   - "SDK automatically reconnects" is positioned between T6 and T7, indicating an automated software function that reconnects the client to the server after a network interruption.
+   - The flow indicates several checks and state changes triggered by both client action and backend responses dealing with connection and publishing status.

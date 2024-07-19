@@ -1,0 +1,66 @@
+### Sequence Diagram Description
+
+#### Overall Structure:
+- Diagram Type: Sequence diagram.
+
+#### Main Entities and Elements:
+- Entities: 
+  - Client (two instances with same label)
+  - Token Server
+  - Call Implementer
+  - Agora Platform
+- Sub-elements within entities: None specified.
+
+#### Data Flow:
+- Connections are indicated via both solid and dashed lines.
+  - Solid lines indicate synchronous calls or actions (sending data or messages).
+  - Dashed lines indicate response or return data.
+- Direction of flow:
+  - From left to right (Client to Token Server/Agora Platform, or Call Implementer to other entities).
+  - Vertically within the same entity, some actions lead to another internally (e.g., "User login to implementor security" leads to "Authenticate and retrieve token").
+
+#### Detailed Content:
+- **Client**:
+  - Setup client
+    - User login to implementor security newline
+    - Authenticate and retrieve token newline
+    - Create client instance newline
+    - Set client role: host
+  - Run call
+    - Connect to local audio and video resources
+  - End call
+    - Close audio and video newline
+    - Leave call
+
+- **Token Server**:
+  - No internal actions shown, participates in responses.
+
+- **Client** ('Agora Platform' interactions):
+  - Setup client
+    - User login to implementor security newline
+    - Authenticate and retrieve token newline
+    - Create client instance newline
+    - Set client role: audience
+  - Run call
+    - Join channel newline
+    - Send audio and video to channel
+  - End call
+    - Close audio and video newline
+    - Leave call
+
+- **Call Implementer**:
+  - Group title: Call Implementer
+  - Actions direct towards other entities as a mediator.
+  - Mainly facilitates connection and authentication between Client and Agora Platform.
+
+- **Agora Platform**:
+  - Interacts directly under:
+    - Join channel newline
+    - Send audio and video to channel newline
+    - Communicate newline
+    - Close audio and video newline
+    - Leave call
+
+#### Configuration or Additional Notes:
+- Configuration settings are not visibly noted outside of the activity descriptions.
+- Communication patterns are notably asynchronous (except where arrows directly lead to immediate returns or responses).

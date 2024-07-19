@@ -1,0 +1,29 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- There are two starting entities labeled "UID 1" and "UID 2".
+- There are several rectangular boxes labeled "T0", "T1", "T2", "T3", "T4", "T5", "T6", and "T7".
+- Within the "T0" box on the top row, there is a smaller box labeled "JoinChannel" with text "Join channel".
+- Within the "T1" box, there is a smaller blue box labeled "OnJoinChannelSuccess" with text "Joined the channel successfully".
+- Within the "T3" box, there is a smaller blue box labeled "OnConnectionStateChanged (CONNECTION_STATE_RECONNECTING, CONNECTION_CHANGED_INTERRUPTED)" with text "Re-establishing Network connection".
+- Within the "T4" box on the top row, there is a smaller blue box labeled "OnConnectionLost" with text "Network connection interrupted".
+- Within the "T5" box, there is a smaller blue box labeled "OnConnectionStateChanged (CONNECTION_STATE_FAILED, CONNECTION_CHANGED_JOIN_FAILED)" with text "Network connection failed".
+- Within the "T2" box on the bottom row, there is a smaller green box labeled "OnUserJoined" with text "Remote user comes online".
+- Within the "T6" box, there is a smaller green box labeled "OnUserOffline (reason USER_OFFLINE_DROPPED)" with text "Remote user is offline".
+
+3. Data Flow:
+- Solid lines with arrows represent the flow between entities.
+- The flow on the top row is: UID 1 -> T0 -> T1 -> T3 -> T4 -> T5 -> T7.
+- The flow on the bottom row is: UID 2 -> T0 -> T2 -> T3 -> T4 -> T6.
+- There is a dashed line connecting T3 on both rows, indicating a grouping.
+- This group is titled "Network interruption".
+- There is a smaller blue box titled "SDK automatically reconnects" below the group.
+
+4. Detailed Content:
+- The text within the "T1" box is: "OnConnectionStateChanged newline (CONNECTION_STATE_CONNECTED, newline CONNECTION_CHANGED_JOIN_SUCCESS) newline Network connection successful".
+- The text within the "T5" box is the same as the label of the smaller blue box within it.
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes specifying configuration settings.

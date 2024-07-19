@@ -1,0 +1,34 @@
+### Overall Structure
+- The diagram is a flow chart.
+- The direction of the diagram is left-to-right.
+
+### Main Entities and Elements
+#### Client A
+- Contains App A and SDK A.
+  - App A contains the settings: "setEncryptionMode" and "setEncryptionSecret."
+  - SDK A contains "Audio/Video capture and encoding."
+  
+#### Client B
+- Contains App B and SDK B.
+  - App B contains the settings: "setEncryptionMode" and "setEncryptionSecret."
+  - SDK B contains "Audio/Video capture and rendering."
+
+#### Edge Server A
+- Contains "Media stream encryption."
+
+#### Edge Server B
+- Contains "Media stream decryption."
+
+### Data Flow
+- Solid lines indicate data transmission paths:
+  - From SDK A to Edge Server A: "DLTS encryption Media stream transmission."
+  - From Edge Server A to Edge Server B: "Encrypted data transmission."
+  - From Edge Server B to SDK B: "DLTS encryption Media stream transmission."
+- Additional solid lines: 
+  - From App A to SDK A, and from App B to SDK B: "HTTPS/WSS encryption method and secret key transmission."
+
+### Configuration or Additional Notes
+- Placed centrally above the Edge Servers, highlighting the data transmission method between them.
+- Labels near connections specify the type of transmission. For instance:
+  - "DLTS encryption Media stream transmission" indicates the encryption type used between SDKs and Edge Servers.
+  - "HTTPS/WSS encryption method and secret key transmission" indicates how encryption settings are transmitted within the Apps to the SDKs.

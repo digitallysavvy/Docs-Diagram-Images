@@ -1,0 +1,37 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "App", "Video SDK", and "Agora SD-RTN".
+- Within the "App" entity, there are sub-elements such as "Create a local client", "Set user role", "Join channel", "If the user role is 'host'", "Create and publish local audio and video tracks", "Subscribe to remote users", and "Leave the channel".
+- The "Create and publish local audio and video tracks" sub-element has further sub-elements: "Create local audio track", "Create local video track", and "Publish local audio and video tracks".
+- The "Subscribe to remote users" sub-element has sub-elements: "Remote users publish audio and video tracks", "Get remote user object", "Subscribe to remote user object", "Get remote audio object", and "Get remote video object".
+- The "Leave the channel" sub-element has sub-elements: "Turn off the local audio track", "Turn off the local video track", and "Leave the channel".
+
+3. Data Flow:
+- There are solid lines with arrows indicating the direction of data flow between the entities.
+- The flow starts from the "App" entity to the "Video SDK" and then to the "Agora SD-RTN" entity.
+- There is a dashed line from the "Agora SD-RTN" entity to the "App" entity, representing a response or data flow in the opposite direction.
+- There is a grouping of elements within the "App" entity, titled "If the user role is 'host'".
+
+4. Detailed Content:
+- Within the "Create a local client" sub-element: "AgoraRTC.createClient" newline "Set mode to 'live'".
+- Within the "Set user role" sub-element: "Set the role to 'host' or 'audience'" newline "AgoraRTCClient.setClientRole".
+- Within the "Join channel" sub-element: "AgoraRTCClient.join".
+- Within the "Create local audio track" sub-element: "AgoraRTC.createMicrophoneAudioTrack".
+- Within the "Create local video track" sub-element: "AgoraRTC.createCameraVideoTrack".
+- Within the "Publish local audio and video tracks" sub-element: "AgoraRTCClient.publish".
+- Within the "Remote users publish audio and video tracks" sub-element: "client.on('user-published')".
+- Within the "Get remote user object" sub-element: "AgoraRTCClient.remoteUsers".
+- Within the "Subscribe to remote user object" sub-element: "AgoraRTCClient.subscribe".
+- Within the "Get remote audio object" sub-element: "AgoraRTCRemoteUser.audioTrack".
+- Within the "Get remote video object" sub-element: "AgoraRTCRemoteUser.videoTrack".
+- Within the "Turn off the local audio track" sub-element: "MicrophoneAudioTrack.close".
+- Within the "Turn off the local video track" sub-element: "CameraVideoTrack.close".
+- Within the "Leave the channel" sub-element: "AgoraRTCClient.leave".
+
+5. Configuration or Additional Notes:
+- There is a dashed line from the "Agora SD-RTN" entity to the "App" entity, labeled "Join channel request".
+- There is a dashed line from the "Agora SD-RTN" entity to the "App" entity, labeled "Send audio and video data".
+- There is a dashed line from the "App" entity to the "Agora SD-RTN" entity, labeled "Receive audio and video data".
+- There is a dashed line from the "App" entity to the "Agora SD-RTN" entity, labeled "Request to leave the channel".

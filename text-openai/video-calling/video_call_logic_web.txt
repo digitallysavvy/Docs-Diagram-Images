@@ -1,0 +1,34 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram which visually represents interactions between entities in a temporal order.
+
+2. Main Entities and Elements:
+   - There are three main vertical entities:
+     a. User
+     b. Your app
+     c. Video SDK
+   - Two entities, "Agora" and "SD-RTN", are represented minimally on the right edge, suggesting their ancillary interaction or relevance.
+
+3. Data Flow:
+   - Solid and dashed lines connect the entities, indicating the flow of operations and information.
+   - Solid lines generally represent sending of commands or initiating actions.
+   - Dashed lines depict responses or results from actions initiated.
+   - The flow goes from the User to Your app, then to Video SDK, and occasionally reference the ancillary entities Agora and SD-RTN.
+
+4. Detailed Content:
+   - **Your app**:
+     - "Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient"
+     - "Start video in the engine: agoraEngine.init"
+     - "Start local media: newline localStream = AgoraRTC.createStream newline localStream.init newline localStream.play"
+   - **User** interaction phases:
+     - Open App
+     - Start call:
+       - "Retrieve authentication token to join channel"
+       - "Join the channel: agoraEngine.join newline join accepted"
+       - "Push local media to the channel: agoraEngine.publish"
+       - "Retrieve streaming from the other user: newline agoraEngine.on("stream-added") newline agoraEngine.subscribe newline agoraEngine.on("stream-subscribed") newline Receive and send data streams"
+     - Leave call:
+       - "leave the channel: agoraEngine.leave"
+   - Information to/from Agora and SD-RTN is associated mostly with network-related operations indicated by dashed lines towards or from the Video SDK, although not explicitly content-detailed.
+
+5. Configuration or Additional Notes:
+   - No explicit additional lines or configuration settings outside of those already detailed in the entity interaction content are noted. The focus remains on operational sequence from user initiation, through application and SDK processing, to network handling with Agora and SD-RTN.

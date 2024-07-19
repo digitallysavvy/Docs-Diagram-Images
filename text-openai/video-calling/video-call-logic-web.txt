@@ -1,0 +1,31 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram, which describes interactions among software components or entities over time.
+
+2. Main Entities and Elements:
+   - The main entities in this diagram are displayed as vertical boxes and labeled as "User", "Your app", and "Agora". Within "Your app", a sub-element labeled "Video SDK" is nested. Similarly, within "Agora", a sub-element labeled "SD-RTN" is nested.
+
+3. Data Flow:
+   - Solid lines with arrows depict the flow of operations and data between the user and the app, and between the app and the Agora platform. These solid lines indicate action requests like "Open App", "Start call", and responses like "Join accepted". Dashed lines represent return data or signals sent back from the software components or process acknowledgments.
+   - The flow begins with the user interacting with "Your app" entity, moving through operational steps down to interacting with the "Agora" entity and then back up to the "User".
+
+4. Detailed Content:
+   - Within the "Video SDK" box: 
+      - "Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient"
+      - "Set the required event listeners: newline agoraEngine.on("user-published") newline agoraEngine.on("user-unpublished")"
+
+   - User actions description:
+      - The user performs actions like "Open App", "Start call", and "Leave call".
+      - Text within the Agora sequence from top to bottom:
+         - "initiate"
+         - "Retrieve authentication token to join channel"
+         - "Join a channel: agoraEngine.join"
+         - "Join accepted"
+         - "Create local media tracks: newline AgoraRTC.createMicrophoneAudioTrack newline AgoraRTC.createCameraVideoTrack"
+         - "Push local media tracks to the channel: agoraEngine.publish"
+         - "Retrieve streaming from the other user: agoraEngine.on("user-published")"
+         - "Play remote media tracks: remoteVideoTrack.play newline remoteAudioTrack.play"
+         - "Receive and send data streams"
+         - "leave the channel: agoraEngine.leave"
+
+5. Configuration or Additional Notes:
+   - There are no specific additional lines or notes indicating configuration settings in this particular diagram. The arrangement strictly follows typical sequence diagram conventions focusing on the interactive flow between components.

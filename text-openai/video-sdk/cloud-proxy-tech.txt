@@ -1,0 +1,23 @@
+1. **Overall Structure:**
+   - Type of Diagram: Flow diagram.
+   - Direction of the Diagram: Mixed directions with main flows from left-to-right and top-to-bottom.
+
+2. **Main Entities and Elements:**
+   - **Agora SDK**: Circular element on the top right, containing the symbol ‘a’ in a blue circle.
+   - **Enterprise Firewall**: Square box in the top center, labeled "Enterprise Firewall".
+   - **Agora SD-RTN™**: Cloud-shaped entity on the bottom left, labeled "Agora SD-RTN™".
+   - **Cloud Proxy**: Cloud-shaped entity next to Agora SD-RTN™, labeled "Cloud Proxy". 
+
+3. **Data Flow:**
+   - **From Agora SDK to Enterprise Firewall**: Solid lines indicating the flow with directional arrows, labeled as "1. Request Proxy" leading up to "2. Return proxy information".
+   - **From Enterprise Firewall to Cloud Proxy and Agora SD-RTN™**: Solid lines from the Enterprise Firewall downward and then bifurcating towards each cloud entity with labels "3. Send Data" to Cloud Proxy and continuation without labeling to the Agora SD-RTN™.
+   - **Data Exchange between Cloud Proxy and Agora SD-RTN™**: Bi-directional arrows, some with and some without labels, indicating data flow.
+
+4. **Detailed Content:**
+   - **Enterprise Firewall**: Text content includes "Enterprise firewall".
+   - **Agora SDK**: Labeled primarily with the symbol 'a' within a blue circle.
+   - **Agora SD-RTN™** and **Cloud Proxy**: Each labeled with their respective names. No additional text within the entities.
+   - Data flow labels along connecting lines: "1. Request Proxy" newline "2. Return proxy information" newline "3. Send Data" newline "4. Receive Data".
+
+5. **Configuration or Additional Notes:**
+   - No additional notes or configurations specified outside of the main entities and data flow labels.

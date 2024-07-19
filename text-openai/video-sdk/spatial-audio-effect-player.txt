@@ -1,0 +1,18 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - There are two main entities: "Local User" and "Agora SDK". Both are depicted as grey rectangular boxes with labels inside.
+   - Inside the "Local User" box, there is an icon of a person on the left side, which suggests it represents a user.
+
+3. Data Flow:
+   - There are two solid blue lines initiating from the "Local User" box and extending horizontally towards the "Agora SDK" box.
+   - The first line is labeled "1. Update the spatial location of local users and media players" and indicates data or commands flowing from the "Local User" to the "Agora SDK".
+   - The second line is labeled "2. Set the spatial sound parameters of the media player". This also indicates data flow from the "Local User" to the "Agora SDK".
+
+4. Detailed Content:
+   - Within the "Local User" box: "Local User" (no other textual content inside this box).
+   - Within the "Agora SDK" box: "Agora SDK" (no other textual content inside this box).
+
+5. Configuration or Additional Notes:
+   - No additional lines, notes or configuration settings are observable outside the main entities in the diagram.

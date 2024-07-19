@@ -1,0 +1,36 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three main entities:
+     - **Your app**: It contains a sub-entity labeled "Chat SDK".
+     - **Agora**: The associated sub-entity is labeled "Agora Chat".
+     - **User**
+   - Each of these main entities has interactions delineated through labeled arrows and steps, which occur within their own lifelines or vertical dashed lines.
+
+3. **Data Flow:**
+   - There are solid and dashed lines indicating the data flow between the entities:
+     - **Solid lines** depict the execution of operations or method calls.
+     - **Dashed lines** represent return responses or callbacks.
+   - Data flow starts from the "User" entity, moving through "Your app", and interactions occur with the "Agora" entity.
+
+4. **Detailed Content:**
+   - Actions within "Your app" are as follows:
+     - "Open app"
+     - "Get a AgoraChat SDKClient instance newline SDKClient.Instance"
+     - "Initialize the instance: newline SDKClient.Instance.InitWithOptions(options)"
+     - "Add message event callbacks: newline SDKClient.Instance.ChatManager.AddChatManagerDelegate(...)"
+     - "Add connection event callbacks: newline SDKClient.Instance.AddConnectionDelegate(...)"
+     - "Retrieve authentication token for the user"
+     - "Log in to Agora Chat: newline SDKClient.Instance.LoginWithAgoraToken(...) newline onConnected() callback"
+     - "Create a ChatMessage"
+     - "Send the ChatMessage: newline SDKClient.Instance.ChatManager.SendMessage(...)"
+     - "onMessageReceived(messages) callback"
+     - "Display message"
+     - "Leave the chat"
+     - "Log out: newline SDKClient.Instance.Logout(...)"
+   - The interaction begins with user actions such as "Join a chat" and "Send a message", and concludes with "Leave the chat".
+
+5. **Configuration or Additional Notes:**
+   - There are sequence groups titled "Initialize", "Log in", "Send messages", "Receive messages", and "Close", organizing the activities and interactions within the diagram.
+   - Data flow and method calls between "Your app" and "Agora" are clearly marked by arrows, indicating directionality. "Newline" is used as a text separator within action boxes for clarity.

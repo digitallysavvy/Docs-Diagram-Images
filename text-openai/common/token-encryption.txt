@@ -1,0 +1,32 @@
+1. **Overall Structure:**
+   - The diagram is a structured Flow Diagram.
+   - The direction of the diagram is largely left-to-right.
+
+2. **Main Entities and Elements:**
+   - There are two pairs of main entities labeled as "Client A" and "Client B" respectively, each including sub-elements labeled "App A/SDK A" for Client A and "App B/SDK B" for Client B.
+   - Each of these entities has grouped elements within dotted outlines, which contain several boxes and circles.
+   - Main entities: 
+     - App A, SDK A (for Client A)
+     - App B, SDK B (for Client B)
+   - Sub-elements within entities:
+     - Small circles: “Enable encryption” in App A and App B.
+     - Small boxes within SDK A and SDK B for "Built-in encryption/decryption," "Audio/Video capture and encoding/decoding and rendering," and "Customized encryption/decryption mode and encryption key."
+
+3. **Data Flow:**
+   - Solid lines indicate data flows between boxes, which describe the process of encryption, encoding, decryption, and decoding.
+   - Dashed lines outline the entites and are within the entity groups showing relationships and encapsulations.
+   - Directional flow is indicated by arrows primarily from left to right, showing the movement from encryption in Client A to decryption in Client B.
+
+4. **Detailed Content:**
+   - App A:
+     - Enable encryption newline Customized encryption mode and encryption key only exist in the app
+   - SDK A:
+     - Customized encryption mode and encryption key transmission newline Built-in encryption (Encryption mode and encryption key only exist in the app) newline Audio/Video capture and encoding
+   - SDK B:
+     - Audio/Video decoding and rendering newline Built-in decryption (Encryption mode and encryption key only exist in the app) newline Encryption mode and encryption key transmission
+   - App B:
+     - Customized decryption mode and encryption key only exist in the app newline Enable encryption
+
+5. **Configuration or Additional Notes:**
+   - Above the diagram: "TCP and UDP encryption" noted over the connection between the cloud symbol labeled "Agora SD-RTN™" and Client A, and similarly between the cloud symbol and Client B.
+   - This indicates a generalized use of TCP and UDP protocols for secure data transmission across network connections.

@@ -1,0 +1,20 @@
+1. Overall Structure:
+   - This is a flow diagram.
+   - The diagram flows from left to right.
+
+2. Main Entities and Elements:
+   - The main entities are represented as boxes labeled "SDK", "Rendering Module", and "Play locally".
+
+3. Data Flow:
+   - The entities are connected by solid lines with arrows indicating the direction of data flow.
+   - There are no groupings of elements.
+
+4. Detailed Content:
+   - SDK (box): no additional text content.
+   - Rendering Module (box): no additional text content.
+   - Play locally (box): no additional text content.
+
+5. Configuration or Additional Notes:
+   - The lines connecting the entities are labeled with text describing the data flow.
+   - From SDK to Rendering Module: "Pass rendered audio frame".
+   - From Rendering Module to Play locally: "Rendered audio frame".

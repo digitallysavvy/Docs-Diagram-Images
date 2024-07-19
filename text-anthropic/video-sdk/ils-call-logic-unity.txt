@@ -1,0 +1,32 @@
+1. Overall Structure:
+   - The provided image is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are: User, Your game, Video SDK, Agora, SD-RTN, Host, and Audience.
+   - Within "Your game" there is a sub-element labeled "Video SDK".
+
+3. Data Flow:
+   - The diagram shows data flow represented by solid lines with arrows indicating the direction.
+   - There are groupings of elements with titles like "Create an RtcEngine instance:" and "Set the context:".
+
+4. Detailed Content:
+   - User: "Open game"
+   - Your game: "Create an RtcEngine instance: newline RtcEngine = Agora.Rtc.RtcEngine.CreateAgoraRtcEngine()"
+     "Set channel profile: newline RtcEngine.SetChannelProfile( newline CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING)"
+     "Set the context: newline RtcEngineContext context = new RtcEngineContext(_appId, 0, true, newline CHANNEL_PROFILE_TYPE.CHANNEL_PROFILE_LIVE_BROADCASTING, newline AUDIO_SCENARIO_TYPE.AUDIO_SCENARIO_DEFAULT)"
+     "Initialize RtcEngine: newline RtcEngine.Initialize(context)"
+   - Host: "Start a live streaming event newline Enable the video module: newline RtcEngine.EnableVideo()"
+     "Set the user role as host: newline RtcEngine.SetClientRole( newline CLIENT_ROLE_TYPE.CLIENT_ROLE_BROADCASTER)"
+     "Join a channel as host: newline RtcEngine.JoinChannel()"
+   - Audience: "Join a live streaming event newline Enable the video module: newline RtcEngine.EnableVideo()"
+     "Set the user role as audience: newline RtcEngine.SetClientRole( newline CLIENT_ROLE_TYPE.CLIENT_ROLE_AUDIENCE)"
+     "Join the channel as audience: newline RtcEngine.JoinChannel()"
+   - User: "Leave call newline Close game"
+   - Your game: "Leave the channel: newline RtcEngine.LeaveChannel()"
+     "Disable the video modules: newline RtcEngine.DisableVideo()"
+     "Stop rendering the remote video: newline RemoteView.SetEnable(false)"
+     "Stop rendering the local video: newline LocalView.SetEnable(false)"
+     "Clean up local resources: newline RtcEngine.Dispose()"
+
+5. Configuration or Additional Notes:
+   - There are no additional lines or notes related to configuration settings.

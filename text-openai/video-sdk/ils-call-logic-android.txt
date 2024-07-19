@@ -1,0 +1,40 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram that charts the flow of interaction between entities in a software operation setting, specifically related to a video streaming service provided by Agora.
+
+2. Main Entities and Elements:
+   - There are four main entities or vertical boxes labeled as "User", "Video SDK", "Agora", and "SD-RTN".
+   - There are sub-elements, such as lifelines (dashed lines) descending from each entity, representing the lifespan of the entity during the interactions.
+   - There are activation boxes (thick blue lines on lifelines) that denote when a particular process is active.
+
+3. Data Flow:
+   - Connections are represented by arrows (solid or dashed) flowing between the entities.
+   - The flow generally moves from left ("User") to right ("SD-RTN").
+   - Dashed lines with arrows indicate the return of a response, acknowledging the reception or completion of an operation.
+
+4. Detailed Content:
+   - User to Video SDK:
+      - Open App
+      - Close app
+   - Video SDK to Agora:
+      - Initiate the Agora Video SDK engine: agoraEngine = RtcEngine.create newline
+      - Enable the video module: agoraEngine.enableVideo() newline
+      - Set the channel profile: agoraEngine.setChannelProfile(CHANNEL_PROFILE_LIVE_BROADCASTING) newline
+      - Retrieve authentication token to join channel newline
+      - Set the role as host: agoraEngine.setClientRole(Constants.CLIENT_ROLE_BROADCASTER) newline
+      - Setup local video: agoraEngine.setupLocalVideo(VideoCanvas) newline
+      - Start local preview: agoraEngine.startPreview()
+      - Join a channel as host: agoraEngine.joinChannel newline
+      - Send data stream newline
+      - Leave the channel: agoraEngine.leaveChannel() newline
+      - Clean up local resources: agoraEngine.destroy()
+   - Audience actions in Video SDK to Agora:
+      - Retrieve authentication token to join channel newline
+      - Set the user role as audience: agoraEngine.setClientRole(CLIENT_ROLE_AUDIENCE) newline
+      - Join the channel: agoraEngine.joinChannel newline
+      - Retrieve streaming from the hosts: agoraEngine.setupRemoteVideo newline
+      - Receive data stream
+
+5. Configuration or Additional Notes:
+   - The interaction starts and ends at a "User" entity, suggesting the behavior is initiated and concluded by user actions.
+   - The rightmost entity labeled "SD-RTN" does not have any interactions or operations depicted in this diagram, indicating that it may serve as an external system or infrastructure component that the Agora SDK interacts with implicitly.
+   - Each main operation in the SDK is clearly linked to a response or an action in the Agora system, maintaining a structured and ordered flow of activities.

@@ -1,0 +1,29 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are "App: Host", "Video SDK", and "App: Audience", represented as boxes.
+   - Within "App: Host", there are sub-elements labeled "Initialize AgoraRtcEngineKit", "Set local view", "Configure ChannelMediaOptions", "Join a channel", and "Start audio and video interaction".
+   - Within "Video SDK", there is a sub-element labeled "Set up remote view".
+
+3. Data Flow:
+   - There are solid lines indicating the flow of data between entities.
+   - The flow is bi-directional between "App: Host" and "Video SDK".
+   - There is a dashed line from "Video SDK" to "App: Audience" labeled "Receive audio and video".
+   - There is a dashed line from "App: Host" to "App: Audience" labeled "Send audio and video".
+   - There is a grouping of elements titled "Configure ChannelMediaOptions" within "App: Host".
+
+4. Detailed Content:
+   - App: Host:
+     Initialize AgoraRtcEngineKit: newline sharedEngineWithAppId
+     Set local view: newline enableVideo newline startPreview newline setupLocalVideo
+     Configure ChannelMediaOptions: newline channelProfile(AgoraChannelProfileLiveBroadcasting) newline clientRoleType(AgoraClientRoleBroadcaster)
+     Join a channel: newline joinChannel(demoChannel)
+     Start audio and video interaction: (no text)
+   - Video SDK:
+     sharedEngineWithAppId newline didJoinChannel(host) newline joinChannel(demoChannel) newline setupRemoteVideo
+   - App: Audience:
+     didJoinChannel(audience)
+
+5. Configuration or Additional Notes:
+   - There are no additional lines or notes specifying configuration settings.

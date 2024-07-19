@@ -1,0 +1,31 @@
+1. Overall Structure:
+- Type of diagram: Sequence diagram
+
+2. Main Entities and Elements:
+- Main entities: User, Your app (contains Chat SDK), Agora (contains Chat Server)
+- Sub-elements within Your app: Initialize, Log in, Send messages, Receive messages, Close
+
+3. Data Flow:
+- Connections between entities and data flow direction:
+  - User to Your app: Open app
+  - Your app to itself: Initialization flows (Init a chat SDK instance, Add message event callbacks)
+  - Your app to Agora: Join a chat, Log in to the chat server, Send the ChatMessage
+  - Agora to Your app: onConnected() callback, onMessageReceived(messages) callback
+  - Your app to User: Display message
+  - Your app to Agora: Log out
+- Groupings: 
+  - "Initialize" group
+  - "Log in" group 
+  - "Send messages" group
+  - "Receive messages" group
+  - "Close" group
+
+4. Detailed Content:
+- Initialize: newline Init a chat SDK instance: newline SDKClient.Instance.InitWithOptions(options); newline Add message event callbacks: newline SDKClient.Instance.ChatManager.AddChatManagerDelegate(this);
+- Log in: Retrieve authentication token for the user newline Log in to the chat server: newline SDKClient.Instance.LoginWithAgoraToken(...)
+- Send messages: Send a message newline Create a ChatMessage newline Send the ChatMessage: SDKClient.Instance.ChatManager.SendMessage(...)
+- Receive messages: onMessageReceived(messages) callback newline Display message
+- Close: Leave the chat newline Log out: newline agoraChatClient.Logout(...)
+
+5. Configuration or Additional Notes:
+- No additional configuration or notes present.

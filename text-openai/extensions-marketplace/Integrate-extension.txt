@@ -1,0 +1,40 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is primarily top-to-bottom and left-to-right.
+
+2. **Main Entities and Elements:**
+   - The diagram contains several main entities grouped into three areas:
+     - **Top grouping** consists of "Image Enhancement", "Face Filter", "Face Change", "Voice Effect", "Voice Changer", and "Noise Cancellation". These are encapsulated by a caption stating "Encapsulate audio or video processing capabilities".
+     - **Middle element** labeled "Audio/Video Filter Extensions".
+     - **Bottom grouping** within "Video SDK" includes steps "Capture", "Pre-Process", "Encode", "Transmit", "Decode", "Post-Process", and "Play".
+   - A separate icon labeled "Extension" appears in the top right corner, represented by a small square with three horizontal lines.
+
+3. **Data Flow:**
+   - Solid lines indicate data flow:
+     - From the top group entities, lines flow down to "Audio/Video Filter Extensions".
+     - From "Audio/Video Filter Extensions", there are two outgoing lines, one to the right labeled "Audio and Video Data" and another to "Video SDK".
+     - Within the "Video SDK" group, there are connections between each step starting from "Capture" to "Play".
+   - There are arrows at the end of each line indicating the direction of flow.
+
+4. **Detailed Content:**
+   - Top Group Entities:
+     - "Image Enhancement"
+     - "Face Filter"
+     - "Face Change"
+     - "Voice Effect"
+     - "Voice Changer"
+     - "Noise Cancellation"
+   - Middle Element:
+     - "Audio/Video Filter Extensions"
+   - Bottom Group (Video SDK):
+     - "Capture"
+     - "Pre-Process"
+     - "Encode"
+     - "Transmit"
+     - "Decode"
+     - "Post-Process"
+     - "Play"
+   - Note: "Encapsulate audio or video processing capabilities" appears above the top group of entities.
+
+5. **Configuration or Additional Notes:**
+   - There is a configuration icon labeled "Extension" positioned in the top right corner, outside the main flow area.

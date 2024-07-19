@@ -1,0 +1,33 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram, which illustrates the interaction between entities over time for an audio capture and processing scenario.
+
+2. Main Entities and Elements:
+   - There are three main entities represented as boxes:
+     - App (with an icon of a mobile device)
+     - SDK (with a layered icon)
+     - Agora SD-RTN (represented with a cloud icon)
+   - Within the SDK box, there's a subgroup named "Custom audio capture" that includes additional detailed steps in smaller boxes and text.
+
+3. Data Flow:
+   - Solid lines with arrows depict the sequential flow and interactions between the entities:
+     - From App to SDK, initiating with "Create and initialize the engine" and following through various functions like "Join a channel," "Leave the channel," and culminating in "Destroy the engine."
+     - From App to Agora SD-RTN via SDK, starting with a "Request to join the channel" and followed by a "Request to leave the channel."
+   - Dashed lines represent informational or state-related flow, primarily within the SDK, indicating processes or states managed within this entity.
+
+4. Detailed Content:
+   - Within the App:
+     - "Create and initialize the engine" newline
+     - "Join a channel" newline
+     - "Leave the channel" newline
+     - "Destroy the engine" 
+
+   - Within the SDK, subgroup "Custom audio capture":
+     - "Set up an external audio source for use" newline
+     - "Send the processed audio data"
+
+   - Within the Agora SD-RTN:
+     - "You manage audio data capture and processing on your own" separates requests handling
+
+5. Configuration or Additional Notes:
+   - There are no additional explicit configuration settings noted in the diagram outside of standard sequence interactions and subgroup details, focusing strictly on functional descriptions per entity.
+   - Specific methods and actions within each box clearly imply the individual responsibilities and sequence of operations in the audio capture process.

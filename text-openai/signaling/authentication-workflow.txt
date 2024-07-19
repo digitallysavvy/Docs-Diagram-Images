@@ -1,0 +1,39 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - The main entities are three vertical boxes labeled "Token server," "Your app," and "Agora Signaling."
+   - Each entity box has several smaller sections describing the processes involved.
+
+3. Data Flow:
+   - Connections between entities are depicted using both solid and dashed lines indicating data flow and process steps. 
+   - The interactions begin from "Token server" to "Your app," then between "Your app" and "Agora Signaling," indicating a sequence of operations leading back and forth between these components.
+   - The diagram includes three major groupings or phases titled: "Log in to Signaling using authentication," "Join a stream channel," and "Renew token."
+
+4. Detailed Content:
+   - The "Token server" section has the following content:
+     - Configure your token server using your App Id and App Certificate newline
+     - Request an RTM token using a user Id newline
+     - Validate request against internal security and generate a token newline
+     - Return RTM token to App newline
+     - Request an RTC token using a user Id, and a stream channel name newline
+     - Validate request against internal security and generate token newline
+     - Return RTC token to App newline
+     - Request an RTM token using the user ID newline 
+     - Validate request against internal security and generate a token newline 
+     - Return RTM token to App
+   - The "Your app" section has the following content:
+     - Log in to Signaling using the user Id and the RTM token newline
+     - Initiate the Signaling Engine using the App Id newline
+     - Log in user, then trigger callback newline
+     - Join a stream channel using channel name, user Id, and the RTC token newline
+     - Trigger event: token privilege will expire newline
+     - Send RTM token to Signaling with a call to renew token newline
+     - Trigger callback
+   - The "Agora Signaling" section has the following content:
+     - Validate the token newline
+     - Validate the token newline
+     - Validate the token
+  
+5. Configuration or Additional Notes:
+   - None of the areas outside the main entities are included with additional configurations or notes.

@@ -1,0 +1,31 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - It is oriented in a left-to-right direction.
+
+2. **Main Entities and Elements:**
+   - **Disconnected:** This is a box label which is the initial state in the diagram.
+   - **Connecting:**
+     - Sub-elements include "Client.join" leading into it from the "Disconnected" state.
+     - Contains a secondary box labeled "Establishing connection with Agora Server".
+     - Another secondary box within states "SDK attempts to connect to the server".
+   - **Connected:**
+     - Shows transition instructions "Successfully established connection with Agora server".
+     - The next step indicates "Client.leave" leading to "Disconnecting".
+   - **Disconnecting:** Links to a box labeled "Disconnecting from Agora Server".
+   - **Reconnecting:**
+     - Houses two conditions: "Automatic reconnection failed" and "Automatic reconnection successful".
+   
+3. **Data Flow:**
+   - Solid lines indicate transitions between states such as from "Disconnected" to "Connecting" and so forth.
+   - A connection from "Connected" to "Reconnecting" details conditions such as successful or failed automatic reconnection.
+   - Lines also connect states back to "Disconnected" indicating completion of certain processes.
+
+4. **Detailed Content:**
+   - **Disconnected:** "The user is in any of the following stages: before calling join to join the channel; after calling leave to leave the channel; being removed from the channel or under abnormal circumstances such as connection failure."
+   - **Connecting:** "The transient state entered after calling join."
+   - **Connected:** "Enter this state after successfully joining the channel newline Users can publish or subscribe to media streams within a channel."
+   - **Disconnecting:** "The transient state entered after calling leave."
+   - **Reconnecting:** "After the connection between the SDK and the server is interrupted due to network disconnection, the SDK automatically reconnects newline Successful reconnection leads back to 'Connected'; failure leads back to 'Disconnected'."
+
+5. **Configuration or Additional Notes:**
+   - Configuration settings are not explicitly detailed but are implied by the descriptions within each state box, such as SDK behavior during reconnect attempts.

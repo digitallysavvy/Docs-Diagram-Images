@@ -1,0 +1,26 @@
+1. Overall Structure:
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app
+- Video SDK (box within Your app)
+- Agora
+- SD-RTN
+
+3. Data Flow:
+- User initiates "Open App" flow towards Your app.
+- Within a group titled "Create Agora engine", there are flows from Your app to Video SDK for "Set log file path, log level and file size" and "Create Agora Engine".
+- A dashed line indicates "Best practice for app initiation" group containing flows from Your app to Agora for "Enable dual-stream mode to allow remote users to choose a stream type" and "Set local publish and remote subscribe fallback options".
+- Within "Settings check" group, there are flows from Your app to Agora for "Specify audio profile and scenario based on the nature of the app", "Set video encoder configuration", and "Call the method to start the network probe test". A reverse flow from Agora to Your app for "Deliver network quality score and network statistics".
+- User initiates "Join channel" flow towards Your app, followed by flows between Your app and Agora for "Enable video" and "Join channel".
+- Within "In-call quality monitoring" group, there are flows from Agora to Your app for "Enable the quality statistics", "Receive network, call, audio and video quality statistics", and "Receive state change notifications". A reverse flow from Your app for "Notify the user" and a flow from Your app to Agora for "Take corrective action".
+
+4. Detailed Content:
+Your app (no text content)
+Video SDK (no text content)
+Agora (no text content)
+SD-RTN (no text content)
+
+5. Configuration or Additional Notes:
+No additional configuration settings or notes are provided.

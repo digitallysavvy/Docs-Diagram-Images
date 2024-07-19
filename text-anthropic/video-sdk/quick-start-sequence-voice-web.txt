@@ -1,0 +1,31 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are labeled as "App", "Voice SDK", and "Agora SD-RTN".
+- The "App" entity contains sub-elements like circles labeled "Create a local client", "Join channel", "Create and publish local audio track", "Subscribe to remote users", and "Leave the channel".
+
+3. Data Flow:
+- The connections between entities are shown using solid lines with arrows indicating the direction of the flow.
+- There is a dashed line grouping from the "App" entity to the "Subscribe to remote users" sub-element, with the title "Remote users publish audio track client.on("user-published")".
+
+4. Detailed Content:
+- App:
+  "Create a local client" newline "AgoraRTC.createClient" newline "Set mode to 'rtc'"
+  "Join channel" newline "AgoraRTCClient.join"
+  "Create and publish local audio track" newline "Create local audio track" newline "AgoraRTC.createMicrophoneAudioTrack" newline "Publish local audio track" newline "AgoraRTCClient.publish"
+  "Subscribe to remote users" newline "Get remote user object" newline "AgoraRTCClient.remoteUsers" newline "Subscribe to remote user object" newline "AgoraRTCClient.subscribe" newline "Get remote audio object" newline "AgoraRTCRemoteUser.audioTrack"
+  "Leave the channel" newline "Turn off the local audio track" newline "MicrophoneAudioTrack.close" newline "Leave the channel" newline "AgoraRTCClient.leave"
+
+- Voice SDK:
+  (No text content)
+
+- Agora SD-RTN:
+  (No text content)
+
+5. Configuration or Additional Notes:
+- The diagram shows arrows with text indicating the data flow:
+  "Join channel request" from "App" to "Agora SD-RTN"
+  "Send audio data" from "App" to "Agora SD-RTN"
+  "Receive audio data" from "Agora SD-RTN" to "App"
+  "Request to leave the channel" from "App" to "Agora SD-RTN"

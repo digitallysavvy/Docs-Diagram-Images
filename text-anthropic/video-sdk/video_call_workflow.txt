@@ -1,0 +1,30 @@
+1. Overall Structure: 
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are Client, Token Server, Client, and Agora Platform, represented as boxes with their labels.
+- The Client box has a sub-element circle labeled "Setup client".
+- The Agora Platform box has no sub-elements.
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of communication between entities.
+- The flow goes from Client to Token Server, Client to Agora Platform, and vice versa.
+- There is a grouping titled "Call implementer" containing the Client, Token Server, and Client boxes.
+
+4. Detailed Content:
+- Client box contains:
+"User login to implementor security" newline
+"Authenticate and retrieve token" newline  
+"Create client instance" newline
+"Set client role: host"
+- Token Server box is empty.
+- Client box contains: 
+"User login to implementor security" newline
+"Authenticate and retrieve token" newline
+"Create client instance" newline  
+"Set client role: audience"
+- Agora Platform box is empty.
+
+5. Configuration or Additional Notes:
+- There is a note "Run call" next to the grouping of Client boxes.
+- There is a note "End call" below the Client boxes.

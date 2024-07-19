@@ -1,0 +1,33 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "Token server" (left), "App" (center), and "SD-RTN" (right).
+- The "Token server" entity contains a sub-element labeled "Renew token".
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of data or requests between entities.
+- There is a group labeled "Join a channel with authentication" connecting the "Token server" and "App" entities.
+- Another group labeled "Renew token" connects the "Token server" and "App" entities.
+
+4. Detailed Content:
+- Token server:
+  "Join a channel with authentication" newline
+  "Request a token using channel name, role, token type, and user ID" newline
+  "Validate user against internal security" newline
+  "Generate a token and return it to the client"
+- Renew token:
+  "Request a fresh token using channel name, role, token type, and user ID" newline
+  "Validate user request against internal logic" newline
+  "Generate a fresh token and return it to the client"
+- App:
+  "Join a channel with uid, channel name, and token" newline
+  "Trigger the callback after adding user to the channel" newline
+  "Trigger event: Token Privilege will Expire" newline
+  "Send the fresh token with a RenewToken request"
+- SD-RTN:
+  "Validate the token"
+
+5. Configuration or Additional Notes:
+- There is a note at the top labeled "Implemented by you" pointing to the "Token server" and "App" entities.
+- There is another note at the top labeled "Provided by Agora" pointing to the "SD-RTN" entity.

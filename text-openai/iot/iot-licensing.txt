@@ -1,0 +1,33 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram, which is used to show object interactions arranged in time sequence. It demonstrates how objects interact with each other and in what order.
+
+2. **Main Entities and Elements:**
+   - The diagram features three main columns which are labeled: "You", "Your IoT device", and "Agora".
+     - Within "Your IoT device", there is a smaller box labeled "IoT SDK".
+     - Within "Agora", there are two smaller boxes labeled "Agora Sales" and "REST API".
+
+3. **Data Flow:**
+   - Solid lines with arrows represent the direction of the flow of information and communications between entities:
+     - A solid line with an arrow goes from "You" to "Agora Sales", labeled "Contact Agora sales to request a license".
+     - A solid line with an arrow goes from "Agora Sales" to "You", labeled “Send license information“.
+     - A solid line with an arrow goes from "You" to "IoT SDK", labeled "Activate the license".
+     - A solid line with an arrow goes from "IoT SDK" to "Agora Sales", labeled "Send activation info".
+     - A solid line with an arrow goes from “Agora Sales” to "REST API", labeled "Activate the license".
+     - Finally, a solid line with an arrow from "You" to “IoT SDK”, labeled "Write a license to the device".
+
+4. **Detailed Content:**
+   - "You" entity interactions:
+     - You: newline
+       Contact Agora sales to request a license newline
+       Send license information newline
+       Activate the license newline
+       Send activation info newline
+       Write a license to the device
+   - "Your IoT device" and sub-element "IoT SDK":
+     - IoT SDK (no additional text within this box, only used as a point of communication)
+   - "Agora" and sub-elements "Agora Sales" and "REST API":
+     - Agora Sales: newline
+       REST API
+
+5. **Configuration or Additional Notes:**
+   - There are no additional notes or configurations explicitly stated outside the described flows and labels in the diagram.

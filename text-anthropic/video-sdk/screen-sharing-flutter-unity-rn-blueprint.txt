@@ -1,0 +1,24 @@
+1. Overall Structure:
+- The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- "Extension process" entity with a "+" symbol.
+- "Main process" entity with a rectangle icon.
+- "Agora SD-RTN" entity with a cloud icon.
+- Two smaller "Extension process" entities with "+" symbols below the main entities.
+- A sub-element labeled "Screen sharing" within the "Extension process" entity.
+
+3. Data Flow:
+- A solid line flows from the "Screen sharing" sub-element to the "Main process" entity, labeled "Send screen sharing command".
+- A dashed line flows from the "Screen sharing" sub-element to the "Main process" entity, labeled "Publish a screen sharing stream".
+- A dashed line flows from the "Main process" entity to the "Agora SD-RTN" entity, labeled "Subscribe to other streams".
+- A solid line flows from the "Main process" entity to the "Agora SD-RTN" entity, labeled "Publish screen sharing stream".
+
+4. Detailed Content:
+- The "Extension process" entity has no text content.
+- The "Main process" entity has no text content.
+- The "Agora SD-RTN" entity has no text content.
+- The "Screen sharing" sub-element has no text content.
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes.

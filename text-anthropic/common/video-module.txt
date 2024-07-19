@@ -1,0 +1,26 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The direction of the flow is from left to right.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes, which include "Enable local video collection", "Video pre-processing", "Video Encoding", "Local Preview", "Video rendering display", "Video post-processing", and "Video Decoding".
+- There are two additional elements labeled as "video module" and "network module", represented by dashed rectangles encompassing groups of entities.
+
+3. Data Flow:
+- The flow is indicated by solid arrows connecting the entities.
+- The flow starts from "Enable local video collection" and proceeds to "Video pre-processing", "Video Encoding", and then branches to "Local Preview" and "Join channel" under the "network module".
+- The flow also goes from "Video rendering display" to "Video post-processing" and then to "Video Decoding".
+
+4. Detailed Content:
+- Within each entity box, the text content is provided as follows:
+Enable local video collection (newline) 
+Video pre-processing (newline)
+Video Encoding (newline)
+Local Preview (newline) 
+Video rendering display (newline)
+Video post-processing (newline)
+Video Decoding (newline)
+Join channel
+
+5. Configuration or Additional Notes:
+- There are no additional lines or configuration settings mentioned in the diagram.

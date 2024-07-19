@@ -1,0 +1,37 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram which details the interaction process between different entities for a video calling application using an SDK.
+
+2. Main Entities and Elements:
+   - **User**: This entity initiates actions such as opening the app, starting and leaving a call.
+   - **Your app**: Coordinates operations within the application, invoking SDK processes.
+   - **Video SDK**: Manages core functionalities including setting up local media, joining/leaving channels, and streaming.
+   - **Agora**: Represents the backend service or network facilitating real-time communication.
+
+3. Data Flow:
+   - **User to Your app**: 
+     - Dashed line indicating the user opening the app and starting a call.
+   - **Your app to Video SDK**:
+     - Solid lines for commands sent to the SDK like setting up local hardware, initiating the SDK environment, and ending a call.
+   - **Video SDK to Agora**:
+     - Solid lines represent the process of creating an engine, joining a channel, and interactions during a live session.
+   - **Bidirectional Communication**: 
+     - Dashed lines for feedback or responses like authentication, acceptance of joining a channel, and streaming data.
+
+4. Detailed Content:
+   - **Your app**:
+     - Open App
+     - Setup app to handle local hardware and streaming.
+   - **Start call** within Your app:
+     - Create the AgoraEngine newline- "const agoraEngine = useRTCClient(AgoraRTC.createClient)"
+     - Retrieve authentication token to join channel
+     - Join a channel: "useJoin"
+     - Join accepted
+     - Create local media tracks : "const { isLoading: isLoadingCam, localCameraTrack } = useLocalCameraTrack();" and "const { isLoading: isLoadingMic, localMicrophoneTrack } = useLocalMicrophoneTrack();"
+     - Push local media tracks to the channel: "usePublish([localMicrophoneTrack, localCameraTrack]);"
+     - Retrieve streaming from the other user: "RemoteUser user={remoteUser} playVideo={true} playAudio={true} />"
+     - Receive and send data streams
+   - **Leave call** within Your app:
+     - leave the channel: "useJoin"
+
+5. Configuration or Additional Notes:
+   - Note adjacent to 'Agora', labeled "SD-RTNₐₛ," indicating a specific sub-element or network component related to the Agora system. This is identical between the start and end of the session, found in the blue contour extending from the top right to the bottom right.

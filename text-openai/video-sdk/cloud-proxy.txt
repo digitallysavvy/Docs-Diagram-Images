@@ -1,0 +1,49 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which visually represents the interaction and flow of processes or data between different entities over time.
+
+### Main Entities and Elements:
+- **User**: Depicted as a standard stick figure icon.
+- **Admin**: Depicted as a standard stick figure icon alongside "User."
+- **App**: Labeled directly and represented as a rectangle.
+- **Enterprise Firewall**: Labeled directly and represented as a rectangle.
+- **Cloud Proxy**: Labeled directly and represented as a rectangle.
+- **SD-RTN**: Labeled directly and represented as a rectangle.
+
+### Data Flow:
+- **Connections between entities**: 
+  - Solid lines between entities (User, Admin, App, Enterprise Firewall, Cloud Proxy, SD-RTN) representing the direction of workflow and requests or responses.
+  - Dashed lines showing return responses or acknowledgement of requests.
+- **Groupings**:
+  - "Implemented by you" groups User, Admin, App, and Enterprise Firewall.
+  - "Provided by Agora" groups Cloud Proxy and SD-RTN.
+
+### Detailed Content:
+- **Inside 'User'**: 
+  - Open the app
+  - Join a channel
+  
+- **Enterprise Firewall**:
+  - Whitelist IP addresses and ports for Cloud Proxy in the firewall.
+
+- **App**:
+  - Initialize the Agora Video SDK engine.
+
+- **Cloud Proxy**:
+  - Request access to Cloud Proxy (double occurrence suggesting retry logic)
+  - Proxy information
+
+- **SD-RTN**:
+  - Request to join a channel
+
+- **Interaction specifics**:
+  - "Join a channel directly" alternative flow marked with "alt":
+      - Join a Channel.
+      - Join Success newline Send and receive data.
+      - Video SDK automatically attempts to connect securely on TLS 443.
+      - Join Success newline Send and receive data.
+      - "Join Channel failed" newline Connection attempt on TLS 443 failed: Enable cloud proxy newline Call the method to enable a Cloud Proxy connection.
+      - Check whitelist to grant access.
+      - Join a channel newline Join success newline Send data stream newline Receive data stream.
+
+### Configuration or Additional Notes:
+- Workflow configurations are indicated through direct interaction commands and conditional responses based on the success or failure of joining a channel or establishing a secure connection. These configurations are not distinctly set apart but integrated into the data flow and entity interactions.

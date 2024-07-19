@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram used to represent the interaction between different software components during the "Screen sharing" process.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as boxes in the diagram:
+     1. App - represented with a computer icon.
+     2. Video SDK - also represented with a computer icon.
+     3. Agora SD-RTN - represented with a cloud icon.
+   - There is a large overarching box labeled "Screen sharing" that encompasses all activities in the diagram.
+
+3. **Data Flow:**
+   - Solid lines with arrows show the flow of operations from the App to the Video SDK:
+     - Set the high-quality scene (optional)
+     - Start screen capture
+     - Set the screen sharing scene (optional)
+     - Join the channel
+     - Update screen sharing parameters (optional)
+     - Stop screen sharing
+   - Solid lines with arrows from the Video SDK to the Agora SD-RTN:
+     - Publish the screen sharing stream in the channel
+     - Publish the updated screen sharing stream in the channel
+     - Stop publishing the screen sharing stream in the channel
+
+4. **Detailed Content:**
+   - App entity contents:
+     - Set the high-quality scene (optional) newline
+     - Start screen capture newline
+     - Set the screen sharing scene (optional) newline
+     - Join the channel newline
+     - Update screen sharing parameters (optional) newline
+     - Stop screen sharing.
+   - Video SDK entity contents:
+     - Publish the screen sharing stream in the channel newline
+     - Publish the updated screen sharing stream in the channel newline
+     - Stop publishing the screen sharing stream in the channel.
+
+5. **Configuration or Additional Notes:**
+   - No additional notes or configuration settings are specified in the visible parts of the diagram. All interactions and operations are contained within the entities and the "Screen sharing" main box.

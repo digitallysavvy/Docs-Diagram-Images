@@ -1,0 +1,19 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The diagram flows from left to right.
+
+2. Main Entities and Elements:
+- The main entities are represented as boxes labeled "Channel", "One M3U8 file" and "One or more MP4 files".
+- Within the "Channel" box, there are two smaller circles labeled "UID 1" and "UID 2".
+
+3. Data Flow:
+- A solid line connects the "Channel" box to the "One M3U8 file" box, indicating a data flow from left to right.
+- A dashed line connects the "One M3U8 file" box to the "One or more MP4 files" box, indicating a conditional or optional data flow.
+- There is a grouping of elements titled "Audio and video of all users".
+
+4. Detailed Content:
+- The "One M3U8 file" box contains the text "One M3U8 file" and "Multiple TS files" on separate lines.
+- The "One or more MP4 files" box contains the text "One or more MP4 files".
+
+5. Configuration or Additional Notes:
+- Below the dashed line, there is a configuration setting: "Set avFileType as ["hls","mp4"]".

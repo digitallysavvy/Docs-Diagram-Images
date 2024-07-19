@@ -1,0 +1,50 @@
+1. Overall Structure: 
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- App: Host
+- Video SDK
+- App: Audience
+
+3. Data Flow:
+- Solid lines show the flow of data/messages between the entities in the indicated direction.
+- A grouping titled "Create and initialize the engine" connects the Video SDK to App: Host and App: Audience.
+- Another grouping titled "Enable the video module" connects the Video SDK to App: Host.
+- A grouping titled "Join the channel and set the user role as host/audience" connects App: Host to Video SDK and App: Audience.
+- Dashed lines are used to notify between entities.
+
+4. Detailed Content:
+App: Host:
+Initialize the engine newline
+Set video properties newline
+Initialize the local view newline
+Display local video preview newline
+Join channel newline
+Join the channel and set the user role as host newline
+Start audio and video interaction newline  
+Send audio and video newline
+End audio and video interaction newline
+Leave the channel newline
+Destroy the engine
+
+Video SDK:
+Create and initialize the engine newline
+Enable the video module newline  
+Join the channel and set the user role as host/audience newline
+Notify the host that the channel has been joined newline
+Notify the audience that the channel has been joined newline
+Set remote view newline
+Initialize the remote view
+
+App: Audience:
+Join the channel and set the user role as audience newline  
+Receive audio and video newline
+Leave the channel newline  
+Notify the audience that it has left the channel newline
+Destroy the engine
+
+5. Configuration or Additional Notes:
+Notify the host that it has left the channel
+Notify the audience that the host has left the channel
+
+These dashed lines indicate notifications from Video SDK to App: Host and App: Audience respectively when leaving the channel.

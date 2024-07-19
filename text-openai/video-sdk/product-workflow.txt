@@ -1,0 +1,38 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram, which details interactions among various entities or systems over time.
+
+2. **Main Entities and Elements:**
+   - There are three primary vertical entities labeled "User," "Your app," and "Agora."
+     - The "User" entity features a stick figure icon at the top and bottom, indicating interaction points.
+     - "Your app" contains a sub-box labeled "Video SDK."
+     - "Agora" includes a sub-box labeled "SD-RTN."
+
+3. **Data Flow:**
+   - Various processes and actions are shown as interactions between the entities using lines. Solid lines usually denote a direct interaction or message sending, while dashed lines represent response or return actions. The data flow progresses top-down through the diagram.
+   - Messages from the "User" to "Your app" and on to "Agora," and vice versa, represent the processes being invoked and their responses.
+   - Groupings of actions under titles:
+     - "Join" encompasses steps to join a channel.
+     - "Publish and Subscribe" details the process of managing audio and video streams.
+     - "Common workflows" group actions like screen sharing and volume adjustments.
+
+4. **Detailed Content:**
+   - "Video SDK" box content: 
+     - Use Video SDK to create an Agora Engine instance newline
+     - Enable audio and video in the engine
+   - Steps under "Join":
+     - Open App -> Retrieve authentication token to join a channel -> Join the channel
+   - "Publish and Subscribe":
+     - Publish camera and microphone streams to the channel newline
+     - Subscribe to streams from other users newline
+     - Manage local and remote streams
+   - "Common workflows":
+     - Start screen sharing newline
+     - Capture and publish your screen to the channel newline
+     - Adjust volume newline
+     - Call API methods to adjust or mute volume
+   - Steps under "User" towards the end:
+     - Leave the channel -> Leave the channel (confirmation)
+
+5. **Configuration or Additional Notes:**
+   - All the interactions are aligned with their respective phases, which are highlighted by blue blocks enveloping groups of interactions.
+   - The sequence diagram does not contain extraneous configuration settings but focuses on depicting the workflow interactions succinctly.

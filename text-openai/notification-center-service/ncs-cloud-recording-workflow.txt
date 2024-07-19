@@ -1,0 +1,33 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which is used to model the interactions between entities in a system. It shows how processes operate with one another and in what order.
+
+### Main Entities and Elements:
+- **User**: Represented as a stick figure icon at both ends of the diagram.
+- **Web server**: Box labeled in both the starting and ending positions of the sequence beneath the user icon.
+- **Your app server**: Box located next to the Web server.
+- **Your third-party cloud storage**: Box adjacent to Your app server.
+- **Agora Cloud Recording**: Box on the far right, indicating the external cloud recording service provided by Agora.
+
+### Data Flow:
+- Solid lines denote the start or continuation of an action:
+  - From Web server to Your app server labeled "Start recording."
+  - From Your app server to Your third-party cloud storage labeled "Get recording resources."
+  - From Your third-party cloud storage back to Your app server and further back to the Web server labeled as "Notification 40: 'recorder_started' < status >" and "200 OK."
+- Dashed lines indicate responses or acknowledgments:
+  - From Web server to Your app server labeled "Stop recording," which flows to the Agora Cloud Recording labeled "End recording" and subsequently, the responses back.
+  - Various acknowledgment messages (e.g., Notification 30: 'uploader_started' < status >, Notification 31: 'uploaded' < status >, Notification 11: 'session_exit' < exitStatus >) all followed by "200 OK."
+
+### Detailed Content:
+- **Web server**:
+  - Start and end view: 
+    - Top: "Web server"
+- **Your app server**:
+  - Top: "Your app server"
+- **Your third-party cloud storage**:
+  - Top: "Your third-party cloud storage"
+- **Agora Cloud Recording**:
+  - Top: "Agora Cloud Recording"
+
+### Configuration or Additional Notes:
+- The headers at the top categorize the entities into either "Implemented by you" or "Provided by Agora," which clarifies responsibility in the implementation.
+- Notifications and status codes (e.g., 200 OK, Notification 40) are used throughout the data flow to signal completion or update states. These are positioned in a left-to-right sequence beneath and between the involved entities, corresponding with the flow directions.

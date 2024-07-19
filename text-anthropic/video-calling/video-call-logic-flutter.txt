@@ -1,0 +1,32 @@
+1. Overall Structure:
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box with "Video SDK" sub-element)
+- Agora (box with "SD-RTN" sub-element)
+- User (box with "Video SDK" sub-element)
+
+3. Data Flow:
+- Solid line from User to Your app labeled "Open App"
+- Dashed lines between Your app and Agora, indicating bidirectional communication
+- Solid line from User to Your app labeled "Join a call"
+- Solid line from Your app to Agora labeled "Join the channel: agoraEngine.joinChannel"
+- Solid line from Agora to Your app labeled "Retrieve streaming from the other user: Widget = RtcRemoteView.SurfaceView()"
+- Bidirectional dashed line between Your app and Agora labeled "Receive and send data stream"
+- Solid line from User to Your app labeled "Leave call"
+- Solid line from Your app to Agora labeled "Leave the channel agoraEngine.leaveChannel"
+- Solid line from User to Your app labeled "Close app"
+- Dashed line from Your app to Agora labeled "Clean up local resources: agoraEngine.destroy()"
+
+4. Detailed Content:
+Your app box contains:
+"Initiate the Agora Video SDK engine: newline agoraEngine = RtcEngine.create"
+"Setup the local video stream: newline agoraEngine.enableVideo"
+"Widget = RtcLocalView.SurfaceView()"
+
+User box contains:
+"Retrieve authentication token to join channel"
+
+5. Configuration or Additional Notes:
+There is a grouping box titled "User" surrounding the interactions between the User, Your app, and Agora entities.

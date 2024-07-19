@@ -1,0 +1,21 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (person symbol)
+- Your app (box labeled "Your app" containing "Video SDK" sub-element)
+- Agora (box labeled "Agora" containing "SD-RTN a, ϕ" sub-element)
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of data/messages between entities.
+- There is a grouping of elements titled "User".
+- There is a dashed line connecting the User entity to the "Start call" sub-element within the grouping.
+
+4. Detailed Content:
+- User: "Open App" newline "Start call"
+- Your app: "Setup app to handle local hardware and streaming." newline "const agoraEngine = useRTCClient(AgoraRTC.createClient" newline "Retrieve authentication token to join channel" newline "Join a channel: useJoin" newline "Join accepted" newline "Create local media tracks : const { isLoading: isLoadingCam, localCameraTrack } = useLocalCameraTrack(); const { isLoading: isLoadingMic, localMicrophoneTrack } = useLocalMicroph" newline "Push local media tracks to the channel: usePublish(localMicrophoneTrack, localCameraTrack);" newline "<RemoteUser user={remoteUser} playVideo={true} playAudio={true} />" newline "Receive and send data streams"
+- User: "Leave call"
+- Your app: "leave the channel: useJoin"
+
+5. Configuration or Additional Notes:
+- There is a configuration setting or note below the diagram: "SD-RTN a, ϕ".

@@ -1,0 +1,32 @@
+1. **Overall Structure:**
+   - The diagram is a flow diagram.
+   - The direction of the diagram is primarily left-to-right.
+
+2. **Main Entities and Elements:**
+   - Main Boxes: 
+     - "joinChannel" (Join channel)
+     - Various "onConnectionStateChanged" boxes with details like (connection_state_connected), (connection_state_reconnecting), and more.
+   - Sub-elements:
+     - "UID 1"
+     - "UID 2"
+     - Smaller transition boxes labeled "T0" to "T7".
+
+3. **Data Flow:**
+   - Connections are depicted using lines typically flowing from left to right.
+   - Dashed lines represent certain conditional or less frequent flows, e.g., from "T1" to "T3" indicating a network interruption and subsequent reattempt.
+   - "SDK automatically reconnects" is highlighted with a dashed bubble indicating an automatic process external to the manual steps but influencing the flow.
+
+4. **Detailed Content:**
+   - "joinChannel" box: "Join channel"
+   - "onJoinChannelSuccess" box: "Joined the channel successfully"
+   - "onConnectionStateChanged" boxes:
+     - (connection_state_connected, connection_changed_join_success): "Network connection successful"
+     - (connection_state_reconnecting, connection_changed_interrupted): "Re-establishing Network connection"
+     - (connection_state_reconnecting, connection_changed_lost): "Network connection interrupted"
+     - (connection_state_failed, connection_changed_join_failed): "Network connection failed"
+   - "onUserJoined" box: "Remote user comes online"
+   - "onUserOffline (reason dropped)" box: "Remote user is offline"
+
+5. **Configuration or Additional Notes:**
+   - "SDK automatically reconnects" is a note placed centrally below the main flow indicating a system/configuration feature.
+   - Positions are depicted with respect to transitions, demonstrating points where the system checks or changes its status due to network success, interruptions, or failures.

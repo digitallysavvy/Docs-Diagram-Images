@@ -1,0 +1,37 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram which illustrates the process flows amongst different components in interacting with a video SDK.
+
+2. **Main Entities and Elements:**
+   - There are three main entities represented as vertical boxes:
+     - **User**: Represents the user's actions.
+     - **Your app/Video SDK**: Contains steps linked to the video SDK within your application.
+     - **Agora/SD-RTN**: Represents the Agora software-defined real-time network component.
+   - Each entity has lines connecting to a variety of sub-elements displayed as specific actions or responses within smaller boxes or circles.
+
+3. **Data Flow:**
+   - Solid lines with arrows represent requests from the user to the application and between the application and the Agora network. Dashed lines indicate responses or data flow back to the user or between systems.
+   - **Flow Sequence**:
+     - From the User to the App component detailing actions like "open app," "join a call," "leave call," and "close app".
+     - Inside the Your app/Video SDK, arrows flow top-down starting with initializing the SDK, setting up video, etc., then moving to actions related to joining a call, and finally leaving a channel and cleaning up resources.
+     - Connections extend from Your app/Video SDK to Agora/SD-RTN during joining and leaving the channel operations.
+
+4. **Detailed Content:**
+   - **User Actions**:
+     - Open App
+     - Join a call
+     - Leave call
+     - Close app
+   - **Your app/Video SDK Actions**:
+     - Initiate the Agora Video SDK engine: agoraEngine = RtcEngine.create 
+     - Setup the local video stream: agoraEngine.enableVideo
+     - Widget = RtcLocalView.SurfaceView()
+     - Retrieve authentication token to join channel
+     - Join the channel: agoraEngine.joinChannel
+     - Retrieve streaming from the other user: Widget = RtcRemoteView.SurfaceView()
+     - Receive and send data stream
+     - Leave the channel: agoraEngine.leaveChannel
+     - Clean up local resources: agoraEngine.destroy()
+   - **Agora/SD-RTN Actions**: (No actions specified within this entity)
+
+5. **Configuration or Additional Notes:**
+   - There are no specific configurations or additional notes indicated outside of the main entity boxes in the layout of the diagram.

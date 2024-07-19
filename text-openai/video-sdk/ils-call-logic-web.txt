@@ -1,0 +1,39 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - **User**: Symbolized by a stick figure icon.
+   - **Your App**: Represented by a tall blue box.
+   - **Video SDK**: A blue box adjacent to Your App.
+   - **Agora**: A blue box labeled as SD-RTN, on the far right.
+   - **Host**: Another stick figure icon with operations listed below.
+   - **Audience**: Yet another stick figure icon at the bottom with actions connected to it.
+
+3. **Data Flow:**
+   - Solid lines flow from the User to Video SDK indicating actions like Open App.
+   - Solid lines flow between entities (User, Video SDK, Agora) indicating the direction of actions such as retrieving tokens, starting video, and pushing media.
+   - Dashed lines represent responses or data being returned, like tokens or acknowledgments.
+   - Groupings include actions under the User for initializing and starting video, under Host for joining and publishing in a live event, and Audience for subscribing and receiving streams.
+
+4. **Detailed Content:**
+   - **Video SDK Box**:
+     - Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient newline
+     - Start video in the engine: App.init newline
+     - Start local media: stream = AgoraRTC.createStream newline
+     - Initialize stream: stream.init newline
+     - Play stream: stream.play
+   - **Between Host And Video SDK**:
+     - Retrieve authentication token to join channel (from Agora to Video SDK) newline
+     - Set the user role as host: agoraEngine.setClientRole("host") newline
+     - Join a channel as host: agoraEngine.join newline
+     - Push local media to the channel: agoraEngine.publish
+   - **Between Audience and Video SDK**:
+     - Retrieve authentication token to join channel newline
+     - Set the user role as audience: agoraEngine.setClientRole("audience") newline
+     - Join the live streaming event: agoraEngine.join newline
+     - Retrieve streaming from the other user: agoraEngine.on("stream-added") newline
+     - Subscribe to the stream: agoraEngine.subscribe newline
+     - Receive data stream: agoraEngine.on("stream-subscribed")
+
+5. **Configuration or Additional Notes:**
+   - Configurations or settings specific to initializing the SDK or stream activities are directly mentioned within the boxes of Video SDK, which aligns with preparing and managing streams for different types of users (host, audience).

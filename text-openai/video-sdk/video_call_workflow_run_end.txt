@@ -1,0 +1,33 @@
+1. **Overall Structure:** 
+   - The diagram is a sequence diagram.
+
+2. **Main Entities and Elements:**
+   - There are three primary entities represented as rectangular boxes across the top, labeled “Client,” “Client,” and “Agora Platform.” 
+   - There are three major groupings within the sequence denoted with larger blue rectangles labeled “Run call,” “Communicate,” and “End call.”
+
+3. **Data Flow:**
+   - Solid lines with arrows and dashed lines indicate interactions and data flow. 
+   - During the "Run call" phase, interactions flow from the left Client entity to the Agora Platform with steps such as "Connect to local audio and video resources," "Join channel," and "Send audio and video to channel". A similar flow of actions begins from the right Client with corresponding steps.
+   - During the "End call" phase, there is a reverse pattern of interactions such as "Close audio and video" and “Leave channel” from both Client entities to the Agora Platform.
+   - The middle phase labeled as "Communicate" shows bidirectional communication between the left and right Clients.
+
+4. **Detailed Content:**
+   - **For the left Client in "Run call":**
+     - Connect to local audio and video resources
+     - Join channel
+     - Send audio and video to channel
+   - **For the right Client in "Run call":**
+     - Connect to local audio and video resources
+     - Join channel
+     - Send audio and video to channel
+   - **Communication Phase between both Clients:**
+     - Not specified further in content
+   - **For the left Client in "End call"**:
+     - Close audio and video
+     - Leave channel
+   - **For the right Client in "End call"**:
+     - Close audio and video
+     - Leave channel
+
+5. **Configuration or Additional Notes:**
+   - No explicit configuration settings or additional notes are indicated outside the main described mechanisms and sequences.

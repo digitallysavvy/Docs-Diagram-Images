@@ -1,0 +1,18 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram detailing the flow and processing steps of data in an application using the Agora SDK.
+
+2. **Main Entities and Elements:**
+   - **Sending End:** Contains a box labeled "Agora Video SDK" which further encloses a smaller box labeled "Audio Module."
+   - **Agora edge server:** Not encapsulated in a box but represented as a large cloud shape with the label 'Agora SD-RTN' and two sub-elements "Last Mile" each containing an icon of a server.
+   - **Receiving End:** Contains a box labeled "Agora Video SDK" and a smaller box labeled "Audio Module." Between them is a cylindrical shape labeled "Network Jitter Buffering."
+
+3. **Data Flow:**
+   - Solid lines show data flow from the "Sending End" starting from "Audio Module," passing through two sequences in "Last Mile" at the Agora edge server, and moving to the "Receiving End." The flow finally reaches the "Audio Module" in the "Receiving End."
+   - Each interaction point is marked with arrows indicating the direction of data flow and numbered from 1 to 6 to represent the sequence of operations.
+
+4. **Detailed Content:**
+   - **Sending End**: "Agora Video SDK"newline"Audio Module"
+   - **Receiving End**: "Agora Video SDK"newline"Audio Module"newline"Network Jitter"newline "Buffering"
+
+5. **Configuration or Additional Notes:**
+   - A dashed boundary encapsulates the entire flow from the initial app interface, through the processing ends, to the final app interface, indicating the total scope or process boundary within the app ecosystem using the Agora Video SDK technology.

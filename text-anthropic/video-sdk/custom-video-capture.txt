@@ -1,0 +1,27 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "App", "SDK", and "Agora SD-RTN".
+- Within the "App" entity, there is a sub-element labeled "Custom video capture".
+
+3. Data Flow:
+- Solid lines with arrows represent the flow of data/messages between entities.
+- The flow is from left to right, starting from the "App" entity, going to the "SDK", and then to the "Agora SD-RTN" entity.
+- There is a grouped section titled "Custom video capture" within the "App" entity.
+
+4. Detailed Content:
+- App: "Create and initialize the engine."
+- Custom video capture:
+  - "Create a custom video track" newline
+  - "Join channel(s)" newline
+  - "Push video frames to SDK using the custom video track" newline
+  - "Destroy the custom video track."
+  - "Leave channel(s)"
+  - "Destroy the engine"
+- SDK:
+  - "Request to join channel(s)"
+  - "Request to leave channel(s)"
+
+5. Configuration or Additional Notes:
+- There are no additional lines or configuration settings mentioned in the diagram.

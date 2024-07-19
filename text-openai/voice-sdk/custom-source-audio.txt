@@ -1,0 +1,36 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which showcases the interaction between different entities over time for a specific process.
+
+### Main Entities and Elements:
+- **User**: Depicted at the far left, represented by a stick figure.
+- **Your app**: Immediately to the right of the User, contains multiple sub-elements labeled as "Voice SDK".
+- **Agora**: Placed at the far right, contains a single sub-element labeled "SD-RTN".
+
+### Data Flow:
+- Solid lines with arrows depict the flow of processes and interactions from the User and Your app to Agora, indicating the direction of user actions and system responses.
+- Dashed lines are used primarily for return values, confirming the receipt of data or completion of tasks.
+
+### Detailed Content:
+Within the "Your app" entity:
+1. "Voice SDK":
+   - Open App
+   - Use Voice SDK to create an instance of Agora Engine (newline)
+   - Setup external source (grouped lines):
+      - Check the external source for compatibility (newline)
+      - Set external audio source
+   - Join a channel (newline)
+   - Retrieve authentication token to join a channel (newline)
+   - Join the channel
+   - Process data:
+      - Manage capturing and processing using external methods (newline)
+   - Stream data:
+      - Push external audio frame (newline)
+   - Leave the channel (newline)
+   - Leave the channel (present twice, first to command to leave and second to confirm leaving)
+
+Within the "Agora" entity:
+1. "SD-RTN":
+   - Responses corresponding to each command issued by the Your app, like acknowledging each step such as setting the external audio source, joining the channel, streaming data, and eventually leaving the channel.
+
+### Configuration or Additional Notes:
+- No additional notes or non-standard configuration settings observed; all interactions follow the standard sequence diagram practices with clear labeling and structured flow.

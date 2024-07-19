@@ -1,0 +1,42 @@
+### Overall Structure
+- The diagram is a sequence diagram.
+
+### Main Entities and Elements
+- There are three main entities:
+  1. **User**: Represented as a stick figure followed by a label "User".
+  2. **Your app**: Represented as a box labeled "Your app".
+  3. **Video SDK**: Another box labeled "Video SDK".
+  4. **Agora**: Further labeled as a third entity.
+
+- Circles or smaller defining elements are absent in the main boxes.
+
+### Data Flow
+- Connections are depicted using both solid and dashed lines, indicating interaction flows and responses:
+  1. From **User** to **Your app**:
+     - Dashed line labeled "Open App"
+  2. Interactions between **Your app** and **Video SDK**:
+     - Solid lines for actions (e.g., initiate Video SDK engine, start video).
+     - Dashed lines for responses (back-and-forth communication like initialization and playback confirmation).
+  3. **User** to **Video SDK**:
+     - Solid lines labeled "Start call" and "Leave call".
+     - Dashed line indicating the response from **Video SDK**.
+  4. Flow from **Video SDK** circles back to **Agora** labeled as "SD-RTN".
+
+### Detailed Content
+- **Your app**:
+  - "Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient"
+  - "Start video in the engine: agoraEngine.init"
+  - "Start local media: newline localStream = AgoraRTC.createStream newline localStream.init newline localStream.play"
+- **Video SDK**:
+  - "Retrieve authentication token to join channel"
+  - "Join the channel: agoraEngine.join"
+  - "join accepted"
+  - "Push local media to the channel: agoraEngine.publish"
+  - "Retrieve streaming from the other user: agoraEngine.on('stream-added') newline agoraEngine.subscribe newline agoraEngine.on('stream-subscribed')"
+  - "Receive and send data streams"
+  - "leave the channel: agoraEngine.leave"
+
+### Configuration or Additional Notes
+- **Agora** entity to the right of the **Video SDK** is titled as "SD-RTN", which is separate but aligned vertically with actions taken in the **SDK**.
+
+These elements construct a detailed interaction flow within an application utilizing a video SDK managed by Agora, illustrating the lifecycle of video stream management from initiation, operation, to termination.

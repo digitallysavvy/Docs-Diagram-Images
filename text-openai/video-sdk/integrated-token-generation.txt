@@ -1,0 +1,35 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+   - There are three main box entities labeled as "App", "Developer's Authentication System", and "SD-RTN".
+   - These are further divided into two side sections labeled "Implemented by you" encompassing "App" and "Developer's Authentication System", and "Provided by Agora" containing "SD-RTN".
+   - At both the beginning and end, there is a stick figure labeled as "User", which is connected to the "App".
+
+3. Data Flow:
+   - There are multiple solid and dashed lines indicating data flow and control flow between entities.
+   - From the "User" to the "App", there are solid lines indicating actions such as "Start the app", "Select a channel", and at the bottom, "Join a channel with user ID, channel name, and token".
+   - Between "App" and "Developer's Authentication System", lines indicate login and token request activities.
+   - From the "Developer's Authentication System" to "SD-RTN", there are lines for validating and generation token.
+   - Lines return from "SD-RTN" and "Developer's Authentication System" back to the "App" indicating token return and validation.
+   - At the end, a line indicates triggering a callback after adding the user to the channel displayed by a dashed line from "App" back to "User".
+   - Each of these lines carries descriptions of the actions taking place such as "Login to your identity management system" or "Request an Agora authentication token using channel name, role, token type and user ID".
+
+4. Detailed Content:
+   - Each entity contains specific text which is laid out as follows:
+     App: 
+       - "Start the app"
+       - "Select a channel"
+       - "Request an Agora authentication token using channel name, role, token type and user ID"
+       - "Return the token to the client"
+       - "Join a channel with user ID, channel name, and token"
+       - "Trigger the callback after adding user to the channel"
+     Developer's Authentication System:
+       - "Login to your identity management system"
+       - "Validate user request against internal security"
+       - "Use integrated Agora library to generate a token"
+     SD-RTN:
+       - "Validate the token"
+
+5. Configuration or Additional Notes:
+   - No additional lines or notes such as configuration settings are visible or specified outside the normal lines of communication and content within the main entities.

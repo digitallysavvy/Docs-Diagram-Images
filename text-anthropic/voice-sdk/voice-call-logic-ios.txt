@@ -1,0 +1,37 @@
+1. Overall Structure: 
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stickman icon on left and right)
+- Your app (box)
+  - Video SDK (sub-box inside Your app)
+- Agora (box on the right)
+  - SD-RTN (sub-box inside Agora)
+
+3. Data Flow:
+- From User to Your app: Solid line labeled "Open app"
+- From Your app to itself (Video SDK): Solid line with text "Initiate the Video SDK engine: agoraEngine = AgoraRtcEngineKit.sharedEngine"
+- From User to Your app (inside Voice call box): Solid line labeled "Start a call" 
+- From Your app to itself (Video SDK): Solid line with text "In a call, all users send to the channel: agoraEngine.setClientRole(.broadcaster)"
+- From Your app to Agora: Dashed line labeled "Join the channel: agoraEngine?.joinChannel"
+- From Agora to Your app: Dashed line labeled "Receive notification of other users joining the channel"
+- Bidirectional dashed line between Your app and Agora labeled "Receive and send data streams"
+- From User to Your app (inside Voice call box): Solid line labeled "Leave the call"
+- From Your app to Agora: Dashed line labeled "Leave the channel: agoraEngine.leaveChannel(nil)"
+- From User to Your app: Solid line labeled "Close app"
+- From Your app to itself (Video SDK): Solid line with text "Clean up local resources: AgoraRtcEngineKit.destroy()"
+
+4. Detailed Content:
+Voice call (box): 
+newline Open app
+newline Start a call
+newline Leave the call
+
+Your app (box):
+Video SDK (sub-box)
+
+Agora (box):
+SD-RTN (sub-box)
+
+5. Configuration or Additional Notes:
+The diagram is contained within a dashed box titled "Voice call".

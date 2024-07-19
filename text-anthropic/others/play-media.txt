@@ -1,0 +1,37 @@
+1. Overall Structure: 
+This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (stick figure icon)
+- Your app (box)
+  - Video SDK (smaller box inside)
+- Agora (box) 
+  - SD-RTN (smaller box inside)
+
+3. Data Flow:
+- Solid line with arrow from User to "Your app" labeled "Open App"
+- Solid line with arrow from "Your app" to "Video SDK" labeled "Use Video SDK to create an instance of Agora Engine"
+- Dashed line with arrow from "Video SDK" to itself labeled "Enable audio and video in the engine"
+- Grouping titled "Join" with a dashed line and arrow from "Your app" to "SD-RTN" labeled "Join a channel" and "Retrieve authentication token to join a channel" (dashed line, both directions)
+- Solid line with arrow from "Your app" to "SD-RTN" labeled "Join the channel"
+- Grouping titled "Play media files" with dashed lines
+  - Dashed line with arrow from "Play media files" to "Your app" labeled "Select media file"
+  - Dashed line with arrow from "Your app" to "Video SDK" labeled "Use Video SDK to create an instance of Media Player"
+  - Solid line with arrow from "Video SDK" to "SD-RTN" labeled "Open media file using Media Player"
+  - Dashed line with arrow from "SD-RTN" to "Video SDK" labeled "Open media file completed"
+  - Dashed line with arrow from "Play media file" to "Your app" and dashed line from "Your app" to itself labeled "Set up local video panel to display Media Player output"
+  - Solid line with arrow from "Your app" to "SD-RTN" labeled "Update channel media options to publish Media Player output"
+  - Solid line with arrow from "Video SDK" to "SD-RTN" labeled "Play the media file on the Media Player"
+  - Dashed line with arrow from "Pause or resume play" to "Video SDK" labeled "Call pause or resume methods"
+  - Dashed line with arrow from "SD-RTN" to "Video SDK" labeled "Media file played completely"
+  - Solid line with arrow from "SD-RTN" to itself labeled "Resume publishing of camera and microphone"
+
+4. Detailed Content:
+Your app (box): 
+Video SDK (smaller box)
+
+Agora (box):
+SD-RTN (smaller box)
+
+5. Configuration or Additional Notes:
+No additional configuration or notes.

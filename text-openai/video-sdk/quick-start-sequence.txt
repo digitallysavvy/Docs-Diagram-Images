@@ -1,0 +1,54 @@
+### Overall Structure
+- Type of Diagram: Sequence
+
+### Main Entities and Elements
+- There are three major vertical entities:
+  1. App: Host
+  2. Video SDK
+  3. App: Audience
+
+### Data Flow
+- The sequence diagram shows the interaction between App: Host, Video SDK, and App: Audience through a series of solid and dashed lines indicating sequence and response.
+- The solid lines generally represent a call or an action being sent, and they flow left to right across the diagram connecting the relevant entities (from App: Host to Video SDK, and from Video SDK to App: Audience).
+- The dashed lines usually indicate the response or acknowledgment of an action, with arrows pointing in the direction of the response flow.
+
+### Detailed Content
+- **App: Host**:
+  - Initialize the engine:
+    - Create and initialize the engine
+  - Set video properties:
+    - Enable the video module
+    - Initialize the local view
+    - Display local video preview newline
+  - Join channel:
+    - Join the channel and set the user role as host
+    - Notify the host that the channel has been joined newline
+  - Start audio and video interaction:
+    - Send audio and video newline
+  - End audio and video interaction:
+    - Leave the channel
+    - Notify the host that it has left the channel
+    - Destroy the engine
+
+- **Video SDK**:
+  - Create and initialize the engine
+  - Enable the video module
+  - Join the channel and set the user role as audience
+  - Set remote view:
+    - Initialize the remote view newline
+  - Receive audio and video newline
+  - Leave the channel
+  - Destroy the engine
+
+- **App: Audience**:
+  - Create and initialize the engine
+  - Enable the video module
+  - Join the channel and set the user role as audience
+  - Notify the audience that the channel has been joined newline
+  - Receive audio and video newline
+  - Leave the channel
+  - Notify the audience that it has left the channel newline
+  - Destroy the engine
+
+### Configuration or Additional Notes
+- There are no additional lines or notes indicating configuration settings visible in the provided diagram data.

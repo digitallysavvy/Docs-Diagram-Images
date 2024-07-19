@@ -1,0 +1,24 @@
+1. **Overall Structure:**
+   - The diagram presented is a sequence diagram, typically used to illustrate how processes interact with each other and in what order.
+
+2. **Main Entities and Elements:**
+   - **Your app:** This box represents the user's application interacting with an IoT software development kit (SDK).
+   - **IoT SDK:** Labeled box indicating the SDK used within the user's application environment.
+   - **Agora:** Denoted as an external entity, engaging with the user's app via the SD-RTN (Software Defined Real-time Network).
+   - **SD-RTN:** Indicates the real-time network used by Agora for handling data transmission.
+
+3. **Data Flow:**
+   - Solid lines with arrowheads depict the direction of the flow from the user's app or IoT SDK to the Agora system and back. These lines typically indicate the flow of commands or data.
+   - Dashed lines often represent return paths or acknowledgments from the Agora system back to the user's application.
+
+4. **Detailed Content:**
+   - "Setup Agora engine" is split into three detailed tasks: "Instantiate the Agora engine", "Set engine options", and "Verify license and initialize".
+   - "Create multiple connections" is detailed with sub-processes like "Create connection-1" and "Create connection-2".
+   - "Stream to multiple channels" involves operations such as joining channels with specific connection IDs and sending audio and video data to these channels.
+   - "Push multiple streams to a single channel" includes steps like joining a single channel with different connection and user IDs and sending multiple data streams.
+   - "Leave channel(s)" section includes steps for leaving channels using specific connection IDs.
+   - "Clean up" involves commands to destroy connections and a final call to "Call the finish method to release resources".
+
+5. **Configuration or Additional Notes:**
+   - Configuration settings, detailed commands, or specific options that must be set in the "Setup Agora engine" and throughout the connections and stream handling possibly involve specific software or network settings, though these are not specifically detailed in the diagram.
+   - Each major step or action is encapsulated in its own compartmentalized section within the broader operation framework outlined in the sequence diagram.

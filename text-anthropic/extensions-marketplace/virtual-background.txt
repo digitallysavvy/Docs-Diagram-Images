@@ -1,0 +1,21 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The direction of the diagram is left-to-right.
+
+2. Main Entities and Elements:
+- The main entities are represented by rectangular boxes labeled: "Capture", "Pre-Process", "Encode", "Transmit", "Decode", "Post-Process", and "Play".
+- There is an additional box above labeled "Agora Extensions (Virtual Backgroud, AI Denoiser)".
+- There is another box connecting to "Agora Extensions" labeled "Audio and Video Data".
+
+3. Data Flow:
+- The main entities are connected by solid lines with arrowheads indicating the direction of the flow from left to right.
+- The group of main entities is enclosed within a dashed rectangular border labeled "aqora Web SDK".
+- "Audio and Video Data" flows into "Agora Extensions".
+
+4. Detailed Content:
+- "Agora Extensions (Virtual Backgroud, AI Denoiser)".
+- "Audio and Video Data".
+- Within "aqora Web SDK": "Capture" newline "Pre-Process" newline "Encode" newline "Transmit" newline "Decode" newline "Post-Process" newline "Play".
+
+5. Configuration or Additional Notes:
+- There are no additional lines or notes specifying configuration settings.

@@ -1,0 +1,48 @@
+### Overall Structure
+- The diagram is a sequence diagram used to illustrate the interaction and data flow between different systems/entities over time.
+
+### Main Entities and Elements
+- There are three main entities represented as boxes at the top:
+  1. **App: Host**
+  2. **Video SDK**
+  3. **App: Audience**
+  
+- Within each of these entities, there are smaller grouped boxes that categorize various functions:
+  - **App: Host** contains groups like "Initialize AgoraRtcEngineKit", "Set local view", "Configure ChannelMediaOptions", "Join a channel", and "Start audio and video interaction".
+  - **App: Audience** contains groups like "Initialize AgoraRtcEngineKit", "Set up remote view", and "Receive audio and video".
+
+### Data Flow
+- Arrows indicate the interaction between these entities. Solid arrows depict method calls or direction of execution flow, while dashed arrows typically represent responses or asynchronous updates.
+  - Between **App: Host** and **Video SDK**, arrows show methods like `sharedEngineWithAppId` moving from **App: Host** to **Video SDK**, and same method in the opposite direction towards **App: Audience**.
+  - After initialization, **App: Host** configures the settings, joins a channel and starts interactions which include sending audio and video streams.
+  - **App: Audience** joins the same channel as indicated by the solid lines with `joinChannel(demoChannel)` and receives the video and audio streams as indicated by dashed arrows.
+
+### Detailed Content
+#### App: Host Box
+- Initialize AgoraRtcEngineKit
+  - sharedEngineWithAppId
+- Set local view
+  - enableVideo newline
+  - startPreview newline
+  - setupLocalVideo
+- Configure ChannelMediaOptions
+  - channelProfile(AgoraChannelProfileLiveBroadcasting) newline
+  - clientRoleType(AgoraClientRoleBroadcaster)
+- Join a channel
+  - joinChannel(demoChannel) newline
+  - didJoinChannel(audience)
+- Start audio and video interaction
+  - Send audio and video
+
+#### Video SDK
+*No detailed interactions noted within this box itself.*
+
+#### App: Audience Box
+- Initialize AgoraRtcEngineKit
+  - sharedEngineWithAppId
+- Set up remote view
+  - setupRemoteVideo
+- Receive audio and video
+
+### Configuration or Additional Notes
+- Configuration settings specifically detailing the channel profile and client roles are noted within the flow, differentiating between broadcaster and audience types in the Host and Audience apps respectively. These settings are crucial for distinguishing the type of interaction (broadcasting vs. receiving) between the two app entities.

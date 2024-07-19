@@ -1,0 +1,24 @@
+1. Overall Structure:
+   - The diagram is a sequence diagram that visualizes the flow of video data through various modules and channels.
+
+2. Main Entities and Elements:
+   - "Third-party video capture module 1", "Third-party video capture module 2", "Third-party video capture module N": These are separate entities each receiving "Video to be captured".
+   - "Agora SDK": A central large entity displayed in the diagram.
+   - "Custom video track 1", "Custom video track 2", "Custom video track N": Entities indicating the custom processing tracks for video data.
+   - "Channel 1", "Channel 2", "Channel N": Each custom video track outputs to a respective channel.
+
+3. Data Flow:
+   - Solid lines trace the flow of data:
+     - From "Video to be captured" to each "Third-party video capture module".
+     - From each "Third-party video capture module" to "Agora SDK" labeled as "Captured video frames".
+     - From "Agora SDK" to each "Custom video track".
+     - From each "Custom video track" to its corresponding "Channel".
+
+4. Detailed Content:
+   - Each of the boxes containing the third-party modules has a single line of text: "Third-party video capture module [number]" newline "Video to be captured".
+   - "Agora SDK" contains no inside text but is highlighted prominently.
+   - Each "Custom video track" entity contains the text: "Custom video track [number]".
+   - Each "Channel" contains the text: "Channel [number]".
+
+5. Configuration or Additional Notes:
+   - There are no additional lines, configuration settings, or notes outside the main flow and entity labels in the diagram. The diagram's focus is to clearly depict the flow of video data processing through various modules orchestrated by the Agora SDK.

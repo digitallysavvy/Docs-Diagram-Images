@@ -1,0 +1,32 @@
+1. Overall Structure:
+   - Type of Diagram: Sequence Diagram.
+
+2. Main Entities and Elements:
+   - There are three primary entities:
+     1. Left Box labeled "HOST with Agora Video SDK".
+     2. Middle Entity presented as a cloud labeled "Agora SD-RTN™".
+     3. Right Box labeled "AUDIENCE with Agora Video SDK".
+
+3. Data Flow:
+   - Connections:
+     - Solid lines with arrows convey action sequences:
+       1. From the "HOST" entity:
+          - A line labeled "Join a Channel" proceeds towards the "Agora SD-RTN™".
+          - A subsequent line labeled "Publish Stream" moves from "HOST" to "Agora SD-RTN™".
+       2. From "AUDIENCE" entity:
+          - A line labeled "Join a Channel" leads towards the "Agora SD-RTN™".
+          - A line titled "Subscribe to a Stream" connects from "AUDIENCE" to "Agora SD-RTN™", indicating the direction of process initiation.
+     - There are reverse arrows from the "Agora SD-RTN™":
+       - A white arrow moving towards "HOST" labeled "Subscribe to a Stream".
+       - Another loops back towards "AUDIENCE" labeled "Publish Stream".
+
+4. Detailed Content:
+   - Box "HOST with Agora Video SDK":
+     - Contains no additional inner text beyond its label.
+   - Cloud "Agora SD-RTN™":
+     - Labeled as such without additional internal text.
+   - Box "AUDIENCE with Agora Video SDK":
+     - Labeled without additional text content.
+
+5. Configuration or Additional Notes:
+   - No additional lines or configuration notes are specified in the diagram. All necessary information is encapsulated within the flow arrows and entity labels.

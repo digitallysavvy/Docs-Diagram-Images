@@ -1,0 +1,26 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (depicted as a stick figure)
+- Your app (box with "IoT SDK" sub-element)
+- Agora (box with "SD-RTN" sub-element)
+- Join a channel (box)
+- Send and receive audio and video (box)
+- Render audio and video frames (box)
+- Manage audio and video streams (box with two sub-elements: "Mute local audio or video" and "Mute remote audio or video")
+
+3. Data Flow:
+- Solid lines represent data flow from one entity to another, with arrows indicating the direction.
+- Dashed lines represent callbacks or responses from an entity to another.
+- Elements are grouped under broader categories like "Setup Agora engine" and "Detect and respond to network bandwidth changes".
+
+4. Detailed Content:
+- Your app box contains: "IoT SDK" newline "Setup Agora engine" newline "Instantiate the Agora RTC engine" newline "Set options including log file path and logging level" newline "Verify license and initialize the engine" newline "Create a connection"
+- Join a channel box contains: "Join a channel" newline "Set bandwidth estimation parameters" newline "Specify the audio codec, sampling rate, and the number of channels" newline "Call the join channel method" newline "on join channel success callback"
+- Send and receive audio and video box contains: "Start threads to send audio and video data" newline "Receive audio and video data"
+- Manage audio and video streams box contains two sub-elements: "Mute local audio or video" and "Mute remote audio or video"
+
+5. Configuration or Additional Notes:
+- "Detect and respond to network bandwidth changes" is a separate section with the following content: "On target bitrate changed callback" newline "Adjust the sending bit rate and resolution" newline "On key frame generation request callback" newline "Send a key frame"
+- Under "Manage audio and video streams", there are additional lines: "Call mute local audio or mute local video" newline "Call mute remote audio or mute remote video" newline "On user mute audio callback" newline "Suspend or resume audio feed" newline "On user mute video callback" newline "Suspend or resume video feed"

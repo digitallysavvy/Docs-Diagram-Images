@@ -1,0 +1,20 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The overall direction of the flow is from left to right.
+
+2. Main Entities and Elements:
+- The main entities are "audio module" and "network module" enclosed in dashed boxes.
+- Within the "audio module" box, there are six smaller boxes labeled "Enable local audio collection", "Audio pre-processing", "Audio Encoding", "Set up playback device or audio", "Audio post-processing", and "Audio Decoding".
+
+3. Data Flow:
+- Solid arrows connect the boxes within the "audio module", indicating the flow direction from left to right.
+- A dashed arrow points from the "Audio Encoding" box to the "Join channel" box within the "network module".
+- Another dashed arrow points from the "Join channel" box back to the "Audio Decoding" box.
+
+4. Detailed Content:
+- "Enable local audio collection" newline "Audio pre-processing" newline "Audio Encoding" 
+- "Set up playback device or audio" newline "Audio post-processing" newline "Audio Decoding"
+- "Join channel"
+
+5. Configuration or Additional Notes:
+- The two main modules, "audio module" and "network module", are enclosed in dashed boxes.

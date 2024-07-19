@@ -1,0 +1,39 @@
+1. Overall Structure:
+- This is a sequence diagram.
+
+2. Main Entities and Elements:
+- The main entities are "Client", "Call implementer", "Token Server", "Client", and "Agora Platform".
+- Within "Call implementer", there is a sub-element labeled "Setup client".
+- Within "Agora Platform", there are no sub-elements.
+
+3. Data Flow:
+- There are solid lines depicting the flow between entities, with arrows indicating the direction.
+- There is a grouping titled "Run call" that includes interactions between "Client" and "Agora Platform".
+- There is another grouping titled "End call" that includes interactions between "Client" and "Agora Platform".
+
+4. Detailed Content:
+- Client: 
+  "User login to implementor security" newline
+  "Authenticate and retrieve token" newline
+  "Create client instance" newline
+  "Set client role: host" newline
+  "Connect to local audio and video resources" newline
+  "Close audio and video"
+- Token Server: No text content.
+- Client: 
+  "User login to implementor security" newline
+  "Authenticate and retrieve token" newline
+  "Create client instance" newline
+  "Set client role: audience" newline
+  "Join channel" newline
+  "Send audio and video to channel" newline
+  "Communicate" newline
+  "Close audio and video" newline
+  "Leave call"
+- Agora Platform:
+  "Join channel" newline
+  "Send audio and video to channel" newline
+  "Leave call"
+
+5. Configuration or Additional Notes:
+- There are no additional lines or configuration notes in this diagram.

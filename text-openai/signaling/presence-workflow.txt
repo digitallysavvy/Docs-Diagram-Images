@@ -1,0 +1,53 @@
+### Overall Structure:
+- The diagram is a sequence diagram that describes interactions between entities over time.
+
+### Main Entities and Elements:
+- **User**: Represents the actions performed by the user.
+- **Your app**: Contains processes and actions taking place within a custom application.
+- **Signaling SDK**: Interfaces between "Your app" and "Agora" to handle signaling tasks.
+- **Agora**: Represents a service or platform named Agora that interacts with the Signaling SDK.
+
+### Data Flow:
+- **Connections**: There are solid and dashed lines connecting the entities, indicating the flow of processes and responses.
+  - Solid lines typically represent calls or actions initiated.
+  - Dashed lines typically represent responses or results returned.
+- **Groupings**:
+  - **Initialize**: Involves user opening the app, and in "Your app", creating a signalingEngine instance, adding listeners, setting authentication, and logging in.
+  - **Presence notifications**: Begins when the user joins a channel and includes subscribing to channel events and handling presence events.
+  - **Presence queries**: Involves loading user lists and channel lists, corresponding calls to get online users and user channels in "Agora".
+  - **User status**: Deals with setting and querying user statuses.
+  - **Close**: Includes logging out actions both by the user and in the Signaling SDK.
+
+### Detailed Content:
+- **Initialize Block**:
+  - Open app newline
+  - Create a signalingEngine instance newline
+  - Add the presence event listener newline
+  - Set the authentication token newline
+  - Log in to Signaling
+  
+- **Presence notifications Block**:
+  - Join a channel newline
+  - Subscribe to a channel and enable presence events for the channel newline
+  - Presence event: A remote user joins, leaves or changes status in the channel newline
+  - Read the event arguments newline
+  - Inform users
+  
+- **Presence queries Block**:
+  - Load the list of users in the channel newline
+  - Call getOnlineUsers newline
+  - Load the channel list for a user newline
+  - Call getUserChannels
+  
+- **User status Block**:
+  - Set own status newline
+  - Call setState newline
+  - Query the status of a remote user newline
+  - Call getState
+  
+- **Close Block**:
+  - Log out newline
+  - Log out of Signaling
+
+### Configuration or Additional Notes:
+- No additional lines or configuration settings are indicated outside the recognized patterns and interactions described above.

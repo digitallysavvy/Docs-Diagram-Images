@@ -1,0 +1,21 @@
+1. Overall Structure:
+- This is a flow diagram.
+- The direction of the flow is cyclical, with the flow moving from the bottom to the top and then back down.
+
+2. Main Entities and Elements:
+- The main entities are represented as icons: a laptop, a desktop computer, a mobile device, and a server.
+- There is a cloud-shaped box labeled "Platform" at the top.
+
+3. Data Flow:
+- The flow is represented by arrows (solid blue lines) connecting the entities.
+- The direction of the flow is indicated by the arrowheads.
+- There are two groups of entities: the laptop, desktop, and mobile device are grouped together, while the server is separate.
+
+4. Detailed Content:
+- The cloud entity is labeled "Platform".
+- The server entity is labeled "Viewer dAccessToken_v1.1".
+- The flow from the server to the other entities is labeled "1. Retrieve AccessToken with user and call permissions".
+- The flow from the laptop, desktop, and mobile device to the cloud is labeled "2. Connect to Agora Platform with AccessToken and join call".
+
+5. Configuration or Additional Notes:
+- There are no additional lines or configuration settings shown in the diagram.

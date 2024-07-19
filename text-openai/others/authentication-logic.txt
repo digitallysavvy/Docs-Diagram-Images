@@ -1,0 +1,41 @@
+### Overall Structure:
+- The diagram is a sequence diagram, which visualizes the interactions among different participants in a sequence of events.
+
+### Main Entities and Elements:
+- **Token Server** (leftmost column): Acts as the service provider which handles token generation and renewal.
+- **App** (middle column): Represents the application performing operations such as joining channels and managing token-related events.
+- **SD-RTN** (rightmost column): Managed by 'Agora', this entity completes the authentication by validating the token and handles the channel operations with the user.
+
+### Data Flow:
+- **Join a channel with authentication**:
+  - Solid lines show the flow of requests and responses between the Token Server and App for token requests and token generation.
+  - A solid line with an arrow from App to SD-RTN represents joining the channel with token and user details.
+  - Dashed lines returning from SD-RTN to App, indicating token validation and a callback event after adding the user to the channel.
+- **Renew token**:
+  - After the "Trigger event: Token Privilege will Expire" in SD-RTN, solid lines between the App and Token Server depict the request and generation of a new token.
+  - A solid line shows sending the fresh token with a RenewToken request from App to SD-RTN.
+
+### Detailed Content:
+- **Token Server Content**:
+  - "Join a channel with authentication":
+    - Request a token using channel name, role, token type, and user ID newline
+    - Validate user against internal security newline
+    - Generate a token and return it to the client
+  - "Renew token":
+    - Request a fresh token using channel name, role, token type, and user ID newline
+    - Validate user request against internal logic newline
+    - Generate a fresh token and return it to the client
+- **App Content**:
+  - "Join a channel with authentication":
+    - Join a channel with uid, channel name, and token newline
+    - Validate the token newline
+    - Trigger the callback after adding user to the channel
+  - "Renew token":
+    - Trigger event: Token Privilege will Expire newline
+    - Send the fresh token with a RenewToken request
+
+### Configuration or Additional Notes:
+- Above the Token Server and App, it is labeled "Implemented by you".
+- Above SD-RTN, it is labeled "Provided by Agora". This specifies the division of responsibility between the user-implemented functions and the services provided by Agora.
+
+This structured layout and content facilitation provide an organized view of the authentication sequence for channel access, indicating how token security and management are handled.

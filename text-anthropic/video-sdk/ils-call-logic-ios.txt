@@ -1,0 +1,36 @@
+1. Overall Structure:
+The diagram is a sequence diagram.
+
+2. Main Entities and Elements:
+- User (entity)
+- Your app (entity, contains Video SDK sub-element)
+- Agora (entity, contains SD-RTN sub-element)
+- Host (entity)
+- Audience (entity)
+
+3. Data Flow:
+- Solid line from User to Your app labeled "Open app"
+- Solid lines between Your app and Video SDK
+- Solid line from Your app to Agora labeled "Initiate the Video SDK engine:" with text "agoraEngine = AgoraRtcEngineKit.sharedEngine"
+- Solid line from Your app to Agora labeled "Start video in the engine:" with text "agoraEngine.enableVideo()"
+- Group box titled "Start a live streaming event" containing:
+    - Solid line from Your app to Agora with text "In an live streaming event, only the hosts broadcast to the channel: agoraEngine.setClientRole(.broadcaster)"
+    - Solid line from Your app to Agora with text "Start local video: agoraEngine.setupLocalVideo(videoCanvas)"
+    - Solid line from Your app to Agora labeled "Join the channel:" with text "agoraEngine?.joinChannel"
+    - Solid lines from Agora to SD-RTN labeled "Send data stream"
+- Group box titled "Join live streaming event" containing:  
+    - Solid line from Audience to Agora with text "In an live streaming event, the audience views the stream sent by channel hosts: agoraEngine.setClientRole(.audience)"
+    - Solid line from Audience to Agora labeled "Join the channel:" with text "agoraEngine?.joinChannel"
+    - Solid line from Audience to SD-RTN labeled "Retrieve streaming from the hosts:" with text "agoraEngine.setupRemoteVideo(videoCanvas)"
+    - Dashed line from SD-RTN to Audience labeled "Receive data streams"
+- Group box titled "Leave live streaming event" containing:
+    - Solid line from Audience to Agora labeled "Stop local video:" with text "agoraEngine.stopPreview()"
+    - Solid line from Audience to Agora labeled "Leave the channel:" with text "agoraEngine.leaveChannel(nil)"
+- Solid line from Audience to Your app labeled "Close app"  
+- Dashed line from Your app to Video SDK labeled "Clean up local resources:" with text "AgoraRtcEngineKit.destroy()"
+
+4. Detailed Content:
+All text content within boxes is included in the data flow descriptions.
+
+5. Configuration or Additional Notes:
+No additional configuration settings or notes present.

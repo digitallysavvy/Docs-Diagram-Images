@@ -1,0 +1,21 @@
+1. Overall Structure:
+   - This is a flow diagram.
+   - The direction of the diagram is from left to right.
+
+2. Main Entities and Elements:
+   - The main entities are represented by rectangular boxes labeled "Agora Video SDK", "Host", and "Audience".
+   - Inside the "Host" and "Audience" boxes, there are smaller icons representing mobile devices.
+
+3. Data Flow:
+   - Bi-directional solid lines connect the "Host" and "Audience" boxes, indicating a two-way flow.
+   - A dashed box surrounds the "Host" and "Audience" entities, grouping them together.
+
+4. Detailed Content:
+   - The "Agora Video SDK" box has no additional text content.
+   - The flow is labeled with the following steps:
+     1. Set the client role newline 2. Retrieve a token newline 3. Join a channel
+     4. Publish local video and audio
+     5. Subscribe to video and audio published by the host
+
+5. Configuration or Additional Notes:
+   - There are no additional configuration settings or notes in the diagram.

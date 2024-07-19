@@ -1,0 +1,32 @@
+### Overall Structure:
+- The diagram is a Sequence Diagram commonly used in software development for specifying the interactions between objects in compliance with their sequence.
+
+### Main Entities and Elements:
+- There are two main entities represented as labeled boxes:
+  1. App Server
+  2. Agora Chat Server
+
+### Data Flow:
+- Solid lines and dashed lines depict communication pathways with arrows showing the direction of data flow between the entities:
+  1. From "App Server" to the right edge of its box with label "1. Generate a token with app privileges."
+  2. Solid line with an arrow from "App Server" to "Agora Chat Server" labeled "2. Use the token with app privileges to call Agora Chat RESTful APIs."
+  3. Dashed line with an arrow returning from "Agora Chat Server" to an open circle in the "App Server" side, with label "3. Validate the token with app privileges."
+  4. Solid line with an arrow returning from the circle next to "Agora Chat Server" directly to "App Server" labeled "4. Return the response parameters after successful RESTful API calls."
+
+### Groupings:
+- Two main groups titled "Implemented by yourself" and "Provided by Agora." The "App Server" is under the group "Implemented by yourself," and the "Agora Chat Server" is under the group "Provided by Agora."
+
+### Detailed Content:
+1. **App Server:**
+   - Label: "App Server"
+   - Actions:
+     - "1. Generate a token with app privileges" (at the left side of the box).
+2. **Agora Chat Server:**
+   - Label: "Agora Chat Server"
+   - Actions:
+     - "3. Validate the token with app privileges". (Events are listed vertically within the interactions toward "App Server")
+
+### Configuration or Additional Notes:
+- The diagram has two horizontal separators, dividing the space into sections that indicate the responsibilities coverage ("Implemented by yourself" and "Provided by Agora").
+- There is a dark background grid that remains consistent throughout the diagram.
+- Dashed boundary divides interactions that occur on the "App Server" side and interactions that involve the "Agora Chat Server."

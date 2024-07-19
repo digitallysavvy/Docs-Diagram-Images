@@ -1,0 +1,35 @@
+### Overall Structure:
+- The diagram is a sequence diagram that illustrates interaction and data flow between entities in an application that utilizes video SDK.
+
+### Main Entities and Elements:
+- **User**: Represented as a labeled stick figure at two different points - top and bottom of the diagram.
+- **Your app**: A rectangular box labeled accordingly, serving as the main application interface.
+- **Video SDK**: Multiple instances of this rectangular box appear, indicating different points of interaction.
+- **Agora**: Another rectangular box labeled as such, interacting with "Your app" and "Video SDK".
+- **SD-RTN**: A rectangular box appearing on the right side, interacting with "Video SDK".
+
+### Data Flow:
+- Solid arrows indicate the direction of interaction and control flow within the diagram:
+  - From "User" to "Your app" initiating the action "Open App".
+  - Multiple interactions between "Your app" and "Video SDK", including the creation and configuration of the Agora Engine.
+  - Interactions extend from "Video SDK" to "Agora", establishing and managing audio and video functionalities.
+  - Data flows back to "User" through "Video SDK" at various points, particularly after actions within "Your app".
+- Solid lines also indicate sequenced interactive steps within specific groupings like "Join", "Play audio effect", "Audio mixing", and "Voice effects".
+
+### Groupings and Title:
+- **Join**: Encompasses actions related to joining a communication channel.
+- **Play audio effect**: Involves triggering, playing, pausing, and managing sound effects.
+- **Audio mixing**: Centers around starting and stopping audio mixing processes.
+- **Voice effects**: Focuses on applying and adjusting voice effects.
+
+### Detailed Content:
+- Each box within the entities contains sequenced actions:
+  - "Your app": newline Create an Agora Engine instance using Video SDK newline Enable audio and video in Agora Engine
+  - "Video SDK" (within "Join"): newline Join a channel newline Retrieve authentication token to join a channel newline Join the channel
+  - "Video SDK" (within "Play audio effect"): newline Trigger sound effect newline Play effect newline Pause and resume effect newline Set effect position newline Set effect volume newline On audio effect finished
+  - "Video SDK" (within "Audio mixing"): newline Control audio mixing newline Start audio mixing newline Stop audio mixing
+  - "Video SDK" (within "Voice effects"): newline Apply a voice effect newline Set preset voice effect newline Disable the voice effect
+  - "Video SDK" (within "Leave the channel"): newline Leave the channel
+
+### Configuration or Additional Notes:
+- No additional notes or configuration settings are specified outside of the primary boxes or groups in the diagram. The interactions and configurations are self-contained within the respective entities and their relationships as articulated by the flow arrows.

@@ -1,0 +1,43 @@
+1. Overall Structure:
+   - This is a sequence diagram.
+
+2. Main Entities and Elements:
+   - User (stick figure icon)
+   - Your app (box)
+     - Video SDK (sub-box)
+   - Agora (box) 
+     - SD-RTN (sub-box)
+   - Host (box)
+   - Audience (box)
+
+3. Data Flow:
+   - Solid arrows represent the flow of data or actions.
+   - Dashed arrows represent the return of data or responses.
+   - There are two groups of elements: one for the Host and one for the Audience.
+
+4. Detailed Content:
+   - User: No text content.
+   - Your app:
+     - Video SDK: No text content.
+   - Agora: 
+     - SD-RTN: No text content.
+   - Host:
+     - Start live streaming event newline
+     - Retrieve authentication token to join channel newline  
+     - Set the user role as host: agoraEngine.setClientRole("host") newline
+     - Join a channel as host: agoraEngine.join newline
+     - Push local media to the channel: agoraEngine.publish
+   - Audience:
+     - Join live streaming event newline
+     - Retrieve authentication token to join channel newline
+     - Set the user role as audience: agoraEngine.setClientRole("audience") newline
+     - Join the live streaming event: agoraEngine.join newline
+     - Retrieve streaming from the other user: agoraEngine.on("stream-added") newline agoraEngine.subscribe newline agoraEngine.on("stream-subscribed") newline
+     - Receive data stream newline
+     - Leave live streaming event newline
+     - agoraEngine.leave
+
+5. Configuration or Additional Notes:
+   - Initiate the Video SDK engine: agoraEngine = AgoraRTC.createClient
+   - Start video in the engine: App.init
+   - Start local media: stream = AgoraRTC.createStream newline stream.init newline stream.play
