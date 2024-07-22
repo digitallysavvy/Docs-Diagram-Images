@@ -20,13 +20,13 @@ sequenceDiagram
     Your_app ->>+ Video_SDK: Join
     Video_SDK ->>+ Agora: Retrieve authentication token to join a channel
     Agora -->>- Video_SDK: Token retrieved
-    Video_SDK ->> Agora: Join the channel
+    Video_SDK ->>+ Agora: Join the channel
     Agora -->>- Video_SDK: Joined channel
     Your_app ->>+ Video_SDK: Process data
     Video_SDK ->>- Your_app: Data processed
-    Your_app ->>+ Video_sdk: Stream data
+    Your_app ->>+ Video_SDK: Stream data
     Video_SDK ->>- Your_app: Data streamed
     User ->>+ Your_app: Leave the channel
     Your_app ->>+ Video_SDK: Leave channel
-    Video_SDK ->>- User: Channel left
+    Video_SDK --> User: Channel left
 ```

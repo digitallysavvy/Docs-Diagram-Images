@@ -1,20 +1,18 @@
+```mermaid
 sequenceDiagram
     participant Sender
     participant Subscriber
+    participant Client_A as Client A
+    participant Client_B as Client B
+    participant Client_C as Client C
 
-    rect rgb(255,255,255)
-        note right of Sender: Sender
-        participant Client_A as Client A
-        participant Client_B as Client B
-    end
+    note right of Sender: Sender
     
-    rect rgb(255,255,255)
-        note right of Subscriber: Subscriber
-        participant Client_C as Client C
-    end
+    note right of Subscriber: Subscriber
 
-    Client_A ->> Client_B: Audio &amp; Video track
-    Client_B ->> Client_C: Audio &amp; Video track
-    Client_A -) Client_C: Screen Sharing Track
+    Client_A ->> Client_B: Audio & Video track
+    Client_B ->> Client_C: Audio & Video track
+    Client_A ->> Client_C: Screen Sharing Track
 
     note left of Client_B: Note: To avoid additional costs, do not subscribe to a local screen sharing track.
+```

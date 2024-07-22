@@ -1,0 +1,23 @@
+1. **Overall Structure:**
+   - The diagram is a sequence diagram that illustrates the flow of operations between various entities in a software implementation setup, specifically detailing the actions involved when integrating and monitoring a Video SDK with Agora technologies.
+
+2. **Main Entities and Elements:**
+   - **User**: Represented by icons at the top and bottom of the diagram.
+   - **Your app**: A labeled box under the top User icon.
+   - **Video SDK**: A labeled box right below "Your app".
+   - **Agora SD-RTN**: A box labeled SD-RTN to the right of the diagram, aligned with the "Video SDK" element.
+
+3. **Data Flow:**
+   - Solid lines show the sequence of operations starting from the User and moving through "Your app" and "Video SDK".
+   - Dashed lines go between "Video SDK" and "SD-RTN" to denote data and control flow.
+   - The direction of the flow is downwards, starting at the User at the top and moving through different operations.
+
+4. **Detailed Content:**
+   - **Create Agora engine**: Includes operations like "Set log file path, log level and file size" followed by "Create Agora Engine".
+   - **Best practice for app initiation**: Contains instructions like "Enable dual-stream mode to allow remote users to choose a stream type" and "Set local publish and remote subscribe fallback options".
+   - **Settings check**: Includes steps such as "Specify audio profile and scenario based on the nature of the app", "Set video encoder configuration", "Call the method to start the network probe test" and reports like "Deliver network quality score and network statistics".
+   - **Join channel**: Actions like "Enable video" and "Join channel" are noted.
+   - **In-call quality monitoring**: Actions include "Enable the quality statistics", "Receive network, call, audio and video quality statistics", "Receive state change notifications", and "Notify the user", followed by "Take corrective action".
+
+5. **Configuration or Additional Notes:**
+   - The operations are grouped logically under labels like "Create Agora engine", "Best practice for app initiation", "Settings check", "Join channel", and "In-call quality monitoring", which indicate the conceptual segmentation of activities during the sequence. These labels appear as titles in wider boxes encompassing specific actions.
